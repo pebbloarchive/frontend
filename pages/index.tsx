@@ -1,8 +1,9 @@
 import React from 'react';
 import { usePulse } from 'pulse-framework';
 import { Account } from '../core';
-import Logger from '../modules/logger';
+import { Logger } from '../modules/logger';
 import Router from 'next/router';
+import Head from 'next/head';
 
 const Home = () => {
   const [logged] = usePulse(Account.isUserLoggedIn);
@@ -10,8 +11,12 @@ const Home = () => {
     if(!logged) Router.replace('/login');
     else if (logged) Router.replace('/explore');
   });
-  return (
-    null
+  return ( 
+    <>
+      <Head>
+      <title>Pebblo</title>
+      </Head>
+    </>
   )
 }
 

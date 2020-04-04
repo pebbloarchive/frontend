@@ -3,25 +3,29 @@ import { AccountData } from '../../core/controllers/account/account.state';
 import { Account } from '../../core';
 import Router from 'next/router';
 import Head from 'next/head';
-import Logger from '../../modules/logger';
+import { Logger } from '../../modules/logger';
 import { useState, useEffect } from 'react';
 
 const Login = () => {
     const [logged] = usePulse(Account.isUserLoggedIn);
     const [email, setEmail] = useState(undefined);
     const [password, setPassword] = useState(undefined);
-    const Login = async (app) => {
-        app.preventDefault();
+    const Login = async (ev) => {
+        ev.preventDefault();
         if(!email || !password) return;
-        const logged = await Account.login(email, password);
-        Logger.msg('Authenticate', 'Trying to login');
+        try {
+            const logged = await Account.login(email, password);
+        } catch (error) {
+            Logger('Error', logged);
+        }
+        // Logger.msg('Authenticate', 'Trying to login');
         if(logged.success) return Router.push('/explore');
     }
     useEffect(() => {
         if(logged) Router.replace('/explore');
     })
     return (
-    <>
+    <div>
         <Head>
             <title>Pebblo Login</title>
             <link rel="shortcut icon" href="https://assets.pebblo.org/images/icon/tab.png" />
@@ -48,14 +52,14 @@ const Login = () => {
                             value={password}
                             onChange={(change) => { setPassword(change.target.value) }}
                         />
+                        <input type="submit" value="Go fuck yourself"/>
                     </form>
                     <div className="lr-signin">
-                    <button onClick={Login}>Login</button>
                     </div>
                 </div>
             </div>
             <a href="/create" className="lr-signup">Don't have an account? <span>Create</span></a>
-        </>
+        </div>
     )
 }
 

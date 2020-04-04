@@ -1,16 +1,9 @@
-export default class Logger {
-    static info(msg: string, message: string) {
-        if(msg === undefined || message === undefined) throw new Error('Invalid params provided');
-        return console.log('%c [Pebblo ' + msg + '] ' + '%c ' + message, 'background: #764E88; color: white; display: block;', 'background: #105577; color: white; display: block;');
-    }
-
-    static msg(msg: string, message: string) {
-        if(msg === undefined || message === undefined) throw new Error('Invalid params provided');
-        return console.log('%c Pebblo ' + msg + ' ' + '%c ' + message + ' ', 'background: #16161D; color: white; display: block;', 'background: #06EDE7; color: black; display: block;');
-    }
-
-    static error(msg: string, message: string) {
-        if(msg === undefined || message === undefined) throw new Error('Invalid params provided');
-        return console.log('%c [Pebblo ' + msg + '] ' + '%c ' + message, 'background: #A24343; color: white; display: block;', 'background: #105577; color: white; display: block;');
-    }
+export function Logger(caller: string = "Router", ...logs: any): void {
+	const name: string = "Peblo";
+	console.log(
+		`%c ${name} %c ${caller} `,
+		"background: #17171E; color: #e8e8e8; border-radius: 3px 0 0 3px;",
+		"background: #00fff0; color: #17171E; border-radius: 0 3px 3px 0;",
+		...logs
+	);
 }

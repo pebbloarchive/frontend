@@ -2,7 +2,7 @@ import { usePulse } from 'pulse-framework';
 import { AccountData } from '../../core/controllers/account/account.state';
 import { Account } from '../../core';
 import Router from 'next/router';
-import Logger from '../../modules/logger';
+import { Logger } from '../../modules/logger';
 import { useEffect } from 'react';
 
 const Explore = () => {
