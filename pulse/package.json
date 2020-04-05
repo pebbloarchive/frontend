@@ -1,0 +1,39 @@
+{
+  "name": "pulse-framework",
+  "version": "3.0.0",
+  "description": "Global state and logic framework for reactive Javascript applications.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "test": "mocha --exit",
+    "test-debug": "mocha --inspect-brk",
+    "build": "tsc",
+    "dev": "tsc-watch",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs --dest ./docs/dist/",
+    "now-build": "npm run docs:build"
+  },
+  "types": "./dist/index.d.ts",
+  "author": "Jamie Pine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pulse-framework/pulse"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint-config-prettier": "^4.0.0",
+    "jest": "^24.7.1",
+    "mocha": "^6.2.0",
+    "prettier": "1.16.3",
+    "tsc-watch": "^4.1.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3",
+    "vuepress": "^1.0.2"
+  }
+}

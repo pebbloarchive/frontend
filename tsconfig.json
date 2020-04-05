@@ -4,13 +4,7 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "ES2015", 
-      "ES2016", 
-      "ES2017", 
-      "ES2018", 
-      "ES2019", 
-      "ES2020", 
-      "ESNext"
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -30,6 +24,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "next.config.js"
   ]
 }
