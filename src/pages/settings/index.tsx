@@ -2,12 +2,15 @@ import Head from 'next/head';
 import Nav from '../../components/Nav';
 import Router from 'next/router'
 import { Account } from '../../core';
+import { AccountData } from '../../core/controllers/account/account.state';
 import { Log } from '../../utils';
 import { usePulse } from 'pulse-framework';
 import { useEffect } from 'react';
 
 const Page = () => {
     const [logged] = usePulse(Account.isUserLoggedIn);
+    const [username] = usePulse([AccountData.username]);
+    const [email] = usePulse([AccountData.email]);
 
     useEffect(() => {
         if(!logged) Router.replace('/login');
@@ -24,23 +27,75 @@ const Page = () => {
 
                 <div className="settings-account settings-medium-box">
                     <div className="settings-account-avatar">
-                        <img src="/images/default.jpg" alt="" />
+                        <img src="/images/default3.jpg" alt="" />
                     </div>
                         <div className="settings-account-info">
                             <form>
                             <h1 className="settings-account-title">Username</h1>
-                            
+                            <input
+                                maxLength={16}
+                                minLength={3}
+                                className="settings-account-input"
+                                type="text"
+                                name="username"
+                                id="username"
+                                autoComplete="false"
+                                autoCapitalize="false"
+                                placeholder={username}
+                            />
                             <h1 className="settings-account-title">Email</h1>
-
-                            <h1 className="settings-account-title">Password</h1>
-
+                            <input
+                                className="settings-account-input"
+                                type="email"
+                                name="email"
+                                id="email"
+                                autoComplete="false"
+                                placeholder={email}
+                            />
+                            <h1 className="settings-account-title">Password *</h1>
+                            <input
+                                className="settings-account-input"
+                                minLength={9}
+                                type="password"
+                                name="password"
+                                id="password"
+                                autoComplete="false"
+                                placeholder="password"
+                                required
+                            />
                             <hr/>
 
                             <h1 className="settings-account-title">Profile</h1>
-
+                            <input
+                            className="settings-account-input"
+                            maxLength={26}
+                            type="text"
+                            name="displayName"
+                            id="displayName"
+                            placeholder="Name"
+                            />
+                            <textarea 
+                            name=""
+                             id="" 
+                             cols={0} 
+                             rows={15}
+                             placeholder="Bio"
+                             />
                             <button className="settings-account-button" type="submit">Save</button>
                             </form>
                         </div>
+                    </div>
+
+                    <h1 className="settings-subtitle">Privacy and Settings</h1>
+
+                    <div className="settings-grid settings-full-box">
+
+                    <div className="settings-item settings-item-1">
+                        <div className="settings-item-content">
+                            <h1>Private</h1>
+                            <p>Set your account to private</p>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
