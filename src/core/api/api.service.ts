@@ -2,7 +2,7 @@ import { App } from '../pulse';
 import { Log } from '../../utils';
 
 const ApiInstance = App.API({
-  baseURL: `13.93.141.19:8080/v1`,
+  baseURL: `localhost:3000/v1`,
   options: {
     headers: {
       ['Content-Type']: 'application/json',
