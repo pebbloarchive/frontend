@@ -1,7 +1,7 @@
 FROM node:12
 
 # Setting working directory. All the path will be relative to WORKDIR
-WORKDIR /usr/src/rocketplay/webapp
+WORKDIR /usr/src/pebblo/webapp
 
 # Installing dependencies
 COPY package*.json ./
