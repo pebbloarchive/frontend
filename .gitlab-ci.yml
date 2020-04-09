@@ -44,6 +44,36 @@ deploy_dev:
     - ssh cideployer@$EUW_PROD_IP "docker stop $CONTAINER_NAME" || true
     - ssh cideployer@$EUW_PROD_IP "docker rm $CONTAINER_NAME" || true
     # start new container
-    - ssh cideployer@$EUW_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e API_URL=https://dev-api.pebblo.org -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
+    - ssh cideployer@$EUW_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
   only:
     - develop
+
+deploy:
+  stage: deploy
+  image: debian:jessie-slim
+  variables: 
+    APP_NAME: web-app
+    APP_INTERNAL_PORT: 3000
+    APP_EXTERNAL_PORT: 8001
+    CONTAINER_NAME: pebblo.org.web-app.${CI_COMMIT_REF_SLUG}
+  before_script:
+    - apt-get update -qq
+    - apt-get install -qq git
+    # Setup SSH deploy keys
+    - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$AZURE_PROD_SSHKEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    # log into Docker registry
+    - ssh cideployer@$EUW_PROD_IP "docker login registry.pebblo.org --username=pebbloci --password=$DOCKER_REPO_PASSWORD"
+    # Remove image and stop container.
+    - ssh cideployer@$EUW_PROD_IP "docker rmi registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
+    - ssh cideployer@$EUW_PROD_IP "docker pull registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
+    - ssh cideployer@$EUW_PROD_IP "docker stop $CONTAINER_NAME" || true
+    - ssh cideployer@$EUW_PROD_IP "docker rm $CONTAINER_NAME" || true
+    # start new container
+    - ssh cideployer@$EUW_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
+  only:
+    - master
