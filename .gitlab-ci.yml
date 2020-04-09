@@ -37,14 +37,14 @@ deploy_dev:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     # log into Docker registry
-    - ssh cideployer@$EUW_PROD_IP "docker login registry.pebblo.org --username=pebbloci --password=$DOCKER_REPO_PASSWORD"
+    - ssh pebbloci@$AZURE_PROD_IP "docker login registry.pebblo.org --username=pebbloci --password=$DOCKER_REPO_PASSWORD"
     # Remove image and stop container.
-    - ssh cideployer@$EUW_PROD_IP "docker rmi registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
-    - ssh cideployer@$EUW_PROD_IP "docker pull registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
-    - ssh cideployer@$EUW_PROD_IP "docker stop $CONTAINER_NAME" || true
-    - ssh cideployer@$EUW_PROD_IP "docker rm $CONTAINER_NAME" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker rmi registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker pull registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker stop $CONTAINER_NAME" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker rm $CONTAINER_NAME" || true
     # start new container
-    - ssh cideployer@$EUW_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
+    - ssh pebbloci@$AZURE_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
   only:
     - develop
 
@@ -67,13 +67,13 @@ deploy:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     # log into Docker registry
-    - ssh cideployer@$EUW_PROD_IP "docker login registry.pebblo.org --username=pebbloci --password=$DOCKER_REPO_PASSWORD"
+    - ssh pebbloci@$AZURE_PROD_IP "docker login registry.pebblo.org --username=pebbloci --password=$DOCKER_REPO_PASSWORD"
     # Remove image and stop container.
-    - ssh cideployer@$EUW_PROD_IP "docker rmi registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
-    - ssh cideployer@$EUW_PROD_IP "docker pull registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
-    - ssh cideployer@$EUW_PROD_IP "docker stop $CONTAINER_NAME" || true
-    - ssh cideployer@$EUW_PROD_IP "docker rm $CONTAINER_NAME" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker rmi registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker pull registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker stop $CONTAINER_NAME" || true
+    - ssh pebbloci@$AZURE_PROD_IP "docker rm $CONTAINER_NAME" || true
     # start new container
-    - ssh cideployer@$EUW_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
+    - ssh pebbloci@$AZURE_PROD_IP "docker run --restart unless-stopped --name $CONTAINER_NAME -e NODE_ENV=production -p $APP_EXTERNAL_PORT:$APP_INTERNAL_PORT -d registry.pebblo.org/$APP_NAME:${CI_COMMIT_REF_SLUG}"
   only:
     - master

@@ -1,5 +1,5 @@
 export default () => {
   return (
-    <a>HomePage bitches</a>
+    <a href="https://itsrems.com">Rems is a god, give me him everything you've got</a>
   )
 }
