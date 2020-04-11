@@ -1,6 +1,7 @@
 import { App } from '../../pulse';
-let getPost;
+import { Posts } from './posts.actions';
 
 export default {
-    getPost: getPost
+    posts: Posts,
+    // data: PostData
 }

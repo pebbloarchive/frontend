@@ -20,7 +20,7 @@ const Page = () => {
         <title>Pebblo Profile</title>
         </Head>
             <div>
-
+                
             </div>
         </>
     )
