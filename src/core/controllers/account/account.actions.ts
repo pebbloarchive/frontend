@@ -16,14 +16,13 @@ export const LogUserIn = (payload: Auth) => {
   Api.config.options.headers = {
     ...Api.config.options.headers,
     Authorization: `Bearer: ${payload.token}`
-  }
+  } 
 }
 
 export const Login = async (email: string, password: string): Promise<{
   success: boolean;
   error?: object;
 }> => {
-  Api.config.options.headers['bigTeStE'] = 'fail'
   try {
     const user = await login({ email, password });
     if (user.error) throw user.message || user.error;
