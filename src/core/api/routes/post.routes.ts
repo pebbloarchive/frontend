@@ -7,4 +7,4 @@ export const Post = async (payload: {
 }): Promise<Posts> => (await API.post('users/posts/new')).data;
 
 export const getPost = async (id: number): Promise<PostBody> => 
-    (await API.get(`users/posts/${id}`));
+    (await API.get(`users/posts/${id}`)).data;

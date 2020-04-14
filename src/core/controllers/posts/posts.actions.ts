@@ -14,8 +14,24 @@ interface Post {
     updated_at: Date;
 }
 
-export const PostCollection = App.collection<Post>({
+export const PostCollection = App.Collection<Post>({
     groups: ['following'],
     primaryKey: 'author'
 });
 
+export const Posts = async (content: string, attachments?: string[]): Promise<{
+    success: boolean;
+    error?: object;
+  }> => {
+    try {
+      return {
+        success: true
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error
+      };
+    }
+  }
+  
