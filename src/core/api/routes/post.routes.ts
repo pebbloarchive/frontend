@@ -1,5 +1,5 @@
 import API from '../';
-import { Posts } from '../../interfaces/post.interfaces';
+import { Posts, PostBody } from '../../interfaces/post.interfaces';
 
 export const Post = async (payload: {
     content: string,
