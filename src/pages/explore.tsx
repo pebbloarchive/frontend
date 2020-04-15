@@ -7,16 +7,12 @@ import { useEffect } from 'react';
 
 const Page = () => {
   const [logged] = usePulse(Account.isUserLoggedIn);
-
-    useEffect(() => {
-        if (!logged) Router.replace('/login');
-    });
-
-    return (
-        <div>
-            <Nav />
-        </div>
-    )
+  if (!logged && process.browser) Router.replace('/login');
+  return (
+    <div>
+      <Nav />
+    </div>
+  )
 }
 
 export default Page;

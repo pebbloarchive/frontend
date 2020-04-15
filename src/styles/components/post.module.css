@@ -1,0 +1,142 @@
+.feed {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  margin-top: 10%;
+  width: 45%;
+  height: 500px;
+  transition: 1s
+}
+
+.feed-nopost {
+  display: block;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: .6
+}
+
+.feed-nopost span {
+  font-weight: 600
+}
+
+.feed-nopost img {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  border: solid 2px #dbdbdb;
+  border-radius: 50%;
+  margin-bottom: 16px
+}
+
+.feed-post {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  padding: 30px;
+  border: solid 1px #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  background-color: #fff
+}
+
+.feed-profile {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px
+}
+
+.feed-profile a {
+  color: var(--color)
+}
+
+.feed-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%
+}
+
+.feed-profile-info {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 60px;
+  width: 70%
+}
+
+.feed-profile-username {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .6
+}
+
+.feed-profile-timeStamp {
+  font-size: 10px
+}
+
+.feed-dropdown {
+  position: absolute;
+  top: 5px;
+  right: 0
+}
+
+.feed-caption {
+  font-size: 14px
+}
+
+.feed-image {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: solid 1px #ddd
+}
+
+.feed-interaction {
+  margin-top: 30px
+}
+
+.feed-interaction-content {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.feed-interaction-left,
+.feed-interaction-right {
+  width: 50%;
+  position: relative
+}
+
+.feed-interaction-right {
+  text-align: right
+}
+
+.feed-interaction-left {
+  text-align: left
+}
+
+.feed-interaction-left a {
+  margin-right: 5px;
+  display: inline-flex;
+  align-items: center
+}
+
+.feed-interaction a {
+  font-size: 16px;
+  color: #404249
+}
+
+.feed-interaction img {
+  width: 20px;
+  height: 20px
+}
+
+.feed-interaction span {
+  font-size: 12px;
+  margin-left: 5px
+}

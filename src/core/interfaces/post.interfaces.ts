@@ -8,11 +8,13 @@ export interface Posts {
     message?: string;
   };
 
-export interface PostBody {
-  id: string;
-  author: string;
+  export interface PostInterface {
+  id: number;
+  author: {
+    username: string;
+  };
   content: string;
-  attachments: string[];
+  attachments?: string[];
   likes: number;
   created_at: Date;
   updated_at: Date;
