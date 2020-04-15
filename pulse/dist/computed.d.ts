@@ -5,5 +5,6 @@ export declare class Computed<ComputedValueType = any> extends State<ComputedVal
     func: Function;
     deps?: Array<State>;
     constructor(instance: () => Pulse, func: Function, deps?: Array<State>);
+    recompute(): void;
 }
 export default Computed;

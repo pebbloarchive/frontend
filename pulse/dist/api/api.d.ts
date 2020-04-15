@@ -1,4 +1,4 @@
-interface PulseResponse extends Response {
+export interface PulseResponse extends Response {
     data?: any;
     timedout?: boolean;
 }
@@ -25,4 +25,3 @@ export default class API {
     private send;
 }
 export declare const getChannel: (channelId: any) => Promise<PulseResponse>;
-export {};

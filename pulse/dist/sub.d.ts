@@ -1,4 +1,3 @@
-import Pulse from '.';
 import { State } from './';
 export declare type SubscriptionContainer = ComponentContainer | CallbackContainer;
 export interface SubscribingComponentObject {
@@ -22,10 +21,9 @@ export declare class CallbackContainer extends ComponentContainer {
     constructor(callback: Function, subs?: Set<State>);
 }
 export default class SubController {
-    instance: Pulse;
     components: Set<ComponentContainer>;
     callbacks: Set<CallbackContainer>;
-    constructor(instance: Pulse);
+    constructor();
     /**
      * Subscribe to Pulse state WITH return object
      */

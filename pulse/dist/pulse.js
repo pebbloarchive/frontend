@@ -43,9 +43,9 @@ class Pulse {
          * @param config.groups Define groups for this collection.
          */
         this.Collection = (config) => new collection_1.default(() => this, config);
-        this.subController = new sub_1.default(this);
-        this.runtime = new runtime_1.default(this);
-        this.storage = new storage_1.default(this, config.storage || {});
+        this.subController = new sub_1.default();
+        this.runtime = new runtime_1.default(() => this);
+        this.storage = new storage_1.default(() => this, config.storage || {});
         if (config.framework)
             this.initFrameworkIntergration(config.framework);
         this.globalBind();
@@ -60,9 +60,12 @@ class Pulse {
      * @param Items Array of items to reset
      */
     reset(items) { }
+    nextPulse(callback) {
+        this.runtime.nextPulse(callback);
+    }
     setStorage(storageConfig) {
         const persistedState = this.storage.persistedState;
-        this.storage = new storage_1.default(this, storageConfig);
+        this.storage = new storage_1.default(() => this, storageConfig);
         this.storage.persistedState = persistedState;
         this.storage.persistedState.forEach(state => state.persist(state.name));
     }

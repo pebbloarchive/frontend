@@ -15,15 +15,36 @@ function cleanState(state) {
 exports.cleanState = cleanState;
 function resetState(items) {
     items.forEach(item => {
-        if (item instanceof state_1.default) {
+        if (item instanceof _1.Collection)
             item.reset();
-        }
-        else if (item instanceof _1.Collection) {
-            // meme
-        }
+        const stateSet = extractAll(item, state_1.default);
+        stateSet.forEach(state => state.reset());
     });
 }
 exports.resetState = resetState;
+function extractAll(obj, instance) {
+    if (obj instanceof instance)
+        return new Set(obj);
+    const found = new Set();
+    let next = [obj];
+    function look() {
+        let _next = [...next];
+        next = [];
+        _next.forEach(o => {
+            for (let property in o) {
+                if (o[property] instanceof instance)
+                    found.add(o[property]);
+                else if (isWatchableObject(o[property]))
+                    next.push(o[property]);
+            }
+        });
+        if (next.length > 0)
+            look();
+    }
+    look();
+    return found;
+}
+exports.extractAll = extractAll;
 function getInstance(state) {
     try {
         if (state.instance)
@@ -77,6 +98,14 @@ function normalizeGroups(groupsAsArray = []) {
     return groups;
 }
 exports.normalizeGroups = normalizeGroups;
+function shallowmerge(source, changes) {
+    let keys = Object.keys(changes);
+    keys.forEach(property => {
+        source[property] = changes[property];
+    });
+    return source;
+}
+exports.shallowmerge = shallowmerge;
 function defineConfig(config, defaults) {
     return Object.assign(Object.assign({}, defaults), config);
 }

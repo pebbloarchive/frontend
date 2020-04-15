@@ -8,6 +8,7 @@ class Runtime {
         this.current = null;
         this.queue = [];
         this.complete = [];
+        this.tasksOnceComplete = [];
         this.trackState = false;
         this.foundState = new Set();
     }
@@ -24,17 +25,16 @@ class Runtime {
     perform(job) {
         // debugger;
         this.current = job;
-        job.state.previousState = utils_1.copy(job.state.masterValue);
+        job.state.previousState = utils_1.copy(job.state._masterValue);
         // write new value as result of mutation
         job.state.privateWrite(job.newState);
-        // set next state for future mutations
-        job.state.nextState = utils_1.copy(job.newState);
         // perform side effects
         this.sideEffects(job.state);
         // declare completed
         this.complete.push(job);
-        // console.log('job', job);
         this.current = null;
+        if (this.instance().config.logJobs)
+            console.log(`Completed Job: Name:${job.state.name}`, job);
         // continue the loop and perform the next job or update subscribers
         if (this.queue.length > 0)
             this.perform(this.queue.shift());
@@ -55,6 +55,10 @@ class Runtime {
         // this is used mainly to cause group to generate its output after changing
         if (typeof state.sideEffects === 'function')
             state.sideEffects();
+        for (let watcher in state.watchers) {
+            if (typeof state.watchers[watcher] === 'function')
+                state.watchers[watcher](state.getPublicValue());
+        }
         // ingest dependents
         dep.deps.forEach(state => {
             this.ingest(state, state.mutation(), false);
@@ -86,16 +90,24 @@ class Runtime {
             }
             else if (cC instanceof sub_1.ComponentContainer) {
                 // call the current intergration's update method
-                this.instance.intergration.updateMethod(cC.instance, Runtime.assembleUpdatedValues(cC));
+                this.instance().intergration.updateMethod(cC.instance, Runtime.assembleUpdatedValues(cC));
             }
         });
+        if (this.instance().config.logJobs && componentsToUpdate.size > 0)
+            console.log(`Rendered Components`, componentsToUpdate);
         this.complete = [];
+        // run any tasks for next runtime
+        this.tasksOnceComplete.forEach(task => typeof task === 'function' && task());
+        this.tasksOnceComplete = [];
     }
     getFoundState() {
         this.trackState = false;
         const ret = this.foundState;
         this.foundState = new Set();
         return ret;
+    }
+    nextPulse(callback) {
+        this.tasksOnceComplete.push(callback);
     }
     static assembleUpdatedValues(cC) {
         let returnObj = {};

@@ -9,8 +9,8 @@ class Storage {
         this.storageType = 'localStorage';
         this.storagePrefix = 'pulse';
         this.persistedState = new Set();
-        if (this.instance.config.storagePrefix)
-            this.storagePrefix = this.instance.config.storagePrefix;
+        if (this.instance().config.storagePrefix)
+            this.storagePrefix = this.instance().config.storagePrefix;
         if (storageMethods.async)
             this.isPromise = true;
         // assume if user provided get, set or remove methods that the storage type is custom

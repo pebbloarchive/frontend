@@ -14,6 +14,7 @@ export interface PulseConfig {
     framework?: any;
     frameworkConstructor?: any;
     storage?: {};
+    logJobs?: boolean;
 }
 export default class Pulse {
     config: PulseConfig;
@@ -46,14 +47,14 @@ export default class Pulse {
      * @param deps Array - An array of state items to depend on
      * @param func Function - A function where the return value is the state, ran every time a dep changes
      */
-    Computed: <T>(func: Function, deps?: any[]) => Computed<T>;
+    Computed: <T>(func: () => any, deps?: any[]) => Computed<T>;
     /**
      * Create a Pulse collection
      * @param config object
      * @param config.primaryKey The primary key for the collection.
      * @param config.groups Define groups for this collection.
      */
-    Collection: <V>(config: any) => Collection<V>;
+    Collection: <V>(config?: any) => Collection<V>;
     /**
      * Reset to initial state.
      * - Supports: State, Collections and Groups
@@ -61,6 +62,7 @@ export default class Pulse {
      * @param Items Array of items to reset
      */
     reset(items: Array<State | Group | Collection>): void;
+    nextPulse(callback: () => any): void;
     setStorage(storageConfig: StorageMethods): void;
     /**
      * Global refrence to the first pulse instance created this runtime

@@ -14,7 +14,7 @@ export default class Storage {
     private storageType;
     private storagePrefix;
     persistedState: Set<State>;
-    constructor(instance: Pulse, storageMethods?: StorageMethods);
+    constructor(instance: () => Pulse, storageMethods?: StorageMethods);
     get(key: any): any;
     set(key: any, value: any): void;
     remove(key: any): void;

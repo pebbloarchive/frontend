@@ -22,6 +22,9 @@ class Computed extends state_1.default {
         const output = this.mutation();
         this.set(output);
     }
+    recompute() {
+        this.set(this.mutation());
+    }
 }
 exports.Computed = Computed;
 exports.default = Computed;

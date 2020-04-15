@@ -9,13 +9,15 @@ export default class Runtime {
     private current;
     private queue;
     private complete;
+    private tasksOnceComplete;
     trackState: boolean;
     foundState: Set<State>;
-    constructor(instance: Pulse);
+    constructor(instance: () => Pulse);
     ingest(state: State, newState?: any, perform?: boolean): void;
     private perform;
     private sideEffects;
     private updateSubscribers;
     getFoundState(): Set<State<any>>;
+    nextPulse(callback: () => any): void;
     static assembleUpdatedValues(cC: SubscriptionContainer): any;
 }

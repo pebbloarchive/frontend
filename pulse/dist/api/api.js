@@ -9,20 +9,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const ensureProperHeaders = (headers) => {
-    let newHeaders = {};
-    Object.keys(headers).forEach(key => {
-        const value = headers[key];
-        newHeaders[key.toLowerCase()] = value;
+const ensureProperHeaders = headers => {
+    let obj = {};
+    Object.keys(headers).forEach(t => {
+        obj[t.toLowerCase()] = headers[t];
     });
-    return newHeaders;
+    return obj;
 };
 class API {
     constructor(config = { options: {} }) {
         this.config = config;
-        /**
-         * Make all headers lowerCase
-         */
         if (config.options && config.options.headers) {
             config.options.headers = ensureProperHeaders(config.options.headers);
         }
@@ -34,7 +30,7 @@ class API {
      * @param config - O
      */
     with(config) {
-        let _this = Object.assign({}, this);
+        let _this = Object.assign(Object.create(Object.getPrototypeOf(this)), this);
         if (config.options && config.options.headers) {
             config.options.headers = ensureProperHeaders(config.options.headers);
         }
@@ -64,13 +60,16 @@ class API {
             config.options.method = method;
             if (!config.options.headers)
                 config.options.headers = {};
-            if (typeof payload === 'object') {
+            let originalType = config.options.headers['content-type'];
+            if (payload && payload._parts && payload.getParts) {
+                // inject body if not get method
+                config.options.body = payload;
+                config.options.headers['content-type'] = 'multipart/form-data';
+            }
+            else if (typeof payload === 'object') {
                 // inject body if not get method
                 config.options.body = JSON.stringify(payload);
-                // auto set header to application/json
-                if (!config.options.headers.hasOwnProperty('content-type')) {
-                    config.options.headers['content-type'] = 'application/json';
-                }
+                config.options.headers['content-type'] = 'application/json';
             }
             else
                 config.options.body = payload;
@@ -80,7 +79,7 @@ class API {
             else
                 fullUrl = `${this.config.baseURL}/${endpoint}`;
             if (config.requestIntercept)
-                config.requestIntercept(config.options);
+                config.requestIntercept(Object.assign(Object.assign({}, config.options), { endpoint: fullUrl }));
             try {
                 if (this.config.timeout) {
                     response = yield Promise.race([
@@ -99,6 +98,9 @@ class API {
             catch (e) {
                 response = Response.error();
             }
+            // Return the old content type header
+            if (originalType)
+                config.options.headers['content-type'] = originalType;
             // if we got here, PulseResponse is the actual response object
             let res = response;
             let contentType = res.headers.get('content-type');

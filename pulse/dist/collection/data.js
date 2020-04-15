@@ -6,7 +6,7 @@ class Data extends state_1.State {
         super(collection.instance, data);
         this.collection = collection;
         this.type(Object);
-        this.mutation = () => this.masterValue;
+        this.mutation = () => this._masterValue;
     }
 }
 exports.default = Data;

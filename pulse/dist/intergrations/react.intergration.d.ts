@@ -17,7 +17,7 @@ export declare function PulseHOC(ReactComponent: any, deps?: Array<State> | {
     };
     [x: string]: any;
 };
-export declare function usePulse(deps: Array<State | keyedState> | State, pulseInstance?: Pulse): Array<any>;
+export declare function usePulse(deps: Array<State | keyedState> | State, pulseInstance?: Pulse): any[];
 declare const _default: {
     name: string;
     bind(pulseInstance: Pulse): void;

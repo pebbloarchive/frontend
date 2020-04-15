@@ -21,8 +21,7 @@ class CallbackContainer extends ComponentContainer {
 }
 exports.CallbackContainer = CallbackContainer;
 class SubController {
-    constructor(instance) {
-        this.instance = instance;
+    constructor() {
         this.components = new Set();
         this.callbacks = new Set();
     }
@@ -84,17 +83,17 @@ class SubController {
      * @param instance - Either a CallbackContainer or a bound component instance
      */
     unsubscribe(instance) {
-        if (instance instanceof CallbackContainer) {
-            // do that
-        }
-        else if (instance.pulseComponentContainer) {
-            let cC = instance.pulseComponentContainer;
+        const unsub = (cC) => {
             cC.ready = false;
             // remove component container from subs' dep
             cC.subs.forEach(state => {
                 state.dep.subs.delete(cC);
             });
-        }
+        };
+        if (instance instanceof CallbackContainer)
+            unsub(instance);
+        else if (instance.pulseComponentContainer)
+            unsub(instance.pulseComponentContainer);
     }
 }
 exports.default = SubController;
