@@ -7,6 +7,7 @@ import Api from '../../api/api.service';
 import { Auth } from '../../interfaces/account.interfaces';
 import { resetState } from 'pulse-framework';
 import Router from 'next/router';
+import { info } from '../../../utils/alert';
 
 export const LogUserIn = (payload: Auth) => {
   AccountData.email.set(payload.account.email);
@@ -32,6 +33,7 @@ export const Login = async (email: string, password: string): Promise<{
       success: true
     };
   } catch (error) {
+    info(error);
     return {
       success: false,
       error
