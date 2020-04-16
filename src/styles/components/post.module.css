@@ -1,3 +1,10 @@
+:root {
+  --color: #1a1a1a;
+  --background: #f8f8f8;
+  --theme-a: #63a4ad;
+  --theme-b: #4f60bb
+}
+
 .feed {
   position: absolute;
   left: 10%;
@@ -8,7 +15,7 @@
   transition: 1s
 }
 
-.feed-nopost {
+.feed_nopost {
   display: block;
   padding: 40px 0;
   text-align: center;
@@ -17,11 +24,11 @@
   opacity: .6
 }
 
-.feed-nopost span {
+.feed_nopost span {
   font-weight: 600
 }
 
-.feed-nopost img {
+.feed_nopost img {
   width: 30px;
   height: 30px;
   padding: 20px;
@@ -30,7 +37,7 @@
   margin-bottom: 16px
 }
 
-.feed-post {
+.feed_post {
   position: relative;
   left: 50%;
   transform: translate(-50%);
@@ -42,7 +49,7 @@
   background-color: #fff
 }
 
-.feed-profile {
+.feed_profile {
   position: relative;
   display: block;
   width: 100%;
@@ -50,17 +57,17 @@
   margin-bottom: 20px
 }
 
-.feed-profile a {
+.feed_profile a {
   color: var(--color)
 }
 
-.feed-avatar {
+.feed_avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%
 }
 
-.feed-profile-info {
+.feed_profile_info {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -68,27 +75,27 @@
   width: 70%
 }
 
-.feed-profile-username {
+.feed_profile_username {
   font-size: 14px;
   font-weight: 600;
   opacity: .6
 }
 
-.feed-profile-timeStamp {
+.feed_profile_timeStamp {
   font-size: 10px
 }
 
-.feed-dropdown {
+.feed_dropdown {
   position: absolute;
   top: 5px;
   right: 0
 }
 
-.feed-caption {
+.feed_caption {
   font-size: 14px
 }
 
-.feed-image {
+.feed_image {
   max-width: 100%;
   margin-top: 10px;
   border-radius: 10px;
@@ -96,47 +103,47 @@
   border: solid 1px #ddd
 }
 
-.feed-interaction {
+.feed_interaction {
   margin-top: 30px
 }
 
-.feed-interaction-content {
+.feed_interaction-content {
   display: flex;
   justify-content: center;
   align-items: center
 }
 
-.feed-interaction-left,
-.feed-interaction-right {
+.feed_interaction-left,
+.feed_interaction-right {
   width: 50%;
   position: relative
 }
 
-.feed-interaction-right {
+.feed_interaction-right {
   text-align: right
 }
 
-.feed-interaction-left {
+.feed_interaction-left {
   text-align: left
 }
 
-.feed-interaction-left a {
+.feed_interaction-left a {
   margin-right: 5px;
   display: inline-flex;
   align-items: center
 }
 
-.feed-interaction a {
+.feed_interaction a {
   font-size: 16px;
   color: #404249
 }
 
-.feed-interaction img {
+.feed_interaction img {
   width: 20px;
   height: 20px
 }
 
-.feed-interaction span {
+.feed_interaction span {
   font-size: 12px;
   margin-left: 5px
 }

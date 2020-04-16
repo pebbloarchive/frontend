@@ -3,17 +3,17 @@ import { PostInterface } from '../core/interfaces/post.interfaces';
 
 const Post = (props: PostInterface) => {
   return (
-    <div className="feed-post">
-      <div className="feed-profile">
+    <div className={styles.feed_post}>
+      <div className={styles.feed_profile}>
         <a href="">
-          <img src="hello" alt="" className="feed-avatar" />
-          <div className="feed-profile-info">
-            <h1 className="feed-profile-username"> { props.author.username } </h1>
-            <span className="feed-profile-timeStamp"> date </span>
+          <img src="hello" alt="" className={styles.feed_avatar} />
+          <div className={styles.feed_profile_info}>
+            <h1 className={styles.feed_profile_username}> { props.author.username } </h1>
+            <span className={styles.feed_profile_timeStamp}> date </span>
           </div>
         </a>
       </div>
-      <p className="feed-caption">
+      <p className={styles.feed_caption}>
         { props.content }
       </p>
     </div>
