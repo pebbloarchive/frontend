@@ -9,3 +9,8 @@ export interface Auth {
   error?: string;
   message?: string;
 };
+
+export interface User {
+  id: string;
+  username: string;
+}

@@ -5,7 +5,7 @@
   margin-top: 10%;
   width: 45%;
   height: 500px;
-  transition: 1s
+  transition: 1s;
 }
 
 .feed_nopost {
@@ -14,11 +14,11 @@
   text-align: center;
   font-size: 16px;
   font-weight: 400;
-  opacity: .6
+  opacity: .6;
 }
 
 .feed_nopost span {
-  font-weight: 600
+  font-weight: 600;
 }
 
 .feed_nopost img {
@@ -27,7 +27,7 @@
   padding: 20px;
   border: solid 2px #dbdbdb;
   border-radius: 50%;
-  margin-bottom: 16px
+  margin-bottom: 16px;
 }
 
 .feed_post {
@@ -39,7 +39,7 @@
   border: solid 1px #e6e6e6;
   border-radius: 5px;
   margin-bottom: 50px;
-  background-color: #fff
+  background-color: #fff;
 }
 
 .feed_profile {
@@ -47,17 +47,17 @@
   display: block;
   width: 100%;
   height: 40px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .feed_profile a {
-  color: var(--color)
+  color: var(--color);
 }
 
 .feed_avatar {
   width: 40px;
   height: 40px;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .feed_profile_info {
@@ -65,27 +65,27 @@
   top: 50%;
   transform: translate(0, -50%);
   left: 60px;
-  width: 70%
+  width: 70%;
 }
 
 .feed_profile_username {
   font-size: 14px;
   font-weight: 600;
-  opacity: .6
+  opacity: .6;
 }
 
 .feed_profile_timeStamp {
-  font-size: 10px
+  font-size: 10px;
 }
 
 .feed_dropdown {
   position: absolute;
   top: 5px;
-  right: 0
+  right: 0;
 }
 
 .feed_caption {
-  font-size: 14px
+  font-size: 14px;
 }
 
 .feed_image {
@@ -93,50 +93,50 @@
   margin-top: 10px;
   border-radius: 10px;
   background-color: #fff;
-  border: solid 1px #ddd
+  border: solid 1px #ddd;
 }
 
 .feed_interaction {
-  margin-top: 30px
+  margin-top: 30px;
 }
 
 .feed_interaction-content {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .feed_interaction-left,
 .feed_interaction-right {
   width: 50%;
-  position: relative
+  position: relative;
 }
 
 .feed_interaction-right {
-  text-align: right
+  text-align: right;
 }
 
 .feed_interaction-left {
-  text-align: left
+  text-align: left;
 }
 
 .feed_interaction-left a {
   margin-right: 5px;
   display: inline-flex;
-  align-items: center
+  align-items: center;
 }
 
 .feed_interaction a {
   font-size: 16px;
-  color: #404249
+  color: #404249;
 }
 
 .feed_interaction img {
   width: 20px;
-  height: 20px
+  height: 20px;
 }
 
 .feed_interaction span {
   font-size: 12px;
-  margin-left: 5px
+  margin-left: 5px;
 }

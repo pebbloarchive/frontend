@@ -9,7 +9,7 @@
     width: 20%;
     height: 500px;
     z-index: 1;
-    transition: 1s
+    transition: 1s;
   }
   
   .profile-avatar {
@@ -18,7 +18,7 @@
     height: 150px;
     border-radius: 50%;
     background-color: var(--background);
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
   
   .profile-badge {
@@ -29,48 +29,48 @@
     height: 25px;
     background-color: var(--background);
     padding: 14px;
-    border-radius: 50%
+    border-radius: 50%;
   }
   
   .profile-fullName {
     font-size: 20px;
     font-weight: 600;
-    color: #585866
+    color: #585866;
   }
   
   .profile-username {
     font-size: 13px;
     opacity: .8;
-    margin-bottom: 15px
+    margin-bottom: 15px;
   }
   
   .profile-bio {
     font-size: 15px;
     color: #9099a4;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
   
   .profile-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
   
   .profile-list li {
     font-size: 14px;
     color: #585866;
-    margin-bottom: 5px
+    margin-bottom: 5px;
   }
   
   .profile-list i {
     display: inline-block;
     width: 20px;
-    text-align: left
+    text-align: left;
   }
   
   .profile-list span {
-    opacity: .8
+    opacity: .8;
   }
   
   .profile-interaction-follow,
@@ -80,17 +80,17 @@
     font-weight: 600;
     border-radius: 100px;
     margin-right: 10px;
-    cursor: pointer
+    cursor: pointer;
   }
   
   .profile-interaction-follow {
     background: linear-gradient(to right, var(--theme-a), var(--theme-b));
-    color: #fff
+    color: #fff;
   }
   
   .profile-interaction-message {
     color: var(--color);
-    background-color: #ebebeb
+    background-color: #ebebeb;
   }
   
   .profile-right {
@@ -102,7 +102,7 @@
     transition: .3s;
     background-color: #fff;
     padding: 30px;
-    border-radius: 10px
+    border-radius: 10px;
   }
   
   .profile-right-avatar {
@@ -112,25 +112,25 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: var(--background)
+    background-color: var(--background);
   }
   
   .profile-right-basic {
     position: absolute;
     left: 150px;
     top: 50%;
-    transform: translate(0, -50%)
+    transform: translate(0, -50%);
   }
   
   .profile-right-fullName {
     font-size: 20px;
-    font-weight: 600
+    font-weight: 600;
   }
   
   .profile-right-username {
     font-size: 13px;
     margin-bottom: 10px;
-    opacity: .5
+    opacity: .5;
   }
   
   .profile-right-basic button {
@@ -141,7 +141,7 @@
     font-weight: 600;
     margin-right: 5px;
     z-index: 1;
-    cursor: pointer
+    cursor: pointer;
   }
   
   .profile-right-followToggle {
@@ -151,6 +151,6 @@
   
   .profile-right-message {
     color: var(--color);
-    background-color: var(--background)
+    background-color: var(--background);
   }
   

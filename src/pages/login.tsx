@@ -5,6 +5,7 @@ import { Account } from '../core';
 import { Log } from '../utils';
 import { usePulse } from 'pulse-framework';
 import Head from 'next/head';
+import styles from '../styles/components/auth.module.css';
 
 const Page = () => {
   const [logged] = usePulse(Account.isUserLoggedIn);
@@ -21,12 +22,12 @@ const Page = () => {
   }
   return (
     <>
-        <div className="lr-sidebar">
-            <h1 className="lr-sidebar-heading">Login <span>Hello! Let's get started.</span></h1>
+        <div className={styles.lr_sidebar}>
+            <h1 className={styles.lr_sidebar_heading}>Login <span>Hello! Let's get started.</span></h1>
         </div>
-            <div className="lr">
-                <div className="lr-content">
-                    <form onSubmit={doLogin} className="lr-form">
+            <div className={styles.lr}>
+                <div className={styles.lr_content}>
+                    <form onSubmit={doLogin} className={styles.lr_form}>
                         <input
                             type="email"
                             name="login_email"
@@ -43,13 +44,13 @@ const Page = () => {
                             value={password}
                             onChange={(change) => { setPassword(change.target.value) }}
                         />
-                    <div className="lr-signin">
+                    <div className={styles.lr_signin}>
                         <input type="submit" value="Login"/>
                     </div>
                     </form>
                 </div>
             </div>
-            <a href="/create" className="lr-signup">Don't have an account? <span>Create</span></a>
+            <a href="/create" className={styles.lr_signup}>Don't have an account? <span>Create</span></a>
     </>
   );
 }

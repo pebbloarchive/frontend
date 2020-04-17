@@ -1,3 +1,4 @@
+import { User } from './account.interfaces';
 export interface Posts {
     token: string;
     account: {
@@ -10,9 +11,8 @@ export interface Posts {
 
   export interface PostInterface {
   id: string; 
-  author: {
-    username: string;
-  };
+  authorId: string;
+  author?: User;
   content: string;
   attachments?: string[];
   likes: number;
