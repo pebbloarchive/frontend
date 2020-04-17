@@ -25,7 +25,7 @@ export default () => {
       }
   }
   const [logged] = usePulse(Account.isUserLoggedIn);
-  if (logged) Router.replace('/');
+  if (logged && process.browser) Router.replace('/explore');
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
   const doLogin = async (ev) => {

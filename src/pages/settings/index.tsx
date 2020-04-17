@@ -11,10 +11,8 @@ const Page = () => {
     const [logged] = usePulse(Account.isUserLoggedIn);
     const [username] = usePulse([AccountData.username]);
     const [email] = usePulse([AccountData.email]);
+    if(!logged && process.browser) Router.replace('/login');
 
-    useEffect(() => {
-        if(!logged) Router.replace('/login');
-    });
     return (
         <>
         <Head>

@@ -1,10 +1,3 @@
-:root {
-    --color: #1a1a1a;
-    --background: #f8f8f8;
-    --theme-a: #63a4ad;
-    --theme-b: #4f60bb
-  }
-
 .profile {
     position: relative;
     display: block;

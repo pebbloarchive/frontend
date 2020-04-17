@@ -9,7 +9,7 @@ export interface Posts {
   };
 
   export interface PostInterface {
-  id: number;
+  id: string; 
   author: {
     username: string;
   };
@@ -17,5 +17,5 @@ export interface Posts {
   attachments?: string[];
   likes: number;
   created_at: Date;
-  updated_at: Date;
+  updated_at?: Date;
 }

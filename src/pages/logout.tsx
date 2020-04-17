@@ -11,9 +11,7 @@ const Page = () => {
         await Account.logout(true);
         Router.replace('/login');
     }
-    useEffect(() => {
-        if(!logged) Router.replace('/login');
-    });
+    if(!logged && process.browser) Router.replace('/login');
     return (
         <div className="logout-landing">
             <div className="logout">
