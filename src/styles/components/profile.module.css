@@ -12,7 +12,7 @@
     transition: 1s;
   }
   
-  .profile-avatar {
+  .profile_avatar {
     display: block;
     width: 150px;
     height: 150px;
@@ -21,7 +21,7 @@
     margin-bottom: 10px;
   }
   
-  .profile-badge {
+  .profile_badge {
     position: absolute;
     top: 100px;
     left: 100px;
@@ -32,49 +32,49 @@
     border-radius: 50%;
   }
   
-  .profile-fullName {
+  .profile_fullName {
     font-size: 20px;
     font-weight: 600;
     color: #585866;
   }
   
-  .profile-username {
+  .profile_username {
     font-size: 13px;
     opacity: .8;
     margin-bottom: 15px;
   }
   
-  .profile-bio {
+  .profile_bio {
     font-size: 15px;
     color: #9099a4;
     margin-bottom: 10px;
   }
   
-  .profile-list {
+  .profile_list {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
   }
   
-  .profile-list li {
+  .profile_list li {
     font-size: 14px;
     color: #585866;
     margin-bottom: 5px;
   }
   
-  .profile-list i {
+  .profile_list i {
     display: inline-block;
     width: 20px;
     text-align: left;
   }
   
-  .profile-list span {
+  .profile_list span {
     opacity: .8;
   }
   
-  .profile-interaction-follow,
-  .profile-interaction-message {
+  .profile_interaction_follow,
+  .profile_interaction_message {
     padding: 7px 20px;
     font-size: 12px;
     font-weight: 600;
@@ -83,17 +83,17 @@
     cursor: pointer;
   }
   
-  .profile-interaction-follow {
+  .profile_interaction_follow {
     background: linear-gradient(to right, var(--theme-a), var(--theme-b));
     color: #fff;
   }
   
-  .profile-interaction-message {
+  .profile_interaction_message {
     color: var(--color);
     background-color: #ebebeb;
   }
   
-  .profile-right {
+  .profile_right {
     position: fixed;
     left: 60%;
     top: 10%;
@@ -105,7 +105,7 @@
     border-radius: 10px;
   }
   
-  .profile-right-avatar {
+  .profile_right-avatar {
     position: relative;
     top: 50%;
     left: 0;
@@ -115,25 +115,25 @@
     background-color: var(--background);
   }
   
-  .profile-right-basic {
+  .profile_right-basic {
     position: absolute;
     left: 150px;
     top: 50%;
     transform: translate(0, -50%);
   }
   
-  .profile-right-fullName {
+  .profile_right-fullName {
     font-size: 20px;
     font-weight: 600;
   }
   
-  .profile-right-username {
+  .profile_right-username {
     font-size: 13px;
     margin-bottom: 10px;
     opacity: .5;
   }
   
-  .profile-right-basic button {
+  .profile_right-basic button {
     display: inline-block;
     padding: 7px 20px;
     border-radius: 100px;
@@ -144,12 +144,12 @@
     cursor: pointer;
   }
   
-  .profile-right-followToggle {
+  .profile_right-followToggle {
     color: #fff;
     background: linear-gradient(to right, var(--theme-a), var(--theme-b))
   }
   
-  .profile-right-message {
+  .profile_right-message {
     color: var(--color);
     background-color: var(--background);
   }
