@@ -142,9 +142,11 @@
 }
 
 .feed_search {
-  display: block;
-  padding: 12px;
+  position: relative;
   background-color: saddlebrown;
+  margin-bottom: 10px;
+  padding: 12px;
+  display: none;
 }
 
 /* Responsive */
