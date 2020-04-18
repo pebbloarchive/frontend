@@ -62,7 +62,7 @@ const Page = () => {
               value={password2}
               onChange={(change) => { setPassword2(change.target.value) }}
             />
-            <div className="lr_signin">
+            <div className={styles.lr_signin}>
               <input type="submit" value="Create"/>
             </div>
           </form>

@@ -200,7 +200,29 @@
     display: none;
   }
 
+  .lr {
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+  }
+
   .lr_content {
-    left: 0;
+    width: 100%;
+  }
+
+  .lr_form input {
+    width: 100%;
+  }
+
+  .lr_signup {
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .lr_signup span {
+    font-size: 20px;
   }
 }
