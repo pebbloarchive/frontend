@@ -7,6 +7,7 @@
   background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to bottom right, var(--theme-a), var(--theme-b));
   background-size: 300%;
   background-repeat: no-repeat;
+  background-position: bottom;
   color: #fff;
 }
 
@@ -211,7 +212,7 @@
   }
 
   .lr_form input {
-    width: 100%;
+    width: 130%;
   }
 
   .lr_signup {
@@ -219,10 +220,10 @@
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .lr_signup span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
