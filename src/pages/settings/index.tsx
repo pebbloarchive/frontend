@@ -24,7 +24,7 @@ const Page = () => {
 
                 <div className={`${styles.settings_account} ${styles.settings_medium_box} `}>
                     <div className={styles.settings_account_avatar}>
-                        <img src="" alt="" />
+                        <img src="https://cdn.discordapp.com/avatars/215302985826304010/54c15631503fc334afae01bd91fe6c3a.png?size=1024" alt="" />
                     </div>
                         <div className={styles.settings_account_info}>
                             <form>
@@ -38,7 +38,8 @@ const Page = () => {
                                 id="username"
                                 autoComplete="false"
                                 autoCapitalize="false"
-                                placeholder={username}
+                                placeholder="Required"
+                                value={username}
                             />
                             <h1 className={styles.settings_account_title}>Email</h1>
                             <input
@@ -47,9 +48,9 @@ const Page = () => {
                                 name="email"
                                 id="email"
                                 autoComplete="false"
-                                placeholder={email}
+                                placeholder="Required"
                             />
-                            <h1 className={styles.settings_account_title}>Password *</h1>
+                            <h1 className={styles.settings_account_title}>Password</h1>
                             <input
                                 className={styles.settings_account_input}
                                 minLength={9}
@@ -57,7 +58,7 @@ const Page = () => {
                                 name="password"
                                 id="password"
                                 autoComplete="false"
-                                placeholder="password"
+                                placeholder="Required"
                                 required
                             />
                             <hr/>

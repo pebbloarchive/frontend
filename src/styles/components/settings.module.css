@@ -26,7 +26,7 @@
   margin-top: 70px;
 }
 
-.settings_full-box {
+.settings_full_box {
   position: relative;
   top: 20px;
   left: 0;
@@ -34,7 +34,7 @@
   padding: 30px;
 }
 
-.settings_medium-box {
+.settings_medium_box {
   position: relative;
   top: 20px;
   left: 0;
@@ -78,6 +78,8 @@
   display: inline-block;
   width: 150px;
   height: 150px;
+  background-color: var(--background);
+  border-radius: 50%;
 }
 
 .settings_account_avatar img {
@@ -99,7 +101,7 @@
   font-weight: 600;
 }
 
-.settings_account_info textarea,.settings_account_input {
+.settings_account_info textarea, .settings_account_input {
   width: 100%;
   padding: 10px 12px;
   border-radius: 5px;
@@ -167,4 +169,38 @@
 
 .settings_item p {
   font-size: 13px;
+}
+
+@media only screen and (max-width:1000px) {
+  .settings {
+    left: 0;
+    width: 100%;
+  }
+
+  .settings_content {
+    top: 2%;
+    margin-bottom: 20%;
+  }
+
+  .settings_title {
+    margin-bottom: 20px;
+  }
+
+  .settings_medium_box,
+  .settings_full_box {
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .settings_account_avatar {
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .settings_account_info {
+    margin: 0;
+    width: 90%;
+  }
 }
