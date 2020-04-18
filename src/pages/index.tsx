@@ -6,25 +6,6 @@ import { usePulse } from 'pulse-framework';
 import styles from '../styles/components/landing.module.css';
 
 export default () => {
-  const landingLogin = () => {
-    let x = document.getElementById("landingBtn");
-    let y = document.getElementById("loginImage");
-    let z = document.getElementById("landingLogin");
-    
-        if (x.style.borderRadius === "50%", x.style.transform === "rotate(0deg)",
-            y.style.transform === "rotate(0deg)",z.style.top === "-100px") {
-
-            x.style.borderRadius = "5px 50% 50%"
-            x.style.transform = "rotate(-45deg)"
-            y.style.transform = "rotate(45deg)"
-            z.style.top = "0px"
-        } else {
-            x.style.borderRadius = "50%"
-            x.style.transform = "rotate(0)"
-            y.style.transform = "rotate(0deg)"
-            z.style.top = "-100px"
-      }
-  }
   const [logged] = usePulse(Account.isUserLoggedIn);
   if (logged && process.browser) Router.replace('/explore');
   const [email, setEmail] = useState(undefined);
@@ -51,9 +32,9 @@ export default () => {
           <span><img src="images/play.png" alt="" /></span>
           </a>
         </div>
-        <button onClick={landingLogin} className={styles.landing_login} id={styles.landingBtn}>
+        {/* <button onClick={landingLogin} className={styles.landing_login} id={styles.landingBtn}>
         <img src="images/user.png" alt="" id={styles.loginImage} />
-        </button>
+        </button> */}
         <form className={styles.landing_loginContent} id={styles.landingLogin} onSubmit={doLogin}>
         <input
             type="email"
