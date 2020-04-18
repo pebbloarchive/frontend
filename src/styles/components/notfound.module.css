@@ -48,16 +48,20 @@
   .notFound {
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 50%;
-    text-align: center;
+    width: 70%;
+  }
+
+  .notFound h1 {
+    font-size: 30px;
   }
 
   .notFound_text {
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 0;
+    top: 20%;
+    transform: translate(0) rotate(10deg);
     width: 100%;
     text-align: center;
-    font-size: 200px;
+    font-size: 160px;
     opacity: .050;
   }
 }
