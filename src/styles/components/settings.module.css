@@ -127,6 +127,11 @@
   font-weight: 600;
 }
 
+.settings_account_logout {
+  display: block;
+  text-align: right;
+}
+
 .settings_grid {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(100px,1fr));

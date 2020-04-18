@@ -80,6 +80,7 @@ const Page = () => {
                              placeholder="Bio"
                              />
                             <button className={styles.settings_account_button} type="submit">Save</button>
+                            <a className={styles.settings_account_logout} href="/logout">Logout</a>
                             </form>
                         </div>
                     </div>

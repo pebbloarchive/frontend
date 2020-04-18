@@ -27,7 +27,7 @@ export default () => {
           <h1 className={styles.landing_content_title}>Share your story with the world</h1>
           <hr/>
           <p className={styles.landing_content_message}>Attracting people from around the world together to share stories, meet new friends and have a laugh.</p>
-          <a href="" className={styles.landing_getStarted}>Get Started</a>
+          <a href="/create" className={styles.landing_getStarted}>Get Started</a>
           <a href="" className={styles.landing_whyPebblo}>Why Pebblo?
           <span><img src="images/play.png" alt="" /></span>
           </a>

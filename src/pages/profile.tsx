@@ -19,11 +19,11 @@ const Page = () => {
   return (
     <>
       <Profile/>
+      <Nav />
       <div className={styles.feed}>
       <Head>
         <title>Pebblo Profile</title>
       </Head>
-      <Nav />
         {
           followingPosts.map((post) => {
             return (
@@ -35,5 +35,4 @@ const Page = () => {
     </>
   )
 }
-
 export default Page;
