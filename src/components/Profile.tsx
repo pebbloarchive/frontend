@@ -8,6 +8,7 @@ const profile = () => {
                 <span></span>
                 <span></span>
             </div>
+            
                 <div className={styles.profile_basic}>
                     <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt="" className={styles.profile_avatar} />
                     <h1 className={styles.profile_fullName}>Kyle</h1>

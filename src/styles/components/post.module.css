@@ -141,6 +141,12 @@
   margin-left: 5px;
 }
 
+.feed_search {
+  display: block;
+  padding: 12px;
+  background-color: saddlebrown;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1000px) {

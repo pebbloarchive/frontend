@@ -214,6 +214,7 @@
   .landing_whyPebblo {
     display: block;
     color: white;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 20px 0;
   }
 }
