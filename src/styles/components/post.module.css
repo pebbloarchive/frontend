@@ -176,10 +176,6 @@
     transform: translate(-50%);
   }
 
-  .feed_profile {
-    margin-bottom: 30px;
-  }
-
   .feed_image {
     width: 99%;
     position: relative;

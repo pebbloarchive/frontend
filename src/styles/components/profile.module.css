@@ -12,6 +12,25 @@
   transition: 1s;
 }
 
+.profile_menu {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  height: 30px;
+  width: 10px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.profile_menu span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #555555;
+  margin-bottom: 3px;
+  border-radius: 50%;
+}
+
 .profile_avatar {
   display: block;
   width: 150px;
@@ -164,5 +183,16 @@
     height: auto;
     padding-bottom: 50px;
     margin-bottom: 50px;
+  }
+
+  .profile_menu {
+    right: 0;
+    width: 1px;
+  }
+
+  .profile_menu span {
+    width: 5px;
+    height: 5px;
+    margin-bottom: 5px;
   }
 }
