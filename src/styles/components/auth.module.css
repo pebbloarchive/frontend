@@ -192,3 +192,15 @@
 .logout_2:hover {
 	background-color: #ce6f6f;
 }
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+  .lr_sidebar {
+    display: none;
+  }
+
+  .lr_content {
+    left: 0;
+  }
+}

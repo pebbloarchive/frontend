@@ -180,14 +180,16 @@
     top: 50%;
     left: 50%;
     width: 80%;
-    height: 90%;
+    height: 60%;
     transform: translate(-50%,-50%);
   }
 
   .landing_content hr {
     opacity: 0;
-    height: 50%;
+    position: relative;
+    height: 10%;
     margin: 0;
+    border-radius: 0;
   }
 
   .landing_content_title {
