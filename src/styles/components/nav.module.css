@@ -1,6 +1,6 @@
 .navigation {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 7%;
   height: 100%;
@@ -53,11 +53,46 @@
   width: 30px;
   height: 30px;
   filter: invert(100%);
-  opacity: .6;
+  opacity: .8;
   transition: .3s;
 }
 
 .navigation_content a:hover img {
   opacity: .8;
   transform: scale(1.1);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+  .navigation {
+    height: 52px;
+    width: 101%;
+    background: linear-gradient(to right, var(--theme-a), var(--theme-b));
+  }
+
+  .navigation_icon {
+    display: none;
+  }
+
+  .navigation_content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-110%);
+  }
+
+  .navigation_content a {
+    display: inline-block;
+    height: 100%;
+    width: 25%;
+  }
+
+  .navigation_content img {
+    width: 30px;
+    height: 30px;
+  }
 }
