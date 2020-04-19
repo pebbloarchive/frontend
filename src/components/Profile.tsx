@@ -13,8 +13,6 @@ class Profile extends React.Component {
     render() {
         return (
             <div className={styles.profile} id={styles.profilefade} onClick={() => {
-                // this.profile = `div.${styles.profile_menuContent}`;
-                console.log(this.profile)
                 const wrapper = this.profile.current;
                 if(wrapper.style.display === "none") {
                     wrapper.style.display = "block";

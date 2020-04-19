@@ -12,7 +12,7 @@ PostCollection.compute((post) => {
   return post;
 })
 
-const formatDate = (stringDate: any) => {
+const formatDate = (stringDate) => {
   const date = new Date();
   const givenDate = new Date(stringDate);
   const differenceMs = date.getTime() - givenDate.getTime();
@@ -24,16 +24,16 @@ const formatDate = (stringDate: any) => {
       return `now`;
 
   if (differenceMinutes < 1)
-      return `${Math.floor(differenceSeconds)}s`;
+      return `${Math.floor(differenceSeconds)} ${Math.floor(differenceSeconds) === 1 ? 'second' : 'seconds'} ago`;
   
   if (differenceHours < 1)
-      return `${Math.floor(differenceMinutes)}m`;
+      return `${Math.floor(differenceMinutes)} ${Math.floor(differenceMinutes) === 1 ? 'minute' : 'minutes'} ago`;
 
   if (differenceHours > 24)
-      return `${givenDate.getDate()}.${givenDate.getMonth()}.`;
+      return `${new Intl.DateTimeFormat('en', { month: 'long' }).format(givenDate)} ${new Intl.DateTimeFormat('en', { day: '2-digit' }).format(givenDate)}`;
 
   if (differenceHours < 24)
-      return `${Math.floor(differenceHours)}h`;
+      return `${Math.floor(differenceHours)} ${Math.floor(differenceHours) === 1 ? 'hour' : 'hours'} ago`;
 }
 
 PostCollection.collect([
