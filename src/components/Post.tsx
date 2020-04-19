@@ -6,7 +6,7 @@ const Post = (props: PostInterface) => {
     <div className={styles.feed_post}>
       <div className={styles.feed_profile}>
         <a href="">
-          <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt="" className={styles.feed_avatar} />
+          <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt="" draggable={false} className={styles.feed_avatar} />
           <div className={styles.feed_profile_info}>
             <h1 className={styles.feed_profile_username}> { props.author.username } </h1>
             <span className={styles.feed_profile_timeStamp}>{ props.created_at }</span>

@@ -32,7 +32,7 @@ class Profile extends React.Component {
             </div>
 
                 <div className={styles.profile_basic}>
-                    <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt="" className={styles.profile_avatar} />
+                    <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt="" draggable={false} className={styles.profile_avatar} />
                     <img src="https://sike.uno/images/icon/verified-account.png" alt="" className={styles.profile_badge}/>
                     <h1 className={styles.profile_fullName}>Kyle</h1>
                     <h1 className={styles.profile_username}>@kyle</h1>
