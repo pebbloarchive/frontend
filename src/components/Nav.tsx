@@ -16,6 +16,8 @@ const Nav = () => {
           <a href="settings" title="Settings"><img src="https://quak.ovh/kGUKdDY.svg" alt="" /></a>
         </div>
       </div>
+
+      <a href="" className={styles.navigation_createPost}></a>
     </div>
   )
 }
