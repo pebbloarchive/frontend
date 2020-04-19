@@ -1,25 +1,34 @@
 import styles from '../styles/components/profile.module.css';
+import React from 'react';
 
-const profile = () => {
-    const profileMenu = () => {
-
-        var x = document.getElementById("profileContent");
-
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
+interface Profile {
+    profile: any;
+}
+class Profile extends React.Component {
+    constructor(props: any) {
+        super(props);
+            this.profile = React.createRef();
     }
-    return (
-        <div className={styles.profile} id={styles.profilefade}>
-            <div className={styles.profile_menu} onClick={profileMenu}>
+
+    render() {
+        return (
+            <div className={styles.profile} id={styles.profilefade} onClick={() => {
+                // this.profile = `div.${styles.profile_menuContent}`;
+                console.log(this.profile)
+                const wrapper = this.profile.current;
+                if(wrapper.style.display === "none") {
+                    wrapper.style.display = "block";
+                } else {
+                    wrapper.style.display = "none";
+                }
+            }}>
+            <div className={styles.profile_menu}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <div className={styles.profile_menuContent}>
+            <div className={styles.profile_menuContent} ref={this.profile}>
                 <a href="">Notifications</a>
                 <a href="" className={styles.profile_menuContent_block}>Logout</a>
             </div>
@@ -44,8 +53,9 @@ const profile = () => {
                 {/* <div className={styles.feed_search}>
                     
                 </div> */}
-        </div>
-    )
+            </div>
+        )
+    }
 }
 
-export default profile;
+export default Profile;
