@@ -53,7 +53,7 @@ textarea {
 
 ::-webkit-scrollbar {
   width: 15px;
-  height: 7px
+  height: 15px
 }
 
 ::-webkit-scrollbar-track {

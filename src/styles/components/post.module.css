@@ -159,7 +159,7 @@
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.115);
     background-color: white;
     border-radius: 30px;
-    padding: 30px 0 30px;
+    padding: 30px 0 100px;
 
     /* display: none; */
   }
@@ -171,7 +171,7 @@
     border-radius: 0;
     border: none;
     padding: 30px 0;
-    border-bottom: solid 1px #dbdbdb;
+    border-bottom: solid 1px #f3f3f3;
   }
 
   .feed_profile,
