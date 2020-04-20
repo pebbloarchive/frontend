@@ -17,14 +17,17 @@ const Explore = () => {
             </div>
 
             <div className={styles.explore_categories}>
-                <a href="explore" className={styles.explore_categories_box}>
-                    <img className={styles.explore_categories_forYou_image} src="https://cdn.discordapp.com/avatars/215302985826304010/54c15631503fc334afae01bd91fe6c3a.png?size=1024" alt=""/>
-                    <span className={styles.explore_categories_forYou_title}>For you</span>
+                <a href="">
+                    <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt=""/>
+                    <span className={styles.explore_categories_forYou}>For you</span>
                 </a>
-                
-                <a href="explore" className={styles.explore_categories_box}>
-                    <img src="https://cdn.discordapp.com/attachments/596156721928470547/701603716398317658/dining-room.png" alt=""/>
-                    <span>Food</span>
+                <a href="">
+                    <img src="https://cdn.discordapp.com/attachments/596156721928470547/701605548851986522/trending.png" alt=""/>
+                    <span>Trending</span>
+                </a>
+                <a href="">
+                    <img src="https://cdn.discordapp.com/attachments/596156721928470547/701604820787658802/around-the-globe.png" alt=""/>
+                    <span>Adventure</span>
                 </a>
             </div>
         </div>
