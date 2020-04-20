@@ -19,7 +19,7 @@ const Explore = () => {
             <div className={styles.explore_categories}>
                 <a href="">
                     <img src="https://cdn.discordapp.com/avatars/583925649807245322/607c1989337e112fbe73ccee25386865.png?size=1024" alt=""/>
-                    <span className={styles.explore_categories_forYou}>For you</span>
+                    <span className={styles.explore_categories_forYou}>Following</span>
                 </a>
                 <a href="">
                     <img src="https://cdn.discordapp.com/attachments/596156721928470547/701605548851986522/trending.png" alt=""/>
@@ -28,6 +28,14 @@ const Explore = () => {
                 <a href="">
                     <img src="https://cdn.discordapp.com/attachments/596156721928470547/701604820787658802/around-the-globe.png" alt=""/>
                     <span>Adventure</span>
+                </a>
+                <a href="">
+                    <img src="https://cdn.discordapp.com/attachments/694681265693130822/701942247066828820/landscape.png" alt=""/>
+                    <span>Nature</span>
+                </a>
+                <a href="">
+                    <img src="https://cdn.discordapp.com/attachments/694681265693130822/701942500985929838/sports.png" alt=""/>
+                    <span>Sports &amp; Fitness</span>
                 </a>
             </div>
         </div>
