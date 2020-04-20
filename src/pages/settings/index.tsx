@@ -24,7 +24,7 @@ const Page = () => {
 
                 <div className={`${styles.settings_account} ${styles.settings_medium_box} `}>
                     <div className={styles.settings_account_avatar}>
-                        <img src="https://cdn.discordapp.com/avatars/215302985826304010/54c15631503fc334afae01bd91fe6c3a.png?size=1024" alt="" />
+                        <img src="https://cdn.discordapp.com/avatars/215302985826304010/54c15631503fc334afae01bd91fe6c3a.png?size=1024" draggable={false} alt="" />
                     </div>
                         <div className={styles.settings_account_info}>
                             <form>
