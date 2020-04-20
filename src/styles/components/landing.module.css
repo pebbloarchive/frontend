@@ -24,8 +24,11 @@
   left: 0;
   width: 40%;
   height: 60%;
-  background: linear-gradient(to bottom left,var(--theme-b),var(--theme-a));
+  background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to top right, var(--theme-a), var(--theme-b));
   border-bottom-right-radius: 10000%;
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
   box-shadow: 9px 9px 5px rgba(0,0,0,.11);
 }
 
@@ -167,7 +170,10 @@
     height: 101%;
     box-shadow: none;
     border-radius: 0;
-    background: linear-gradient(to bottom right,var(--theme-b),var(--theme-a));
+    background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to top left, var(--theme-a), var(--theme-b));
+    background-size: 200%;
+    background-position: bottom;
+    background-repeat: no-repeat;
     /* transform: scale(10); */
   }
 

@@ -23,7 +23,7 @@ const Page = () => {
       <div className={styles.logout}>
         <h1 className={styles.logout_title}>Log out</h1>
         <p className={styles.logout_message}>Are you sure you want to log out of <span>{ username }</span>?</p>
-        <button className={` ${styles.logout_btn} ${styles.logout_1} `}>Cancel</button>
+        <a href="explore" className={` ${styles.logout_btn} ${styles.logout_1} `}>Cancel</a>
         <button onClick={ logout } className={` ${styles.logout_btn} ${styles.logout_2} }`}>Log out</button>
       </div>
     </div>

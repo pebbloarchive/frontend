@@ -29,8 +29,9 @@ class Profile extends React.Component {
             </div>
 
             <div className={styles.profile_menuContent} ref={this.profile}>
+                <a href="">Activity</a>
                 <a href="">Notifications</a>
-                <a href="" className={styles.profile_menuContent_block}>Logout</a>
+                <a href="logout" className={styles.profile_menuContent_block}>Logout</a>
             </div>
 
                 <div className={styles.profile_basic}>

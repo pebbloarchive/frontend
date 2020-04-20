@@ -176,11 +176,13 @@
 	padding: 8px 20px;
 	font-size: 12px;
 	font-weight: 600;
-	cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .logout_1 {
-	border-radius: 5px;
+  border-radius: 5px;
+  color: var(--color);
 }
 
 .logout_2 {
