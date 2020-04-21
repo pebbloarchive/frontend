@@ -37,6 +37,10 @@ const Explore = () => {
                     <img src="https://cdn.discordapp.com/attachments/694681265693130822/701942500985929838/sports.png" alt=""/>
                     <span>Sports &amp; Fitness</span>
                 </a>
+                
+                <a className={styles.explore_categories_sortCategory}>
+                    <img src="https://cdn.discordapp.com/attachments/596156721928470547/701625527005478912/plus.png" alt=""/>
+                </a>
             </div>
         </div>
     )
