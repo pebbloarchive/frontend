@@ -4,6 +4,7 @@ import { Account } from '../core';
 import { Log } from '../utils';
 import { usePulse } from 'pulse-framework';
 import styles from '../styles/components/landing.module.css';
+import Topnav from '../components/Topnav';
 
 export default () => {
   const [logged] = usePulse(Account.isUserLoggedIn);
@@ -28,9 +29,11 @@ export default () => {
           <hr/>
           <p className={styles.landing_content_message}>Attracting people from around the world together to share stories, meet new friends and have a laugh.</p>
           <a href="/create" className={styles.landing_getStarted}>Get Started</a>
-          <a href="" className={styles.landing_whyPebblo}>Why Pebblo?
+
+          <a href="/why-pebblo" className={styles.landing_whyPebblo}>Why Pebblo?
           <span><img src="images/play.png" alt="" /></span>
           </a>
+          
         </div>
         {/* <button onClick={landingLogin} className={styles.landing_login} id={styles.landingBtn}>
         <img src="images/user.png" alt="" id={styles.loginImage} />
