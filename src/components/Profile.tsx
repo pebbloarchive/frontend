@@ -42,8 +42,8 @@ class Profile extends React.Component {
                         {/* <li><i className="far fa-clock">joined on <span>December, 2019</span></i></li> */}
                     </ul>
                     <div className={styles.profile_interaction}>
-                        <a className={styles.profile_interaction_follow}>Edit</a>
-                        <a className={styles.profile_interaction_message}>Create Post</a>
+                        <a href="/settings" className={styles.profile_interaction_follow}>Settings</a> {/* somehow make it remove the link? idk */}
+                        <a className={styles.profile_interaction_message}>Messages</a>
                         {/* <a href="settings" className={styles.profile_interaction_follow}>Edit Account</a> */}
                         {/* <a className={styles.profile_interaction_message}>Message</a> */}
                     </div>

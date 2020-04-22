@@ -12,9 +12,9 @@ const Nav = () => {
         <div className={styles.navigation_links}>
           <a href="profile" title="Profile"><img src="https://quak.ovh/44fw8G1.png" draggable={false} alt="" /></a>
           {/* <a href="library" title="Library"><img src="https://quak.ovh/9CTKBHB.png" alt="" /></a> */}
-          <a href="message" title="Messages"><img src="https://cdn.discordapp.com/attachments/596156721928470547/701295179297980466/chat-bubble.png" draggable={false} alt="" /></a>
           <a href="explore" title="Explore"><img src="https://cdn.discordapp.com/attachments/596156721928470547/701294239463637002/compass.png" draggable={false} alt="" /></a>
-          <a href="settings" title="Settings"><img src="https://quak.ovh/kGUKdDY.svg" draggable={false} alt="" /></a>
+          <a href="notifications" title="Notifications"><img src="https://cdn.discordapp.com/attachments/637859135970607131/702396304046817390/notifications.png" draggable={false} alt="" /></a>
+          <a href="messages" title="Messages"><img src="https://cdn.discordapp.com/attachments/596156721928470547/701295179297980466/chat-bubble.png" draggable={false} alt="" /></a> {/* https://quak.ovh/kGUKdDY.svg */}
         </div>
       </div>
 

@@ -1,6 +1,6 @@
-import styles from '../styles/components/explore.module.css';
+import styles from '../styles/components/categories.module.css';
 
-const Explore = () => {
+const Explorenav = () => {
     return (
         <div className={styles.explore}>
             <div className={styles.explore_topBar}>
@@ -46,4 +46,4 @@ const Explore = () => {
     )
 }
 
-export default Explore;
+export default Explorenav;

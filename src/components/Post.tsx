@@ -18,6 +18,16 @@ const Post = (props: PostInterface) => {
       </p>
       {/* you forgot images by the way - Andre */}
             {/* <img className={styles.feed_image} src="https://cdn.discordapp.com/attachments/667293886468718592/701025255573159946/unknown.png" alt=""/> */}
+      <div className={styles.feed_interaction}>
+        <button>
+          <img src="https://cdn.discordapp.com/attachments/637859135970607131/702393487378874398/heart-filled.png" alt=""/>
+          <span>[count]</span>
+        </button>
+        <button>
+          <img src="https://cdn.discordapp.com/attachments/637859135970607131/702394541419790338/speech-bubble.png" alt=""/>
+          <span>[count]</span>
+        </button>
+      </div>
     </div>
   )
 }

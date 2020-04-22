@@ -1,5 +1,5 @@
 import Nav from '../components/Nav';
-import Explore from '../components/Explore';
+import Categories from '../components/Categories';
 import Router from 'next/router'
 import { Account } from '../core';
 import { Log } from '../utils';
@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <div>
       <Nav />
-      <Explore />
+      <Categories />
     </div>
   )
 }
