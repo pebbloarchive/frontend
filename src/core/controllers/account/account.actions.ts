@@ -7,7 +7,7 @@ import Api from '../../api/api.service';
 import { Auth } from '../../interfaces/account.interfaces';
 import { resetState } from 'pulse-framework';
 import Router from 'next/router';
-import { info, success } from '../../../utils/alert';
+import { toast } from 'react-toastify';
 
 export const LogUserIn = (payload: Auth) => {
   AccountData.email.set(payload.account.email);
@@ -29,12 +29,11 @@ export const Login = async (email: string, password: string): Promise<{
     if (user.error) throw user.message || user.error;
     LogUserIn(user);
     Parent.isUserLoggedIn.set(true);
-    success('Successfully logging in');
     return {
       success: true
     };
   } catch (error) {
-    info(error);
+    toast.error(error.toString());
     return {
       success: false,
       error
@@ -56,6 +55,7 @@ export const Register = async (username: string, email: string, password: string
       success: true
     };
   } catch (error) {
+    toast.error(error.toString());
     return {
       success: false,
       error

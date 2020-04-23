@@ -1,5 +1,5 @@
 import Nav from '../../../components/Nav';
-import Userpost from '../../../components/Userpost';
+import UserPost from '../../../components/UserPosts';
 import Router from 'next/router'
 import { Account } from '../../../core';
 import { Log } from '../../../utils';
@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <>
       <Nav />
-      <Userpost />
+      <UserPost />
     </>
   )
 }

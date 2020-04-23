@@ -5,6 +5,7 @@ import { Account } from '../core';
 import { Log } from '../utils';
 import { usePulse } from 'pulse-framework';
 import Head from 'next/head';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import styles from '../styles/components/auth.module.css';
 
 const Page = () => {
@@ -20,7 +21,7 @@ const Page = () => {
     if (!password) return;
     const logged = await Account.register(username, email, password, password2);
     Log('Application', 'Logging in');
-    if (logged.success) return Router.push('/explore');
+    if (logged.success) return await Account.login(email, password) && Router.push('/explore');
   }
   return (
     <>
