@@ -77,10 +77,10 @@
 .feed_profile_timeStamp {
   font-size: 10px;
   display: block;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 19%;
+  width: 19%; */
 }
 
 .feed_dropdown {
