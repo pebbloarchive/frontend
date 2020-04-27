@@ -1,4 +1,4 @@
-import { login, register } from '../../api/routes/account.routes';
+import { login, register, user } from '../../api/routes/account.routes';
 import { Log } from '../../../utils';
 import { AccountData } from './account.state';
 import Parent from '.';
@@ -14,10 +14,6 @@ export const LogUserIn = (payload: Auth) => {
   AccountData.id.set(payload.account.id);
   AccountData.username.set(payload.account.username);
   AccountData.token.set(payload.token);
-  Api.config.options.headers = {
-    ...Api.config.options.headers,
-    Authorization: `Bearer: ${payload.token}`
-  } 
 }
 
 export const Login = async (email: string, password: string): Promise<{
@@ -51,12 +47,34 @@ export const Register = async (username: string, email: string, password: string
     if (user.error) throw user.message || user.error;
     LogUserIn(user);
     Parent.isUserLoggedIn.set(true);
+    toast.success(user.message);
     return {
       success: true
     };
   } catch (error) {
+    console.log(error)
+    console.log(error.message)
     toast.error(error.toString());
     return {
+      success: false,
+      error
+    };
+  }
+}
+
+export const getUser = async (id: string): Promise<{
+  success: boolean;
+  error?: object;
+}> => {
+  try {
+    const payload = await user(id);
+    if (payload.error) throw payload.message || payload.error;
+    return {
+      success: true
+    }
+  } catch(error) {
+  toast.error(error.toString());
+  return {
       success: false,
       error
     };

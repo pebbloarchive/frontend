@@ -7,4 +7,4 @@ const Page = () => {
   return ( <p>{slug}</p> )
 }
 
-export default Page;
+export default Page; // oh hi there

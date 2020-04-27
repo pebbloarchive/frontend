@@ -2,10 +2,10 @@ import { App } from '../pulse';
 import { Log } from '../../utils';
 
 const ApiInstance = App.API({
-  baseURL: `https://dev-api.pebblo.org/v1`,
+  baseURL: `http://localhost:3000/v1`,
   options: {
     headers: {
-      ['Content-Type']: 'application/json',
+      ['content-type']: 'application/json',
     }
   }
 })
