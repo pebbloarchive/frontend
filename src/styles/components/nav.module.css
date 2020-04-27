@@ -51,16 +51,28 @@
 }
 
 .navigation_content img {
-  width: 30px;
-  height: 30px;
-  filter: invert(100%);
+  width: 25px;
+  height: 25px;
+  filter: invert(100%) grayscale(100%);
   opacity: .8;
+  padding: 12px;
+  border-radius: 50%;
   transition: .3s;
+
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 .navigation_content a:hover img {
   opacity: .8;
   transform: scale(1.1);
+}
+
+.navigation_profile img {
+  filter: none !important;
+  background-color: rgba(255, 255, 255, 0.177);
+  padding: 0;
+  width: 42px;
+  height: 42px;
 }
 
 .navigation_createPost {
@@ -114,12 +126,20 @@
   }
 
   .navigation_content a {
-    display: inline-block;
+    float: right;
+    /* display: inline-block; */
     height: 100%;
     width: 25%;
   }
 
   .navigation_content img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navigation_profile img {
     width: 30px;
     height: 30px;
   }
