@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Nav from '../../components/Nav';
+import Nav from '../../components/navbar';
 import Router from 'next/router'
 import { Account } from '../../core';
 import { AccountData } from '../../core/controllers/account/account.state';

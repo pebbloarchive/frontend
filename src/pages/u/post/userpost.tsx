@@ -1,5 +1,5 @@
-import Nav from '../../../components/Nav';
-import UserPost from '../../../components/UserPosts';
+import Nav from '../../../components/navbar';
+import UserPost from '../../../components/userpost';
 import Router from 'next/router'
 import { Account } from '../../../core';
 import { Log } from '../../../utils';

@@ -1,5 +1,5 @@
-import Nav from '../components/Nav';
-import MsgNav from '../components/messagebar';
+import Nav from '../components/navbar';
+import MsgNav from '../components/messagenavbar';
 import Router from 'next/router'
 import { Account } from '../core';
 import { Log } from '../utils';
