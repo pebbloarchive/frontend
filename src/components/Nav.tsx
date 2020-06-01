@@ -1,28 +1,62 @@
-import styles from '../styles/components/nav.module.css';
+import styles from '../styles/components/topnav.module.css';
 
-const Nav = () => {
-  return (
-    <div className={styles.navigation}>
-      <a className={styles.navigation_icon}>
-        <span style={{ width: '100%' }}></span>
-        <span style={{ width: '70%' }}></span>
-        <span style={{ width: '50%' }}></span>
-      </a>
-      <div className={styles.navigation_content}>
-        <div className={styles.navigation_links}>
-          <a href="profile" title="Profile" className={styles.navigation_profile}><img src="https://cdn.discordapp.com/avatars/215302985826304010/54c15631503fc334afae01bd91fe6c3a.png?size=1024" draggable={false} alt="" /></a>
-          {/* <a href="library" title="Library"><img src="https://quak.ovh/9CTKBHB.png" alt="" /></a> */}
-          <a href="explore" title="Explore"><img src="https://cdn.discordapp.com/attachments/596156721928470547/703106144591151215/search.png" draggable={false} alt="" /></a>
-          <a href="notifications" title="Notifications"><img src="https://cdn.discordapp.com/attachments/596156721928470547/703106874073022474/melting-heart.png" draggable={false} alt="" /></a>
-          <a href="messages" title="Messages"><img src="https://cdn.discordapp.com/attachments/596156721928470547/703107939925491752/speech-bubble.png" draggable={false} alt="" /></a> {/* https://quak.ovh/kGUKdDY.svg */}
+const Topnav = () => {
+    return (
+        <div className={styles.nav}>
+
+            <div className={styles.nav_profile}>
+                <img src="https://cdn.discordapp.com/avatars/215302985826304010/fbcf44a65980ab1542eaaaf8fe636272.png?size=1024" alt=""
+                className={styles.nav_avatar}
+                />
+                    <div className={styles.nav_info}>
+                        <h1 className={styles.nav_displayName}>Andrea Lewis
+                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/716563875352543282/verified.png" alt=""/>
+                        </h1>
+                        <h1 className={styles.nav_username}>andrea</h1>
+                            <div className={styles.nav_stats}>
+                                <a href="">
+                                    <span>0</span>
+                                    Followers
+                                </a>
+                                <a href="">
+                                    <span>0</span>
+                                    Following
+                                </a>
+                            </div>
+                    </div>
+                
+            </div>
+
+                <div className={styles.nav_pages}>
+                    <a href="profile">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
+                        <span>Feed</span></a>
+                    <a href="explore">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>
+                        <span>Explore</span></a>
+                    <a href="messages">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530868629536808/messages.png" alt=""/>
+                        <span>Messages</span></a>
+                    <a href="acitivity">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
+                        <span>Activity</span></a>
+                    <a href="settings">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>
+                        <span>Settings</span></a>
+                    <a href="app">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716577640273805312/infinate.png" alt=""/>
+                        Browse Pebblo
+                    </a>
+                </div>
+
+                <div className={styles.topbar_right}>
+                    <a href="upload" className={styles.topbar_create}>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716567464246509598/plus.png" alt=""/>
+                        <span>Create post</span></a>
+                </div>
+
         </div>
-      </div>
-
-      <a href="" className={styles.navigation_createPost}>
-        <div className={styles.navigation_createPost_image}></div>
-      </a>
-    </div>
-  )
+    )
 }
 
-export default Nav;
+export default Topnav;

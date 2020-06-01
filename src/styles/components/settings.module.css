@@ -1,211 +1,92 @@
 .settings {
   position: absolute;
-  top: 0;
-  left: 7%;
-  width: 93%;
-  height: 100%;
+  top: 100px;
+  left: 20%;
+  width: 80%;
 }
 
-.settings_content {
-  position: absolute;
-  top: 5%;
+.settings_tabs {
+  position: relative;
+  width: 86%;
   left: 50%;
   transform: translate(-50%);
-  width: 90%;
-  margin-bottom: 5%;
+  margin: 30px 0 0;
+  padding-bottom: 20px;
+  border-bottom: solid 2px #efefef;
+}
+
+.settings_tabs a {
+  color: var(--color);
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 15px;
+  padding: 0 0 10px;
+  opacity: .7;
+}
+
+.settings_tabs a:hover {
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  top: 200px;
+  left: 25.6%;
+  width: 68.7%;
 }
 
 .settings_title {
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.settings_subtitle {
+  display: block;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 70px;
+  margin-bottom: 30px;
 }
 
-.settings_full_box {
-  position: relative;
-  top: 20px;
-  left: 0;
-  width: 85%;
-  padding: 30px;
+.avatar {
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
-.settings_medium_box {
-  position: relative;
-  top: 20px;
-  left: 0;
-  width: 50%;
-  padding: 30px;
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.settings_unverified {
-  margin-bottom: 20px;
-  background-color: #f0a331;
-  color: #fff;
-  border-radius: 5px;
-}
-
-.settings_unverified p {
-  font-size: 20px;
-  padding-bottom: 20px;
-}
-
-.settings_unverified button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #f0a331;
-  font-weight: 600;
-  font-size: 14px;
+.avatar button {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 50%;
+  background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/716622333711876156/camera.png);
+  background-position: center;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer;
   transition: .3s;
 }
 
-.settings_unverified button:active {
-  opacity: .8;
+.avatar:hover button {
+  opacity: .3;
 }
 
-.settings_account {
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.settings_account_avatar {
-  position: absolute;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  background-color: var(--background);
-  border-radius: 50%;
-}
-
-.settings_account_avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.settings_account_info {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin-left: 200px;
-  width: 55%;
-}
-
-.settings_account_title {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.settings_account_info textarea, .settings_account_input {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 5px;
-  margin: 10px 0 20px;
+.account input {
   display: block;
-  background-color: #fafafa;
+  width: 40%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #f8f8f8;
   font-size: 14px;
-  color: #353434;
 }
 
-.settings_account_info hr {
-  opacity: 0;
-  margin: 30px 0;
-}
-
-.settings_account_button {
-  display: inline-block;
-  padding: 8px 20px;
-  background: linear-gradient(to right,var(--theme-a),var(--theme-b));
-  border-radius: 100px;
-  color: #fff;
+.account h1 {
   font-size: 14px;
   font-weight: 600;
-}
-
-.settings_account_logout {
-  display: block;
-  text-align: right;
-}
-
-.settings_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-  grid-auto-rows: minmax(100px,auto);
-  grid-auto-flow: dense;
-  padding: 0;
-}
-
-.settings_item {
-  padding: 1rem;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #fff;
-  cursor: pointer;
-  text-align: left;
-  transition: .1s;
-  transform: scale(.98);
-}
-
-.settings_item:hover {
-  transform: scale(1);
-}
-
-.settings_item:active, .settings_item:focus {
-  transform: scale(1);
-  background-color: #57be84;
-  color: #fff;
-}
-
-.settings_item_1 {
-  grid-column-end: span 3;
-  grid-row-end: span 1;
-}
-
-.settings_item h1 {
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.settings_item p {
-  font-size: 13px;
-}
-
-@media only screen and (max-width:1000px) {
-  .settings {
-    left: 0;
-    width: 100%;
-  }
-
-  .settings_content {
-    top: 2%;
-    margin-bottom: 20%;
-  }
-
-  .settings_title {
-    margin-bottom: 20px;
-  }
-
-  .settings_medium_box,
-  .settings_full_box {
-    width: 80%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  .settings_account_avatar {
-    display: block;
-    position: relative;
-    margin-bottom: 30px;
-  }
-
-  .settings_account_info {
-    margin: 0;
-    width: 90%;
-  }
 }

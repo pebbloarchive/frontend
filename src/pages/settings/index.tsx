@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Nav from '../../components/Nav';
+import Settings from '../../components/Settings';
+import Accountsetting from '../../components/settings/Account';
 import Router from 'next/router'
 import { Account } from '../../core';
 import { AccountData } from '../../core/controllers/account/account.state';
@@ -18,7 +20,10 @@ const Page = () => {
             <title>Pebblo Settings</title>
         </Head>
         <Nav />
-        <div className={styles.settings}>
+        <Settings />
+        <Accountsetting />
+
+        {/* <div className={styles.settings}>
             <div className={styles.settings_content}>
                 <h1 className={styles.settings_title}>My Account</h1>
 
@@ -97,7 +102,7 @@ const Page = () => {
                     </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

@@ -6,6 +6,9 @@
   width: 45%;
   height: 500px;
   transition: 1s;
+
+  display: none;
+  /* hide content on /profile */
 }
 
 .feed_nopost {

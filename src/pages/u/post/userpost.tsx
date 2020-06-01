@@ -1,5 +1,6 @@
 import Nav from '../../../components/Nav';
 import UserPost from '../../../components/UserPosts';
+import PostComment from '../../../components/PostsComments';
 import Router from 'next/router'
 import { Account } from '../../../core';
 import { Log } from '../../../utils';
@@ -14,6 +15,7 @@ const Page = () => {
     <>
       <Nav />
       <UserPost />
+      {/* <PostComment /> */}
     </>
   )
 }
