@@ -14,9 +14,6 @@ class Profile extends React.Component {
     
     render() {
         return (
-<<<<<<< HEAD:src/components/Profile.tsx
-            <h1></h1>
-=======
             <div className={styles.profile} id={styles.profilefade}>
             <div className={styles.profile_menu} onClick={() => {
                 const wrapper = this.profile.current;
@@ -58,7 +55,6 @@ class Profile extends React.Component {
                     
                 </div> */}
             </div>
->>>>>>> a7894d53d94a500cfb472f542d35c640f39ecd63:src/components/profiles.tsx
         )
     }
 }
