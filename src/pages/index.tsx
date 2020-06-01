@@ -4,7 +4,11 @@ import { Account } from '../core';
 import { Log } from '../utils';
 import { usePulse } from 'pulse-framework';
 import styles from '../styles/components/landing.module.css';
+<<<<<<< HEAD
 import TopNavBar from '../components/Nav';
+=======
+import TopNavBar from '../components/topnavibar';
+>>>>>>> a7894d53d94a500cfb472f542d35c640f39ecd63
 
 export default () => {
   const [logged] = usePulse(Account.isUserLoggedIn);

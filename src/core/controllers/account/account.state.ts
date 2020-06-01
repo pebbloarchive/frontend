@@ -14,5 +14,6 @@ export const AccountCollection = App.Collection<User>({
 
 AccountCollection.collect({
   id: 'x6_0pG',
-  username: 'Kyle'
+  username: 'Kyle',
+  avatar: 'https://cdn.discordapp.com/attachments/596156721928470547/703021929300492318/images.jpeg'
 }, 'following')

@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Nav from '../components/Nav';
-import Post from '../components/Post';
-import Profile from '../components/Profile';
+import Nav from '../components/navbar';
+import Post from '../components/posts';
+import Profile from '../components/profiles';
 import Router from 'next/router'
 import { Account } from '../core';
 import { AccountData } from '../core/controllers/account/account.state';

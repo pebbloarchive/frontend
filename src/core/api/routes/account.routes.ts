@@ -1,5 +1,5 @@
 import API from '../';
-import { Auth } from '../../interfaces/account.interfaces';
+import { Auth, UserData } from '../../interfaces/account.interfaces';
 
 export const login = async (payload: {
   email: string;
@@ -13,4 +13,4 @@ export const register = async (payload: {
   password: string;
 }): Promise<Auth> => (await API.post('auth/register', payload)).data;
 
-export const user = async (id: number) => (await API.get(`users/${id}`)).data;
+export const user = async (id: string): Promise<UserData> => (await API.get(`users/${id}`)).data;
