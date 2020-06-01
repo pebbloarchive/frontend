@@ -1,12 +1,11 @@
 import Head from 'next/head';
-import Nav from '../../components/Nav';
+import Nav from '../../components/navbar';
 import Settings from '../../components/Settings';
 import Appearancesetting from '../../components/settings/Appearance';
 import Router from 'next/router'
 import { Account } from '../../core';
 import { AccountData } from '../../core/controllers/account/account.state';
 import { usePulse } from 'pulse-framework';
-import styles from '../../styles/components/settings.module.css';
 
 const Page = () => {
     const [logged] = usePulse(Account.isUserLoggedIn);

@@ -1,11 +1,7 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-import Nav from '../../components/Nav';
 import Settings from '../../components/Settings';
 import Accountsetting from '../../components/settings/Account';
-=======
 import Nav from '../../components/navbar';
->>>>>>> a7894d53d94a500cfb472f542d35c640f39ecd63
 import Router from 'next/router'
 import { Account } from '../../core';
 import { AccountData } from '../../core/controllers/account/account.state';
