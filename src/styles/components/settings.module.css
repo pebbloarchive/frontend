@@ -90,3 +90,26 @@
   font-size: 14px;
   font-weight: 600;
 }
+
+.account_inputs label {
+  display: inline-block;
+  width: 300px;
+  margin: 0 30px 30px 0
+}
+
+.account_inputs h1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: .5;
+}
+
+.account_inputs input {
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: solid 1px #dedede;
+  padding: 12px 18px;
+  width: 80%;
+  font-size: 12px;
+  font-weight: 600;
+}

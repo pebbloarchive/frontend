@@ -16,39 +16,60 @@ class Profile extends React.Component {
                 <h1 className={styles.settings_title}>My Account</h1>
 
 
-                        <div className={styles.avatar}>
-                            <img src="https://cdn.discordapp.com/avatars/215302985826304010/fbcf44a65980ab1542eaaaf8fe636272.png?size=1024" alt=""/>
-                            <button></button>
-                        </div>
+                        <form>
+                            <div className={styles.account_inputs}>
 
-                        <form className={styles.account}>
-                            <h1>Name</h1>
-                            <input
-                                type="text"
-                                name="displayName"
-                                id=""
-                                placeholder="Display name"
-                                autoComplete="off"
-                                // value="Andrea Lewis"
-                            />
-                            <h1>Username</h1>
-                            <input
-                                type="text"
-                                name="username"
-                                id=""
-                                placeholder="Required"
-                                autoComplete="off"
-                                // value="Andrea Lewis"
-                            />
-                            <h1>Email Address</h1>
-                            <input
-                                type="email"
-                                name="email"
-                                id=""
-                                placeholder="Required"
-                                autoComplete="off"
-                                // value="Andrea Lewis"
-                            />
+
+                                <label>
+                                    <h1>Display Name</h1>
+                                    <input
+                                        type="text"
+                                        name="displayName"
+                                        id="displayName"
+                                        autoComplete="off"
+                                        value="Andrea Lewis"
+                                    />
+                                </label>
+
+
+                                <label>
+                                    <h1>Email Address</h1>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        autoComplete="off"
+                                        value="andrea@example.com"
+                                    />
+                                </label>
+
+
+                                <label>
+                                    <h1>Username</h1>
+                                    <input
+                                        type="text"
+                                        name="username"
+                                        id="username"
+                                        autoComplete="off"
+                                        placeholder="Required"
+                                        value="andrea"
+                                    />
+                                </label>
+
+
+                                <label>
+                                    <h1>Password</h1>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Required"
+                                        value="thisisanexample"
+                                    />
+                                </label>
+
+
+                            </div>
                         </form>
 
 
