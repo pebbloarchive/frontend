@@ -9,10 +9,10 @@ const Topnav = () => {
                 className={styles.nav_avatar}
                 />
                     <div className={styles.nav_info}>
-                        <h1 className={styles.nav_displayName}>Andrea Lewis
+                        <h1 className={styles.nav_displayName}>Andre
                             <img src="https://cdn.discordapp.com/attachments/596156721928470547/716563875352543282/verified.png" alt=""/>
                         </h1>
-                        <h1 className={styles.nav_username}>andrea</h1>
+                        <h1 className={styles.nav_username}>andre</h1>
                             <div className={styles.nav_stats}>
                                 <a href="">
                                     <span>0</span>

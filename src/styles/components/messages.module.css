@@ -1,0 +1,12 @@
+.contacts {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    border-right: solid 1px #dddddd;
+}
+
+.contacts_top {
+    position: absolute;
+}

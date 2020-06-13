@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Nav from '../../components/navbar';
 import Settings from '../../components/Settings';
-import Connectionssetting from '../../components/settings/Connections';
+import Connectionssetting from '../../components/settings/Security';
 import Router from 'next/router'
 import { Account } from '../../core';
 import { AccountData } from '../../core/controllers/account/account.state';

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Nav from '../components/navbar';
-import Post from '../components/posts';
+import Post from '../components/feed';
 import Profile from '../components/profiles';
 import Router from 'next/router'
 import { Account } from '../core';

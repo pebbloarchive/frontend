@@ -44,40 +44,40 @@ PostCollection.collect([
     likes: 0,
     created_at: formatDate(new Date())
   },
-  {
-    id: '1aahZ2',
-    authorId: 'x6_0pG',
-    content: 'Hey guys',
-    likes: 0,
-    created_at: formatDate(new Date())
-  },
-  {
-    id: '1a3hZ3',
-    authorId: 'x6_0pG',
-    content: 'Alright I think I am getting the hang of this',
-    likes: 0,
-    created_at: formatDate(new Date())
-  },
-  {
-    id: '1ahZa',
-    authorId: 'x6_0pG',
-    content: 'Hello world',
-    likes: 0,
-    created_at: formatDate(new Date())
-  },
-  {
-    id: '1aahZ24',
-    authorId: 'x6_0pG',
-    content: 'How do I use this thing?',
-    likes: 0,
-    created_at: formatDate(new Date("04/17/2020"))
-  },
-  {
-    id: '1a3hZ3e',
-    authorId: 'x6_0pG',
-    content: 'This is my first post!',
-    likes: 0,
-    created_at: formatDate(new Date("03/25/2015"))
-  },
+    {
+      id: '1aahZ2',
+      authorId: 'x6_0pG',
+      content: 'Hey guys',
+      likes: 0,
+      created_at: formatDate(new Date())
+    },
+    // {
+    //   id: '1a3hZ3',
+    //   authorId: 'x6_0pG',
+    //   content: 'Alright I think I am getting the hang of this',
+    //   likes: 0,
+    //   created_at: formatDate(new Date())
+    // },
+    // {
+    //   id: '1ahZa',
+    //   authorId: 'x6_0pG',
+    //   content: 'Hello world',
+    //   likes: 0,
+    //   created_at: formatDate(new Date())
+    // },
+    // {
+    //   id: '1aahZ24',
+    //   authorId: 'x6_0pG',
+    //   content: 'How do I use this thing?',
+    //   likes: 0,
+    //   created_at: formatDate(new Date("04/17/2020"))
+    // },
+    // {
+    //   id: '1a3hZ3e',
+    //   authorId: 'x6_0pG',
+    //   content: 'This is my first post!',
+    //   likes: 0,
+    //   created_at: formatDate(new Date("03/25/2015"))
+    // },
   
 ], 'following');
