@@ -16,7 +16,7 @@ class Profile extends React.Component {
                 <h1 className={styles.settings_title}>Appearance</h1>
 
 
-                    <div className="appearance"></div>
+                    
 
 
             </div>

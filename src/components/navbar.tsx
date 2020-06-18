@@ -14,11 +14,11 @@ const Topnav = () => {
                         </h1>
                         <h1 className={styles.nav_username}>andre</h1>
                             <div className={styles.nav_stats}>
-                                <a href="">
+                                <a href="/profile/followers">
                                     <span>0</span>
                                     Followers
                                 </a>
-                                <a href="">
+                                <a href="/profile/following">
                                     <span>0</span>
                                     Following
                                 </a>
@@ -28,29 +28,29 @@ const Topnav = () => {
             </div>
 
                 <div className={styles.nav_pages}>
-                    <a href="profile">
+                    <a href="/profile">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                         <span>Feed</span></a>
-                    <a href="explore">
+                    <a href="/explore">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>
                         <span>Explore</span></a>
-                    <a href="messages">
+                    <a href="/message">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530868629536808/messages.png" alt=""/>
                         <span>Messages</span></a>
-                    <a href="acitivity">
+                    <a href="/acitivity">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
                         <span>Activity</span></a>
-                    <a href="settings">
+                    <a href="/settings">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>
                         <span>Settings</span></a>
-                    <a href="app">
+                    <a href="/app">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716577640273805312/infinate.png" alt=""/>
                         Browse Pebblo
                     </a>
                 </div>
 
                 <div className={styles.topbar_right}>
-                    <a href="upload" className={styles.topbar_create}>
+                    <a href="/upload" className={styles.topbar_create}>
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716567464246509598/plus.png" alt=""/>
                         <span>Create post</span></a>
                 </div>

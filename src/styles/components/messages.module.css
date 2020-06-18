@@ -1,12 +1,19 @@
-.contacts {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    border-right: solid 1px #dddddd;
+.msg_nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: solid 2px #f8f8f8;
 }
 
-.contacts_top {
-    position: absolute;
+.msg_nav_title {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
 }
