@@ -14,7 +14,6 @@ const Page = () => {
     <>
       <Nav />
       <UserPost />
-      {/* <PostComment /> */}
     </>
   )
 }
