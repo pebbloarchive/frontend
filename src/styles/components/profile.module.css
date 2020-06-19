@@ -1,3 +1,8 @@
 .profile {
-    display: none;
+    position: relative;
+    left: 22%;
+    width: 50%;
+    margin: 100px 0 50px 50px;
+    /* padding-bottom: 50px;
+    border-bottom: solid 2px #f8f8f8; */
 }

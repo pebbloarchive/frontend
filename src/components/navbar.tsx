@@ -37,7 +37,7 @@ const Topnav = () => {
                     <a href="/message">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530868629536808/messages.png" alt=""/>
                         <span>Messages</span></a>
-                    <a href="/acitivity">
+                    <a href="/activity">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
                         <span>Activity</span></a>
                     <a href="/settings">

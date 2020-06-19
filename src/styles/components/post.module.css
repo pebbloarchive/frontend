@@ -2,6 +2,8 @@
   position: absolute;
   left: 20%;
   width: 80%;
+
+  display: none;
 }
 
 .feed_post {

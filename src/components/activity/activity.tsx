@@ -1,6 +1,5 @@
-import styles from '../styles/components/profile.module.css';
+import styles from '../../styles/components/activity.module.css';
 import React from 'react';
-import { Account } from '../core';
 
 interface Profile {
     profile: any;
@@ -11,11 +10,12 @@ class Profile extends React.Component {
             this.profile = React.createRef();
     }
 
-    
     render() {
         return (
-            <div className={styles.profile}>
+            <div className={styles.content}>
                 
+                Maintenance
+
             </div>
         )
     }
