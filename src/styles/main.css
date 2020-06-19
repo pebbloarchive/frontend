@@ -1,12 +1,18 @@
 :root {
   --color: #1a1a1a;
   /* --background: #f8f8f8; PREVIOUS */
-  --background: #f2f3f7;
+  --background: white;
   --theme-a: #ff6e20;
   --theme-b: #ff0067;
   --links: #1f68a8;
   /* --theme-a: #63a4ad;
   --theme-b: #4f60bb; */
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --background: #f2f3f7;
+  }
 }
 
 body {

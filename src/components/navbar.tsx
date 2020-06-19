@@ -63,16 +63,16 @@ const Topnav = () => {
                 </a>
 
                 <div className={styles.mobile_link}>
-                    <a href="">
+                    <a href="/profile">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                     </a>
-                    <a href="">
+                    <a href="/explore">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>
                     </a>
-                    <a href="">
+                    <a href="/activity">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
                     </a>
-                    <a href="">
+                    <a href="/settings">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>
                     </a>
                 </div>
