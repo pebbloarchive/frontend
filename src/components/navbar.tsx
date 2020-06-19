@@ -3,6 +3,7 @@ import styles from '../styles/components/topnav.module.css';
 const Topnav = () => {
     return (
         <div className={styles.nav}>
+            <div className={styles.nav_content}>
 
             <div className={styles.nav_profile}>
                 <img src="https://cdn.discordapp.com/avatars/215302985826304010/fbcf44a65980ab1542eaaaf8fe636272.png?size=1024" alt=""
@@ -54,7 +55,28 @@ const Topnav = () => {
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716567464246509598/plus.png" alt=""/>
                         <span>Create post</span></a>
                 </div>
+            </div>
 
+            <div className={styles.mobile}>
+                <a href="/upload" className={styles.mobile_upload}>
+                    <img src="https://cdn.discordapp.com/attachments/596156721928470547/716567464246509598/plus.png" alt=""/>
+                </a>
+
+                <div className={styles.mobile_link}>
+                    <a href="">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
+                    </a>
+                    <a href="">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>
+                    </a>
+                    <a href="">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
+                    </a>
+                    <a href="">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>
+                    </a>
+                </div>
+            </div>
         </div>
     )
 }

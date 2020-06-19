@@ -29,7 +29,7 @@ class Profile extends React.Component {
                                 <img src="https://cdn.discordapp.com/attachments/596156721928470547/723028890099908648/twitter.png" alt=""/>
                                 <h1>
                                     Twitter
-                                    <span>@yourlocalAndre</span>
+                                    <span>@andrea</span>
                                 </h1>
                             </div>
                             <button className={styles.connections_right}>
