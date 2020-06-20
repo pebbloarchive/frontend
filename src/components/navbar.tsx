@@ -15,11 +15,11 @@ const Topnav = () => {
                         </h1>
                         <h1 className={styles.nav_username}>andre</h1>
                             <div className={styles.nav_stats}>
-                                <a href="/profile/followers">
+                                <a href="/user/@me/followers">
                                     <span>0</span>
                                     Followers
                                 </a>
-                                <a href="/profile/following">
+                                <a href="/user/@me/following">
                                     <span>0</span>
                                     Following
                                 </a>
@@ -29,7 +29,7 @@ const Topnav = () => {
             </div>
 
                 <div className={styles.nav_pages}>
-                    <a href="/@me">
+                    <a href="/user/@me">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                         <span>Feed</span></a>
                     <a href="/explore">
@@ -63,7 +63,7 @@ const Topnav = () => {
                 </a>
 
                 <div className={styles.mobile_link}>
-                    <a href="/@me">
+                    <a href="/user/@me">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                     </a>
                     <a href="/activity">

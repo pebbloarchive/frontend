@@ -1,104 +1,50 @@
 .content {
     position: absolute;
-    width: 65%;
     left: 20%;
-    padding: 70px 0 70px 70px;
+    width: 80%;
 }
 
-.activity_title {
-    font-size: 20px;
+.list {
+    margin: 10% 0 10% 7%;
+    width: 70%;
+}
+
+.list a {
+    display: inline-block;
+    width: 230px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 0 20px 20px 0;
+    transition: .1s;
+
+    background-position: 90% 90%;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+.list a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 16px rgba(0, 0, 0, 0.177);
+}
+
+.list span {
+    display: inline-block;
+    margin: 20px;
+    font-size: 14px;
+    background-color: white;
     font-weight: 600;
-    margin-top: 50px;
+    color: var(--color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    max-width: 40%;
 }
 
-.activity_description {
-    font-size: 12px;
-    opacity: .7;
-    width: 300px;
-    margin-bottom: 30px;
-}
+            .activity_time {
+                background-color: #df4f4f;
+                background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/723812016195633163/inactive.png);
+            }
 
-.activity_title:nth-child(1) {
-    margin-top: 0;
-}
-
-.activity_count {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-}
-
-.activity_count h1 {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    font-size: 40px;
-    margin: 0 10px;
-    font-weight: 600;
-    background: -webkit-linear-gradient(var(--theme-a),var(--theme-b));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.activity_count span {
-    font-size: 12px;
-    font-weight: 600;
-    margin-left: 5px;
-}
-
-.activity_table {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-}
-
-.activity_table span {
-    display: block;
-    width: 50px;
-    height: 5px;
-    background: linear-gradient(to bottom right, var(--theme-a),var(--theme-b));
-    margin: 0 5px;
-    opacity: .5;
-    color: white;
-}
-
-.activity_table strong {
-    font-weight: normal;
-    display: block;
-    text-align: center;
-    font-size: 12px;
-}
-
-                                                                                    /* remove this and make it a functional thing */
-                                                                                        .activity_sunday {
-                                                                                            height: 47% !important;
-                                                                                            opacity: .7 !important;
-                                                                                        }
-                                                                                        .activity_monday {
-                                                                                            height: 16% !important;
-                                                                                            opacity: .6 !important;
-                                                                                        }
-                                                                                        .activity_tuesday {
-                                                                                            height: 63% !important;
-                                                                                            opacity: .8 !important;
-                                                                                        }
-                                                                                        .activity_wednesday {
-                                                                                            height: 66% !important;
-                                                                                            opacity: .8 !important;
-                                                                                        }
-                                                                                        .activity_thursday {
-                                                                                            height: 83% !important;
-                                                                                            opacity: .9 !important;
-                                                                                        }
-                                                                                        .activity_friday {
-                                                                                            height: 100% !important;
-                                                                                            opacity: 1 !important;
-                                                                                        }
-                                                                                        .activity_saturday {
-                                                                                            height: 83% !important;
-                                                                                            opacity: .9 !important;
-                                                                                        }
+            .activity_likes {
+                background-color: #f7a474;
+                background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/723814078341971979/transition-both.png);
+            }

@@ -14,7 +14,14 @@ class Profile extends React.Component {
         return (
             <div className={styles.content}>
                 
-                Maintenance
+                <div className={styles.list}>
+                    <a className={styles.activity_time}>
+                        <span>Your Activity</span>
+                    </a>
+                    <a className={styles.activity_likes}>
+                        <span>Likes</span>
+                    </a>
+                </div>
 
             </div>
         )
