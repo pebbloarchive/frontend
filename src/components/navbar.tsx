@@ -29,7 +29,7 @@ const Topnav = () => {
             </div>
 
                 <div className={styles.nav_pages}>
-                    <a href="/profile">
+                    <a href="/@me">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                         <span>Feed</span></a>
                     <a href="/explore">
@@ -63,14 +63,14 @@ const Topnav = () => {
                 </a>
 
                 <div className={styles.mobile_link}>
-                    <a href="/profile">
+                    <a href="/@me">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
-                    </a>
-                    <a href="/explore">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>
                     </a>
                     <a href="/activity">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
+                    </a>
+                    <a href="/explore">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>
                     </a>
                     <a href="/settings">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>

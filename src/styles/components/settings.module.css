@@ -232,12 +232,48 @@
     width: 90%;
   }
 
+  .content {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%);
+  }
+
   .settings_tabs {
     position: relative;
     width: 100%;
+    top: 0;
+    margin: 0;
     padding: 20px 0;
     border: none;
     overflow-y: auto;
     white-space: nowrap;
+  }
+
+  .account_avatar label {
+    left: 140px;
+    text-align: center;
+  }
+
+  .account_inputs {
+    margin-bottom: 70px;
+  }
+
+  .account_inputs label {
+    width: 100%;
+  }
+
+  .account_inputs input, .account_inputs textarea {
+    width: 90%;
+  }
+
+  .accountUpdate {
+    left: 0;
+    bottom: 30px;
+  }
+
+  .connections a {
+    width: 90%;
   }
 }

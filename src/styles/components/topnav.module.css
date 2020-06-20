@@ -142,9 +142,12 @@
     font-weight: 600;
     color: white;
     background: linear-gradient(to right, var(--theme-b),var(--theme-a));
+    border: solid 5px rgba(255, 255, 255, 0.203);
+    border-left: none;
+    border-right: none;
     opacity: .8;
-    padding: 8px 17px 8px 10px;
-    border-radius: 10px;
+    padding: 4px 17px 4px 10px;
+    border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,18 +169,20 @@
     left: 0;
     width: 100%;
     height: 55px;
-    background-color: white;
+    background-color: #f8f8f8;
+    /* box-shadow: -10px 0 18px rgba(0, 0, 0, 0.122); */
+    z-index: 1;
 }
 
 .mobile_upload {
     position: absolute;
-    top: -40px;
-    right: 5%;
-    transform: rotate(45deg);
-    width: 45px;
-    height: 45px;
+    top: -23px;
+    right: 6%;
+    transform: rotate(45deg) scale(1.1);
+    width: 40px;
+    height: 40px;
     border-radius: 27px;
-    border: solid 10px var(--background);
+    border: solid 15px #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,6 +211,8 @@
 .mobile_link a {
     width: 25%;
     text-align: center;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .mobile_link img {

@@ -9,11 +9,11 @@
   --theme-b: #4f60bb; */
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   :root {
     --background: #f2f3f7;
   }
-}
+} */
 
 body {
   margin: 0;
