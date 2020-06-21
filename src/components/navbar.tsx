@@ -29,7 +29,7 @@ const Topnav = () => {
             </div>
 
                 <div className={styles.nav_pages}>
-                    <a href="/user/@me">
+                    <a href="/@me">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                         <span>Feed</span></a>
                     <a href="/explore">
@@ -39,7 +39,7 @@ const Topnav = () => {
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530868629536808/messages.png" alt=""/>
                         <span>Messages</span></a>
                     <a href="/activity">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/724207251933495296/heart-outline.png" alt=""/>
                         <span>Activity</span></a>
                     <a href="/settings">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>
@@ -67,7 +67,7 @@ const Topnav = () => {
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                     </a>
                     <a href="/activity">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716528087973757008/melting-heart.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/724207251933495296/heart-outline.png" alt=""/>
                     </a>
                     <a href="/explore">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529353046884362/search.png" alt=""/>

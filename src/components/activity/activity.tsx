@@ -21,6 +21,9 @@ class Profile extends React.Component {
                     <a className={styles.activity_likes}>
                         <span>Likes</span>
                     </a>
+                    <a className={styles.activity_promo}>
+                        <span>Promotions</span>
+                    </a>
                 </div>
 
             </div>
