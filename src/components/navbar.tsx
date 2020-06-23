@@ -63,7 +63,7 @@ const Topnav = () => {
                 </a>
 
                 <div className={styles.mobile_link}>
-                    <a href="/user/@me">
+                    <a href="/@me">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716529638209355826/gallery.png" alt=""/>
                     </a>
                     <a href="/activity">
