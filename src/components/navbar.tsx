@@ -45,7 +45,7 @@ const Topnav = () => {
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/716530147167305738/settings.png" alt=""/>
                         <span>Settings</span></a>
                     <a href="/app">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/716577640273805312/infinate.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/725214265069535252/infinate.png" alt=""/>
                         Browse Pebblo
                     </a>
                 </div>

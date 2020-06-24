@@ -221,6 +221,90 @@
     opacity: .5;
 }
 
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--background);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translate(-0%,-50%);
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color);
+}
+
+.logo img {
+    margin-right: 10px;
+    width: 50px;
+    transform: rotate(-30deg);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 220px;
+    transform: translate(-0%,-50%);
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    transition: left .2s;
+}
+
+.links a {
+    margin-right: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: .7;
+    color: var(--color);
+    display: inline-block;
+}
+
+.links a:hover {
+    opacity: 1;
+}
+
+.bars {
+    position: fixed;
+    top: 30px;
+    right: 35px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.bars span {
+    display: block;
+    margin-bottom: 7px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color);
+}
+
+.content:hover .links {
+    left: 0% !important;
+}
+
+.content:hover .bars {
+    opacity: 0;
+}
+
+.inactive_link {
+    cursor: not-allowed;
+    opacity: .3 !important;
+}
+
 @media screen and (max-width: 1000px) {
     .nav_content {
         display: none;
@@ -228,5 +312,63 @@
 
     .mobile {
         display: block;
+    }
+
+    .content {
+        position: fixed;
+        top: 35px;
+        right: 35px;
+        transform: none;
+    }
+
+    .navigation {
+        height: 80px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .logo {
+        left: 20px;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .links {
+        position: fixed;
+        left: -130%;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        transform: none;
+        z-index: 1;
+        background-color: white;
+        display: block;
+    }
+
+    .links::after {
+        content: "";
+        position: absolute;
+        right: -50%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.816);
+        background-clip: unset;
+        pointer-events: none;
+    }
+
+    .links a {
+        display: block;
+        font-size: 20px;
+        padding: 0 0 20px 50px;
+        margin: 0;
+    }
+
+    .links a:nth-child(1) {
+        margin-top: 50px;
     }
 }

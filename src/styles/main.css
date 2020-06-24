@@ -5,7 +5,11 @@
   --theme-a: #ff6e20;
   --theme-b: #ff0067;
   --links: #1f68a8;
-  /* --theme-a: #63a4ad;
+
+
+  /* --theme-a: #e27b23;
+  --theme-b: #e75139;
+  --theme-a: #63a4ad;
   --theme-b: #4f60bb; */
 }
 
@@ -24,7 +28,6 @@ body {
 
 a {
   text-decoration: none;
-  cursor: pointer;
   color: var(--links);
 }
 
@@ -103,4 +106,8 @@ textarea {
   background-color: var(--background);
   height: 100%;
   border-top-left-radius: 50px;
+}
+
+.inactive_link {
+  cursor: not-allowed !important;
 }
