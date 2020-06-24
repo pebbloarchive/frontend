@@ -60,9 +60,8 @@
 
 .profile_interation {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    height: 130px;
     display: flex;
     align-items: center;
 }
@@ -73,6 +72,9 @@
     font-weight: 600;
     border-radius: 100px;
     margin-right: 10px;
+    display: inline-block;
+    /* width: 60px; */
+    text-align: center;
 }
 
 .profile_toggleFollow {
@@ -88,21 +90,26 @@
 
 .profile_stats {
     position: absolute;
-    top: 100px;
-    right: 0;
+    top: 0;
+    height: 130px;
+    left: 150px;
+    display: flex;
+    align-items: center;
 }
 
 .profile_stats a {
-    padding: 7px 20px 10px 20px;
     display: block;
+    padding: 10px 30px 10px 20px;
     font-size: 13px;
-    color: #aaaaaa;
-    text-align: right;
+    color: #9d9eaf;
 }
 
 .profile_stats span {
     display: block;
     font-weight: 600;
-    font-size: 16px;
-    color: var(--color);
+    font-size: 20px;
+    color: var(--color)
+    /* background: -webkit-linear-gradient(var(--theme-a),var(--theme-b));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }

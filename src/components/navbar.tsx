@@ -16,11 +16,11 @@ const Topnav = () => {
                         <h1 className={styles.nav_username}>andre</h1>
                             <div className={styles.nav_stats}>
                                 <a href="/user/@me/followers">
-                                    <span>0</span>
+                                    <span>293</span>
                                     Followers
                                 </a>
                                 <a href="/user/@me/following">
-                                    <span>0</span>
+                                    <span>190</span>
                                     Following
                                 </a>
                             </div>

@@ -25,14 +25,14 @@ class Profile extends React.Component {
                             <p className={styles.profile_bio}>If you can't have midnight snacks why is there a light in the fridge? lorem</p>
                     </div>
                 <div className={styles.profile_interation}>
-                    <a href="" className={styles.profile_message}>Message</a>
-                    <a href="" className={styles.profile_toggleFollow}>Follow</a>
+                    <a href="" className={styles.profile_toggleFollow}>Insights</a> {/* change this to "Insights" when you're on https://pebblo.org/@me */}
+                    <a href="" className={styles.profile_message}>Apps</a> {/* change this to "Apps" when you're on https://pebblo.org/@me */}
                 </div>
 
                 <div className={styles.profile_stats}>
-                    <a href=""><span>0</span>
+                    <a href="" className={styles.profile_followers}><span>293</span>
                     Followers</a>
-                    <a href=""><span>0</span>
+                    <a href="" className={styles.profile_posts}><span>0</span>
                     Posts</a>
                 </div>
             </div>
