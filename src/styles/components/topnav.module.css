@@ -251,7 +251,7 @@
 .content {
     position: absolute;
     top: 50%;
-    left: 220px;
+    left: 225px;
     transform: translate(-0%,-50%);
     display: flex;
     align-items: center;
