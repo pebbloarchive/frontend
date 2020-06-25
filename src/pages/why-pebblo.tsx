@@ -1,9 +1,8 @@
-import styles from '../styles/components/whypebblo.module.css';
-import TopNavBar from '../components/topnavibar';
+import styles from '../styles/components/whypebblo.module.css';import Nav from '../components/topnavi';
 
 const Page = () => {
 return (
-    <TopNavBar />
+    <Nav />
 )
 }
 
