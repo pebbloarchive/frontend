@@ -29,7 +29,7 @@ export default () => {
           <p className={styles.landing_content_message}>Attracting people from around the world together to share stories, meet new friends and have a laugh.</p>
           <a href="/create" className={styles.landing_getStarted}>Get Started</a>
 
-          <a href="/why-pebblo" className={styles.landing_whyPebblo}>Why Pebblo?
+          <a href="/app" className={styles.landing_whyPebblo}>Why Pebblo?
           <span><img src="images/play.png" alt="" /></span>
           </a>
           

@@ -1,0 +1,30 @@
+.content {
+    margin-top: 70px;
+}
+
+.why_pebblo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.why_pebblo_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 170px 0 0 100px;
+}
+
+.why_pebblo_title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.why_pebblo_paragraph {
+    font-size: 20px;
+    opacity: .5;
+    width: 400px;
+}

@@ -18,8 +18,7 @@ const Topnav = () => {
 
                         <div className={styles.links}>
                             <a href="/">Home</a>
-                            <a href="/app">Apps</a>
-                            <a href="">Jobs</a>
+                            <a href="/app">Features</a>
                         </div>
                     </div>
         </div>
