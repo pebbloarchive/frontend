@@ -19,12 +19,137 @@
 }
 
 .why_pebblo_title {
-    font-size: 40px;
+    font-size: 70px;
     font-weight: 600;
 }
 
 .why_pebblo_paragraph {
-    font-size: 20px;
+    font-size: 40px;
     opacity: .5;
-    width: 400px;
+    width: 700px;
 }
+
+.downloadON a {
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    transition: .3s;
+    right: 50px;
+}
+
+.downloadON a:hover {
+    transform: scale(1.1);
+}
+
+.downloadON img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(-0%,-50%);
+    width: 25px;
+    height: 25px;
+}
+
+.downloadON p {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translate(-0%,-50%);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.downloadON span {
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.downloadON_android {
+    position: absolute;
+    bottom: 50px;
+    background-color: #f8f8f8;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.184);
+    color: var(--color);
+}
+
+.downloadON_iOS {
+    position: absolute;
+    bottom: 120px;
+    background-color: #010101;
+    color: white;
+}
+
+.downloadON_iOS img {
+    filter: invert(100%);
+}
+
+.apps {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width: 100%;
+}
+
+.apps a {
+    display: inline-block;
+    height: 350px;
+    transition: .3s;
+}
+
+.apps h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+}
+
+.apps span {
+    opacity: 0;
+    font-size: 25px;
+    display: block;
+    margin-top: -10px;
+    transition: .3s;
+}
+
+.apps a:hover span {
+    opacity: 1;
+}
+
+.apps_title {
+    text-align: right;
+    padding: 20px;
+    opacity: .3;
+    font-size: 14px;
+}
+
+                                    .app_social {
+                                        width: 100%;
+                                        background: linear-gradient(to bottom right, #8e44ad,#c0392b);
+                                        color: white;
+                                    } .app_social:hover { background: linear-gradient(to bottom left, #8e44ad,#c0392b); }
+                                      .app_social h1 {
+                                          text-align: center;
+                                          margin-top: 70px;
+                                      }
+
+                                    .app_community {
+                                        width: 50%;
+                                        background: linear-gradient(to bottom right, #F15F79,#B24592);
+                                        color: white;
+                                    }
+                                      .app_community h1 {
+                                          margin: 70px 0 0 70px;
+                                          text-align: left;
+                                      }
+
+                                    .app_share {
+                                        width: 50%;
+                                        background: linear-gradient(to bottom right, #302b63,#24243e);
+                                        color: white;
+                                    }
+                                      .app_share h1 {
+                                          margin: 70px 70px 0 0;
+                                          text-align: right;
+                                      }

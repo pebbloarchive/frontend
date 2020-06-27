@@ -24,6 +24,9 @@ const Page = () => {
     <>
         <div className={styles.lr_sidebar}>
             <h1 className={styles.lr_sidebar_heading}>Login <span>Hello! Let's get started.</span></h1>
+      <a href="/" className={styles.lr_home}>
+        <img src="https://cdn.discordapp.com/attachments/596156721928470547/726229498831306792/chevron-left.png" alt=""/>
+      </a>
         </div>
             <div className={styles.lr}>
                 <div className={styles.lr_content}>

@@ -5,8 +5,8 @@ import Apps from '../components/page/app'
 const Page = () => {
 return (
     <div>
-        <Nav />
         <Apps />
+        <Nav />
     </div>
 )
 }
