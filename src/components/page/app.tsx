@@ -28,34 +28,6 @@ const App = () => {
                         </div>
                 </div>
 
-                <div className={styles.apps}>
-
-                    <a href="" className={styles.app_social}>
-                        <p className={styles.apps_title}>Social Media Platform.</p>
-                        <h1>
-                            connect
-                            <span>with friends</span>
-                        </h1>
-                    </a>
-
-                    <a href="" className={styles.app_community}>
-                        <p className={styles.apps_title}>Social Media Platform.</p>
-                        <h1>
-                            create
-                            <span>your community</span>
-                        </h1>
-                    </a>
-
-                    <a href="" className={styles.app_share}>
-                        <p className={styles.apps_title}>Social Media Platform.</p>
-                        <h1>
-                            share
-                            <span>stories</span>
-                        </h1>
-                    </a>
-
-                </div>
-
             </div>
     )
 }

@@ -85,71 +85,42 @@
     filter: invert(100%);
 }
 
-.apps {
-    position: absolute;
-    top: 130%;
-    left: 0;
-    width: 100%;
+
+@media screen and (max-width: 1000px) {
+    .why_pebblo_content {
+        margin: 0;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+    }
+
+    .why_pebblo_title {
+        font-size: 35px;
+    }
+
+    .why_pebblo_paragraph {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .downloadON a {
+        left: 50%;
+        transform: translate(-50%);
+        /* width: 50%; */
+    }
+
+    .downloadON a:hover {
+        transform: translate(-50%);
+        opacity: .4;
+    }
+
+    .downloadON_android {
+        bottom: 180px;
+    }
+
+    .downloadON_iOS {
+        bottom: 250px;
+    }
 }
-
-.apps a {
-    display: inline-block;
-    height: 350px;
-    transition: .3s;
-}
-
-.apps h1 {
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 50px;
-}
-
-.apps span {
-    opacity: 0;
-    font-size: 25px;
-    display: block;
-    margin-top: -10px;
-    transition: .3s;
-}
-
-.apps a:hover span {
-    opacity: 1;
-}
-
-.apps_title {
-    text-align: right;
-    padding: 20px;
-    opacity: .3;
-    font-size: 14px;
-}
-
-                                    .app_social {
-                                        width: 100%;
-                                        background: linear-gradient(to bottom right, #8e44ad,#c0392b);
-                                        color: white;
-                                    } .app_social:hover { background: linear-gradient(to bottom left, #8e44ad,#c0392b); }
-                                      .app_social h1 {
-                                          text-align: center;
-                                          margin-top: 70px;
-                                      }
-
-                                    .app_community {
-                                        width: 50%;
-                                        background: linear-gradient(to bottom right, #F15F79,#B24592);
-                                        color: white;
-                                    }
-                                      .app_community h1 {
-                                          margin: 70px 0 0 70px;
-                                          text-align: left;
-                                      }
-
-                                    .app_share {
-                                        width: 50%;
-                                        background: linear-gradient(to bottom right, #302b63,#24243e);
-                                        color: white;
-                                    }
-                                      .app_share h1 {
-                                          margin: 70px 70px 0 0;
-                                          text-align: right;
-                                      }
