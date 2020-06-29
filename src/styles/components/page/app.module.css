@@ -113,7 +113,7 @@
 
     .downloadON a:hover {
         transform: translate(-50%);
-        opacity: .4;
+        opacity: .5;
     }
 
     .downloadON_android {
