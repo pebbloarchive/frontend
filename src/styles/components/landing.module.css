@@ -1,234 +1,109 @@
-.landing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.landing_company {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 23px;
-  margin: 3%;
-}
-
-.landing_company span {
-  font-weight: 600;
-}
-
-.landing_border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40%;
-  height: 60%;
-  background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to top right, var(--theme-a), var(--theme-b));
-  border-bottom-right-radius: 10000%;
-  background-size: 100%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  box-shadow: 9px 9px 5px rgba(0,0,0,.11);
-}
-
-.landing_image {
-  position: absolute;
-  bottom: -10%;
-  left: 20%;
-  margin-left: 10%;
-  width: 60%;
-  transition: .3s;
-}
-
-.landing_content {
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  width: 40%;
-  transform: translate(0,-50%);
-}
-
-.landing_content_title {
-  font-size: 50px;
-  font-weight: 600;
-  width: 500px;
-}
-
-.landing_content hr {
-  border: none;
-  display: block;
-  position: relative;
-  left: 0;
-  margin: 50px 0;
-  padding: 0;
-  border-radius: 100px;
-  width: 200px;
-  height: 5px;
-  background: linear-gradient(to right,var(--theme-b),var(--theme-a));
-}
-
-.landing_content_message {
-  width: 600px;
-  font-size: 20px;
-  margin-bottom: 60px;
-}
-
-.landing_getStarted {
-  padding: 20px 40px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 100px;
-  background: linear-gradient(to bottom right,var(--theme-a),var(--theme-b));
-  box-shadow: 7px 7px 5px rgba(0,0,0,.11);
-  margin-right: 50px;
-}
-
-.landing_whyPebblo {
-  color: var(--color);
-  font-weight: 600;
-  padding: 15px 0;
-  display: inline-flex;
-  align-items: center;
-}
-
-.landing_whyPebblo span {
-  margin-left: 20px;
-  width: 35px;
-  height: 35px;
-  background-color: #76aed3;
-  box-shadow: 7px 7px 5px rgba(0,0,0,.11);
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-
-.landing_whyPebblo img {
-  filter: invert(100%);
-  height: 50%;
-}
-
-.landing_login {
+.side {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 30px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(to bottom right,var(--theme-a),var(--theme-b));
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .3s;
+  width: 45%;
+  height: 100%;
+  background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to bottom right, var(--theme-b), var(--theme-c));
+  background-size: 300%;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
-#loginImage {
-  width: 30px;
-  height: 30px;
-  filter: invert(100%);
-  transition: .3s;
-}
-
-.landing_loginContent {
+.content {
   position: fixed;
-  top: -100px;
-  right: 100px;
-  margin: 30px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .3s;
+  top: 50%;
+  transform: translate(-0%,-50%);
+  right: 43%;
+  width: 45%;
 }
 
-.landing_loginContent input {
-  display: inline-block;
-  padding: 12px 20px;
-  margin-left: 20px;
-  background-color: #e6e7eb;
-  border-radius: 100px;
+.slogan {
+  width: 350px;
+  font-weight: 600;
+  color: var(--theme-a);
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
-.landing_loginContent button {
-  margin-left: -30px;
-  padding: 12px 28px;
-  background-color: #bebebe;
-  border-radius: 100px;
+.register {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.129);
+}
+
+.email h1 {
+  opacity: .4;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.email input {
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--theme-a);
+  width: 50%;
+}
+
+.submit {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0,-50%);
+  height: 60%;
+  width: 30%;
+  background-color: #eb6652;
+  font-weight: 600;
   font-size: 14px;
+  color: white;
+  cursor: pointer;
 }
 
-/* Responsive */
+.submit:hover {
+  opacity: .8;
+}
 
-@media screen and (max-width: 1000px) {
-  .landing_border {
-    position: fixed;
-    width: 101%;
-    height: 101%;
-    box-shadow: none;
-    border-radius: 0;
-    background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to top left, var(--theme-a), var(--theme-b));
-    background-size: 200%;
+
+@media only screen and (max-width:1000px) {
+  .side {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-position: bottom;
-    background-repeat: no-repeat;
-    /* transform: scale(10); */
+    background-size: 500%;
   }
 
-  .landing_image {
-    display: none;
-  }
-
-  .landing_content {
+  .side::before {
+    content: "Sorry! This page is under not available.";
     position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 60%;
-    transform: translate(-50%,-50%);
-  }
-
-  .landing_content hr {
-    opacity: 0;
-    position: relative;
-    height: 10%;
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .landing_content_title {
-    width: 100%;
-    font-size: 40px;
+    top: 0;
+    left: 0;
+    margin: 50px;
+    font-weight: 600;
     color: white;
+    font-size: 20px;
   }
 
-  .landing_content_message {
+  .side::after {
+    content: "Pebblo Team";
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    margin: 150px 50px;
     color: white;
-    width: 100%;
     opacity: .8;
+    font-weight: 600;
+  }
+
+  .content {
     display: none;
-  }
-
-  .landing_getStarted {
-    display: inline-block;
-    background: white;
-    color: var(--color);
-    font-size: 14px;
-    margin: 0;
-    padding: 20px 0px;
-    width: 50%;
-    text-align: center;
-  }
-
-  .landing_whyPebblo {
-    display: inline-block;
-    color: white;
-    /* margin-top: 10px; */
-    padding: 20px 0px;
-    font-size: 14px;
-    width: 50%;
-    text-align: center;
   }
 }

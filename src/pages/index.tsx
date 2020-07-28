@@ -4,6 +4,7 @@ import { Account } from '../core';
 import { Log } from '../utils';
 import { usePulse } from 'pulse-framework';
 import styles from '../styles/components/landing.module.css';
+import nav from '../styles/components/navbar.module.css';
 
 export default () => {
   const [logged] = usePulse(Account.isUserLoggedIn);
@@ -19,43 +20,30 @@ export default () => {
     if (logged.success) return Router.push('/explore');
   }
   return (
-    <div className={styles.landing}>
-        <div className={styles.landing_border}>
-          <img src="images/person.svg" className={styles.landing_image} />
-        </div>
-        <div className={styles.landing_content}>
-          <h1 className={styles.landing_content_title}>Share your story with the world</h1>
-          <hr/>
-          <p className={styles.landing_content_message}>Attracting people from around the world together to share stories, meet new friends and have a laugh.</p>
-          <a href="/create" className={styles.landing_getStarted}>Get Started</a>
-
-          <a href="/app" className={styles.landing_whyPebblo}>Why Pebblo?
-          <span><img src="images/play.png" alt="" /></span>
-          </a>
-          
-        </div>
-        {/* <button onClick={landingLogin} className={styles.landing_login} id={styles.landingBtn}>
-        <img src="images/user.png" alt="" id={styles.loginImage} />
-        </button> */}
-        <form className={styles.landing_loginContent} id={styles.landingLogin} onSubmit={doLogin}>
-        <input
-            type="email"
-            name="login_email"
-            placeholder="email"
-            required
-            value={email}
-            onChange={(change) => { setEmail(change.target.value) }}
-        />
-        <input
-            type="password"
-            name="login_password"
-            placeholder="password"
-            required
-            value={password}
-            onChange={(change) => { setPassword(change.target.value) }}
-        />
-        <input type="submit" value="login"/>
-        </form>
+    <>
+      <div className={styles.side}>
       </div>
+
+      <div className={styles.content}>
+        <h1 className={styles.slogan}>Share your story with the world</h1>
+        
+          <form className={styles.register}>
+            <div className={styles.email}>
+              <h1>Register using your email</h1>
+              <input type="email" name="" id="" placeholder="hello@pebblo.org" required />
+            </div>
+
+            <input className={styles.submit} type="submit" value="Next"/>
+          </form>
+      </div>
+
+      <div className={nav.navbar}>
+        <h1>pebblo</h1>
+        <a href="">Features</a>
+        <a href="">Support</a>
+        <a href="">Safety</a>
+        <a href="/login">Login</a>
+      </div>
+    </>
   )
 }

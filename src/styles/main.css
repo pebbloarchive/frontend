@@ -1,10 +1,13 @@
 :root {
   --color: #1a1a1a;
-  /* --background: #f8f8f8; PREVIOUS */
-  --background: white;
-  --theme-a: #ff6e20;
-  --theme-b: #ff0067;
-  --links: #1f68a8;
+  --background: #ffffff;
+  --theme-a: #0d243c;
+  --theme-b: #ff6e20;
+  --theme-c: #ff0067;
+  --links: #3d6a9b;
+
+  --center-left: 6%;
+  --center-width: 94%;
 
 
   /* --theme-a: #e27b23;
@@ -41,6 +44,15 @@ p {
   margin: 0;
   padding: 0;
   font-weight: 400
+}
+
+img {
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 input[type=search]::-webkit-search-cancel-button,

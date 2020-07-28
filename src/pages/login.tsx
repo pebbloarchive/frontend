@@ -53,7 +53,7 @@ const Page = () => {
                     </form>
                 </div>
             </div>
-            <a href="/create" className={styles.lr_signup}>Don't have an account? <span>Create</span></a>
+            <a href="/" className={styles.lr_signup}>Don't have an account? <span>Create</span></a>
     </>
   );
 }
