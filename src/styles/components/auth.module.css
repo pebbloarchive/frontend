@@ -300,7 +300,10 @@
     padding: 12px 20px;
     font-weight: 600;
     margin-bottom: 30px;
-    background-color: #fafafa;
+    /* background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: right 10px;
+    background-size: 20px; */
 }
 
 .login_content input::placeholder {
@@ -311,6 +314,10 @@
 .login_content input:focus {
     border-color: #afafaf;
 }
+
+/* .login_content input:nth-child(1) {
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/744410115632791583/email.png);
+} */
 
 .trouble {
     font-size: 12px;

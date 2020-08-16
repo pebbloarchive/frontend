@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    background-image: url(https://paranoidandroid.co/assets/wallpapers/2018/submerged_desktop_thumb.jpg);
+    background-image: url(https://pbs.twimg.com/profile_banners/1183270417718341633/1597309350/600x200);
 }
 
 .columns {
@@ -211,4 +211,36 @@
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: solid 1px #dddddd;
+}
+
+.createThread {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+    min-width: 30px;
+    min-height: 30px;
+    background: radial-gradient(circle at top left, var(--theme-a),var(--theme-b));
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createThread img {
+    width: 25px;
+    padding: 12px;
+    filter: invert(100%);
+    border-radius: 100px;
+    margin: 5px;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0.100);
+    opacity: .6;
+}
+
+.createThread span {
+    margin-right: 20px;
+    color: white;
+    font-weight: 600;
+    opacity: .7;
 }

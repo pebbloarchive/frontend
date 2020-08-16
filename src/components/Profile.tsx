@@ -3,7 +3,12 @@ import styles from '../styles/components/profile.module.css';
 const Topnav = () => {
     return (
         <>
-            <div className={styles.wallpaper}></div>
+            <div className={styles.wallpaper}>
+                <a href="" className={styles.createThread}>
+                    <img src="https://cdn.discordapp.com/attachments/667293886468718592/736049316078288967/plus.png" alt=""/>
+                    <span>Create</span>
+                </a>
+            </div>
                 <div className={styles.columns}>
 
                     <div className={styles.profile}>
@@ -16,7 +21,7 @@ const Topnav = () => {
                                     <div className={styles.profile_stats}>
                                         <a href="">
                                             <span>0</span>
-                                            Posts
+                                            Supporters
                                         </a>
                                         <a href="">
                                             <span>0</span>
@@ -24,14 +29,14 @@ const Topnav = () => {
                                         </a>
                                         <a href="">
                                             <span>0</span>
-                                            Subscribers
+                                            Posts
                                         </a>
                                     </div>
                         </div>
                     </div>
 
                     <div className={styles.profile_biography}>
-                        <h1>Biography</h1>
+                        <h1>Bio</h1>
                         <p>Attracting people from around the world together to share stories, meet new friends &amp; have a laugh.</p>
                     </div>
 
