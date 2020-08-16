@@ -22,38 +22,34 @@ const Page = () => {
   }
   return (
     <>
-        <div className={styles.lr_sidebar}>
-            <h1 className={styles.lr_sidebar_heading}>Login <span>Hello! Let's get started.</span></h1>
-      <a href="/" className={styles.lr_home}>
-        <img src="https://cdn.discordapp.com/attachments/596156721928470547/726229498831306792/chevron-left.png" alt=""/>
-      </a>
-        </div>
-            <div className={styles.lr}>
-                <div className={styles.lr_content}>
-                    <form onSubmit={doLogin} className={styles.lr_form}>
-                        <input
-                            type="email"
-                            name="login_email"
-                            placeholder="email"
-                            required
-                            value={email}
-                            onChange={(change) => { setEmail(change.target.value) }}
-                        />
-                        <input
-                            type="password"
-                            name="login_password"
-                            placeholder="password"
-                            required
-                            value={password}
-                            onChange={(change) => { setPassword(change.target.value) }}
-                        />
-                    <div className={styles.lr_signin}>
-                        <input type="submit" value="Login"/>
-                    </div>
-                    </form>
-                </div>
+    <title>Login</title>
+          <div className={styles.wallpaper}>
+            <div className={styles.wallpaper_bar}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <a href="/" className={styles.lr_signup}>Don't have an account? <span>Create</span></a>
+          </div>
+        <div className={styles.login_content}>
+            <form>
+              <input type="email" name="" id="" placeholder="Email Address" required/>
+              <input type="password" name="" id="" placeholder="Password" required/>
+
+                  <a href="" className={styles.trouble}>Having trouble logging in?</a>
+                
+              <input className={styles.login_button} type="submit" value="Login"/>
+
+            <a className={styles.login_alternative} href="">Log in with <strong>Google</strong></a>
+            </form>
+        </div>
     </>
   );
 }

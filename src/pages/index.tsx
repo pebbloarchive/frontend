@@ -4,7 +4,6 @@ import { Account } from '../core';
 import { Log } from '../utils';
 import { usePulse } from 'pulse-framework';
 import styles from '../styles/components/landing.module.css';
-import nav from '../styles/components/navbar.module.css';
 
 export default () => {
   const [logged] = usePulse(Account.isUserLoggedIn);
@@ -21,28 +20,61 @@ export default () => {
   }
   return (
     <>
-      <div className={styles.side}>
+      <div className={styles.landing}>
+
+        <div className={styles.wallpaper}>
+          <div className={styles.wallpaper_bar}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div className={styles.landing_content}>
+          <h1>
+            A new way to Share Your Story
+          </h1>
+          <p>Attracting people from around the world together.</p>
+          <a href="/create">Start Your Journey!</a>
+        </div>
+        <div className={styles.landing_phone}></div>
       </div>
 
       <div className={styles.content}>
-        <h1 className={styles.slogan}>Share your story with the world</h1>
         
-          <form className={styles.register}>
-            <div className={styles.email}>
-              <h1>Register using your email</h1>
-              <input type="email" name="" id="" placeholder="hello@pebblo.org" required />
+        <div className={styles.how}>
+          <h1>What can you do?</h1>
+          <p>There are a lot of exciting stuff going on that we would love for you to enjoy, here are a few.</p>
+
+            <div className={styles.how_item}>
+              <img src="https://cdn.discordapp.com/attachments/596156721928470547/741254218882482227/share-gradient.png" alt=""/>
+              <h1><span>1.</span> Share Posts</h1>
+              <p>Share your favourite posts on your profile or to your friends.</p>
             </div>
+            <div className={styles.how_item}>
+              <img src="https://cdn.discordapp.com/attachments/596156721928470547/741254191787278455/gift-gradient.png" alt=""/>
+              <h1><span>2.</span> Gain Rewards</h1>
+              <p>Earn rewards and unlock special features on your account.</p>
+            </div>
+            <div className={styles.how_item}>
+              <img src="https://cdn.discordapp.com/attachments/596156721928470547/741254236704079912/messages-gradient.png" alt=""/>
+              <h1><span>3.</span> Communicate</h1>
+              <p>Communicate with your friends and comment on peoples posts.</p>
+            </div>
+        </div>
 
-            <input className={styles.submit} type="submit" value="Next"/>
-          </form>
-      </div>
+        <a href="/login" className={styles.login}>
+          <img src="https://cdn.discordapp.com/attachments/596156721928470547/741599640935333939/login.png" alt=""/>
+        </a>
 
-      <div className={nav.navbar}>
-        <h1>pebblo</h1>
-        <a href="">Features</a>
-        <a href="">Support</a>
-        <a href="">Safety</a>
-        <a href="/login">Login</a>
       </div>
     </>
   )

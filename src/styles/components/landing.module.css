@@ -1,109 +1,272 @@
-.side {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: 100%;
-  background: url(https://sike.uno/images/cdn/svg-background/background.svg), linear-gradient(to bottom right, var(--theme-b), var(--theme-c));
-  background-size: 300%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-.content {
-  position: fixed;
-  top: 50%;
-  transform: translate(-0%,-50%);
-  right: 43%;
-  width: 45%;
-}
-
-.slogan {
-  width: 350px;
-  font-weight: 600;
-  color: var(--theme-a);
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.register {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.129);
-}
-
-.email h1 {
-  opacity: .4;
-  font-weight: 600;
-  font-size: 13px;
-  margin-bottom: 20px;
-}
-
-.email input {
-  background-color: transparent;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--theme-a);
-  width: 50%;
-}
-
-.submit {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translate(0,-50%);
-  height: 60%;
-  width: 30%;
-  background-color: #eb6652;
-  font-weight: 600;
-  font-size: 14px;
-  color: white;
-  cursor: pointer;
-}
-
-.submit:hover {
-  opacity: .8;
-}
-
-
-@media only screen and (max-width:1000px) {
-  .side {
-    display: block;
+.landing {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-position: bottom;
-    background-size: 500%;
-  }
+}
 
-  .side::before {
-    content: "Sorry! This page is under not available.";
-    position: fixed;
+.wallpaper_bar span {
+    position: absolute;
+
+    animation: minusToptoTop 3s;
+}
+
+.wallpaper_bar span:nth-child(1) {
+    top: 0;
+    left: 5%;
+    width: 1%;
+    height: 10%;
+    border-radius: 0 0 100px 100px;
+    background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+    z-index: 1;
+}
+
+.wallpaper_bar span:nth-child(2) {
+    top: 0;
+    left: 7%;
+    width: 1%;
+    height: 7%;
+    border-radius: 0 0 100px 100px;
+    background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+    z-index: 1;
+}
+
+.wallpaper_bar span:nth-child(3) {
+    top: 0;
+    right: 40%;
+    width: 1%;
+    height: 4%;
+    border-radius: 0 0 100px 100px;
+    background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+}
+
+.wallpaper_bar span:nth-child(4) {
+    top: 6%;
+    right: 40%;
+    width: 1%;
+    height: 3%;
+    border-radius: 100px 100px;
+    background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+}
+
+.wallpaper_bar span:nth-child(5) {
+    top: 0;
+    right: 46%;
+    width: 1%;
+    height: 2%;
+    border-radius: 0 0 100px 100px;
+    background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+}
+
+.wallpaper_bar span:nth-child(6) {
+    top: 4%;
+    right: 46%;
+    width: 1%;
+    height: 2%;
+    border-radius: 100px 100px;
+    background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+}
+
+
+.wallpaper_bar span:nth-child(7) {
     top: 0;
     left: 0;
-    margin: 50px;
-    font-weight: 600;
-    color: white;
-    font-size: 20px;
-  }
+    width: 10%;
+    height: 30%;
+    background-color: whitesmoke;
+    border-radius: 0 0 100px 100px;
+}
 
-  .side::after {
-    content: "Pebblo Team";
+.wallpaper_bar span:nth-child(8) {
+    top: 0;
+    left: 20%;
+    width: 10%;
+    height: 20%;
+    background-color: whitesmoke;
+    border-radius: 0 0 100px 100px;
+}
+
+.wallpaper_bar span:nth-child(9) {
+    top: 0;
+    right: 13%;
+    width: 4%;
+    height: 30%;
+    background-color: whitesmoke;
+    border-radius: 0 0 100px 100px;
+}
+
+.wallpaper_bar span:nth-child(10) {
+    top: 0;
+    right: 5%;
+    width: 5%;
+    height: 17%;
+    background-color: whitesmoke;
+    border-radius: 0 0 100px 100px;
+}
+
+@keyframes minusToptoTop {
+    from {
+        top: -10%;
+    }
+
+    to {
+        top: ;
+    }
+}
+
+
+.landing_content {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 300px;
+    z-index: 1;
+
+    animation: minusLefttoLeft 1s;
+}
+
+.landing_content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    width: 450px;
+}
+
+.landing_content p {
+    font-size: 17px;
+    font-weight: 600;
+    opacity: .5;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.landing_content a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    background: radial-gradient(circle at top left, var(--theme-a),var(--theme-b));
+    border-radius: 100px;
+    padding: 22px 40px;
+    color: white;
+    transition: .1s;
+}
+
+.landing_content a:hover {
+    margin-top: -5px;
+    margin-left: 5px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.478);
+}
+
+.landing_phone {
+    position: absolute;
+    bottom: -5%;
+    right: 20%;
+    width: 20%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(https://cdn.discordapp.com/attachments/667293886468718592/740505248967295016/38776065-554e9eb6-4091-11e8-8147-04c10cba5bfc.png);
+    /* display: none; */
+
+    animation: fadeIN 4s;
+}
+
+@keyframes fadeIN {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes minusLefttoLeft {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: ;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.how {
+    margin: 100px 0 100px;
+    text-align: center;
+}
+
+.how h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.how p {
+    margin: 20px auto 60px;
+    width: 400px;
+    font-weight: 600;
+    opacity: .4;
+}
+
+.how_item {
+    display: inline-block;
+    /* height: 300px; */
+    width: 300px;
+    margin: 0 20px 50px;
+}
+
+.how_item img {
     display: block;
-    top: 0;
-    left: 0;
-    position: fixed;
-    margin: 150px 50px;
-    color: white;
-    opacity: .8;
-    font-weight: 600;
-  }
+    margin: 0 auto 50px;
+    width: 80px;
+}
 
-  .content {
-    display: none;
-  }
+.how_item h1 {
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how_item span {
+    margin-right: 10px;
+    font-size: 25px;
+    opacity: .5;
+}
+
+.how_item p {
+    height: 50px;
+    display: block;
+    margin: 20px auto 0;
+    width: 90%;
+    font-size: 19px;
+}
+
+.login {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 30px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at top right, var(--theme-a),var(--theme-b));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .1s;
+}
+
+.login img {
+    filter: invert(100%);
+    width: 40%;
 }
