@@ -2,6 +2,7 @@
 
 # fuck off settings
 .vscode
+.idea
 
 # dependencies
 /node_modules
