@@ -1,25 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Router from 'next/router'
-import { Account } from '../core';
-import { Log } from '../utils';
-import { usePulse } from 'pulse-framework';
+import { Log } from '../actions/utils';
 import Head from 'next/head';
-import styles from '../styles/components/auth.module.css';
+import styles from '../components/styles/auth.module.css';
 
 const Page = () => {
-  const [logged] = usePulse(Account.isUserLoggedIn);
-  if (logged && process.browser) Router.replace('/explore');
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
-  const doLogin = async (ev) => {
-    ev.preventDefault();
-    if (!email) return;
-    if (!password) return;
-    const logged = await Account.login(email, password);
-    Log('Application', 'Logging in');
-    if (logged.success) return Router.push('/explore');
-  }
   return (
     <>
     <title>Login</title>
@@ -40,8 +28,8 @@ const Page = () => {
           </div>
         <div className={styles.login_content}>
             <form>
-              <input type="email" name="" id="" placeholder="Email Address" required/>
-              <input type="password" name="" id="" placeholder="Password" required/>
+              <input type="email" name="" id="" placeholder="Email Address" required onChange={(change) => { setEmail(change.target.value) }}/>
+              <input type="password" name="" id="" placeholder="Password" required onChange={(change) => { setPassword(change.target.value) }}/>
 
                   <a href="" className={styles.trouble}>Having trouble logging in?</a>
                 
