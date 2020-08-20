@@ -1,10 +1,15 @@
-import Head from 'next/head';
-import Nav from '../components/general/Nav';
-import Profile from '../components/user/Profile'
+import React, { useState } from 'react';
 import Router from 'next/router'
 import { Log } from '../actions/utils';
+import styles from '../components/styles/navbar.module.css';
 
-const Page = () => {
+// components
+import Nav from '../components/general/Nav'
+import Profile from '../components/general/Profile'
+
+export default () => {
+  const [email, setEmail] = useState(undefined);
+  const [password, setPassword] = useState(undefined);
   return (
     <>
         <Profile />
@@ -12,4 +17,3 @@ const Page = () => {
     </>
   )
 }
-export default Page;

@@ -1,246 +1,119 @@
-.wallpaper {
-    position: absolute;
-    width: 100%;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background-color: #f8f8f8;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-image: url(https://pbs.twimg.com/profile_banners/1183270417718341633/1597309350/600x200);
-}
-
-.columns {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 100%;
-}
-
-.profile {
+.content {
     position: absolute;
     top: 0;
-    left: 0;
-    display: inline-block;
-    margin-left: 100px;
-    width: 357px;
+    left: 200px;
+    margin: 100px;
+    margin-bottom: 200px;
+    width: 750px;
+    height: 100%;
+    color: var(--color);
 }
 
-.profile_box {
-    background-color: #fdfdfd;
-    border-radius: 5px;
-    height: 370px;
-    box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.050);
-    margin-bottom: 50px;
-    text-align: center;
+.suggested {
+    position: fixed;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 0;
+    margin-right: 1%;
+    width: 400px;
+    height: 94%;
+    border-radius: 30px;
+    display: none;
 }
 
-.profile_avatar {
-    /* position: relative;
-    left: 50%;
-    transform: translate(-50%); */
-    width: 100px;
-    height: 100px;
-    margin-top: 30px;
+.upload {
+    display: block;
+}
+
+.upload textarea {
+    resize: none;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color);
+    font-size: 30px;
+    padding: 16px 30px 16px 0;
+    color: black;
+}
+
+.upload textarea::placeholder {
+    color: var(--color);
+    opacity: .7;
+}
+
+.upload textarea::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.upload input {
+    display: none;
+}
+
+.upload label {
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.050);
     border-radius: 50%;
-    margin-bottom: 20px;
+    cursor: pointer;
 }
 
-.profile_fullName {
-    font-size: 20px;
-    font-weight: 600;
-    opacity: .8;
-}
-
-.profile_username {
-    font-size: 12px;
-    font-weight: 600;
+.upload img {
+    width: 25px;
+    height: 25px;
+    filter: invert(100%);
     opacity: .5;
 }
 
-.profile_website {
-    display: inline-block;
-    margin-top: 40px;
-    font-size: 13px;
-    font-weight: 600;
+@media only screen and (max-width:1400px) {
+    .content {
+        width: 600px;
+        margin-left: 50px;
+    }
+
+    .suggested {
+        width: 300px;
+    }
+
+    .upload textarea {
+        font-size: 20px;
+    }
+
+    .upload label {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .upload img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.profile_website:hover {
-    text-decoration: underline;
-}
+@media only screen and (max-width:1200px) {
+    .content {
+        width: 440px;
+        margin-left: 0;
+    }
 
-.profile_stats {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 260px 0 0 0;
-    width: 357px;
-    height: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .suggested {
+        width: 270px;
+    }
 
-.profile_stats a {
-    width: 33.33%;
-    font-size: 12px;
-    color: var(--color);
-}
+    .upload textarea {
+        font-size: 16px;
+    }
 
-.profile_stats span {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.feed {
-    position: absolute;
-    top: 200px;
-    left: 550px;
-    display: inline-block;
-    width: 600px;
-    margin-bottom: 100px;
-    background-color: #fdfdfd;
-    border-radius: 5px;
-    /* box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.050); */
-}
-
-.feed_tabs {
-    display: block;
-    padding: 20px;
-    border-bottom: solid 1px #f8f8f8;
-    margin-bottom: 30px;
-}
-
-.feed_tabs a {
-    margin-right: 20px;
-    font-size: 14px;
-    color: var(--color);
-    font-weight: 600;
-    opacity: .8;
-}
-
-.post {
-    display: block;
-    width: 90%;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    margin-bottom: 50px;
-}
-
-.post_avatar {
-    float: left;
-}
-
-.post_avatar img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.post_content {
-    border-radius: 0 0 10px 10px;
-    display: inline-block;
-    margin-left: 20px;
-    background-color: #f8f8f8;
-    width: 440px;
-    padding: 12px 16px;
-}
-
-.post_interactedWith {
-    font-size: 14px;
-    opacity: .3;
-    font-weight: 600;
-    color: var(--color);
-    margin-bottom: 5px;
-    display: block;
-}
-
-.post_fullName {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    font-size: 17px;
-    color: var(--color);
-    margin-bottom: 15px;
-}
-
-.post_username {
-    margin-left: 20px;
-    font-size: 12px;
-    opacity: .6;
-    font-weight: 600;
-}
-
-.post_caption {
-    color: var(--color);
-    margin-bottom: 30px;
-}
-
-.post:nth-last-child(1) {
-    margin-bottom: 30px !important;
-}
-
-.post_caption img {
-    max-width: 440px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.post_caption a {
-    font-weight: 600;
-    color: var(--links);
-}
-
-.profile_biography {
-    position: absolute;
-    top: 450px;
-    left: 100px;
-    width: 357px;
-}
-
-.profile_biography h1 {
-    font-size: 20px;
-    opacity: .7;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: solid 1px #dddddd;
-}
-
-.createThread {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 50px;
-    min-width: 30px;
-    min-height: 30px;
-    background: radial-gradient(circle at top left, var(--theme-a),var(--theme-b));
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.createThread img {
-    width: 25px;
-    padding: 12px;
-    filter: invert(100%);
-    border-radius: 100px;
-    margin: 5px;
-    margin-right: 20px;
-    background-color: rgba(0, 0, 0, 0.100);
-    opacity: .6;
-}
-
-.createThread span {
-    margin-right: 20px;
-    color: white;
-    font-weight: 600;
-    opacity: .7;
+    .upload label {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .upload img {
+        width: 15px;
+        height: 15px;
+    }
 }

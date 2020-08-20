@@ -3,33 +3,23 @@ import styles from '../styles/navbar.module.css'
 const Topnav = () => {
     return (
         <>
-                {/* https://dribbble.com/shots/10034795/attachments/2053017?mode=media */}
-
             <div className={styles.navigation}>
-                <a href="/" className={styles.user}>
-                    <a href="" className={styles.notifications}>
-                        <span>999+</span>
-                    </a>
-                    <p>Hey, <strong>Pebblo</strong>!</p>
-                    <img className={styles.avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                </a>
-
-                <div className={styles.search}>
-                    <input type="search" name="" id="" placeholder="Search on Pebblo"/>
+                <div className={styles.navigation_logo}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
 
                 <div className={styles.links}>
-                    <a href="">Profile</a>
-                    <a href="">Explore</a>
-                    <a href="">Messages</a>
+                    <a href="/profile" className={styles.active}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745850922525261844/unknown.png" alt=""/></a>
+                    <a href="/explore"><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
+                    <a href="/notifications"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745859897656344586/bell2.png" alt=""/></a>
+                    <a href="/message"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745856510227120229/unknown.png" alt=""/></a>
                 </div>
-            </div>
 
-            <div className={styles.notifications_box}>
-                <button className={styles.notifications_close}></button>
-                    <div className={styles.notifications_content}>
-                        <h1 className={styles.notifications_title}>Notifications</h1>
-                    </div>
+                <a href="/profile" className={styles.avatar}>
+                    <img src="https://cdn.discordapp.com/avatars/215302985826304010/5e65d38cf852733f000359a5713231a2.png?size=1024" alt=""/>
+                </a>
             </div>
         </>
     )
