@@ -11,13 +11,13 @@ const Topnav = () => {
                 </div>
 
                 <div className={styles.links}>
-                    <a href="/profile" className={styles.active}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745850922525261844/unknown.png" alt=""/></a>
+                    <a href="/andre" className={styles.active}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745850922525261844/unknown.png" alt=""/></a>
                     <a href="/explore"><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
                     <a href="/notifications"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745859897656344586/bell2.png" alt=""/></a>
-                    <a href="/message"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745856510227120229/unknown.png" alt=""/></a>
+                    <a href="/message"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745835287300800522/envelope.png" alt=""/></a>
                 </div>
 
-                <a href="/profile" className={styles.avatar}>
+                <a href="/andre" className={styles.avatar}>
                     <img src="https://cdn.discordapp.com/avatars/215302985826304010/5e65d38cf852733f000359a5713231a2.png?size=1024" alt=""/>
                 </a>
             </div>

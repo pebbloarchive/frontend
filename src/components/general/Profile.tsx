@@ -5,27 +5,44 @@ const Topnav = () => {
         <>
             <div className={styles.content}>
 
-                    <form className={styles.upload}>
-                        <textarea name="" id="" cols="1" rows="2" placeholder="Create a post"></textarea>
-                            {/* <label>
-                                <input type="file" name="" id=""/>
-                                <img src="https://cdn.discordapp.com/attachments/596156721928470547/745852834972565535/camera.png" alt=""/>
-                            </label> ALLOW IN WEBCAM ONCE I FIGURE IT OUT */}
-                            <label>
-                                <input type="file" name="" id=""/>
-                                <img src="https://cdn.discordapp.com/attachments/596156721928470547/745854755649355876/gallery.png" alt=""/>
-                            </label>
-                            <label>
-                                <input type="file" name="" id=""/>
-                                <img src="https://cdn.discordapp.com/attachments/596156721928470547/745854061454033076/emoji.png" alt=""/>
-                            </label>
-                    </form>
-
-                    
+                    <div className={styles.profile}>
+                        <div className={styles.profile_images}>
+                            <img className={styles.avatar} src="https://cdn.discordapp.com/avatars/215302985826304010/5e65d38cf852733f000359a5713231a2.png?size=1024" alt=""/>
+                            <img className={styles.badge} src="https://cdn.discordapp.com/attachments/596156721928470547/745873552384983050/unknown.png" alt=""/>
+                        </div>
+                        <div className={styles.names}>
+                            <div className={styles.names_content}>
+                                <h1>Andre Lewis</h1>
+                                <p>@andre</p>
+                            </div>
+                        </div>
+                        <div className={styles.bio}>
+                            <p>If we can't have midnight snacks why is there a light in the fridge? <a href="">#MindBoggled</a></p>
+                        </div>
+                    </div>
 
             </div>
 
-            <div className={styles.suggested}>
+            <div className={styles.additional_information}>
+                <div className={styles.statistics}>
+                    <a href="">
+                        <span>28K</span>
+                        <h3>Followers</h3>
+                    </a>
+                    <a href="">
+                        {/* BY DEFAULT >> CHANGE TO FOLLOWING */}
+                        <span>482</span>
+                        <h3>Subscribers</h3>
+                    </a>
+                </div>
+                <div className={styles.interaction}>
+                    <a className={styles.follow_account} href="">
+                        Settings
+                    </a>
+                    <a href="" className={styles.insights_account}>
+                        Dashboard
+                    </a>
+                </div>
             </div>
         </>
     )
