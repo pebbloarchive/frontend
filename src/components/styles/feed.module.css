@@ -122,12 +122,46 @@
     .names p {
         font-size: 14px;
     }
+
+    .content {
+        padding: 25px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .interactions img {
+        width: 20px;
+        height: 16px;
+    }
+
+    .interactions span {
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width:1200px) {
     .feed {
         width: 440px;
         margin-left: 0;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .interactions img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .interactions span {
+        font-size: 11px;
     }
 }
 
