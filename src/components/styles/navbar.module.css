@@ -85,6 +85,70 @@
     width: 100%;
 }
 
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    background-color: #15181a;
+}
+
+.settings_content {
+    margin: 100px 0;
+    color: var(--color);
+}
+
+.settings_content a {
+    display: flex;
+    align-items: center;
+    color: var(--color);
+    padding: 20px 40px;
+    transition: .3s;
+}
+
+.settings_active {
+    background-color: rgba(255, 255, 255, 0.050) !important;
+    border-left: solid 5px rgba(255, 255, 255, 0.100);
+}
+
+.settings_content span {
+    font-weight: 600;
+    font-size: 15px;
+    opacity: .8;
+}
+
+.settings_content img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 15px;
+    filter: invert(100%);
+    opacity: .3;
+}
+
+.settings_avatar {
+    width: 35px !important;
+    height: 35px !important;
+    opacity: 1 !important;
+    filter: invert(0%) !important;
+    border-radius: 50%;
+}
+
+.settings_content a:hover {
+    background-color: rgba(255, 255, 255, 0.030);
+}
+
+.settings_content button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: transparent;
+    color: #ff5a5a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
 @media only screen and (max-width:1400px) {
     .navigation {
         width: 150px;
@@ -118,6 +182,23 @@
         width: 50px;
         height: 50px;
     }
+
+    .settings {
+        width: 300px;
+    }
+
+    .settings_content a {
+        padding: 15px 20px;
+    }
+
+    .settings_content img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .settings_content span {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width:1200px) {
@@ -148,6 +229,27 @@
         width: 30px;
         height: 30px;
         bottom: 30px;
+    }
+
+    .settings {
+        width: 250px;
+    }
+
+    .settings_content {
+        margin: 50px 0;
+    }
+
+    .settings_content a {
+        padding: 8px 20px;
+    }
+
+    .settings_content img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .settings_content span {
+        font-size: 11px;
     }
 }
 
