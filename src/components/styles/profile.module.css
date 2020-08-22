@@ -109,13 +109,14 @@
     margin-top: 30px;
 }
 
-.follow_account {
+.rewards_account {
     border-radius: 5px;
     display: block;
     text-align: center;
     background-color: #15181a;
     color: var(--color);
     padding: 20px 0;
+    margin-top: 15px;
     width: 70%;
     position: relative;
     left: 50%;
@@ -147,6 +148,21 @@
     color: var(--background);
 }
 
+.follow_account {
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    background: linear-gradient(to right, var(--theme-a),var(--theme-b));
+    color: var(--color);
+    padding: 20px 1px;
+    margin-bottom: 10px;
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 600;
+}
+
 @media only screen and (max-width:1400px) {
     .content {
         width: 600px;
@@ -170,7 +186,8 @@
     }
 
     .follow_account,
-    .insights_account {
+    .insights_account,
+    .rewards_account {
         font-size: 14px;
         padding: 12px 0;
         width: 60%;
@@ -181,6 +198,7 @@
     .content {
         width: 440px;
         margin-left: 0;
+        margin-bottom: 80px;
     }
 
     .suggested {
@@ -222,7 +240,8 @@
     }
 
     .follow_account,
-    .insights_account {
+    .insights_account,
+    .rewards_account {
         font-size: 12px;
         padding: 20px 0;
         width: 40%;

@@ -4,37 +4,30 @@ const Topnav = () => {
     return (
         <>
             <div className={styles.feed}>
-                
-                <a href="" className={styles.post}>
-                    <a href="" className={styles.info}>
-                        <img src="https://cdn.discordapp.com/avatars/583925649807245322/ff92aefeb57f1a6ab56d28a23f614b9a.png?size=1024" alt=""/>
-                            <div className={styles.info_content}>
-                                <h1>Kyle</h1>
-                                <p>@kyle</p>
-                            </div>
-                    </a>
 
-                    <div className={styles.content}>
-                        <p>Sometimes I like to go in the garden and pretend that I'm a carrot.</p>
-                        <img src="https://www.alimentarium.org/en/system/files/thumbnails/image/AL012-02%20carotte.jpg" alt=""/>
+                <div className={styles.post}>
+                    <div className={styles.user}>
+                        <img src="https://cdn.discordapp.com/avatars/641349391210512394/a_91280ea889eed83eb8a4620e5c2e0efe.png?size=1024" alt=""/>
+                        <div className={styles.names}>
+                            <h1><img src="https://cdn.discordapp.com/attachments/596156721928470547/745873552384983050/unknown.png" alt=""/> kissmemore</h1>
+                            <p>@Natasha</p>
+                        </div>
                     </div>
-                </a>
-                
-                <a href="" className={styles.post}>
-                    <a href="" className={styles.info}>
-                        <img src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                            <div className={styles.info_content}>
-                                <h1>Pebblo</h1>
-                                <p>@Pebblo</p>
-                            </div>
-                    </a>
-
-                    <div className={styles.content}>
-                        <p>Not long ago, the Pebblo Servers were under attack by an unknown user.</p>
-                        <p>Fortunately, how the security at Pebblo is set-up, we've been able to prevent all user data from being compromised.</p>
-                        <img src="https://pbs.twimg.com/media/ERCg_8wWkAAgJN8?format=png&name=small" alt=""/>
+                    <div className={styles.caption}>
+                        <div className={styles.content}>
+                            <p>👀🐽👀</p>
+                            <img src="https://pbs.twimg.com/media/Ef8GeZGXkAA7vfs?format=jpg&name=large" alt=""/>
+                        </div>
                     </div>
-                </a>
+                    <div className={styles.interactions}>
+                        <a href=""><img src="https://cdn.discordapp.com/attachments/596156721928470547/746527468898484344/comment.png" alt=""/>
+                        <span>248</span></a>
+                        <a href=""><img src="https://cdn.discordapp.com/attachments/596156721928470547/746527493787353148/heart.png" alt=""/>
+                        <span>4.7k</span></a>
+                        <a href=""><img src="https://cdn.discordapp.com/attachments/596156721928470547/746527492461822093/share.png" alt=""/>
+                        <span>482</span></a>
+                    </div>
+                </div>
 
             </div>
         </>

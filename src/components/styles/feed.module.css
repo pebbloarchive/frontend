@@ -3,94 +3,124 @@
     top: 0;
     left: 200px;
     margin-left: 100px;
-    margin-bottom: 200px;
-    width: 750px;
+    margin-bottom: 100px;
+    width: 600px;
     color: var(--color);
-}
-
-.avatar {
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-}
-
-.avatar img {
-    background-color: transparent;
-    padding: 1px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
 }
 
 .post {
     display: block;
     width: 100%;
-    margin-bottom: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: solid 5px #15181a;
 }
 
-.info {
+.post:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.user {
     height: 60px;
-    display: block;
-    width: 100%;
-    color: var(--color);
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 20px;
 }
 
-.info img {
-    display: inline-block;
+.user img {
     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
-.info_content {
+.names {
     margin-left: 20px;
 }
 
-.info_content h1 {
-    opacity: .9;
-    font-size: 19px;
+.names h1 {
+    font-size: 20px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
-.info_content p {
-    font-size: 14px;
+.names img {
+    margin-right: 5px;
+    width: 28px;
+    height: 28px;
+}
+
+.names p {
+    font-size: 15px;
     opacity: .3;
 }
 
-.content {
+.caption {
+    border-radius: 5px;
     background-color: #15181a;
-    padding: 30px;
-    color: var(--color);
-    border-radius: 5px 10px 10px 10px;
 }
 
-.content img {
-    min-width: 30px;
-    min-height: 30px;
-    max-width: 100%;
-    border-radius: 5px;
-    margin-top: 20px;
+.content {
+    padding: 20px;
 }
 
 .content p {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 19px;
 }
 
-.content p:nth-last-child(1) {
-    margin-bottom: 0;
+.content img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.interactions {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.interactions a {
+    margin-right: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: var(--color);
+}
+
+.interactions img {
+    filter: invert(100%);
+    margin-right: 5px;
+    opacity: .6;
+}
+
+.interactions span {
+    opacity: .3;
 }
 
 @media only screen and (max-width:1400px) {
     .feed {
         width: 600px;
         margin-left: 50px;
+    }
+
+    .user img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .names h1 {
+        font-size: 16px;
+    }
+
+    .names img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .names p {
+        font-size: 14px;
     }
 }
 

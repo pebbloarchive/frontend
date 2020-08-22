@@ -37,11 +37,14 @@ const Topnav = () => {
                 </div>
                 <div className={styles.interaction}>
                     <a className={styles.follow_account} href="">
-                        Settings
+                        Follow
                     </a>
-                    <a href="" className={styles.insights_account}>
+                    <a href="" className={styles.rewards_account}>
+                        Rewards
+                    </a>
+                    {/* <a href="" className={styles.insights_account}>
                         Dashboard
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </>
