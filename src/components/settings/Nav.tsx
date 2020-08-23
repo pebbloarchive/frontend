@@ -1,4 +1,4 @@
-import styles from '../../styles/navbar.module.css'
+import styles from '../styles/navbar.module.css'
 
 const Topnav = () => {
     return (

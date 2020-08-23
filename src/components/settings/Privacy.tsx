@@ -1,10 +1,10 @@
-import styles from '../../styles/settings.module.css'
+import styles from '../styles/settings.module.css'
 
 const Page = () => {
     return (
         <>
             <div className={styles.content}>
-                <h1 className={styles.title}>Connections</h1>
+                <h1 className={styles.title}>Privacy &amp; Safety</h1>
 
                     <div className={styles.setting}>
                         <h1 className={styles.maintenance}>Coming soon!</h1>
