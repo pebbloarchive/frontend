@@ -17,7 +17,7 @@ const Topnav = () => {
                             </div>
                         </div>
                         <div className={styles.bio}>
-                            <p>If we can't have midnight snacks why is there a light in the fridge? <a href="">#MindBoggled</a></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex beatae architecto, velit ratione cupiditate explicabo voluptate sapiente, nihil aliquam, culpa repellendus neque incidunt tempore accusamus hic mollitia quae. Eius, asperiores.</p>
                         </div>
                     </div>
 

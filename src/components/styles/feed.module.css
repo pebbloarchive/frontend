@@ -167,7 +167,8 @@
 
 @media only screen and (max-width:1000px) {
     .feed {
-        margin: 20px 0 150px;
+        position: relative;
+        margin: 100px 0 0;
         width: 85%;
         left: 50%;
         transform: translate(-50%);

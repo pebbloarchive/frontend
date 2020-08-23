@@ -1,134 +1,94 @@
 .content {
-    position: absolute;
-    left: 400px;
-    margin: 100px;
+    position: relative;
+    left: 50px;
+    margin-left: 450px;
     display: block;
+    width: 700px;
     color: var(--color);
-    width: 900px;
-}
-
-.title {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 25px 0;
-    color: var(--color);
-    opacity: .5;
-}
-
-.setting {
-    display: block;
-    width: 100%;
     background-color: rgba(255, 255, 255, 0.050);
-    border-right: 5px;
-}
-
-.edit_avatar {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
+    border-radius: 5px;
     padding: 30px;
-    text-align: center;
     margin-bottom: 50px;
 }
 
-.edit_avatar img {
-    display: inline-block;
-    background-color: var(--background);
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+.content:nth-child(1) {
+    margin-top: 100px;
 }
 
-.edit_avatar input {
-    display: none !important;
-}
-
-.edit_avatar button {
-    margin: 10px 0 20px;
-    padding: 10px 20px;
-    background: radial-gradient(circle at top left, var(--theme-a),var(--theme-b));
-    color: white;
-    border-radius: 100px;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.edit_profile {
-    display: block;
-    width: 100%;
-    padding: 30px;
-    /* background-color: saddlebrown; */
-}
-
-.edit_profile input {
-    width: 30%;
-}
-
-.setting input {
-    background-color: rgba(255, 255, 255, 0.020);
-    padding: 12px 20px;
-    display: block;
-    border-radius: 100px;
-    color: var(--color);
-    margin-bottom: 20px;
-}
-
-.setting input:nth-last-child(1) {
-    margin-bottom: 0;
-}
-
-.setting input::placeholder {
-    font-weight: 600;
-}
-
-.setting button[type="submit"] {
-    display: block;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.200);
-    color: var(--color);
-}
-
-.maintenance {
-    display: block;
-    text-align: center;
-    padding: 30px;
-    font-size: 20px;
-    font-weight: 600;
+.title {
+    font-size: 17px;
     opacity: .3;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.edit_account img {
+    width: 160px;
+    height: 160px;
+    float: left;
+    border-radius: 100%;
+}
+
+.edit_account input[type="file"] {
+    display: none;
+}
+
+.edit_account input {
+    margin-left: 200px;
+}
+
+.content input[type="text"],
+.content input[type="email"],
+.content input[type="password"],
+.content textarea {
+    display: block;
+    width: 50%;
+    font-size: 17px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.100);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.700);
+}
+
+.content input[type="submit"] {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(to right, var(--theme-a),var(--theme-b));
+    font-weight: 600;
+}
+
+.content textarea {
+    margin: 0;
+    /* height: 40px; */
+    width: 94%;
+    resize: vertical;
+}
+
+.content input::placeholder {
+    color: var(--color);
+    opacity: .4;
+    font-weight: 600;
+}
+
+.content hr {
+    width: 100%;
+    margin: 100px 0 50px;
+    border: solid 1px rgba(255, 255, 255, 0.010);
+}
+
+.change_password hr {
+    margin: 50px 0;
 }
 
 @media only screen and (max-width:1400px) {
     .content {
-        margin: 90px 0px;
-        width: 700px;   
-    }
-
-    .title {
-        font-size: 16px;        
-    }
-
-    .edit_avatar {
-        width: 100px;
-        height: 100px;
-    }
-
-    .edit_avatar button {
-        font-size: 10px;
-        padding: 10px 10px;
-    }
-
-    .edit_profile input {
-        width: 35%;
-    }
-
-    .setting input {
-        font-size: 10px;
-    }
-
-    .setting button[type="submit"] {
-        margin-top: 30px;
-        font-size: 10px;
+        margin-left: 350px;
     }
 }

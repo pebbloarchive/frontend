@@ -251,13 +251,49 @@
 
 @media only screen and (max-width:1000px) {
     .content {
-        margin: 20px 0 150px;
+        position: relative;
+        margin: 100px 0 0;
         width: 85%;
         left: 50%;
+        height: 80%;
         transform: translate(-50%);
     }
 
     .suggested {
         display: none;
+    }
+
+    .additional_information {
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        height: auto;
+    }
+
+    .rewards_account,
+    .follow_account,
+    .insights_account {
+        width: auto;
+        margin: 0 10px;
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 0;
+    }
+
+    .statistics {
+        margin: 0 auto;
+        height: 100px;
+    }
+
+    .bio {
+        width: 100%;
+    }
+
+    .bio p {
+        font-size: 16px;
     }
 }
