@@ -87,6 +87,91 @@
     margin: 50px 0;
 }
 
+.connections_list {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.030);
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.connections_list button {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 100px;
+    transition: .3s;
+    margin-right: 5px;
+}
+
+.connections_list button:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.connections_list img {
+    width: 30px;
+}
+
+.connections_list button:hover {
+    background-color: rgba(255, 255, 255, 0.050);
+}
+
+.connections_items button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    text-align: left;
+    color: var(--color);
+    border: solid 1px rgba(0, 0, 0, 0.500);
+    margin-bottom: 30px;
+    display: block;
+    padding: 30px 60px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 20px;
+}
+
+.connections_items button:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.connections_items input {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 1;
+    background-color: transparent;
+    width: 99% !important;
+    padding: 0;
+    margin: 0 !important;
+    color: var(--color) !important;
+}
+
+.connections_discord {
+    background-color: #6071ac;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995343429730354/discord.png);
+}
+
+.connections_twitch {
+    background-color: #373665;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995519515262996/twitch.png);
+}
+
+.connections_spotify {
+    background-color: #1c944c;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995816027389982/spotify.png);
+}
+
+.connections_items button:hover {
+    background-color: #d64646;
+    cursor: pointer;
+
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/747038330591641691/trash.png);
+}
+
 @media only screen and (max-width:1400px) {
     .content {
         margin-left: 350px;

@@ -32,6 +32,8 @@ const Topnav = () => {
                     <button>Logout</button>
                 </div>
             </div>
+            
+            <a href="/profile" className={styles.settings_home}></a>
         </>
     )
 }

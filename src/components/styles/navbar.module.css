@@ -149,6 +149,25 @@
     font-size: 14px;
 }
 
+.settings_home {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    margin: 40px;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.100);
+    filter: invert(100%);
+    opacity: .9;
+
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746976276216152104/chevron-left.png);
+}
+
 @media only screen and (max-width:1400px) {
     .navigation {
         width: 150px;
