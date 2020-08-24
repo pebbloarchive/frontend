@@ -22,13 +22,13 @@ const Page = () => {
                     <div className={styles.connections_items}>
                         <h1 className={styles.title}>Active</h1>
                         <button className={styles.connections_discord}>
-                            <input type="text" name="" id="" value="andre#0069"/>
+                            <input type="text" name="" id="" defaultValue="andre#0069"/>
                         </button>
                         <button className={styles.connections_twitch}>
-                            <input type="text" name="" id="" value="andre"/>
+                            <input type="text" name="" id="" defaultValue="andre"/>
                         </button>
                         <button className={styles.connections_spotify}>
-                            <input type="text" name="" id="" value="rocketlea"/>
+                            <input type="text" name="" id="" defaultValue="rocketlea"/>
                         </button>
                     </div>
             </div>

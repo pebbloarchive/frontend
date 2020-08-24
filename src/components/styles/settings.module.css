@@ -101,8 +101,8 @@
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background-color: transparent;
-    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.050);
+    border-radius: 10px;
     transition: .3s;
     margin-right: 5px;
 }
@@ -116,7 +116,7 @@
 }
 
 .connections_list button:hover {
-    background-color: rgba(255, 255, 255, 0.050);
+    border-radius: 50%;
 }
 
 .connections_items button {
@@ -175,5 +175,42 @@
 @media only screen and (max-width:1400px) {
     .content {
         margin-left: 350px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .content {
+        margin-left: 300px;
+        width: 500px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .content hr {
+        margin: 30px 0;
+    }
+
+    .edit_account img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .edit_account input {
+        margin-left: 100px;
+    }
+
+    .content input[type="text"],
+    .content input[type="email"],
+    .content input[type="password"],
+    .content textarea {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
+    .content input[type="submit"] {
+        font-size: 8px;
+        margin: 10px;
     }
 }
