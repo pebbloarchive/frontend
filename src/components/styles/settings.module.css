@@ -8,7 +8,7 @@
     background-color: rgba(255, 255, 255, 0.050);
     border-radius: 5px;
     padding: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .content:nth-child(1) {
@@ -22,11 +22,26 @@
     margin-bottom: 30px;
 }
 
+.subtitle {
+    font-size: 15px;
+    opacity: .3;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.note {
+    margin-top: -25px;
+    margin-bottom: 50px;
+    color: #888888;
+}
+
 .edit_account img {
     width: 160px;
     height: 160px;
     float: left;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .edit_account input[type="file"] {
@@ -165,11 +180,79 @@
     background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995816027389982/spotify.png);
 }
 
+.connections_twitter {
+    background-color: #0569ac;
+    background-image: url(https://cdn.discordapp.com/attachments/637859135970607131/747309987818373190/twitter.png);
+}
+
 .connections_items button:hover {
     background-color: #d64646;
     cursor: pointer;
 
     background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/747038330591641691/trash.png);
+}
+
+.checkbox {
+    margin-top: 20px;
+    display: block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.050);
+}
+
+.checkbox h1 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: .6;
+    margin-left: 30px;
+    margin-top: -1px;
+}
+
+.checkbox p {
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 50px;
+    display: block;
+    color: #dedede;
+}
+
+.checkbox a {
+    margin: 0 4px;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input[type="checkbox"]::after,
+.checkbox input[type="radio"] {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox_container {
+    float: left;
+}
+
+.checkbox_container span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.100);
+    transition: .3s;
+}
+
+.checkbox input:checked ~ .checkbox_box {
+    background-color: #34a134;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width:1400px) {
