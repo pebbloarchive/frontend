@@ -3,6 +3,8 @@ import styles from '../styles/settings.module.css'
 const Page = () => {
     return (
         <>
+        <title>Settings &gt; Connections</title>
+
             <div className={styles.content}>
                 <h1 className={styles.title}>Connections</h1>
 
@@ -18,9 +20,8 @@ const Page = () => {
                         </button>
                     </div>
 
-                    <hr/>
                     <div className={styles.connections_items}>
-                        <h1 className={styles.title}>Active</h1>
+                        <h1 className={styles.subtitle}>Active</h1>
                         <button className={styles.connections_discord}>
                             <input type="text" name="" id="" defaultValue="andre#0069"/>
                         </button>

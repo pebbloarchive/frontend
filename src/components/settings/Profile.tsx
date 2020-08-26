@@ -3,6 +3,8 @@ import styles from '../styles/settings.module.css'
 const Page = () => {
     return (
         <>
+        <title>Settings &gt; Edit Profile</title>
+
                 <div className={styles.content}>
                     <h1 className={styles.title}>Account Details</h1>
                         <form className={styles.edit_account}>

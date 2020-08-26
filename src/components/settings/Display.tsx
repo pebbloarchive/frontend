@@ -3,6 +3,8 @@ import styles from '../styles/settings.module.css'
 const Page = () => {
     return (
         <>
+        <title>Settings &gt; Display</title>
+
             <div className={styles.content}>
                 <h1 className={styles.title}>Display</h1>
 
