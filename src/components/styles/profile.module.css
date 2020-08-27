@@ -1,7 +1,7 @@
 .content {
     position: relative;
     top: 0;
-    left: 200px;
+    left: 300px;
     margin: 100px;
     margin-bottom: 100px;
     width: 900px;
@@ -14,7 +14,7 @@
     position: fixed;
     top: 50%;
     transform: translate(0,-50%);
-    right: 0;
+    right: 100px;
     width: 500px;
     /* 400 WIDTH FOR 80% */
     height: 100%;
@@ -167,10 +167,12 @@
 
 @media only screen and (max-width:1800px) {
     .content {
+        left: 200px;
         width: 750px;
     }
 
     .additional_information {
+        right: 0;
         width: 400px;
     }
 

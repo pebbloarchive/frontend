@@ -1,7 +1,7 @@
 .feed {
     position: relative;
     top: 0;
-    left: 200px;
+    left: 300px;
     margin-left: 100px;
     margin-bottom: 100px;
     width: 700px;
@@ -114,6 +114,7 @@
 
 @media only screen and (max-width:1800px) {
     .feed {
+        left: 200px;
         width: 600px;
     }
 }
