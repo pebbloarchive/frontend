@@ -5,16 +5,16 @@ const Topnav = () => {
         <>
             <div className={styles.settings}>
                 <div className={styles.settings_content}>
-                    <a href="/settings">
+                    <a href="/settings" className={styles.settings_active}>
                         <img className={styles.settings_avatar} src="https://cdn.discordapp.com/avatars/215302985826304010/5e65d38cf852733f000359a5713231a2.png?size=1024" alt=""/>
                         <span>Edit Profile</span>
                     </a>
-                    <a href="/settings/privacy-safety" className={styles.settings_active}>
+                    <a href="/settings/privacy-safety">
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/746565258050666516/padlock.png" alt=""/>
                         <span>Privacy &amp; Safety</span>
                     </a>
                     <a href="/settings/password">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746573883930312734/unknown.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png" alt=""/>
                         <span>Change Password</span>
                     </a>
                     <a href="/settings/connections">
@@ -32,6 +32,8 @@ const Topnav = () => {
                     <button>Logout</button>
                 </div>
             </div>
+            
+            <a href="/profile" className={styles.settings_home}></a>
         </>
     )
 }

@@ -1,10 +1,11 @@
 .feed {
     position: relative;
     top: 0;
-    left: 200px;
+    left: 300px;
     margin-left: 100px;
     margin-bottom: 100px;
-    width: 600px;
+    width: 700px;
+    /* 600 WIDTH FOR 80% */
     color: var(--color);
 }
 
@@ -14,6 +15,7 @@
     padding-bottom: 50px;
     margin-bottom: 50px;
     border-bottom: solid 5px #15181a;
+    color: var(--color);
 }
 
 .post:nth-last-child(1) {
@@ -25,6 +27,7 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    color: var(--color);
 }
 
 .user img {
@@ -66,9 +69,11 @@
 
 .content p {
     font-size: 19px;
+    color: #dedede;
 }
 
 .content img {
+    width: 100%;
     max-width: 100%;
     border-radius: 5px;
     margin-top: 15px;
@@ -97,6 +102,21 @@
 
 .interactions span {
     opacity: .3;
+}
+
+.comments {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100%;
+}
+
+@media only screen and (max-width:1800px) {
+    .feed {
+        left: 200px;
+        width: 600px;
+    }
 }
 
 @media only screen and (max-width:1400px) {
@@ -139,6 +159,10 @@
     .interactions span {
         font-size: 13px;
     }
+
+    .comments {
+        width: 500px;
+    }
 }
 
 @media only screen and (max-width:1200px) {
@@ -167,7 +191,8 @@
 
 @media only screen and (max-width:1000px) {
     .feed {
-        margin: 20px 0 150px;
+        position: relative;
+        margin: 100px 0 0;
         width: 85%;
         left: 50%;
         transform: translate(-50%);

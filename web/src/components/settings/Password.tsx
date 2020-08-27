@@ -3,13 +3,22 @@ import styles from '../styles/settings.module.css'
 const Page = () => {
     return (
         <>
-            <div className={styles.content}>
-                <h1 className={styles.title}>Change Password</h1>
+        <title>Settings &gt; Password</title>
 
-                    <div className={styles.setting}>
-                        <h1 className={styles.maintenance}>Coming soon!</h1>
-                    </div>
-            </div>
+                <div className={styles.content}>
+                    <h1 className={styles.title}>Change Password</h1>
+                        <form className={styles.change_password}>
+                            <input type="password" name="" id="" placeholder="Current Password" required/>
+                            <hr/>
+                            <input type="password" name="" id="" placeholder="New Password" required/>
+                            <input type="password" name="" id="" placeholder="Repeat Password" required/>
+                            
+
+                                <div className={styles.submit}>
+                                    <input type="submit" value="Save Changes"/>
+                                </div>
+                        </form>
+                </div>
         </>
     )
 }
