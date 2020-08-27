@@ -1,0 +1,317 @@
+.navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #101112;
+    border-right: solid 1px #15181a;
+
+    transition: .3s;
+}
+
+.navigation_logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation_logo span {
+    width: 7px;
+    height: 30px;
+    margin: 0 4px;
+    display: block;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.navigation_logo span:nth-child(2) {
+    height: 40px;
+}
+
+.links {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.links img {
+    filter: invert(100%);
+    opacity: .150;
+    width: 60%;
+    transition: .3s;
+}
+
+.links a {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a:hover img {
+    opacity: .8;
+}
+
+.active {
+    background: linear-gradient(to right, var(--theme-a),var(--theme-b));
+}
+
+.active img {
+    opacity: .4;
+    width: 40%;
+}
+
+.avatar {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60px;
+    height: 60px;
+}
+
+.avatar img {
+    border-radius: 100%;
+    width: 100%;
+}
+
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    background-color: #15181a;
+}
+
+.settings_content {
+    margin: 100px 0;
+    color: var(--color);
+}
+
+.settings_content a {
+    display: flex;
+    align-items: center;
+    color: var(--color);
+    padding: 20px 40px;
+    transition: .3s;
+}
+
+.settings_active {
+    background-color: rgba(255, 255, 255, 0.050) !important;
+    border-left: solid 5px rgba(255, 255, 255, 0.100);
+}
+
+.settings_content span {
+    font-weight: 600;
+    font-size: 15px;
+    opacity: .8;
+}
+
+.settings_content img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 15px;
+    filter: invert(100%);
+    opacity: .3;
+}
+
+.settings_avatar {
+    width: 35px !important;
+    height: 35px !important;
+    opacity: 1 !important;
+    filter: invert(0%) !important;
+    border-radius: 50%;
+}
+
+.settings_content a:hover {
+    background-color: rgba(255, 255, 255, 0.030);
+}
+
+.settings_content button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: transparent;
+    color: #ff5a5a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.settings_home {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    margin: 40px;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.100);
+    filter: invert(100%);
+    opacity: .9;
+
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746976276216152104/chevron-left.png);
+}
+
+@media only screen and (max-width:1400px) {
+    .navigation {
+        width: 150px;
+    }
+
+    .navigation_logo {
+        margin-top: 60px;
+    }
+
+    .navigation_logo span {
+        width: 5px;
+        height: 20px;
+        margin: 0 3px;
+    }
+
+    .navigation_logo span:nth-child(2) {
+        height: 30px;
+    }
+
+    .links {
+        top: 150px;
+    }
+
+    .links a {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .settings {
+        width: 300px;
+    }
+
+    .settings_content a {
+        padding: 15px 20px;
+    }
+
+    .settings_content img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .settings_content span {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .navigation {
+        width: 130px;
+    }
+
+    .navigation_logo span {
+        height: 15px;
+        width: 4px;
+    }
+
+    .navigation_logo span:nth-child(2) {
+        height: 25px;
+    }
+
+    .links {
+        top: 130px;
+    }
+
+    .links a {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+        bottom: 30px;
+    }
+
+    .settings {
+        width: 250px;
+    }
+
+    .settings_content {
+        margin: 50px 0;
+    }
+
+    .settings_content a {
+        padding: 15px 20px;
+    }
+
+    .settings_content img {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .settings_content span {
+        font-size: 9px;
+    }
+
+    .settings_home {
+        width: 30px;
+        height: 30px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .navigation {
+        width: 100%;
+        height: 60px;
+        border: none;
+        border-top: solid 1px #15181a;
+    }
+
+    .navigation_logo,
+    .avatar {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+
+    .links a {
+        width: 25%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .links img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .active {
+        background: transparent;
+    }
+}

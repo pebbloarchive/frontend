@@ -1,0 +1,21 @@
+{
+  "name": "@pebblo/core",
+  "version": "1.0.0-alpha.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "@types/react": "^16.9.41",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "pulse-framework": "^3.0.0",
+    "react": "^16.13.1"
+  }
+}
