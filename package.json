@@ -1,28 +1,14 @@
 {
-  "name": "pebblo",
-  "version": "0.1.0",
+  "name": "frontend",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 1500",
-    "build": "next build",
-    "start": "next start"
+    "dev": "lerna bootstrap && lerna run build && lerna run dev --parallel"
   },
-  "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "next": "^9.4.4",
-    "pulse-framework": "^3.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-toastify": "^6.0.8",
-    "ws": "^7.3.1"
-  },
+  "workspaces": [
+    "core",
+    "web"
+  ],
   "devDependencies": {
-    "@types/node": "^13.13.14",
-    "@types/react": "^16.9.43",
-    "@types/react-router": "^5.1.8",
-    "@types/react-router-dom": "^5.1.5",
-    "@types/next": "^9.0.0",
-    "typescript": "^3.9.7"
+    "lerna": "^3.22.1"
   }
 }
