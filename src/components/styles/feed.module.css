@@ -108,14 +108,94 @@
     position: absolute;
     top: 0;
     right: 0;
+    min-height: 100%;
     width: 600px;
-    height: 100%;
+    border-left: solid 1px #15181a;
+    color: var(--color);
+}
+
+.comments_title {
+    padding: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.comment {
+    padding-bottom: 40px;
+    padding: 30px;
+    border-bottom: solid 2px #15181a;
+}
+
+.comment:hover {
+    background-color: rgba(255, 255, 255, 0.030);
+    border-bottom-color: transparent;
+}
+
+.comment:nth-last-child(1) {
+    border-bottom-style: none;
+}
+
+.comment_author {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+}
+
+.comment_author img {
+    width: 50px;
+    display: block;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.comment_author h1 {
+    font-size: 20px;
+    font-weight: 600;
+    opacity: .6;
+}
+
+.comment_author p {
+    font-size: 15px;
+    font-weight: 600;
+    opacity: .3;
+}
+
+.comment_caption {
+    margin-top: 20px;
+}
+
+.comment_caption p {
+    font-size: 18px;
+    color: #dddddd;
 }
 
 @media only screen and (max-width:1800px) {
     .feed {
         left: 200px;
         width: 600px;
+    }
+
+    .comments {
+        width: 500px;
+    }
+
+    .comment_author img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .comment_author h1 {
+        font-size: 18px;
+    }
+
+    .comment_author p {
+        font-size: 14px;
+    }
+
+    .comment_caption p {
+        font-size: 14px;
     }
 }
 
@@ -161,7 +241,34 @@
     }
 
     .comments {
-        width: 500px;
+        width: 400px;
+    }
+
+    .comments_title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .comment_author img {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+    }
+
+    .comment_author h1 {
+        font-size: 16px;
+    }
+
+    .comment_author p {
+        font-size: 12px;
+    }
+
+    .comment_caption {
+        margin-top: 5px;
+    }
+
+    .comment_caption p {
+        font-size: 13px;
     }
 }
 
@@ -186,6 +293,35 @@
 
     .interactions span {
         font-size: 11px;
+    }
+
+    .comments {
+        width: 350px;
+    }
+
+    .comment {
+        padding: 20px;
+    }
+
+    .comment_author img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .comment_author h1 {
+        font-size: 13px;
+    }
+
+    .comment_author p {
+        font-size: 10px;
+    }
+
+    .comment_caption {
+        margin-top: 0;
+    }
+
+    .comment_caption p {
+        font-size: 10px;
     }
 }
 
