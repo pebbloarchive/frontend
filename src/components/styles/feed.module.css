@@ -4,7 +4,8 @@
     left: 200px;
     margin-left: 100px;
     margin-bottom: 100px;
-    width: 600px;
+    width: 700px;
+    /* 600 WIDTH FOR 80% */
     color: var(--color);
 }
 
@@ -72,6 +73,7 @@
 }
 
 .content img {
+    width: 100%;
     max-width: 100%;
     border-radius: 5px;
     margin-top: 15px;
@@ -108,6 +110,12 @@
     right: 0;
     width: 600px;
     height: 100%;
+}
+
+@media only screen and (max-width:1800px) {
+    .feed {
+        width: 600px;
+    }
 }
 
 @media only screen and (max-width:1400px) {
