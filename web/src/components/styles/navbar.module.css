@@ -4,8 +4,8 @@
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: #101112;
-    border-right: solid 1px #15181a;
+    background-color: #fafafa;
+    border-right: solid 1px #f8f8f8;
 
     transition: .3s;
 }
@@ -26,8 +26,9 @@
     height: 30px;
     margin: 0 4px;
     display: block;
-    background-color: white;
+    background-color: var(--color);
     border-radius: 100px;
+    opacity: .7;
 }
 
 .navigation_logo span:nth-child(2) {
@@ -42,8 +43,8 @@
 }
 
 .links img {
-    filter: invert(100%);
-    opacity: .150;
+    /* filter: invert(100%); */
+    opacity: .5;
     width: 60%;
     transition: .3s;
 }
@@ -64,6 +65,10 @@
 
 .active {
     background: linear-gradient(to right, var(--theme-a),var(--theme-b));
+}
+
+.active img {
+    filter: invert(100%);
 }
 
 .active img {
@@ -91,7 +96,7 @@
     left: 0;
     height: 100%;
     width: 400px;
-    background-color: #15181a;
+    background-color: #f8f8f8;
 }
 
 .settings_content {
@@ -108,8 +113,8 @@
 }
 
 .settings_active {
-    background-color: rgba(255, 255, 255, 0.050) !important;
-    border-left: solid 5px rgba(255, 255, 255, 0.100);
+    background-color: rgba(0, 0, 0, 0.050) !important;
+    border-left: solid 5px rgba(0, 0, 0, 0.100);
 }
 
 .settings_content span {
@@ -123,7 +128,7 @@
     height: 30px;
     display: block;
     margin-right: 15px;
-    filter: invert(100%);
+    /* filter: invert(100%); */
     opacity: .3;
 }
 
@@ -136,7 +141,7 @@
 }
 
 .settings_content a:hover {
-    background-color: rgba(255, 255, 255, 0.030);
+    background-color: rgba(0, 0, 0, 0.030);
 }
 
 .settings_content button {
@@ -158,8 +163,7 @@
     border-radius: 100%;
     width: 60px;
     height: 60px;
-    background: rgba(0, 0, 0, 0.100);
-    filter: invert(100%);
+    background: rgba(0, 0, 0, 0.200);
     opacity: .9;
 
     background-position: center;

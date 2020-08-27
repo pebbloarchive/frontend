@@ -14,7 +14,7 @@
     width: 100%;
     padding-bottom: 50px;
     margin-bottom: 50px;
-    border-bottom: solid 5px #15181a;
+    border-bottom: solid 5px #f8f8f8;
     color: var(--color);
 }
 
@@ -55,12 +55,13 @@
 
 .names p {
     font-size: 15px;
-    opacity: .3;
+    font-weight: 600;
+    opacity: .5;
 }
 
 .caption {
     border-radius: 5px;
-    background-color: #15181a;
+    background-color: #dedede;
 }
 
 .content {
@@ -69,7 +70,7 @@
 
 .content p {
     font-size: 19px;
-    color: #dedede;
+    color: #777777;
 }
 
 .content img {
@@ -95,13 +96,13 @@
 }
 
 .interactions img {
-    filter: invert(100%);
+    /* filter: invert(100%); */
     margin-right: 5px;
     opacity: .6;
 }
 
 .interactions span {
-    opacity: .3;
+    opacity: .7;
 }
 
 .comments {
@@ -110,7 +111,7 @@
     right: 0;
     min-height: 100%;
     width: 600px;
-    border-left: solid 1px #15181a;
+    border-left: solid 1px #f8f8f8;
     color: var(--color);
 }
 
@@ -128,7 +129,7 @@
 }
 
 .comment:hover {
-    background-color: rgba(255, 255, 255, 0.030);
+    background-color: rgba(0, 0, 0, 0.030);
     border-bottom-color: transparent;
 }
 
@@ -141,6 +142,7 @@
     align-items: center;
     height: 60px;
     width: 100%;
+    color: var(--color);
 }
 
 .comment_author img {
@@ -153,13 +155,13 @@
 .comment_author h1 {
     font-size: 20px;
     font-weight: 600;
-    opacity: .6;
+    opacity: .8;
 }
 
 .comment_author p {
     font-size: 15px;
     font-weight: 600;
-    opacity: .3;
+    opacity: .6;
 }
 
 .comment_caption {
@@ -168,7 +170,7 @@
 
 .comment_caption p {
     font-size: 18px;
-    color: #dddddd;
+    color: #555555;
 }
 
 @media only screen and (max-width:1800px) {

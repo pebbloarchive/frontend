@@ -6,7 +6,7 @@
     display: block;
     width: 700px;
     color: var(--color);
-    background-color: rgba(255, 255, 255, 0.050);
+    background-color: rgba(0, 0, 0, 0.050);
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 100px;
@@ -18,14 +18,14 @@
 
 .title {
     font-size: 17px;
-    opacity: .3;
+    opacity: .5;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
 .subtitle {
     font-size: 15px;
-    opacity: .3;
+    opacity: .5;
     font-weight: 600;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -62,9 +62,9 @@
     font-size: 17px;
     padding: 15px 20px;
     margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.100);
+    background-color: rgba(0, 0, 0, 0.100);
     border-radius: 5px;
-    color: rgba(255, 255, 255, 0.700);
+    color: rgba(0, 0, 0, 0.700);
 }
 
 .content input[type="submit"] {
@@ -84,6 +84,10 @@
     margin: 0;
     /* height: 40px; */
     width: 94%;
+    resize: none;
+}
+
+.content textarea:hover {
     resize: vertical;
 }
 
@@ -96,7 +100,7 @@
 .content hr {
     width: 100%;
     margin: 100px 0 50px;
-    border: solid 1px rgba(255, 255, 255, 0.010);
+    border: solid 1px rgba(0, 0, 0, 0.050);
 }
 
 .change_password hr {
@@ -106,7 +110,7 @@
 .connections_list {
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.030);
+    background-color: rgba(0, 0, 0, 0.030);
     display: flex;
     align-items: center;
     margin-bottom: 50px;
@@ -117,7 +121,7 @@
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.050);
+    background-color: rgba(0, 0, 0, 0.050);
     border-radius: 10px;
     transition: .3s;
     margin-right: 5px;
@@ -142,7 +146,7 @@
     border-radius: 5px;
     text-align: left;
     color: var(--color);
-    border: solid 1px rgba(0, 0, 0, 0.500);
+    border: solid 1px rgba(255, 255, 255, 0.500);
     margin-bottom: 30px;
     display: block;
     padding: 30px 60px;
@@ -163,7 +167,7 @@
     width: 99% !important;
     padding: 0;
     margin: 0 !important;
-    color: var(--color) !important;
+    color: #dedede !important;
 }
 
 .connections_discord {
@@ -198,7 +202,7 @@
     display: block;
     padding: 15px 30px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.050);
+    background-color: rgba(0, 0, 0, 0.050);
 }
 
 .checkbox h1 {
@@ -215,7 +219,7 @@
     margin-top: 10px;
     padding-left: 50px;
     display: block;
-    color: #dedede;
+    color: #777777;
 }
 
 .checkbox a {
@@ -247,7 +251,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.100);
+    background-color: rgba(0, 0, 0, 0.100);
     transition: .3s;
 }
 

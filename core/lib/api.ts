@@ -4,7 +4,7 @@ import { ICore } from "./core";
 const core = App.Core<ICore>();
 
 export const API = App.API({
-  baseURL: 'http://localhost:3000/1.0',
+  baseURL: 'http://97.84.165.72:3000/1.0',
   options: {
     headers: {
       ['content-type']: 'application/json'
