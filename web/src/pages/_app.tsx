@@ -8,7 +8,6 @@ import API from '@pebblo/core/lib/api'
 import '../components/styles/main.css';
 import { Log } from '../components/utils';
 
-
 const Pebblo = ({ Component, pageProps }: AppProps) => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
   const [loaded, isLoading] = useState(false);

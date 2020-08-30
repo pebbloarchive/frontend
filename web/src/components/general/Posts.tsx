@@ -3,7 +3,7 @@ import styles from '../styles/feed.module.css'
 const Page = () => {
     return (
         <>
-<div className={styles.comments}>
+                <div className={styles.comments}>
                     <h1 className={styles.comments_title}>Comments</h1>
                         <div className={styles.comment}>
                             <a href="" className={styles.comment_author}>
@@ -48,7 +48,6 @@ const Page = () => {
                         </form>
                     </div>
                 </div>
-
         </>
     )
 }

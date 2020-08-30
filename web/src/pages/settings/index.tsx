@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Router from 'next/router'
-import core from '@pebblo/core'
+import core from '../../core';
 import { usePulse } from 'pulse-framework';
 import styles from '../../components/styles/navbar.module.css';
 

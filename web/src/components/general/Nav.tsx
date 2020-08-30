@@ -1,5 +1,5 @@
 import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
+import core from '../../core';
 import styles from '../styles/navbar.module.css'
 import Router from 'next/router';
 import { loginUserIn } from '@pebblo/core/dist/controllers/accounts/account.helpers';
