@@ -1,6 +1,6 @@
 import Router from 'next/router';
 import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
+import core from '../core';
 
 export default function Page() {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);

@@ -1,5 +1,5 @@
 import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
+import core from '../../core';
 import styles from '../styles/navbar.module.css'
 
 const Topnav = () => {

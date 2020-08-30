@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../components/styles/main.css';
 import { AppProps } from 'next/app';
-import core from '@pebblo/core'
+import core from '../core'
 import { Log } from '../components/utils'
 import { usePulse } from 'pulse-framework';
 
