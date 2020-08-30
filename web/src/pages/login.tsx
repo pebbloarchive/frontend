@@ -1,5 +1,5 @@
 import { usePulse } from 'pulse-framework'
-import core from '../core'
+import core from '@pebblo/core';
 import Router from 'next/router';
 import Head from 'next/head';
 import { useState } from 'react';

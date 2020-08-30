@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Router from 'next/router'
 import { usePulse } from 'pulse-framework';
-import core from '../../core';
+import core from '@pebblo/core';
 import styles from '../../components/styles/navbar.module.css';
 
 // components
