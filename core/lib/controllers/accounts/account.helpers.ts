@@ -3,6 +3,7 @@ import { ICore } from '../../core';
 import { AccountState as state, AccountCollection as collection, AccountCollection } from './account.controller';
 import { AccountBody, AccountData, AuthTokens } from './account.interfaces';
 import API from '../../api';
+import { resetState } from 'pulse-framework';
 
 const core = App.Core<ICore>();
 
@@ -16,12 +17,15 @@ export async function loginUserIn(data: AccountData) {
   collection.collect(account, 'AUTHED');
   collection.selectors.CURRENT.select(account.id);
   state.CACHE.set(account);
+  // API.config.options.headers['authorization'] = 'Bearer ' + state.TOKEN.value;
+  // let followers = await core.accounts.routes.getFollowers();
+  // core.accounts.collection.collect(followers, 'RELATIONSHIPS');
   // state.IS_LOGGED.set(true);
 }
 
 export async function refreshUser() {
   const [token, refresh] = [state.TOKEN.value, state.REFRESH_TOKEN.value];
-  if(!token || !refresh) resetData();
+  if(!token || !refresh) return resetData();
   API.config.options.headers['authorization'] = 'Bearer ' + token;
   try {
     const { refresh_token, access_token } = await core.accounts.routes.getRefreshToken({ refresh_token: token });
@@ -36,9 +40,20 @@ export async function refreshUser() {
 
 export async function resetData() {
   collection.selectors.CURRENT.select(undefined);
-  collection.reset();
-  state.TOKEN.reset();
-  state.REFRESH_TOKEN.reset();
   state.CACHE.reset();
-  state.THEME.reset();
+  resetState([collection, state.TOKEN, state.REFRESH_TOKEN, state.THEME]);
+}
+
+export async function getFollowers() {
+    try {
+      API.config.options.headers['authorization'] = 'Bearer ' + state.TOKEN.value;
+      let followers = await core.accounts.routes.getRelationships();
+      core.accounts.collection.collect(followers, 'FOLLOWERS');
+    } catch(err) {
+      App.Error(err);
+    }
+}
+
+export async function setHeaders() {
+  API.config.options.headers['authorization'] = 'Bearer ' + state.TOKEN.value;
 }

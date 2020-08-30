@@ -1,9 +1,11 @@
 import { usePulse } from 'pulse-framework';
 import core from '@pebblo/core';
 import styles from '../styles/navbar.module.css'
+import Router from 'next/router';
+import { loginUserIn } from '@pebblo/core/dist/controllers/accounts/account.helpers';
 
 const Topnav = () => {
-    const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
+    const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
     return (
         <>
             <div className={styles.navigation}>
@@ -19,12 +21,12 @@ const Topnav = () => {
                     <a href="/notifications"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745859897656344586/bell2.png" alt=""/></a>
                     <a href="/message"><img src="https://cdn.discordapp.com/attachments/596156721928470547/745835287300800522/envelope.png" alt=""/></a>
                 </div>
-            
+
                 {loggedIn ? 
-                <a href="/andre" className={styles.avatar}>
-                     <img src="https://cdn.discordapp.com/avatars/215302985826304010/5e65d38cf852733f000359a5713231a2.png?size=1024" alt=""/>
+                <a href={`/${user.username}`} className={styles.avatar}>
+                     <img src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
                 </a>
-                : <p>no u</p> }
+                : !loggedIn ? '' : false }
             </div>
         </>
     )

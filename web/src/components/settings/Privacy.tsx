@@ -81,6 +81,9 @@ const Page = () => {
                             <a href="">More Info.</a>
                         </p>
                     </label>
+                    <div className={styles.submit}>
+                        <input type="submit" value="Save Changes"/>
+                    </div>
             </div>
         </>
     )

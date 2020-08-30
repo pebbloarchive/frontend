@@ -52,17 +52,54 @@ export interface AccountBody {
   id: number;
   email: string;
   username: string;
+  name: string;
   avatar: string;
   description?: string;
   permissions: string[];
   sessions?: string[];
   followingCount?: number;
-  followerCount?: number;
-  linkedAccounts?: linkedAccounts;
+  followersCount?: number;
   private?: boolean;
   suspended?: boolean;
-  suspended_at?: string;
   created_at?: string;
+}
+
+export interface AccountUser {
+  id: number;
+  username: string;
+  name: string;
+  avatar: string;
+  description?: string;
+  permissions: string[];
+  followingCount?: number;
+  followersCount?: number;
+  private?: boolean;
+  suspended?: boolean;
+  created_at?: string;
+}
+
+export interface AccountPosts {
+  id: number;
+  author: number;
+  original: number;
+  content: string;
+  attachments: string[];
+  likes: string[];
+  shares: string[];
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AccountPostsArray extends AccountPosts {
+  id: number;
+  username: string;
+  posts: AccountPosts;
+}
+
+export interface AccountRelationship extends AccountBody {
+  followers: any;
+  following: any;
+  blocked: string[];
 }
 
 export interface AuthCredentials {

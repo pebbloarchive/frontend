@@ -1,6 +1,6 @@
 :root {
-  --color: #ffffff;
-  --background: #101112;
+  --color: #010101;
+  --background: white;
   --theme-a: #ff6e20;
   --theme-b: #ff0067;
   --links: #3d6a9b;
@@ -20,6 +20,23 @@
     --background: #f2f3f7;
   }
 } */
+
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444444;
+  border: solid 7px var(--background);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
+}
+
+
 
 body {
   margin: 0;

@@ -1,6 +1,7 @@
 import Router from 'next/router';
 import { usePulse } from 'pulse-framework';
 import core from '@pebblo/core';
+import { useEffect } from 'react';
 
 export default function Page() {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
@@ -8,7 +9,18 @@ export default function Page() {
     core.accounts.helpers.resetData();
     return Router.push('/');
   }
-  if(!loggedIn && process.browser) return Router.push('/');
+  
+  useEffect(() => {
+    try {
+      if(!loggedIn && process.browser) {
+        core.accounts.helpers.resetData();
+        Router.push('/');
+      }
+    } catch(err) {
+      console.error(err);
+    }
+  });
+
   return (
     <p>Hey</p>
   )

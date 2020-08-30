@@ -15,6 +15,7 @@ export const AccountState = {
 export const AccountCollection = App.Collection<AccountBody>()(Collection => ({
   groups: {
     AUTHED: Collection.Group().persist("ACCOUNT"),
+    RELATIONSHIPS: Collection.Group().persist(),
   },
   selectors: {
     CURRENT: Collection.Selector().persist("CURRENT_ACCOUNT") 

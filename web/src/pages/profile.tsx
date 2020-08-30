@@ -12,7 +12,7 @@ import Feed from '../components/general/Feed'
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-  if(!loggedIn && process.browser) return Router.push('/');
+  if(!loggedIn && process.browser) Router.push('/');
   return (
     <>
         <Profile />
