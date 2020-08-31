@@ -26,7 +26,7 @@ export const AccountCollection = App.Collection<AccountBody>()(Collection => ({
 const AccountComputed = {
 	IS_LOGGED: App.Computed(() => {
     if(AccountCollection.selectors.CURRENT.value) {
-      if(AccountCollection.selectors.CURRENT.value.id) {
+      if(AccountCollection.selectors.CURRENT.id) {
         return true;
       } else {
         return false;
@@ -35,6 +35,10 @@ const AccountComputed = {
     return false;
   })
 }
+
+console.log(AccountCollection.selectors.CURRENT)
+console.log(AccountCollection.selectors.CURRENT.id)
+console.log(AccountCollection.selectors.CURRENT.username)
 
 const controller = App.Controller({
   state: { ...AccountState, ...AccountComputed },

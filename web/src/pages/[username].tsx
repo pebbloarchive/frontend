@@ -1,45 +1,42 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import core from '@pebblo/core';
+import { usePulse } from 'pulse-framework';
 import { AccountUser as UserProps } from '@pebblo/core/lib/controllers/accounts/account.interfaces'
+import { useState } from 'react';
+import Router from 'next/router';
 
 // Components
 import NotFound from './404';
 import Nav from '../components/general/Nav'
 import styles from '../components/styles/profile.module.css';
-import { useState } from 'react';
+import { Log } from '../components/utils';
 
 export default ({ user }: {
   user: UserProps,
 }) => {
+  const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED])
   if(!user || !user.username || user.suspended) return <NotFound />
-  const followUser = async () => {
-    await core.accounts.routes.followUser(user.id);
-  };
-
-  const unfollowUser = async () => {
-    await core.accounts.routes.unfollowUser(user.id);
-  };
-
   const Button = () => {
     const [set, isSet] = useState(false);
     const [hovering, hovered] = useState(false);
-    const [follow, following] = useState(false);
+    const [followed, following] = useState(false);
 
     const buttonClick = async () => {
+      if(!loggedIn) return Router.push('/login');
       let isFollowing = await core.accounts.routes.getRelationships();
       if(isFollowing.following.includes(user.id)) {
         await core.accounts.routes.unfollowUser(user.id);
-        following(false)
+        following(true);
       } else {
         await core.accounts.routes.followUser(user.id);
-        following(true);
+        following(false);
       }
     }
 
     return (
       <a className={styles.follow_account} onClick={buttonClick}>
-        { following ? <>Unfollow</> : <>Follow</> }
+        { followed ? <>Unfollow</> : <>Follow</> }
       </a>
     )
   }

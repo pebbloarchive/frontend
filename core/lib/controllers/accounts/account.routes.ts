@@ -21,4 +21,4 @@ export const getRelationships = async(): Promise<AccountRelationship> => (await 
 
 export const followUser = async(id: number): Promise<PulseResponse> => (await API.post(`users/follow/${id}`)).data;
 
-export const unfollowUser = async(id: number): Promise<PulseResponse> => (await API.post(`users/unfollow/${id}`)).data;
+export const unfollowUser = async(id: number): Promise<PulseResponse> => (await API.delete(`users/unfollow/${id}`)).data;

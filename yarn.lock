@@ -7026,9 +7026,9 @@ public-encrypt@^4.0.0:
     safe-buffer "^5.1.2"
 
 pulse-framework@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/pulse-framework/-/pulse-framework-3.0.0.tgz#ca9256cebc86b2db7b83fc9a77d36054e31539b5"
-  integrity sha512-DYv9ASxD0WLMz3QSBc3y0vtKuQebqLANYSwqfXRFLVmttwd0JhhOFWNKW4HaJutJa11jXJmJSPehV80WbscbOg==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/pulse-framework/-/pulse-framework-3.0.1.tgz#4514eb6ff409c78c2c77bf93ab105056fa44ab81"
+  integrity sha512-vNzWnkTJkZj6w+h+fcwbTD1EL8AkgxGASWaKpC90oyRR0RkM+6uzAnfal0oop0HUB03ZzyuTHv/MzbahiV6vYA==
 
 pump@^2.0.0:
   version "2.0.1"
@@ -8548,9 +8548,9 @@ typescript@^3.9.5, typescript@^3.9.7:
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 uglify-js@^3.1.4:
-  version "3.10.2"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.10.2.tgz#8cfa1209fd04199cc8a7f9930ddedb30b0f1912d"
-  integrity sha512-GXCYNwqoo0MbLARghYjxVBxDCnU0tLqN7IPLdHHbibCb1NI5zBkU2EPcy/GaVxc0BtTjqyGXJCINe6JMR2Dpow==
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.10.3.tgz#f0d2f99736c14de46d2d24649ba328be3e71c3bf"
+  integrity sha512-Lh00i69Uf6G74mvYpHCI9KVVXLcHW/xu79YTvH7Mkc9zyKUeSPz0owW0dguj0Scavns3ZOh3wY63J0Zb97Za2g==
 
 uid-number@0.0.6:
   version "0.0.6"
@@ -8645,9 +8645,9 @@ upath@^1.1.1, upath@^1.2.0:
   integrity sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==
 
 uri-js@^4.2.2:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.3.0.tgz#e16cb9ef7b4036d74be59dc7342258e6f1aca20e"
-  integrity sha512-Q9Q9RlMM08eWfdPPmDDrXd8Ny3R1sY/DaRDR2zTPPneJ6GYiLx3++fPiZobv49ovkYAnHl/P72Ie3HWXIRVVYA==
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.0.tgz#aa714261de793e8a82347a7bcc9ce74e86f28602"
+  integrity sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   dependencies:
     punycode "^2.1.0"
 
