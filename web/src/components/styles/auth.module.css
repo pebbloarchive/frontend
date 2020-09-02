@@ -1,140 +1,85 @@
-.auth_login {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    animation: login 120s infinite;
-}
-
-@keyframes login {
-    0% {
-        background-color: #ff6e20;
-    }
-    10% {
-        background-color: #ff2020;
-    }
-    20% {
-        background-color: #ff2064;
-    }
-    30% {
-        background-color: #8350b7;
-    }
-    40% {
-        background-color: #5099b7;
-    }
-    50% {
-        background-color: #60c578;
-    }
-    60% {
-        background-color: #a1c560;
-    }
-    70% {
-        background-color: #c5b660;
-    }
-    80% {
-        background-color: #c57960;
-    }
-    90% {
-        background-color: #c56060;
-    }
-    100% {
-        background-color: #ff6e20;
-    }
-}
-
-.auth_login_form {
+.auth_right {
     position: absolute;
     top: 50%;
-    left: 50%;
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 30px;
-    width: 400px;
-    transform: translate(-50%,-50%);
+    right: 10%;
+    transform: translate(0%,-50%);
+    width: 40%;
 }
 
-.auth_login_form h1 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-.auth_login_form input {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 15px 20px;
-    background-color: rgba(0, 0, 0, 0.050);
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.auth_login_form input:nth-last-child(1) {
-    margin-bottom: 0;
-}
-
-.auth_login_form hr {
-    opacity: 0;
-    margin: 25px 0;
-}
-
-.auth_login_form p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 600px;
-}
-
-.auth_login_form p::before,
-.auth_login_form p::after {
-    content: "";
+.auth_right img {
+    height: 100%;
     width: 100%;
-    height: 1px;
-    background-color: black;
-    opacity: .3;
-    margin: 0 50px;
 }
 
-.auth_login_alternative {
-    margin-top: 40px;
+.auth_form {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%,-50%);
+    width: 400px;
 }
 
-.auth_login_alternative button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 15px 20px;
-    width: 90%;
-    background-color: #f8f8f8;
+.auth_title {
+    font-size: 80px;
+    width: 700px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auth_form input {
+    font-size: 20px;
+    padding: 20px 40px 20px 65px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
     border-radius: 100px;
+    background-color: #f8f8f8;
+
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 25px 50%;
 }
 
-.auth_login_alternative img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
+.auth_form input:nth-child(2) {
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/750855758123499530/email.png);
 }
 
-.auth_login_alternative span {
-    font-size: 17px;
+.auth_form input:nth-child(3) {
+    margin-bottom: 60px;
+    background-image: url(https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png);
 }
 
-.auth_login_form input[type="submit"] {
-    margin-top: 30px;
-    font-size: 15px;
+.auth_form input[type="submit"] {
+    text-align: center;
+    padding: 20px 0;
+    width: 40%;
     background: linear-gradient(to right, var(--theme-a), var(--theme-b));
     color: white;
     font-weight: 600;
-    cursor: pointer;
+}
+
+@media only screen and (max-width:1600px) {
+    .auth_form {
+        width: 300px;
+    }
+
+    .auth_title {
+        font-size: 60px;
+    }
+
+    .auth_form input {
+        font-size: 16px;
+        padding: 15px 30px 15px 50px;
+        
+        background-size: 20px;
+        background-position: 20px 50%;
+    }
+
+    .auth_form input[type="submit"] {
+        font-size: 14px;
+        padding: 15px 0;
+    }
 }

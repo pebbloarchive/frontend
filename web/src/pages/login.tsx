@@ -26,54 +26,43 @@ export default function Page() {
         <input
           type="email"
           name="login_email"
-          placeholder="Email"
+          placeholder="Email Address"
           required
           onChange={(change) => { setEmail(change.target.value) }}
         />
         <input
           type="password"
           name="login_password"
-          placeholder="password"
+          placeholder="Password"
           required
           onChange={(change) => { setPassword(change.target.value) }}
         />
         <input type="submit" value="Login"/>     
       </form> */}
 
+      <div className={styles.auth_right}>
+        <img src="images/svg/man-computer-desk.svg"/>
+      </div>
 
-        <div className={styles.auth_login}>
-          <form className={styles.auth_login_form} onSubmit={userLogin}>
-            <h1>Welcome Back.</h1>
-              <input
-                type="email"
-                name="login_email"
-                placeholder="Email Address"
-                required
-                onChange={(change) => { setEmail(change.target.value) }}
-              />
-              <input
-                type="password"
-                name="login_password"
-                placeholder="Password"
-                required
-                onChange={(change) => { setPassword(change.target.value) }}
-              />
+      <form className={styles.auth_form} onSubmit={userLogin}>
+        <h1 className={styles.auth_title}>Welcome Back :)</h1>
+          <input
+            type="email"
+            name="login_email"
+            placeholder="Email Address"
+            required
+            onChange={(change) => { setEmail(change.target.value) }}
+          />
+          <input
+            type="password"
+            name="login_password"
+            placeholder="Password"
+            required
+            onChange={(change) => { setPassword(change.target.value) }}
+          />
 
-              <hr/>
-
-              <p>or</p>
-
-              <div className={styles.auth_login_alternative}>
-                <button>
-                  <img src="https://cdn.discordapp.com/attachments/637859135970607131/750596570176815134/google.png" alt="Google Logo"/>
-                  <span>Log in with <strong>Google</strong></span>
-                </button>
-              </div>
-
-              <input type="submit" value="Login"/>     
-
-          </form>
-        </div>
+          <input type="submit" value="Login"/>
+      </form>
     </>
   )
 }
