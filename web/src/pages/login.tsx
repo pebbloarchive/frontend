@@ -3,6 +3,7 @@ import core from '@pebblo/core'
 import Router from 'next/router';
 import Head from 'next/head';
 import { useState } from 'react';
+import styles from '../components/styles/auth.module.css'
 
 export default function Page() {
   const [email, setEmail] = useState(undefined);
@@ -21,7 +22,7 @@ export default function Page() {
     <Head>
       <title>Pebblo - Login</title>
     </Head>
-      <form onSubmit={userLogin}>
+      {/* <form onSubmit={userLogin}>
         <input
           type="email"
           name="login_email"
@@ -35,9 +36,44 @@ export default function Page() {
           placeholder="password"
           required
           onChange={(change) => { setPassword(change.target.value) }}
-        />   
+        />
         <input type="submit" value="Login"/>     
-      </form>
+      </form> */}
+
+
+        <div className={styles.auth_login}>
+          <form className={styles.auth_login_form} onSubmit={userLogin}>
+            <h1>Welcome Back.</h1>
+              <input
+                type="email"
+                name="login_email"
+                placeholder="Email Address"
+                required
+                onChange={(change) => { setEmail(change.target.value) }}
+              />
+              <input
+                type="password"
+                name="login_password"
+                placeholder="Password"
+                required
+                onChange={(change) => { setPassword(change.target.value) }}
+              />
+
+              <hr/>
+
+              <p>or</p>
+
+              <div className={styles.auth_login_alternative}>
+                <button>
+                  <img src="https://cdn.discordapp.com/attachments/637859135970607131/750596570176815134/google.png" alt=""/>
+                  <span>Log in with <strong>Google</strong></span>
+                </button>
+              </div>
+
+              <input type="submit" value="Login"/>     
+
+          </form>
+        </div>
     </>
   )
 }

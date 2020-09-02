@@ -13,9 +13,9 @@ const Page = () => {
                                 <span className={styles.checkbox_box}></span>
                             </div>
                             <h1>Epilepsy warning</h1>
-                            {/* <p>People who don't follow you will be able to comment on your posts.
+                            <p>Our AI will warn you if a post may trigger epilepsy.
                                 <a href="">More Info.</a>
-                        </p> */}
+                        </p>
                     </label>
                 </div>
         </div>

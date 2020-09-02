@@ -77,7 +77,7 @@ const Page = () => {
                             <span className={styles.checkbox_box}></span>
                         </div>
                         <h1>Scan Media</h1>
-                        <p>Scan and delete media that may contain explicit content.
+                        <p>Scan and delete media that may be offensive or explicit.
                             <a href="">More Info.</a>
                         </p>
                     </label>

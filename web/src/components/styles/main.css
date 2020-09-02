@@ -27,7 +27,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #444444;
+  background-color: #dedede;
   border: solid 7px var(--background);
   border-radius: 100px;
 }
@@ -42,7 +42,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background);
-  font-family: Montserrat, sans-serif
+  font-family: Montserrat, sans-serif;
+  /* filter: invert(100%); */
 }
 
 a {

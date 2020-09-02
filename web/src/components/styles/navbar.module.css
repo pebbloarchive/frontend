@@ -6,6 +6,7 @@
     height: 100%;
     background-color: #fafafa;
     border-right: solid 1px #f8f8f8;
+    z-index: 1;
     transition: .3s;
     animation: navbar .3s;
 }
