@@ -16,30 +16,30 @@ const Topnav = () => {
                         <span>Edit Profile</span>
                     </a>
                     <a href="/settings/privacy-safety">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746565258050666516/padlock.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746565258050666516/padlock.png" alt="Privacy and Safety > Padlock"/>
                         <span>Privacy &amp; Safety</span>
                     </a>
                     <a href="/settings/password">
-                        <img src="https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png" alt="Change Password | Key"/>
                         <span>Change Password</span>
                     </a>
                     <a href="/settings/connections">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746568861314187374/connection.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746568861314187374/connection.png" alt="Connections | Connection"/>
                         <span>Connections</span>
                     </a>
                     <a href="/settings/display">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746571427188178964/display.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746571427188178964/display.png" alt="Display | Color Palette"/>
                         <span>Display</span>
                     </a>
                     <a href="/settings/notifications">
-                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746591289486737488/bell.png" alt=""/>
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/746591289486737488/bell.png" alt="Notifications | Bell"/>
                         <span>Notifications</span>
                     </a>
                     <button>Logout</button>
                 </div>
             </div>
             
-            <a href="/profile" className={styles.settings_home}></a>
+            <a href={`/${current.username}`} className={styles.settings_home}></a>
         </>
     )
 }

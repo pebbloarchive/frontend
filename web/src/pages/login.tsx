@@ -65,7 +65,7 @@ export default function Page() {
 
               <div className={styles.auth_login_alternative}>
                 <button>
-                  <img src="https://cdn.discordapp.com/attachments/637859135970607131/750596570176815134/google.png" alt=""/>
+                  <img src="https://cdn.discordapp.com/attachments/637859135970607131/750596570176815134/google.png" alt="Google Logo"/>
                   <span>Log in with <strong>Google</strong></span>
                 </button>
               </div>

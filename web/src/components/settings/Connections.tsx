@@ -10,13 +10,13 @@ const Page = () => {
 
                     <div className={styles.connections_list}>
                         <button>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746995343429730354/discord.png" alt=""/>
+                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746995343429730354/discord.png" alt="Discord Logo"/>
                         </button>
                         <button>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746995519515262996/twitch.png" alt=""/>
+                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746995519515262996/twitch.png" alt="Twitch Logo"/>
                         </button>
                         <button>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746995816027389982/spotify.png" alt=""/>
+                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746995816027389982/spotify.png" alt="Sptofy Logo"/>
                         </button>
                     </div>
 

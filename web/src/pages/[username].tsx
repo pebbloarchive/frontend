@@ -67,13 +67,13 @@ export default ({ user }: {
       <div className={styles.content}>
         <div className={styles.profile}>
               <div className={styles.profile_images}>
-                  <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
+                  <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt={user.name}/>
                   { user.permissions.includes('verified') ? (<img className={styles.badge} src="icons/verified.png" alt=""/>) : '' }
               </div>
               <div className={styles.names}>
                   <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
                       <h1>
-                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' }
+                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt="Admin"/> : '' }
                         {user.name}</h1>
                       <p>@{user.username}</p>
                   </div>

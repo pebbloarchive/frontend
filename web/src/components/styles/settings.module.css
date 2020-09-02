@@ -21,6 +21,8 @@
     opacity: .5;
     font-weight: 600;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .subtitle {
@@ -35,6 +37,14 @@
     margin-top: -25px;
     margin-bottom: 50px;
     color: #888888;
+}
+
+.title span {
+    transform: scale(0.7);
+    padding: 1px 3px;
+    background-color: #555555;
+    color: white;
+    border-radius: 5px;
 }
 
 .edit_account img {
@@ -259,6 +269,70 @@
     background-color: #34a134;
     border-radius: 5px;
 }
+
+.appearance {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.appearance button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.appearance button:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.appearance button:hover {
+    transform: scale(1.2);
+}
+
+.appearance span {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    /* box-shadow: 0 0 10px #fff8f8; */
+}
+
+                .appearance_light:hover {
+                    border-color: #d8d7d7;
+                }
+
+                .appearance_light span {
+                    background-color: #d8d7d7;
+                }
+
+                .appearance_dark:hover {
+                    border-color: #333333;
+                }
+
+                .appearance_dark span {
+                    background-color: #333333;
+                }
+
+                .appearance_dark_blue:hover {
+                    border-color: #344065;
+                }
+
+                .appearance_dark_blue span {
+                    background-color: #344065;
+                }
+
+
+                
 
 @media only screen and (max-width:1400px) {
     .content {

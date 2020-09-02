@@ -13,7 +13,7 @@ const Page = () => {
                 <div className={styles.content}>
                     <h1 className={styles.title}>Account Details</h1>
                         <form className={styles.edit_account}>
-                            <label>{loggedIn ? <img src={current.avatar} draggable={false} alt=""/> : '' ? !loggedIn : '' }
+                            <label>{loggedIn ? <img src={current.avatar} draggable={false} alt="Your Avatar"/> : '' ? !loggedIn : '' }
                                 <input type="file" name="" id=""/>
                             </label>
                             <input type="text" name="" id="" placeholder="Full Name" required/>
