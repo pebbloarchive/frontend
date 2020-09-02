@@ -5,18 +5,22 @@ import { usePulse } from 'pulse-framework';
 import { AccountUser as UserProps } from '@pebblo/core/lib/controllers/accounts/account.interfaces'
 import { useState } from 'react';
 import Router from 'next/router';
+import { Log } from '../components/utils';
 
 // Components
 import NotFound from './404';
 import Nav from '../components/general/Nav'
+import Posts from '../components/general/Posts';
+import Suspended from '../components/general/Suspended';
 import styles from '../components/styles/profile.module.css';
-import { Log } from '../components/utils';
 
 export default ({ user }: {
   user: UserProps,
 }) => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED])
-  if(!user || !user.username || user.suspended) return <NotFound />
+  const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
+  if(!user || !user.username) return <NotFound />
+  if(user.suspended) return <Suspended {...user}/>
   const Button = () => {
     const [set, isSet] = useState(false);
     const [hovering, hovered] = useState(false);
@@ -24,20 +28,25 @@ export default ({ user }: {
 
     const buttonClick = async () => {
       if(!loggedIn) return Router.push('/login');
+      // if(current.id === user.id) return;
       let isFollowing = await core.accounts.routes.getRelationships();
       if(isFollowing.following.includes(user.id)) {
         await core.accounts.routes.unfollowUser(user.id);
-        following(true);
+        following(false);
       } else {
         await core.accounts.routes.followUser(user.id);
-        following(false);
+        following(true);
       }
+      console.log(followed);
     }
 
     return (
-      <a className={styles.follow_account} onClick={buttonClick}>
-        { followed ? <>Unfollow</> : <>Follow</> }
-      </a>
+      <button className={styles.follow_account} onClick={buttonClick} 
+      onMouseEnter={() => (hovered(true))}
+      onMouseLeave={() => (hovered(false))}><strong>
+        {/* { hovering && followed ? <>Unfollow</> : <>Follow{followed ? 'ing' : ''}</> } */}
+        { hovering && followed ? <>Unfollow</> : <>Follow{followed ? 'ing' : ''}</> }
+      </strong></button>
     )
   }
 
@@ -48,31 +57,31 @@ export default ({ user }: {
         <meta property="og:type" content="website"/>
         <meta name="description" content={user.description}/>
         <meta property="og:title" content={`${user.name} - @${user.username}`}/>
-        <meta name="description" content={user.description}/>
         <meta property="og:url" content={`https://pebblo.org/${user.username}`}/>
-        <meta property="og:description" content={user.description}/>
+        <meta property="og:description" content={`${user.description}\n\n&copy; pebblo.org`}/>
         <meta property="og:image" content={user.avatar}/>
+        <meta name="theme-color" content="#FF274E"/>
+        {/* <meta name="og:site_name" content={`Followers             Posts\n${user.followersCount}             0`}/> */}
       </Head>
       <Nav />
       <div className={styles.content}>
-
-              <div className={styles.profile}>
-                  <div className={styles.profile_images}>
-                      <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
-                      {/* { user.permissions.includes('admin') ? (<img className={styles.badge} src="https://cdn.discordapp.com/attachments/704179636879228949/749738812917153933/unknown.png" alt=""/>) 
-                      : user.permissions.includes('verified') ? (<img className={styles.badge} src="https://cdn.discordapp.com/attachments/596156721928470547/745873552384983050/unknown.png" alt=""/>) : '' } */}
-                      { user.permissions.includes('verified') ? (<img className={styles.badge} src="https://cdn.discordapp.com/attachments/596156721928470547/745873552384983050/unknown.png" alt=""/>) : '' }
-                  </div>
-                  <div className={styles.names}>
-                      <div className={styles.names_content}>
-                          <h1>{user.name}</h1>
-                          <p>@{user.username}</p>
-                      </div>
-                  </div>
-                  <div className={styles.bio}>
-                      <p>{user.description}</p>
+        <div className={styles.profile}>
+              <div className={styles.profile_images}>
+                  <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
+                  { user.permissions.includes('verified') ? (<img className={styles.badge} src="icons/verified.png" alt=""/>) : '' }
+              </div>
+              <div className={styles.names}>
+                  <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
+                      <h1>
+                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' }
+                        {user.name}</h1>
+                      <p>@{user.username}</p>
                   </div>
               </div>
+              <div className={styles.bio}>
+                  <p>{user.description}</p>
+              </div>
+          </div>
       </div>
 
       <div className={styles.additional_information}>
@@ -89,15 +98,17 @@ export default ({ user }: {
               </a>
           </div>
           <div className={styles.interaction}>
-              {/* <a className={styles.follow_account} onClick={followUser}>
-                  Follow
-              </a> */}
               <Button />
-              <a href="" className={styles.rewards_account}>
-                  Rewards
-              </a>
+              <a href="" className={styles.rewards_account}><strong>
+                Rewards
+              </strong></a>
           </div>
       </div>
+
+      {
+        
+      }
+      
     </>
   )
 }

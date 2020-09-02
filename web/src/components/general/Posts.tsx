@@ -1,20 +1,21 @@
 import styles from '../styles/feed.module.css'
+import { AccountBody, AccountUser, AccountPosts } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 
-const Page = () => {
+const Page = ( props: AccountPosts ) => {
     return (
         <>
-<div className={styles.comments}>
+            <div className={styles.comments}>
                     <h1 className={styles.comments_title}>Comments</h1>
                         <div className={styles.comment}>
                             <a href="" className={styles.comment_author}>
                                 <img src="https://cdn.discordapp.com/avatars/583925649807245322/a_16205383e4e17804d4beef8bebe9d2ea.gif?size=1024" alt=""/>
                                 <section>
-                                    <h1>Kyle</h1>
+                                    <h1>kyle</h1>
                                     <p>@kyle</p>
                                 </section>
                             </a>
                             <div className={styles.comment_caption}>
-                                <p>I want to become a carrot so I can sit in the garden.</p>
+                                <p>Hello world</p>
                             </div>
                         </div>
                 </div>
@@ -23,16 +24,16 @@ const Page = () => {
                     <div className={styles.box_content}>
 
                         <a href="" className={styles.author}>
-                                <img src="https://cdn.discordapp.com/avatars/215302985826304010/5e65d38cf852733f000359a5713231a2.png?size=1024" alt=""/>
+                                <img src={props.author_info.avatar} alt=""/>
                                 <section>
-                                    <h1>Andre</h1>
-                                    <p>@andre</p>
+                                    <h1>{props.author_info.name}</h1>
+                                    <p>@{props.author_info.username}</p>
                                 </section>
                         </a>
 
                         <div className={styles.single_caption}>
-                            <p>Working on <a href="">@Pebblo</a> offline</p>
-                            <img src="https://pbs.twimg.com/media/EfSj6cfUcAAL8vy?format=jpg&name=small" alt=""/>
+                            <p>{props.content}</p>
+                            {/* <img src={props.attachments} alt=""/> */}
                         </div>
 
 
@@ -48,7 +49,6 @@ const Page = () => {
                         </form>
                     </div>
                 </div>
-
         </>
     )
 }

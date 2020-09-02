@@ -3,7 +3,7 @@ import { ICore } from '../../core';
 import { AccountState as state, AccountCollection as collection } from './account.controller';
 import * as routes from './account.routes';
 import * as helpers from './account.helpers';
-import { AccountPostsArray, AccountPosts, AccountRelationship } from './account.interfaces';
+import { AccountPosts, AccountRelationship } from './account.interfaces';
 import API from '../../api';
 
 const core = App.Core<ICore>();

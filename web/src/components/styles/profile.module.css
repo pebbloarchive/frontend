@@ -50,21 +50,61 @@
     width: 400px;
 }
 
-.names_content {
+.names_content, 
+.names_content_staff {
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
 }
 
 .names_content h1 {
+    display: flex;
+    align-items: center;
     font-size: 30px;
     font-weight: 600;
 }
 
-.names_content p {
+.names_content p,
+.names_content_staff p {
     font-size: 16px;
     font-weight: 600;
     opacity: .5;
+}
+
+.names_content img,
+.names_content_staff img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.names_content_staff h1 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    animation: rainbow 6s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        color: #ED1A3B;
+    }
+    15% {
+        color: #F78022;
+    }
+    30% {
+        color: #e4da24;
+    }
+    70% {
+        color: #0DB14B;
+    }
+    95% {
+        color: #005BAA;
+    }
+    100% {
+        color: #922791;
+    }
 }
 
 .statistics {
@@ -110,6 +150,10 @@
 
 .interaction {
     margin-top: 30px;
+}
+
+.interaction a {
+    cursor: pointer;
 }
 
 .rewards_account {
@@ -170,6 +214,11 @@
     cursor: pointer;
 }
 
+.interaction strong {
+    font-weight: 600;
+    font-size: 16px;
+}
+
 @media only screen and (max-width:1800px) {
     .content {
         left: 200px;
@@ -200,12 +249,20 @@
         width: 350px;
     }
 
-    .names_content h1 {
+    .names_content h1,
+    .names_content_staff h1 {
         font-size: 20px;
     }
 
-    .names_content p {
+    .names_content p,
+    .names_content_staff p {
         font-size: 14px;
+    }
+
+    .names_content img,
+    .names_content_staff img {
+        width: 30px;
+        height: 30px;
     }
 
     .follow_account,
@@ -245,16 +302,19 @@
         height: 40px;
     }
 
-    .names_content {
+    .names_content,
+    .names_content_staff {
         top: 0;
         transform: none;
     }
 
-    .names_content h1 {
+    .names_content h1,
+    .names_content_staff h1 {
         font-size: 20px;
     }
 
-    .names_content p {
+    .names_content p,
+    .names_content_staff p {
         font-size: 14px;
     }
 
@@ -305,6 +365,7 @@
         font-size: 14px;
         padding: 10px 20px;
         border-radius: 0;
+        border: none;
     }
 
     .statistics {
@@ -318,5 +379,17 @@
 
     .bio p {
         font-size: 16px;
+    }
+
+    .names_content h1,
+    .names_content_staff h1 {
+        margin-bottom: 5px;
+    }
+
+    .names_content img,
+    .names_content_staff img {
+        margin-right: 7px;
+        width: 25px;
+        height: 25px;
     }
 }

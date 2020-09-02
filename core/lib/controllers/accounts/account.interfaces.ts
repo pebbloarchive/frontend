@@ -76,25 +76,37 @@ export interface AccountUser {
   private?: boolean;
   suspended?: boolean;
   created_at?: string;
+  posts: AccountPosts;
 }
 
 export interface AccountPosts {
   id: number;
   author: number;
+  author_info: {
+    name: string;
+    username: string;
+    avatar: string;
+  }
   original: number;
   content: string;
-  attachments: string[];
+  attachments: string[] | string;
   likes: string[];
   shares: string[];
   created_at: string;
   updated_at: string;
+  type: string;
 }
 
-export interface AccountPostsArray extends AccountPosts {
-  id: number;
-  username: string;
-  posts: AccountPosts;
-}
+// export interface AccountPostsArray extends AccountPosts {
+//   id: number;
+//   username: string;
+//   posts: AccountPosts;
+// }
+
+
+// export interface AccountPosts {
+//   posts: AccountUser;
+// }
 
 export interface AccountRelationship extends AccountBody {
   followers: any;

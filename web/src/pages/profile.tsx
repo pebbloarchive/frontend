@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
 import Router from 'next/router'
-import { Log } from '../components/utils';
 import { usePulse } from 'pulse-framework';
 import core from '@pebblo/core';
-import styles from '../components/styles/navbar.module.css';
-
-// components
-import Nav from '../components/general/Nav'
-import Profile from '../components/user/Profile'
-import Feed from '../components/general/Feed'
+import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
+import { useEffect } from 'react';
+import Login from '../pages/login';
 
 export default () => {
-  const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-  if(!loggedIn && process.browser) Router.push('/');
-  return (
-    <>
-        <Profile />
-        <Feed />
-        <Nav />
-    </>
-  )
+  const [loggedIn, cache] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
+
+  if(loggedIn && process.browser) return Router.replace(`/${cache.username}`);
+
+  useEffect(() => {
+    if(!loggedIn && process.browser) Router.push('/login');
+  }, []);
+
+  return(null)
+
 }

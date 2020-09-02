@@ -1,7 +1,8 @@
 import { App } from '../../pulse';
 import { ICore } from '../../core';
 import { AccountState as state, AccountCollection as collection, AccountCollection } from './account.controller';
-import { AccountBody, AccountData, AuthTokens } from './account.interfaces';
+import * as routes from './account.routes';
+import { AccountBody, AccountData, AuthTokens, AccountUser } from './account.interfaces';
 import API from '../../api';
 import { resetState } from 'pulse-framework';
 
@@ -54,6 +55,24 @@ export async function getFollowers() {
     }
 }
 
-export async function setHeaders() {
+export async function getUserData() {
   API.config.options.headers['authorization'] = 'Bearer ' + state.TOKEN.value;
+  const account = await routes.getSelf();
+  collection.update(collection.selectors.CURRENT.value.id, account);
+}
+
+export async function initUser() {
+  if(state.USER_INITIALIZED.is(true)) return;
+  const [token] = [state.TOKEN.value];
+  if(!token) return resetData();
+  API.config.options.headers['authorization'] = 'Bearer ' + token;
+  if(state.CACHE.isNot(undefined)) {
+    if(collection.selectors.CURRENT && collection.selectors.CURRENT.id !== state.CACHE.value.id) {
+      state.CACHE.reset();
+    } else {
+      collection.collect(state.CACHE.value, 'AUTHED');
+    }
+    setTimeout(getUserData, 500);
+    return state.USER_INITIALIZED.set(true);
+  }
 }

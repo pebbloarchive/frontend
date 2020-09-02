@@ -18,17 +18,11 @@ const Pebblo = ({ Component, pageProps }: AppProps) => {
     Router.events.on('routeChangeComplete', () => { isLoading(false) }); 
     Router.events.on('routeChangeError', () => { isLoading(false) });
   }, []);
-
-  // useEffect(() => {
-  //   if(!loggedIn) core.accounts.helpers.setHeaders();
-  // });
   
   useEffect(() => {
-    if(loggedIn) { 
-      core.accounts.helpers.setHeaders();
-      return Sockets.connectWebsockets();
-    }
-  });
+    core.accounts.helpers.initUser();
+    if(loggedIn) Sockets.connectWebsockets();
+  }, []);
 
   // useEffect(() => {
   //   if(!loggedIn) {

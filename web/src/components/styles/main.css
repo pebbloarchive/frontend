@@ -62,13 +62,22 @@ p {
   font-weight: 400
 }
 
+
+::selection {
+  background: var(--theme-b);
+  color: white;  
+}
+
 img {
   user-drag: none; 
-  user-select: none;
-  -moz-user-select: none;
+  /* user-select: none; */
+  /* -moz-user-select: none; */
   -webkit-user-drag: none;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   -ms-user-select: none;
+  -moz-window-dragging: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
 }
 
 input[type=search]::-webkit-search-cancel-button,

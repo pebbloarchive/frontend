@@ -88,6 +88,7 @@
 }
 
 .interactions a {
+    width: 10%;
     margin-right: 30px;
     text-align: left;
     display: flex;
@@ -103,6 +104,23 @@
 
 .interactions span {
     opacity: .7;
+}
+
+.interactions a:nth-last-child(2) {
+    width: 60%;
+    /* background-color: saddlebrown; */
+}
+
+.timeStamp {
+    width: 20%;
+    text-align: right;
+    margin-right: 5%;
+    /* that'll do for now */
+}
+
+.timeStamp p {
+    font-size: 15px;
+    opacity: .3;
 }
 
 .comments {
@@ -408,6 +426,10 @@
     .single_caption p {
         font-size: 15px;
     }
+    
+    .timeStamp p {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width:1200px) {
@@ -501,5 +523,13 @@
         width: 85%;
         left: 50%;
         transform: translate(-50%);
+    }
+
+    .interactions a:nth-last-child(2) {
+        width: 45%;
+    }
+
+    .timeStamp p {
+        font-size: 10px;
     }
 }

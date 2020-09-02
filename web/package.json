@@ -18,7 +18,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-toastify": "^6.0.8"
+    "react-toastify": "^6.0.8",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",

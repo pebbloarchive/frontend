@@ -11,17 +11,11 @@ export default function Page() {
   }
   
   useEffect(() => {
-    try {
       if(!loggedIn && process.browser) {
         core.accounts.helpers.resetData();
-        Router.push('/');
+        Router.push('/login')
       }
-    } catch(err) {
-      console.error(err);
-    }
-  });
+  }, []);
 
-  return (
-    <p>Hey</p>
-  )
+  return (null)
 }

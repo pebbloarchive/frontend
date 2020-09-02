@@ -1,4 +1,5 @@
 import styles from '../styles/settings.module.css'
+import zxcvbn from 'zxcvbn';
 
 const Page = () => {
     return (

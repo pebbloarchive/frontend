@@ -8,14 +8,13 @@ export const AccountState = {
   TOKEN: App.State<string>(undefined).persist("AUTH_TOKEN"),
   REFRESH_TOKEN: App.State<string>(undefined).persist("AUTH_REFRESH_TOKEN"),
   CACHE: App.State<AccountBody>(undefined).persist("CACHE"),
-  // IS_LOGGED: App.State<boolean>(false),
-  THEME: App.State<string>("dark").persist("THEME")
+  THEME: App.State<string>("dark").persist("THEME"),
+  USER_INITIALIZED: App.State<boolean>(false)
 }
 
 export const AccountCollection = App.Collection<AccountBody>()(Collection => ({
   groups: {
     AUTHED: Collection.Group().persist("ACCOUNT"),
-    RELATIONSHIPS: Collection.Group().persist(),
   },
   selectors: {
     CURRENT: Collection.Selector().persist("CURRENT_ACCOUNT") 
@@ -36,9 +35,11 @@ const AccountComputed = {
   })
 }
 
-console.log(AccountCollection.selectors.CURRENT)
-console.log(AccountCollection.selectors.CURRENT.id)
-console.log(AccountCollection.selectors.CURRENT.username)
+setTimeout(() => {
+  console.log(AccountCollection.selectors.CURRENT)
+  console.log(AccountCollection.selectors.CURRENT.value.id)
+  console.log(AccountCollection.selectors.CURRENT.value.username)
+}, 3500);
 
 const controller = App.Controller({
   state: { ...AccountState, ...AccountComputed },
