@@ -18,7 +18,7 @@ const Page = (props: AccountUser) => {
                 </div>
             </div>
             <div className={styles.bio}>
-                This account has been suspended due to multiple violations of our <Link href="/tos">terms.</Link>
+                This account has been suspended on <strong>[KYLE ADD A DATE HERE]</strong> due to multiple violations of our <Link href="/tos">Terms of Service</Link>.
             </div>
         </div>
         </div>
