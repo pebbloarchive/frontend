@@ -6,7 +6,7 @@
     width: 40%;
 }
 
-.auth_right img {
+.auth_login_right img {
     height: 100%;
     width: 100%;
 }
@@ -43,12 +43,19 @@
     background-position: 25px 50%;
 }
 
-.auth_form input:nth-child(2) {
+.auth_form_fullName {
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/750917731984998400/user.png);
+}
+
+.auth_form_username {
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/750917731984998400/user.png);
+}
+
+.auth_form_email {
     background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/750855758123499530/email.png);
 }
 
-.auth_form input:nth-child(3) {
-    margin-bottom: 60px;
+.auth_form_password {
     background-image: url(https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png);
 }
 
@@ -60,6 +67,7 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 60px;
 }
 
 .alerts {
@@ -137,6 +145,7 @@
     .auth_form input[type="submit"] {
         font-size: 14px;
         padding: 15px 0;
+        margin-top: 40px;
     }
 }
 

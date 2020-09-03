@@ -41,29 +41,34 @@ export default function Page() {
       </form> */}
 
       <div className={styles.auth_right}>
-        <img src="images/svg/man-computer-desk.svg"/>
+        <img src="images/svg/woman-analytics.svg"/>
       </div>
 
-      <form className={styles.auth_form} onSubmit={userLogin}>
-        <h1 className={styles.auth_title}>Welcome Back :)</h1>
+      <form className={styles.auth_form}>
+        <h1 className={styles.auth_title}>Create an account.</h1>
           <input
-            className={styles.auth_form_email}
-            type="email"
-            name="login_email"
-            placeholder="Email Address"
+            className={styles.auth_form_username}
+            type="text"
+            name="create_username"
+            placeholder="Username"
             required
-            onChange={(change) => { setEmail(change.target.value) }}
           />
           <input
             className={styles.auth_form_password}
             type="password"
-            name="login_password"
+            name="create_password"
             placeholder="Password"
             required
-            onChange={(change) => { setPassword(change.target.value) }}
+          />
+          <input
+            className={styles.auth_form_email}
+            type="email"
+            name="create_email"
+            placeholder="Email Address"
+            required
           />
 
-          <input type="submit" value="Login"/>
+          <input type="submit" value="Create"/>
       </form>
     </>
   )
