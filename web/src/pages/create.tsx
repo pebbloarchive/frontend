@@ -54,17 +54,17 @@ export default function Page() {
             required
           />
           <input
-            className={styles.auth_form_password}
-            type="password"
-            name="create_password"
-            placeholder="Password"
-            required
-          />
-          <input
             className={styles.auth_form_email}
             type="email"
             name="create_email"
             placeholder="Email Address"
+            required
+          />
+          <input
+            className={styles.auth_form_password}
+            type="password"
+            name="create_password"
+            placeholder="Password"
             required
           />
 

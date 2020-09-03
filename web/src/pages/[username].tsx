@@ -71,7 +71,8 @@ export default ({ user }: {
                   { user.permissions.includes('verified') ? (<img className={styles.badge} src="icons/verified.png" alt=""/>) : '' }
               </div>
               <div className={styles.names}>
-                  <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
+                  {/* <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }> */}
+                  <div className={styles.names_content}>
                       <h1>
                         { user.permissions.includes('admin') ? <img src="icons/developer.png" alt="Admin"/> : '' }
                         {user.name}</h1>

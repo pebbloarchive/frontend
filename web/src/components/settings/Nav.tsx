@@ -35,6 +35,10 @@ const Topnav = () => {
                         <img src="https://cdn.discordapp.com/attachments/596156721928470547/746591289486737488/bell.png" alt="Notifications | Bell"/>
                         <span>Notifications</span>
                     </a>
+                    <a href="/settings/staff-tools">
+                        <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
+                        <span>Staff Tools</span>
+                    </a>
                     <button>Logout</button>
                 </div>
             </div>
