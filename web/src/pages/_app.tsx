@@ -20,8 +20,10 @@ const Pebblo = ({ Component, pageProps }: AppProps) => {
   }, []);
   
   useEffect(() => {
-    core.accounts.helpers.initUser();
-    if(loggedIn) Sockets.connectWebsockets();
+    if(loggedIn) {
+      core.accounts.helpers.initUser();
+      // Sockets.connectWebsockets();
+    }
   }, []);
 
   // useEffect(() => {

@@ -22,24 +22,6 @@ export default function Page() {
     <Head>
       <title>Pebblo - Login</title>
     </Head>
-      {/* <form onSubmit={userLogin}>
-        <input
-          type="email"
-          name="login_email"
-          placeholder="Email Address"
-          required
-          onChange={(change) => { setEmail(change.target.value) }}
-        />
-        <input
-          type="password"
-          name="login_password"
-          placeholder="Password"
-          required
-          onChange={(change) => { setPassword(change.target.value) }}
-        />
-        <input type="submit" value="Login"/>     
-      </form> */}
-
       <div className={styles.auth_right}>
         <img src="images/svg/man-computer-desk.svg"/>
       </div>

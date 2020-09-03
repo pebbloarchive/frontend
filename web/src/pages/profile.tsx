@@ -8,12 +8,11 @@ import Login from '../pages/login';
 export default () => {
   const [loggedIn, cache] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
 
-  if(loggedIn && process.browser) return Router.replace(`/${cache.username}`);
-
   useEffect(() => {
-    if(!loggedIn && process.browser) Router.push('/login');
+    if(process.browser) {
+      if(!loggedIn) Router.push('/login');
+      if(loggedIn) Router.push(`/${cache.username}`);
+    }
   }, []);
-
   return(null)
-
 }
