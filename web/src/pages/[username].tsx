@@ -29,13 +29,18 @@ export default ({ user }: {
     const buttonClick = async () => {
       if(!loggedIn) return Router.push('/login');
       // if(current.id === user.id) return;
-      let isFollowing = await core.accounts.routes.getRelationships();
-      if(isFollowing.following.includes(user.id)) {
-        await core.accounts.routes.unfollowUser(user.id);
-        following(false);
-      } else {
-        await core.accounts.routes.followUser(user.id);
+      // let isFollowing = await core.accounts.routes.getRelationships();
+      // if(user.followers.includes(user.id)) {
+      //   await core.accounts.routes.unfollowUser(user.id);
+      //   following(false);
+      // } else {
+      //   await core.accounts.routes.followUser(user.id);
+      //   following(true);
+      // }
+      if(user.followers.includes(user.id)) {
         following(true);
+      } else {
+        following(false);
       }
       console.log(followed);
     }
@@ -44,8 +49,18 @@ export default ({ user }: {
       <button className={styles.follow_account} onClick={buttonClick} 
       onMouseEnter={() => (hovered(true))}
       onMouseLeave={() => (hovered(false))}><strong>
-        {/* { hovering && followed ? <>Unfollow</> : <>Follow{followed ? 'ing' : ''}</> } */}
-        { hovering && followed ? <>Unfollow</> : <>Follow{followed ? 'ing' : ''}</> }
+        { followed && hovering ? <>Unfollow</> : <>Follow{followed ? 'ing' : ''}</> }
+      </strong></button>
+    )
+  }
+
+  const Insights = () => {
+    const buttonClick = () => {
+      Router.push('/insights')
+    }
+    return (
+      <button className={styles.follow_account} onClick={buttonClick}><strong>
+        <>Hey</>
       </strong></button>
     )
   }
@@ -67,14 +82,13 @@ export default ({ user }: {
       <div className={styles.content}>
         <div className={styles.profile}>
               <div className={styles.profile_images}>
-                  <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt={user.name}/>
+                  <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
                   { user.permissions.includes('verified') ? (<img className={styles.badge} src="icons/verified.png" alt=""/>) : '' }
               </div>
               <div className={styles.names}>
-                  {/* <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }> */}
-                  <div className={styles.names_content}>
+                  <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
                       <h1>
-                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt="Admin"/> : '' }
+                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' }
                         {user.name}</h1>
                       <p>@{user.username}</p>
                   </div>
@@ -99,7 +113,7 @@ export default ({ user }: {
               </a>
           </div>
           <div className={styles.interaction}>
-              <Button />
+              { process.browser && Router.route === `/${current.username}` ? <Button /> : <Insights /> }
               <a href="" className={styles.rewards_account}><strong>
                 Rewards
               </strong></a>

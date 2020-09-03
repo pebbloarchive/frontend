@@ -73,6 +73,8 @@ export interface AccountUser {
   permissions: string[];
   followingCount?: number;
   followersCount?: number;
+  following?: any;
+  followers?: any;
   private?: boolean;
   suspended?: boolean;
   created_at?: string;

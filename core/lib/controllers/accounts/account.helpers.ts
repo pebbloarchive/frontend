@@ -73,6 +73,6 @@ export async function initUser() {
       collection.collect(state.CACHE.value, 'AUTHED');
     }
     setTimeout(getUserData, 500);
-    return state.USER_INITIALIZED.set(true);
   }
+  return state.USER_INITIALIZED.set(true);
 }

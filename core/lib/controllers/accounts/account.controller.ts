@@ -39,7 +39,7 @@ setTimeout(() => {
   console.log(AccountCollection.selectors.CURRENT)
   console.log(AccountCollection.selectors.CURRENT.value.id)
   console.log(AccountCollection.selectors.CURRENT.value.username)
-}, 3500);
+}, 500);
 
 const controller = App.Controller({
   state: { ...AccountState, ...AccountComputed },
