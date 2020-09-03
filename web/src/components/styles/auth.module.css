@@ -59,6 +59,62 @@
     background: linear-gradient(to right, var(--theme-a), var(--theme-b));
     color: white;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.alerts {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 50px 0;
+    width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alerts section {
+    max-width: 100%;
+    text-align: center;
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.alerts section:hover {
+    margin-bottom: 5px;
+}
+
+.alerts a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.alerts_success {
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    color: white;
+}
+
+.alerts_upload {
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    color: white;
+    box-shadow: 0 10px 18px rgba(255, 0, 103, 0.300);
+}
+
+.alerts_error {
+    background-color: #e25959;
+    color: white;
+    box-shadow: 0 10px 18px rgba(226, 89, 89, 0.600);
+}
+
+.alerts_info {
+    background-color: #4570de;
+    color: white;
+    box-shadow: 0 10px 18px rgba(69, 112, 222, 0.500);
 }
 
 @media only screen and (max-width:1600px) {
@@ -81,5 +137,56 @@
     .auth_form input[type="submit"] {
         font-size: 14px;
         padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .auth_form {
+        width: 200px;
+    }
+
+    .auth_title {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .auth_form input {
+        font-size: 10px;
+        background-size: 15px;
+    }
+
+    .auth_form input[type="submit"] {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .auth_right {
+        display: none;
+    }
+
+    .auth_form {
+        position: fixed;
+        top: 50%;
+        height: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%,-50%);
+    }
+
+    .auth_title {
+        font-size: 40px;
+        margin-bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .auth_form input {
+        position: relative;
+        left: 50%;
+        width: 70%;
+        transform: translate(-50%);
+        padding: 15px 50px;
     }
 }
