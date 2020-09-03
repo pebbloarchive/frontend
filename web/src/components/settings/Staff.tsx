@@ -17,13 +17,11 @@ const Page = () => {
                             <span className={styles.checkbox_box}></span>
                         </div>
                         <h1>Colorful</h1>
-                        <p>what could this be? Guess you'll never know...</p>
-                    </label>
-
-                            
-                                <div className={styles.submit}>
-                                    <input type="submit" value="Save Changes"/>
-                                </div>
+                        <p>What could this be? Guess you'll never know...</p>
+                    </label>                
+                    <div className={styles.submit}>
+                        <input type="submit" value="Save Changes"/>
+                    </div>
             </form>
         </>
     )
