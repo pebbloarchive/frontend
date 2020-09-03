@@ -1,9 +1,10 @@
 import { API } from '../../api';
-import { AccountBody, AuthCredentials, AuthTokens, AccountUser, AccountPosts, AccountRelationship } from './account.interfaces';
+import { AccountBody, AuthCredentials, AuthTokens, AccountUser, AccountPosts, AccountRelationship, ChangePassword } from './account.interfaces';
 import { PulseResponse } from 'pulse-framework';
 
-export const Login = async (payload: AuthCredentials): Promise<PulseResponse> =>
-	(await API.post("auth/login", payload)).data;
+export const Login = async(payload: AuthCredentials): Promise<PulseResponse> => (await API.post('auth/login', payload)).data;
+
+export const changePassword = async(payload: ChangePassword): Promise<PulseResponse> => (await API.post('auth/update/password', payload)).data;
 
 export const getRefreshToken = async(payload: {
 	refresh_token: string

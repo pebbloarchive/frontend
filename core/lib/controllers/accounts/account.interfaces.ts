@@ -128,3 +128,9 @@ export interface AuthTokens {
 export interface AccountData extends AuthTokens {
   account: AccountBody;
 }
+
+export interface ChangePassword {
+  password: string;
+  confirm_password: string;
+  new_password: string;
+}
