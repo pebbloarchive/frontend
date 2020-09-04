@@ -5,7 +5,7 @@ import { Log } from '../components/utils';
 
 // Components
 import styles from '../components/styles/landing.module.css';
-import Nav from '../components/general/Nav';
+import Nav from '../components/general/Menu';
 
 export default () => {
   return (

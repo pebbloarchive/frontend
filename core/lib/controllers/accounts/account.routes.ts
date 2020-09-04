@@ -4,6 +4,8 @@ import { PulseResponse } from 'pulse-framework';
 
 export const Login = async(payload: AuthCredentials): Promise<PulseResponse> => (await API.post('auth/login', payload)).data;
 
+export const Create = async(payload: AuthCredentials): Promise<PulseResponse> => (await API.post('auth/register', payload)).data;
+
 export const changePassword = async(payload: ChangePassword): Promise<PulseResponse> => (await API.post('auth/update/password', payload)).data;
 
 export const getRefreshToken = async(payload: {

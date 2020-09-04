@@ -7,6 +7,22 @@
     background: var(--background);
 }
 
+.menu_links {
+    position: fixed;
+    top: 0;
+    left: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_links a {
+    color: var(--color);
+    margin-right: 30px;
+    opacity: .6;
+    font-size: 18px;
+}
+
 .menu_button {
     position: absolute;
     top: 50%;
@@ -16,14 +32,14 @@
     height: 100%;
     background: transparent;
     cursor: pointer;
-    z-index: 2;
+    display: none;
 }
 
 .menu_button span {
     display: block;
     width: 100%;
-    height: 3px;
-    margin-bottom: 7px;
+    height: 2px;
+    margin-bottom: 10px;
     background-color: #313131;
 }
 
@@ -34,13 +50,34 @@
 .menu_company {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 20px;
+    margin-left: 2%;
+    transform: translate(0%,-50%);
+}
+
+.menu_company h1 {
+    cursor: pointer;
+    font-size: 25px;
     font-weight: 600;
     background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.menu_user {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.menu_user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    background-color: transparent;
 }
 
 .navigation {
@@ -54,15 +91,6 @@
     z-index: 1;
     transition: .3s;
     /* animation: navbar .3s; */
-}
-
-@keyframes navbar {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0;
-    }
 }
 
 .navigation_logo {
@@ -229,6 +257,50 @@
     background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746976276216152104/chevron-left.png);
 }
 
+.message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(var(--theme-a), var(--theme-b));
+}
+
+.message_avatar {
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    border-radius: 50%;
+    margin: 25px 0;
+    width: 50px;
+    height: 50px;
+}
+
+.messages_pages {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.messages_pages a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+}
+
+.message_active {
+    background-color: rgba(0, 0, 0, 0.200);
+}
+
+.messages_pages img {
+    filter: invert(100%);
+    opacity: .8;
+}
+
+
 @media only screen and (max-width:1400px) {
     .navigation {
         width: 150px;
@@ -278,6 +350,10 @@
 
     .settings_content span {
         font-size: 14px;
+    }
+
+    .message {
+        width: 150px;
     }
 }
 
@@ -340,6 +416,31 @@
 }
 
 @media only screen and (max-width:1000px) {
+    .menu {
+        height: 60px;
+    }
+
+    .menu_company {
+        left: 50%;
+        margin-left: 0;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+    }
+
+    .menu_button {
+        display: block;
+        margin-left: 4%;
+    }
+
+    .menu_user {
+        margin-right: 4%;
+    }
+
+    .menu_user img {
+        width: 35px;
+        height: 35px;
+    }
+
     .navigation {
         width: 100%;
         height: 60px;

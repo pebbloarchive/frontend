@@ -88,7 +88,7 @@ export default ({ user }: {
               <div className={styles.names}>
                   <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
                       <h1>
-                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' }
+                        {/* { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' } */}
                         {user.name}</h1>
                       <p>@{user.username}</p>
                   </div>

@@ -7,9 +7,26 @@ const Page = () => {
 
             <div className={styles.content}>
                 <h1 className={styles.title}>Notifications</h1>
-
                     <div className={styles.setting}>
-                        <h1 className={styles.maintenance}>Coming soon!</h1>
+                        
+                        <h1 className={styles.subtitle}>Email Notifications</h1>
+                            <label className={styles.checkbox}>
+                                <div className={styles.checkbox_container}>
+                                    <input type="checkbox" name="" id=""/>
+                                    <span className={styles.checkbox_box}></span>
+                                </div>
+                                <h1>News Letters</h1>
+                                <p>Keep up to date with Pebblo.</p>
+                            </label>
+                            <label className={styles.checkbox}>
+                                <div className={styles.checkbox_container}>
+                                    <input type="checkbox" name="" id=""/>
+                                    <span className={styles.checkbox_box}></span>
+                                </div>
+                                <h1>Message Requests</h1>
+                                <p>Get an email when someone has requested to message you.</p>
+                            </label>
+
                     </div>
             </div>
         </>

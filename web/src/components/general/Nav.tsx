@@ -23,8 +23,8 @@ const Topnav = () => {
                 return isActive('explore');
             case '/notifications':
                 return isActive('notifications');
-            case '/message':
-                return isActive('message');
+            case '/messages':
+                return isActive('messages');
         }
         console.log(active);
     };
@@ -55,8 +55,8 @@ const Topnav = () => {
                     <Link href="/notifications">
                     <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745859897656344586/bell2.png" alt=""/></a>
                     </Link>
-                    <Link href="/message">
-                        <a className={`${active === 'message' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745835287300800522/envelope.png" alt=""/></a>
+                    <Link href="/messages">
+                        <a className={`${active === 'messages' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745835287300800522/envelope.png" alt=""/></a>
                     </Link>
                 </div>
 

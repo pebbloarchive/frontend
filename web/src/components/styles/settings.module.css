@@ -77,6 +77,15 @@
     color: rgba(0, 0, 0, 0.700);
 }
 
+.content input[type="email"] {
+    filter: blur(3px);
+}
+
+.content input[type="email"]:hover,
+.content input[type="email"]:focus {
+    filter: none;
+}
+
 .content input[type="submit"] {
     position: fixed;
     bottom: 0;
@@ -228,6 +237,7 @@
     font-size: 15px;
     margin-top: 10px;
     padding-left: 50px;
+    margin-top: -1px;
     display: block;
     color: #777777;
 }
