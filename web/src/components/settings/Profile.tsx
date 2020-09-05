@@ -1,12 +1,11 @@
 import styles from '../styles/settings.module.css'
 import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework';
-import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
+import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 
 const Page = () => {
     const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
-
+    const [current]: AccountBody[] = usePulse([core.accounts.collection.selectors.CURRENT]);
 
     return (
         <>

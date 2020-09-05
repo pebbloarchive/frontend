@@ -6,12 +6,13 @@ import { Log } from '../../components/utils';
 // Components
 import styles from '../../components/styles/landing.module.css';
 import Nav from '../../components/messages/Nav';
+import Contact from '../../components/messages/Contact'
 
 export default () => {
   return (
     <>
-    <title>Messages</title>
-    
+    <title>user</title>
+      <Contact />
       <Nav/>
     </>
   )

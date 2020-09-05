@@ -10,7 +10,7 @@ import Nav from '../../components/messages/Nav';
 export default () => {
   return (
     <>
-    <title>Messages</title>
+    <title>Messages &gt; Favourites</title>
     
       <Nav/>
     </>
