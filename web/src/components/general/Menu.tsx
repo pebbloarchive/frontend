@@ -19,7 +19,7 @@ const Topnav = () => {
 
                 <div className={styles.menu_company}>
                     <Link href="/">
-                        <h1>Pebblo</h1>
+                        <a href="/"><h1>Pebblo</h1></a>
                     </Link>
                 </div>
                 {loggedIn ? 
@@ -28,13 +28,20 @@ const Topnav = () => {
                         {/* <p>Hey, ${current.username}!</p> */}
                         <img src={current.avatar} alt=""/>
                     </Link>
+                <section className={styles.menu_user_dropdown}>
+                    <Link href={`/${current.username}`}><a href={`/${current.username}`}>Profile</a></Link>
+                    <Link href="/"><a href="/settings">Settings</a></Link>
+                    <hr/>
+                    <Link href="/logout"><a href="/logout">Logout</a></Link>
+                </section>
                 </div> : '' }
             </div>
 
             <div className={styles.menu_links}>
-                <Link href="">Explore</Link>
-                <Link href="">News</Link>
-                <Link href="">Developers</Link>
+                <Link href="/explore"><a href="/explore">Explore</a></Link>
+                <Link href="/blog"><a href="/blog">Blog</a></Link>
+                <Link href="/developers"><a href="/developers">Developers</a></Link>
+                <Link href="/help-desk"><a href="/help-desk">Help Desk</a></Link>
             </div>
         </>
     )

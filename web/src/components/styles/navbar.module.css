@@ -19,8 +19,29 @@
 .menu_links a {
     color: var(--color);
     margin-right: 30px;
-    opacity: .6;
-    font-size: 18px;
+    opacity: .5;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_links a::after {
+    content: "";
+    position: absolute;
+    margin-top: 28px;
+    margin-left: 0px;
+    border-radius: 100px;
+    width: 15px;
+    height: 5px;
+    background: linear-gradient(to right, var(--theme-a), var(--theme-b));
+    opacity: 0;
+    transition: .2s;
+}
+
+.menu_links a:hover::after {
+    opacity: .5;
+    width: 30px;
 }
 
 .menu_button {
@@ -76,8 +97,57 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    border: none;
+    margin-right: -10px;
+    border: solid 10px transparent;
     background-color: transparent;
+}
+
+.menu_user_dropdown {
+    position: absolute;
+    min-width: 160px;
+    display: none;
+    right: 0;
+    z-index: 1;
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #818181;
+}
+
+.menu_user_dropdown a {
+    display: block;
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    font-size: 15px;
+    opacity: .8;
+    border-radius: 5px;
+}
+
+.menu_user_dropdown hr {
+    background-color: white;
+    opacity: .1;
+    border: none;
+}
+
+.menu_user_dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.300);
+}
+
+.menu_user:hover section {
+    animation: dropdown .3s;
+}
+
+@keyframes dropdown {
+    from {
+        display: none;
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .navigation {
