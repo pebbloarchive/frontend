@@ -21,7 +21,8 @@ const Page = () => {
                     </label>
 
                 <h1 className={styles.subtitle}>Parent Email</h1>
-                <p className={styles.note}>Parents can connect their email address to get updates on your activity. Learn more about <a href="">child safety</a> on Pebblo.</p>
+                <p className={styles.note}>Mainly used for minors so parents can keep an eye on the safety of their children. You can learn more about how <a href="">children safety</a> works.</p>
+                <p className={styles.note}>You can also use this to gets emails about your activity as well.</p>
                     <label className={styles.guardian_email}>
                         <input type="email" name="" id="" placeholder="Email Address"/>
                     </label>

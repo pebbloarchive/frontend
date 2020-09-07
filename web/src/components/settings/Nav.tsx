@@ -8,34 +8,34 @@ import { useState, useEffect } from 'react';
 
 const Topnav = () => {
     const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-    const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
     const [active, isActive] = useState(undefined);
 
     const onRouteChange = (route) => {
-        switch(route) {
-            case '/settings':
-                return isActive('settings');
-            case '/settings/privacy-safety':
-                 return isActive('privacy');
-            case '/settings/password':
-                return isActive('password');
-            case '/settings/connections':
-                 return isActive('connections');
-            case '/settings/display':
-                return isActive('display');
-            case '/settings/notifications':
-                return isActive('notifications');
-            case '/settings/linked':
-                return isActive('linked');
-            case '/settings/staff-tools':
-                return isActive('staff');
-        }
+        if(route === '/settings') isActive('settings');
+        if(route === '/settings/privacy-safety') isActive('privacy');
+        if(route === '/settings/password') isActive('password');
+        if(route === '/settings/connections') isActive('connections');
+        if(route === '/settings/display') isActive('display');
+        if(route === '/settings/notifications') isActive('notifications');
+        if(route === '/settings/staff-tools') isActive('staff');
     };
 
     useEffect(() => {
         if(process.browser) onRouteChange(Router.route);
         Router.events.on('onRouterStart', onRouteChange);
     });
+
+    const Staff = () => {
+        return (
+            <Link href="/settings/staff-tools">                    
+                <a className={`${active === 'staff' ? styles.settings_active : ''}`}>
+                    <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
+                    <span>Staff Tools</span>
+                </a>
+            </Link>
+        )
+    }
 
     return (
         <>
@@ -77,23 +77,12 @@ const Topnav = () => {
                             <span>Notifications</span>
                         </a>
                     </Link>
-                    <Link href="/settings/linked">                    
-                        <a className={`${active === 'linked' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
-                            <span>Linked Account</span>
-                        </a>
-                    </Link>
-                    <Link href="/settings/staff-tools">                    
-                        <a className={`${active === 'staff' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
-                            <span>Staff Tools</span>
-                        </a>
-                    </Link>
+                    {/* { process.browser && loggedIn && current.permissions.includes('staff') ? <Staff/> : '' } */}
                     <button>Logout</button>
                 </div>
             </div>
             
-            { loggedIn ?  <a href={`/${current.username}`} className={styles.settings_home}></a> : '' }
+            { loggedIn ? <a href={`/${current.username}`} className={styles.settings_home}></a> : '' }
         </>
     )
 }

@@ -4,7 +4,7 @@ import { AccountState as state, AccountCollection as collection, AccountCollecti
 import * as routes from './account.routes';
 import { AccountBody, AccountData, AuthTokens, AccountUser } from './account.interfaces';
 import API from '../../api';
-import { resetState } from 'pulse-framework';
+// import { resetState } from 'pulse-framework';
 
 const core = App.Core<ICore>();
 
@@ -42,7 +42,7 @@ export async function refreshUser() {
 export async function resetData() {
   collection.selectors.CURRENT.select(undefined);
   state.CACHE.reset();
-  resetState([collection, state.TOKEN, state.REFRESH_TOKEN, state.THEME]);
+  // resetState([collection, state.TOKEN, state.REFRESH_TOKEN, state.THEME]);
 }
 
 export async function getFollowers() {

@@ -14,7 +14,7 @@ export const AccountState = {
 
 export const AccountCollection = App.Collection<AccountBody>()(Collection => ({
   groups: {
-    AUTHED: Collection.Group().persist("ACCOUNT"),
+    AUTHED: Collection.Group().persist("ACCOUNT")
   },
   selectors: {
     CURRENT: Collection.Selector().persist("CURRENT_ACCOUNT") 
@@ -22,30 +22,35 @@ export const AccountCollection = App.Collection<AccountBody>()(Collection => ({
   }
 }));
 
-const AccountComputed = {
-	IS_LOGGED: App.Computed(() => {
-    if(AccountCollection.selectors.CURRENT.value) {
-      if(AccountCollection.selectors.CURRENT.id) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-    return false;
-  })
+// const AccountComputed = {
+// 	IS_LOGGED: App.Computed(() => {
+//     if(AccountCollection.selectors.CURRENT.value) {
+//       if(AccountCollection.selectors.CURRENT.id) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     }
+//     return false;
+//   })
+// }
+
+export const AccountComputed = {
+  IS_LOGGED: App.Computed(() => (
+    AccountCollection.selectors.CURRENT.value ? AccountCollection.selectors.CURRENT.id ? true : false : false
+  ), [AccountCollection.selectors.CURRENT])
 }
 
-setTimeout(() => {
-  console.log(AccountCollection.selectors.CURRENT)
-  console.log(AccountCollection.selectors.CURRENT.value.id)
-  console.log(AccountCollection.selectors.CURRENT.value.username)
-}, 500);
+console.log(AccountCollection.selectors.CURRENT.value)
+
+setTimeout(() => console.log(AccountCollection.selectors.CURRENT), 500);
 
 const controller = App.Controller({
   state: { ...AccountState, ...AccountComputed },
   collection: AccountCollection,
   routes,
   helpers
-}, actions);
+}).root(actions);
 
-export const accounts = controller as typeof controller & typeof actions;
+
+export const accounts = controller as typeof controller;

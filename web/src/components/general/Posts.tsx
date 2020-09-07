@@ -24,10 +24,10 @@ const Page = ( props: AccountPosts ) => {
                     <div className={styles.box_content}>
 
                         <a href="" className={styles.author}>
-                                <img src={props.author_info.avatar} alt=""/>
+                                <img src={props.avatar} alt=""/>
                                 <section>
-                                    <h1>{props.author_info.name}</h1>
-                                    <p>@{props.author_info.username}</p>
+                                    <h1>{props.name}</h1>
+                                    <p>@{props.username}</p>
                                 </section>
                         </a>
 

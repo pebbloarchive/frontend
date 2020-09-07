@@ -12,7 +12,7 @@ import NotFound from '../404';
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-  const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+  const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
   console.log(current)
   useEffect(() => {
     if(process.browser) {

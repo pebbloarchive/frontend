@@ -25,8 +25,6 @@ const Page = () => {
                         required={true}
                         onChange={(change) => { setPassword(change.target.value) }}
                     />
-                    <hr/>
-                    <h1 className={styles.title}>New password</h1>
                     <input 
                         className={styles.change_pasword}
                         type="password"

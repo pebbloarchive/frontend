@@ -7,43 +7,6 @@
     background: var(--background);
 }
 
-.menu_links {
-    position: fixed;
-    top: 0;
-    left: 250px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-}
-
-.menu_links a {
-    color: var(--color);
-    margin-right: 30px;
-    opacity: .5;
-    font-weight: 600;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.menu_links a::after {
-    content: "";
-    position: absolute;
-    margin-top: 28px;
-    margin-left: 0px;
-    border-radius: 100px;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(to right, var(--theme-a), var(--theme-b));
-    opacity: 0;
-    transition: .2s;
-}
-
-.menu_links a:hover::after {
-    opacity: .8;
-    width: 20px;
-}
-
 .menu_button {
     position: absolute;
     top: 50%;
@@ -53,14 +16,14 @@
     height: 100%;
     background: transparent;
     cursor: pointer;
-    display: none;
+    z-index: 2;
 }
 
 .menu_button span {
     display: block;
     width: 100%;
-    height: 2px;
-    margin-bottom: 10px;
+    height: 3px;
+    margin-bottom: 7px;
     background-color: #313131;
 }
 
@@ -71,59 +34,13 @@
 .menu_company {
     position: absolute;
     top: 50%;
-    margin-left: 2%;
-    transform: translate(0%,-50%);
-}
-
-.menu_company h1 {
-    cursor: pointer;
-    font-size: 25px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
     font-weight: 600;
     background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.menu_user {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0%, -50%);
-    margin-right: 2%;
-    cursor: pointer;
-}
-
-.menu_user img {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-}
-
-.menu_buttons {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    right: 0;
-    margin-right: 2%;
-    display: flex;
-    align-items: center;
-}
-
-.menu_buttons a {
-    padding: 14px 30px;
-    margin-left: 20px;
-    border-radius: 100px;
-    font-weight: 600;
-}
-
-.login {
-    color: var(--color);
-    border: solid 1px var(--color);
-}
-
-.create {
-    color: white;
-    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
 }
 
 .navigation {
@@ -137,6 +54,15 @@
     z-index: 1;
     transition: .3s;
     /* animation: navbar .3s; */
+}
+
+@keyframes navbar {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 .navigation_logo {
@@ -215,55 +141,9 @@
 }
 
 .avatar img {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
     border-radius: 100%;
     width: 100%;
     height: 100%;
-    border: solid 10px transparent;
-}
-
-.profile_dropup {
-    display: none;
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    min-width: 160px;
-    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
-    padding: 7px;
-    color: var(--color);
-    border-radius: 5px;
-    box-shadow: 3px 3px 10px #919191;
-}
-
-.profile_dropup a {
-    padding: 10px 10px;
-    color: white;
-    /* font-weight: 600; */
-    font-size: 15px;
-    display: block;
-    opacity: .8;
-    border-radius: 5px;
-}
-
-.profile_dropup a:hover {
-    background-color: rgba(255, 255, 255, 0.150);
-}
-
-.avatar:hover .profile_dropup {
-    display: block;
-    animation: dropup .3s;
-}
-
-@keyframes dropup {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 .settings {
@@ -289,10 +169,15 @@
     transition: .3s;
 }
 
+.settings_active {
+    background-color: rgba(0, 0, 0, 0.050) !important;
+    border-left: solid 5px rgba(0, 0, 0, 0.100);
+}
+
 .settings_content span {
     font-weight: 600;
     font-size: 15px;
-    opacity: .5;
+    opacity: .8;
 }
 
 .settings_content img {
@@ -344,210 +229,6 @@
     background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746976276216152104/chevron-left.png);
 }
 
-.settings_active {
-    padding-left: 50px !important;
-    background-color: rgba(0, 0, 0, 0.050) !important;
-    border-left: solid 5px rgba(0, 0, 0, 0.100);
-}
-
-.settings_active img {
-    opacity: .7 !important;
-}
-
-.settings_active span {
-    opacity: .7;
-}
-
-.message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(var(--theme-a), var(--theme-b));
-}
-
-.message_avatar {
-    position: relative;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%);
-    border-radius: 50%;
-    margin: 25px 0;
-    width: 50px;
-    height: 50px;
-    border: solid 2px rgba(255, 255, 255, 0.150);
-    cursor: pointer;
-}
-
-.messages_pages {
-    width: 100%;
-    margin: 50px 0;
-}
-
-.messages_pages a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70px;
-    cursor: pointer;
-}
-
-.message_active {
-    background-color: rgba(255, 255, 255, 0.150);
-}
-
-.messages_pages img {
-    filter: invert(100%);
-    width: 30px;
-    height: 30px;
-    opacity: .8;
-}
-
-.contacts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 400px;
-    height: 100%;
-    overflow: auto;
-    background-color: #fafafa;
-}
-
-.contacts_content {
-    margin-left: 100px;
-}
-
-.contacts_filter {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contacts_filter input {
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    height: 60px;
-    margin-top: 25px;
-    padding: 0 30px 0 70px;
-    width: 100%;
-    font-weight: 600;
-    background-color: transparent;
-
-    background-repeat: no-repeat;
-    background-position: 30px 50%;
-    background-size: 25px;
-    background-image: url(https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png);
-}
-
-.contacts_filter input::placeholder {
-    font-weight: normal;
-}
-
-.contact_item {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    height: 30px;
-    width: 100%;
-    padding: 20px 0;
-    border-radius: 0 1000px 1000px 0;
-}
-
-.contact_item section {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 30px;
-}
-
-.contact_avatar {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-left: 30px;
-    border-radius: 50%;
-}
-
-.contact_names {
-    display: flex;
-    align-items: center;
-}
-
-.contact_names img {
-    width: 30px;
-    height: 30px;
-    margin-left: -15px;
-    margin-right: -5px;
-}
-
-.contact_names span {
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    opacity: .7;
-}
-
-.contact_item:hover {
-    background-color: rgba(0, 0, 0, 0.030);
-}
-
-.contact_item:hover span {
-    opacity: .8;
-}
-/* .contact_lastMessage {
-    max-width: 100%;
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    word-wrap: break-word;
-    max-height: 20px;
-    font-size: 14px;
-} */
-
-.contact_timeStamp {
-    width: 100%;
-    opacity: .5;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: right;
-}
-
-.contact_status {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    width: 5px;
-    height: 100%;
-    display: none;
-}
-
-.contact_status span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    transform: translate(0%, -50%);
-}
-
-.contact_status_offline {
-    background-color: #afafaf;
-}
-
-.contact_status_online {
-    background-color: #4aca4a;
-}
-
-.contact_status_idle {
-    background-color: #f6bb3a;
-}
-
-.contact_status_dnd {
-    background-color: #ff5a5a;
-}
-
 @media only screen and (max-width:1400px) {
     .navigation {
         width: 150px;
@@ -597,65 +278,6 @@
 
     .settings_content span {
         font-size: 14px;
-    }
-
-    .message {
-        width: 80px;
-    }
-
-    .message_avatar {
-        width: 35px;
-        height: 35px;
-    }
-
-    .messages_pages img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .messages_pages a {
-        height: 50px;
-    }
-
-    .contacts_filter input {
-        margin-top: 15px;
-        padding-left: 50px;
-        font-size: 12px;
-
-        background-position: 20px 50%;
-        background-size: 20px;
-    }
-
-    .contacts {
-        width: 300px;
-    }
-
-    .contacts_content {
-        margin-left: 80px;
-    }
-
-    .contact_item {
-        height: 10px;
-    }
-
-    .contact_avatar {
-        width: 25px;
-        height: 25px;
-        margin-left: 15px;
-    }
-
-    .contact_names img {
-        width: 20px;
-        height: 20px;
-        margin-left: -10px;
-    }
-
-    .contact_names span {
-        font-size: 12px;
-    }
-
-    .contact_timeStamp {
-        font-size: 10px;
     }
 }
 
@@ -718,31 +340,6 @@
 }
 
 @media only screen and (max-width:1000px) {
-    .menu {
-        height: 60px;
-    }
-
-    .menu_company {
-        left: 50%;
-        margin-left: 0;
-        transform: translate(-50%,-50%);
-        font-size: 20px;
-    }
-
-    .menu_button {
-        display: block;
-        margin-left: 4%;
-    }
-
-    .menu_user {
-        margin-right: 4%;
-    }
-
-    .menu_user img {
-        width: 35px;
-        height: 35px;
-    }
-
     .navigation {
         width: 100%;
         height: 60px;
@@ -782,9 +379,5 @@
 
     .active img {
         filter: none;
-    }
-    .menu_user_dropdown,
-    .menu_links {
-        display: none !important;
     }
 }

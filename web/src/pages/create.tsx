@@ -24,7 +24,7 @@ export default function Page() {
       <title>Pebblo - Create</title>
     </Head>
       <div className={styles.auth_right}>
-        <img src="images/svg/woman-smartphone.svg"/>
+        <img src="images/svg/woman-analytics.svg"/>
       </div>
 
       <form className={styles.auth_form} onSubmit={userCreate}>

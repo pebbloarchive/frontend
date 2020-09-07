@@ -21,11 +21,11 @@ export default ({ post }: {
   return (
     <>
         <Head>
-          <title>{post.author_info.name}: "{post.content}" / Pebblo</title>
+          <title>{post.name}: "{post.content}" / Pebblo</title>
             <meta property="og:type" content="website"/>
             <meta name="description" content={post.content}/>
-            <meta name="subtitle" content={`${post.author_info.name} (@${post.author_info.username}), ${post.author_info.avatar}`}/>
-            <meta name="author" content={post.author_info.avatar}/>
+            <meta name="subtitle" content={`${post.name} (@${post.username}), ${post.avatar}`}/>
+            <meta name="author" content={post.avatar}/>
             <meta property="og:description" content={`${post.content}\n\n&copy; pebblo.org`}/>
             <meta name="theme-color" content="#FF274E"/>
         </Head>

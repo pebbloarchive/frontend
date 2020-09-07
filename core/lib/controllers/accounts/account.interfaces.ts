@@ -59,9 +59,13 @@ export interface AccountBody {
   sessions?: string[];
   followingCount?: number;
   followersCount?: number;
+  following?: any;
+  followers?: any;
   private?: boolean;
   suspended?: boolean;
   created_at?: string;
+  posts: AccountPosts;
+  settings?: any;
 }
 
 export interface AccountUser {
@@ -78,17 +82,32 @@ export interface AccountUser {
   private?: boolean;
   suspended?: boolean;
   created_at?: string;
-  posts: AccountPosts;
+  posts: [{
+    id: number;
+    post_id: number;
+    author: number;
+    author_info: {
+      name: string;
+      username: string;
+      avatar: string;
+      permissions: string[];
+    }
+    original: number;
+    content: string;
+    attachments: string[] | string;
+    likes: string[];
+    shares: string[];
+    created_at: string;
+    updated_at: string;
+    type: string;
+  }]
+  settings?: any;
 }
 
 export interface AccountPosts {
   id: number;
+  post_id: number;
   author: number;
-  author_info: {
-    name: string;
-    username: string;
-    avatar: string;
-  }
   original: number;
   content: string;
   attachments: string[] | string;
@@ -97,6 +116,10 @@ export interface AccountPosts {
   created_at: string;
   updated_at: string;
   type: string;
+  name: string;
+  username: string;
+  avatar: string;
+  permissions: string[];
 }
 
 // export interface AccountPostsArray extends AccountPosts {

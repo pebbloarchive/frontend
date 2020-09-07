@@ -2,22 +2,22 @@ import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework';
-import { AccountUser as UserProps } from '@pebblo/core/lib/controllers/accounts/account.interfaces'
-import { useState } from 'react';
+import { AccountUser as UserProps, AccountUser, AccountPosts } from '@pebblo/core/lib/controllers/accounts/account.interfaces'
+import { useState, useEffect } from 'react';
 import Router from 'next/router';
-import { Log } from '../components/utils';
+import { Log, abbreivate } from '../components/utils';
 
 // Components
 import NotFound from './404';
 import Nav from '../components/general/Nav'
-import Posts from '../components/general/Posts';
+import Feed from '../components/general/Feed';
 import Suspended from '../components/general/Suspended';
 import styles from '../components/styles/profile.module.css';
 
-export default ({ user }: {
+export const Page = ({ user }: {
   user: UserProps,
 }) => {
-  const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED])
+  const [loggedIn, cache] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE])
   const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
   if(!user || !user.username) return <NotFound />
   if(user.suspended) return <Suspended {...user}/>
@@ -28,21 +28,14 @@ export default ({ user }: {
 
     const buttonClick = async () => {
       if(!loggedIn) return Router.push('/login');
-      // if(current.id === user.id) return;
-      // let isFollowing = await core.accounts.routes.getRelationships();
-      // if(user.followers.includes(user.id)) {
-      //   await core.accounts.routes.unfollowUser(user.id);
-      //   following(false);
-      // } else {
-      //   await core.accounts.routes.followUser(user.id);
-      //   following(true);
-      // }
-      if(user.followers.includes(user.id)) {
-        following(true);
-      } else {
+      if(current.id === user.id) return;
+      if(user.followers.includes(current.id)) {
+        await core.accounts.routes.unfollowUser(user.id);
         following(false);
+      } else {
+        await core.accounts.routes.followUser(user.id);
+        following(true);
       }
-      console.log(followed);
     }
 
     return (
@@ -68,7 +61,7 @@ export default ({ user }: {
   return (
     <>
       <Head>
-  <title>{user.name} (@{user.username}) {user.followersCount} Followers</title>
+      <title>{user.name} (@{user.username}) / Pebblo</title>
         <meta property="og:type" content="website"/>
         <meta name="description" content={user.description}/>
         <meta property="og:title" content={`${user.name} - @${user.username}`}/>
@@ -86,9 +79,9 @@ export default ({ user }: {
                   { user.permissions.includes('verified') ? (<img className={styles.badge} src="icons/verified.png" alt=""/>) : '' }
               </div>
               <div className={styles.names}>
-                  <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
+                  <div className={user.permissions.includes('admin') && user.settings.rainbow === true ? styles.names_content_staff : styles.names_content}>
                       <h1>
-                        {/* { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' } */}
+                        { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' }
                         {user.name}</h1>
                       <p>@{user.username}</p>
                   </div>
@@ -102,28 +95,29 @@ export default ({ user }: {
       <div className={styles.additional_information}>
           <div className={styles.statistics}>
               <a href="">
-                  <span>{user.followersCount}</span>
+                  <span>{abbreivate(user.followersCount)}</span>
                   <h3>Followers</h3>
               </a>
               <a href="">
                   {/* BY DEFAULT >> CHANGE TO FOLLOWING */}
-                  <span>{user.followingCount}</span>
+                  <span>{abbreivate(user.followingCount)}</span>
                   {/* <h3>Subscribers</h3> */}
                   <h3>Following</h3>
               </a>
           </div>
           <div className={styles.interaction}>
-              { process.browser && Router.route === `/${current.username}` ? <Button /> : <Insights /> }
-              {/* <a href="" className={styles.rewards_account}><strong>
+              { process.browser && user.username === current.username && loggedIn ? <Insights/> : <Button /> }
+              <a href="" className={styles.rewards_account}><strong>
                 Rewards
-              </strong></a> */}
+              </strong></a>
           </div>
       </div>
 
-      {
-        
+      { 
+        user.posts.map(post => {
+          return <Feed {...post} {...user}/>
+        })
       }
-      
     </>
   )
 }
@@ -137,3 +131,5 @@ export const getServerSideProps: GetServerSideProps = async(context) => {
     }
   }
 }
+
+export default Page;

@@ -3,5 +3,7 @@ import React from 'react';
 
 export const App = new Pulse({
   framework: React,
-  storagePrefix: 'pblo_'
+  storage: {
+    prefix: 'pblo_'
+  }
 });
