@@ -68,7 +68,7 @@ export default ({ user }: {
   return (
     <>
       <Head>
-      <title>{user.name} (@{user.username}) / Pebblo</title>
+  <title>{user.name} (@{user.username}) {user.followersCount} Followers</title>
         <meta property="og:type" content="website"/>
         <meta name="description" content={user.description}/>
         <meta property="og:title" content={`${user.name} - @${user.username}`}/>
@@ -114,9 +114,9 @@ export default ({ user }: {
           </div>
           <div className={styles.interaction}>
               { process.browser && Router.route === `/${current.username}` ? <Button /> : <Insights /> }
-              <a href="" className={styles.rewards_account}><strong>
+              {/* <a href="" className={styles.rewards_account}><strong>
                 Rewards
-              </strong></a>
+              </strong></a> */}
           </div>
       </div>
 

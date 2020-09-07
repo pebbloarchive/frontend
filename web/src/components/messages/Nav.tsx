@@ -50,18 +50,14 @@ const Topnav = () => {
                 </form>
 
                     <div className={styles.contact_item}>
-                    <section>
-                        <img className={styles.contact_avatar} src="https://cdn.discordapp.com/attachments/706304868805115934/750287819754176542/giphy-downsized-large.gif" alt=""/>
-                            <h1 className={styles.contact_names}>
-                                <img src="../icons/verified.png" alt=""/>
-                                <span>@kyle</span>
-                            </h1>
-                        <span className={styles.contact_timeStamp}>5 mins</span>
+                        <section>
+                            <img className={styles.contact_avatar} src="https://cdn.discordapp.com/attachments/706304868805115934/750287819754176542/giphy-downsized-large.gif" alt=""/>
+                                <h1 className={styles.contact_names}>
+                                    <img src="../icons/verified.png" alt=""/>
+                                    <span>@kyle</span>
+                                </h1>
+                            <span className={styles.contact_timeStamp}>5 mins</span>
                         </section>
-
-                        <div className={styles.contact_status}>
-                            <span className={styles.contact_status_online}></span>
-                        </div>
                     </div>
 
             </div>

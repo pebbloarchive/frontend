@@ -10,7 +10,7 @@ export default function Page() {
   const [password, setPassword] = useState(undefined);
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
 
-  if(loggedIn && process.browser) Router.push('/home');
+  if(loggedIn && process.browser) Router.push('/explore');
 
   const userLogin = async (ev) => {
     ev.preventDefault();
@@ -23,7 +23,7 @@ export default function Page() {
       <title>Pebblo - Login</title>
     </Head>
       <div className={styles.auth_right}>
-        <img src="images/svg/man-computer-desk.svg"/>
+        <img src="images/svg/woman-bench.svg"/>
       </div>
 
       <form className={styles.auth_form} onSubmit={userLogin}>

@@ -27,6 +27,17 @@ const Page = () => {
                                 <p>Get an email when someone has requested to message you.</p>
                             </label>
 
+                        <hr/>
+                        <h1 className={styles.subtitle}>Messages</h1>
+                            <label className={styles.checkbox}>
+                                <div className={styles.checkbox_container}>
+                                    <input type="checkbox" name="" id=""/>
+                                    <span className={styles.checkbox_box}></span>
+                                </div>
+                                <h1>Beep Boop</h1>
+                                <p>Makes a sound when you get a new message from someone.</p>
+                            </label>
+
                     </div>
             </div>
         </>

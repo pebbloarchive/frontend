@@ -39,6 +39,10 @@
     color: #888888;
 }
 
+.note a {
+    font-weight: 600;
+}
+
 .title span {
     transform: scale(0.7);
     padding: 1px 3px;

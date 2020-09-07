@@ -17,7 +17,7 @@ const Topnav = () => {
         // if(route === '/notifications') isActive('notifications');
         // if(route === '/message') isActive('message');
         switch(route) {
-            case '/home':
+            case  '/profile':
                 return isActive('home');
             case '/explore':
                 return isActive('explore');
@@ -44,9 +44,9 @@ const Topnav = () => {
                     <span></span>
                 </div>
                 </a>
-
+                {loggedIn ? 
                 <div className={styles.links}>
-                    <Link href="/home">
+                    <Link href="/profile">
                         <a className={`${active === 'home' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745850922525261844/unknown.png" alt=""/></a>
                     </Link>
                     <Link href="/explore">
@@ -58,12 +58,19 @@ const Topnav = () => {
                     <Link href="/messages">
                         <a className={`${active === 'messages' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745835287300800522/envelope.png" alt=""/></a>
                     </Link>
-                </div>
+                </div> : '' }
 
                 {loggedIn ? 
-                <a href={`/${current.username}`} className={styles.avatar}>
+                <Link href={`/${current.username}`}><a href={`/${current.username}`} className={styles.avatar}>
                      <img src={current.avatar} alt=""/>
-                </a> : '' }
+                        <section className={styles.profile_dropup}>
+                            <Link href="/"><a href="/">Accounts</a></Link>
+                            <Link href="/rewards"><a href="/rewards">Rewards</a></Link>
+                            <Link href="/settings"><a href="/settings">Settings</a></Link>
+                            <br/>
+                            <Link href="/logout"><a href="/logout">Logout</a></Link>
+                        </section>
+                </a></Link> : '' }
 
             </div>
         </>

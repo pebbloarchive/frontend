@@ -4,19 +4,15 @@ const Page = () => {
     return (
         <>
             <div className={styles.messages}>
-                <div className={styles.content}>
-                    <section>
-
-                    <div className={styles.sender}>
-                        <p>also sorry about the wait for messages lorem</p>
-                    </div>
-
-                    <div className={styles.recipient}>
+                    {/*<div className={styles.recipient}>
                         <p>np LOL</p>
-                    </div>
+                    </div>*/}
 
-                    </section>
+
+                <div className={styles.section}>
+
                 </div>
+
             </div>
         </>
     )

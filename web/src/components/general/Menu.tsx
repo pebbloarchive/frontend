@@ -18,30 +18,28 @@ const Topnav = () => {
                 </button>
 
                 <div className={styles.menu_company}>
-                    <Link href="/">
-                        <a href="/"><h1>Pebblo</h1></a>
+                    <Link href="/explore">
+                        <a href="/explore"><h1>pebblo</h1></a>
                     </Link>
                 </div>
-                {loggedIn ? 
+                { loggedIn ? 
                 <div className={styles.menu_user}>
                     <Link href={`${current.username}`}>
-                        {/* <p>Hey, ${current.username}!</p> */}
-                        <img src={current.avatar} alt=""/>
+                        <img src={current.avatar} alt={current.username}/>
                     </Link>
-                <section className={styles.menu_user_dropdown}>
-                    <Link href={`/${current.username}`}><a href={`/${current.username}`}>Profile</a></Link>
-                    <Link href="/"><a href="/settings">Settings</a></Link>
-                    <hr/>
-                    <Link href="/logout"><a href="/logout">Logout</a></Link>
-                </section>
-                </div> : '' }
+                </div> : '' ? !loggedIn : 
+                    <div className={styles.menu_buttons}>
+                        <Link href="/login"><a href="/login" className={styles.login}>Login</a></Link>
+                        <Link href="/create"><a href="/create" className={styles.create}>Get Started</a></Link>
+                    </div>
+                }
             </div>
 
             <div className={styles.menu_links}>
-                <Link href="/explore"><a href="/explore">Explore</a></Link>
+                <Link href="/about"><a href="/about">Features</a></Link>
                 <Link href="/blog"><a href="/blog">Blog</a></Link>
-                <Link href="/developers"><a href="/developers">Developers</a></Link>
-                <Link href="/help-desk"><a href="/help-desk">Help Desk</a></Link>
+                <Link href="/jobd"><a href="/jobs">Jobs</a></Link>
+                <Link href="/developers"><a href="/developers">Safety</a></Link>
             </div>
         </>
     )
