@@ -1,7 +1,7 @@
 ## Required for the repo to run
-npm & yarn 
+npm, yarn & lerna 
 
-run -> `npm i -g yarn`
+run -> `npm i -g yarn lerna`
 
 ## Running the app
 `yarn run dev`
