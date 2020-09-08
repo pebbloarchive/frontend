@@ -91,12 +91,17 @@
     transform: translate(0%, -50%);
     margin-right: 2%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .menu_user img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    margin-left: 20px;
 }
 
 .menu_buttons {
@@ -227,8 +232,8 @@
 .profile_dropup {
     display: none;
     position: absolute;
-    bottom: 60px;
-    left: 0;
+    bottom: 0;
+    left: 70px;
     min-width: 160px;
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
     padding: 7px;
@@ -549,6 +554,29 @@
 }
 
 @media only screen and (max-width:1400px) {
+    .menu,
+    .menu_links {
+        height: 70px;
+    }
+
+    .menu_links {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .menu_links a {
+        font-size: 12px;
+    }
+
+    .menu_company h1 {
+        font-size: 20px;
+    }
+
+    .menu_user {
+        width: 40px;
+        height: 40px;
+    }
+
     .navigation {
         width: 150px;
     }

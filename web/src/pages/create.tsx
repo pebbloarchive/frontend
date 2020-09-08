@@ -11,7 +11,7 @@ export default function Page() {
   const [password, setPassword] = useState(undefined);
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
 
-  if(loggedIn && process.browser) Router.push('/');
+  if(loggedIn && process.browser) Router.push('/explore');
 
   const userCreate = async (ev) => {
     ev.preventDefault();

@@ -7,7 +7,8 @@ import Link from 'next/link';
 
 const Topnav = () => {
     const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    // const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
     return (
         <>
             <div className={styles.menu}>
@@ -18,28 +19,30 @@ const Topnav = () => {
                 </button>
 
                 <div className={styles.menu_company}>
-                    <Link href="/explore">
-                        <a href="/explore"><h1>pebblo</h1></a>
+                    <Link href="/">
+                        <a href="/"><h1>pebblo</h1></a>
                     </Link>
                 </div>
                 { loggedIn ? 
                 <div className={styles.menu_user}>
-                    <Link href={`${current.username}`}>
+                    <span>{current.name}</span>
+                    <Link href={`/${current.username}`}><a href={`/${current.username}`}>
                         <img src={current.avatar} alt={current.username}/>
-                    </Link>
-                </div> : '' ? !loggedIn : 
-                    <div className={styles.menu_buttons}>
-                        <Link href="/login"><a href="/login" className={styles.login}>Login</a></Link>
-                        <Link href="/create"><a href="/create" className={styles.create}>Get Started</a></Link>
-                    </div>
-                }
+                    </a></Link>
+                </div> : ''
+                //  ? loggedIn : 
+                //     <div className={styles.menu_buttons}>
+                //         <Link href="/login"><a href="/login" className={styles.login}>Login</a></Link>
+                //         <Link href="/create"><a href="/create" className={styles.create}>Get Started</a></Link>
+                //     </div>
+                 }
             </div>
 
             <div className={styles.menu_links}>
                 <Link href="/about"><a href="/about">Features</a></Link>
                 <Link href="/blog"><a href="/blog">Blog</a></Link>
-                <Link href="/jobd"><a href="/jobs">Jobs</a></Link>
-                <Link href="/developers"><a href="/developers">Safety</a></Link>
+                <Link href="/jobs"><a href="/jobs">Jobs</a></Link>
+                <Link href="/blog/safety"><a href="/blog/safety">Safety</a></Link>
             </div>
         </>
     )

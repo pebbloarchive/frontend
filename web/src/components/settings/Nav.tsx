@@ -77,12 +77,12 @@ const Topnav = () => {
                             <span>Notifications</span>
                         </a>
                     </Link>
-                    <Link href="/settings/linked">                    
+                    {/* <Link href="/settings/linked">                    
                         <a className={`${active === 'linked' ? styles.settings_active : ''}`}>
                             <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
                             <span>Linked Account</span>
                         </a>
-                    </Link>
+                    </Link> */}
                     <Link href="/settings/staff-tools">                    
                         <a className={`${active === 'staff' ? styles.settings_active : ''}`}>
                             <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
