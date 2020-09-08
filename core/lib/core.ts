@@ -1,4 +1,4 @@
-import { App } from './pulse';
+import { App } from './app';
 import { accounts } from './controllers/accounts';
 import { settings } from './controllers/settings';
 

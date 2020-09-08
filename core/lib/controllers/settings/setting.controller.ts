@@ -1,4 +1,4 @@
-import { App } from '../../pulse';
+import { App } from '../../app';
 import * as actions from './setting.actions';
 import * as routes from './setting,routes';
 import * as helpers from './setting.helpers';
@@ -13,4 +13,4 @@ const controller = App.Controller({
   helpers: helpers
 }).root(actions);
 
-export const settings = controller as typeof controller;
+export const settings = controller;

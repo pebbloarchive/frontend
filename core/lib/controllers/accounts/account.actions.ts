@@ -1,4 +1,4 @@
-import { App } from '../../pulse';
+import { App } from '../../app';
 import { ICore } from '../../core';
 import { AccountState as state, AccountCollection as collection } from './account.controller';
 import * as routes from './account.routes';
@@ -13,7 +13,7 @@ export async function Login(email: string, password: string) {
   try {
     const user = await routes.Login({ email, password });
     if(user.status === 404 || user.status === 400 || user.status === 401) return console.log('Error', 'Unable to login');
-    return core.accounts.helpers.loginUserIn(user.data);
+    return core.accounts.helpers.logUserIn(user.data);
   } catch(err) {
     App.Error(err);
   }

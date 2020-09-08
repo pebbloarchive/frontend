@@ -1,4 +1,4 @@
-import { App } from '../../pulse';
+import { App } from '../../app';
 import { ICore } from '../../core';
 
 const core = App.Core<ICore>();

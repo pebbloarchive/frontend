@@ -1,14 +1,14 @@
-import { App } from '../../pulse';
+import { App } from '../../app';
 import { ICore } from '../../core';
 import { AccountState as state, AccountCollection as collection, AccountCollection } from './account.controller';
 import * as routes from './account.routes';
 import { AccountBody, AccountData, AuthTokens, AccountUser } from './account.interfaces';
 import API from '../../api';
-// import { resetState } from 'pulse-framework';
+import { resetState } from 'pulse-framework';
 
 const core = App.Core<ICore>();
 
-export async function loginUserIn(data: AccountData) {
+export async function logUserIn(data: AccountData) {
   state.TOKEN.set(data.access_token);
   state.REFRESH_TOKEN.set(undefined);
   // API.config.options.headers['authorization'] = 'Bearer ' + data.access_token;
@@ -42,7 +42,7 @@ export async function refreshUser() {
 export async function resetData() {
   collection.selectors.CURRENT.select(undefined);
   state.CACHE.reset();
-  // resetState([collection, state.TOKEN, state.REFRESH_TOKEN, state.THEME]);
+  resetState([collection, state.TOKEN, state.REFRESH_TOKEN, core.settings.state.THEME]);
 }
 
 export async function getFollowers() {

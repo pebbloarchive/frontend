@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@pebblo/core": "^1.0.0-alpha.0",
     "fs": "0.0.1-security",
     "mesa-js-client": "^1.4.6",
     "moment": "^2.27.0",

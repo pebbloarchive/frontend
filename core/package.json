@@ -15,7 +15,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "pulse-framework": "^3.2.0",
+    "pulse-framework": "file:../_pulse",
     "react": "^16.13.1"
   }
 }
