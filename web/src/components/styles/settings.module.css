@@ -1,0 +1,378 @@
+.content {
+    margin-top: 100px;
+    position: relative;
+    left: 50px;
+    margin-left: 450px;
+    display: block;
+    width: 700px;
+    color: var(--color);
+    background-color: rgba(0, 0, 0, 0.050);
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 100px;
+}
+
+.content:nth-child(1) {
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 17px;
+    opacity: .5;
+    font-weight: 600;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 15px;
+    opacity: .5;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.note {
+    margin-top: -25px;
+    margin-bottom: 50px;
+    color: #888888;
+}
+
+.title span {
+    transform: scale(0.7);
+    padding: 1px 3px;
+    background-color: #555555;
+    color: white;
+    border-radius: 5px;
+}
+
+.edit_account img {
+    width: 160px;
+    height: 160px;
+    float: left;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.edit_account input[type="file"] {
+    display: none;
+}
+
+.edit_account input {
+    margin-left: 200px;
+}
+
+.content input[type="text"],
+.content input[type="email"],
+.content input[type="password"],
+.content textarea {
+    display: block;
+    width: 50%;
+    font-size: 17px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.100);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.700);
+}
+
+.content input[type="submit"] {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(to right, var(--theme-a),var(--theme-b));
+    font-weight: 600;
+}
+
+.content textarea {
+    margin: 0;
+    /* height: 40px; */
+    width: 94%;
+    resize: none;
+}
+
+.content textarea:hover {
+    resize: vertical;
+}
+
+.content input::placeholder {
+    color: var(--color);
+    opacity: .4;
+    font-weight: 600;
+}
+
+.content hr {
+    width: 100%;
+    margin: 100px 0 50px;
+    border: solid 1px rgba(0, 0, 0, 0.050);
+}
+
+.change_password hr {
+    margin: 50px 0;
+}
+
+.connections_list {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.030);
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.connections_list button {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.050);
+    border-radius: 10px;
+    transition: .3s;
+    margin-right: 5px;
+}
+
+.connections_list button:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.connections_list img {
+    width: 30px;
+}
+
+.connections_list button:hover {
+    border-radius: 50%;
+}
+
+.connections_items button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    text-align: left;
+    color: var(--color);
+    border: solid 1px rgba(255, 255, 255, 0.500);
+    margin-bottom: 30px;
+    display: block;
+    padding: 30px 60px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 20px;
+}
+
+.connections_items button:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.connections_items input {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 1;
+    background-color: transparent;
+    width: 99% !important;
+    padding: 0;
+    margin: 0 !important;
+    color: #dedede !important;
+}
+
+.connections_discord {
+    background-color: #6071ac;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995343429730354/discord.png);
+}
+
+.connections_twitch {
+    background-color: #373665;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995519515262996/twitch.png);
+}
+
+.connections_spotify {
+    background-color: #1c944c;
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746995816027389982/spotify.png);
+}
+
+.connections_twitter {
+    background-color: #0569ac;
+    background-image: url(https://cdn.discordapp.com/attachments/637859135970607131/747309987818373190/twitter.png);
+}
+
+.connections_items button:hover {
+    background-color: #d64646;
+    cursor: pointer;
+
+    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/747038330591641691/trash.png);
+}
+
+.checkbox {
+    margin-top: 20px;
+    display: block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.050);
+}
+
+.checkbox h1 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: .6;
+    margin-left: 30px;
+    margin-top: -1px;
+}
+
+.checkbox p {
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 50px;
+    display: block;
+    color: #777777;
+}
+
+.checkbox a {
+    margin: 0 4px;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input[type="checkbox"]::after,
+.checkbox input[type="radio"] {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox_container {
+    float: left;
+}
+
+.checkbox_container span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.100);
+    transition: .3s;
+}
+
+.checkbox input:checked ~ .checkbox_box {
+    background-color: #34a134;
+    border-radius: 5px;
+}
+
+.appearance {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.appearance button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.appearance button:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.appearance button:hover {
+    transform: scale(1.2);
+}
+
+.appearance span {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    /* box-shadow: 0 0 10px #fff8f8; */
+}
+
+                .appearance_light:hover {
+                    border-color: #d8d7d7;
+                }
+
+                .appearance_light span {
+                    background-color: #d8d7d7;
+                }
+
+                .appearance_dark:hover {
+                    border-color: #333333;
+                }
+
+                .appearance_dark span {
+                    background-color: #333333;
+                }
+
+                .appearance_dark_blue:hover {
+                    border-color: #344065;
+                }
+
+                .appearance_dark_blue span {
+                    background-color: #344065;
+                }
+
+
+                
+
+@media only screen and (max-width:1400px) {
+    .content {
+        margin-left: 350px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .content {
+        margin-left: 300px;
+        width: 500px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .content hr {
+        margin: 30px 0;
+    }
+
+    .edit_account img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .edit_account input {
+        margin-left: 100px;
+    }
+
+    .content input[type="text"],
+    .content input[type="email"],
+    .content input[type="password"],
+    .content textarea {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
+    .content input[type="submit"] {
+        font-size: 8px;
+        margin: 10px;
+    }
+}

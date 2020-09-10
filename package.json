@@ -1,26 +1,14 @@
 {
-  "name": "pebblo",
-  "version": "0.1.0",
+  "name": "frontend",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 1500 -H 0.0.0.0 ",
-    "build": "next build",
-    "start": "next start"
+    "dev": "lerna bootstrap && lerna run build && lerna run dev --parallel"
   },
-  "dependencies": {
-    "@types/next": "^9.0.0",
-    "next": "9.3.2",
-    "pulse-framework": "file:./pulse",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router-dom": "^5.1.2",
-    "ws": "^7.2.3"
-  },
+  "workspaces": [
+    "core",
+    "web"
+  ],
   "devDependencies": {
-    "@types/node": "^13.9.8",
-    "@types/react": "^16.9.32",
-    "@types/react-router": "^5.1.5",
-    "@types/react-router-dom": "^5.1.3",
-    "typescript": "^3.8.3"
+    "lerna": "^3.22.1"
   }
 }

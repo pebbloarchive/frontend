@@ -1,0 +1,35 @@
+{
+  "name": "@pebblo/web",
+  "version": "1.0.0-alpha.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1500",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "pulse-framework": "file:../_pulse",
+    "fs": "0.0.1-security",
+    "mesa-js-client": "^1.4.6",
+    "moment": "^2.27.0",
+    "next": "^9.4.4",
+    "next-auth": "^3.1.0",
+    "nprogress": "^0.2.0",
+    "pulse-framework": "file:../_pulse",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^6.0.8",
+    "ts-loader": "^8.0.3",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/next": "^9.0.0",
+    "@types/node": "^13.13.14",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^16.9.43",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "typescript": "^3.9.7"
+  }
+}

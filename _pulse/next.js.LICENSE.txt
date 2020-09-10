@@ -1,0 +1,19 @@
+/*! ../index */
+
+/*! export __esModule [provided] [maybe used in index (runtime-defined)] [usage prevents renaming] */
+
+/*! export isServer [provided] [maybe used in index (runtime-defined)] [usage prevents renaming] */
+
+/*! export loadServerState [provided] [maybe used in index (runtime-defined)] [usage prevents renaming] */
+
+/*! export preserveServerState [provided] [maybe used in index (runtime-defined)] [usage prevents renaming] */
+
+/*! flagged exports */
+
+/*! other exports [not provided] [maybe used in index (runtime-defined)] */
+
+/*! runtime requirements: __webpack_exports__, __webpack_require__ */
+
+/*!***************************!*\
+  !*** ./lib/next/index.ts ***!
+  \***************************/
