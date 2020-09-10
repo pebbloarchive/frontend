@@ -5,6 +5,7 @@ import { abbreivate } from '../utils';
 import moment from 'moment';
 
 const Page = (props: AccountPosts) => {
+    
     return (
         <>
             <div className={styles.feed}>
@@ -26,7 +27,7 @@ const Page = (props: AccountPosts) => {
                         <a href="/p/POSTID#comments"><img src="https://cdn.discordapp.com/attachments/596156721928470547/746527468898484344/comment.png" alt=""/>
                         <span>0</span></a>
                         <a href=""><img src="https://cdn.discordapp.com/attachments/596156721928470547/746527493787353148/heart.png" alt=""/>
-                        <span>{abbreivate(props.likes.length ? props.likes.length    : 0)}</span></a>
+                        <span>{abbreivate(props.likes.length ? props.likes.length : 0)}</span></a>
                         <a href=""><img src="https://cdn.discordapp.com/attachments/596156721928470547/746527492461822093/share.png" alt=""/>
                         <span>{abbreivate(props.shares.length ? props.shares.length : 0)}</span></a>
 
