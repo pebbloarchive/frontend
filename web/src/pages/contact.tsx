@@ -7,6 +7,7 @@ import styles from '../components/styles/support.module.css';
 import Nav from '../components/general/Menu'
 import Footer from '../components/general/Footer'
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default () => {
   return (
@@ -16,6 +17,7 @@ export default () => {
     </Head>
     <form className={styles.contact}>
       <h1 className={styles.contact_title}>Contact Us</h1>
+      <p className={styles.contact_note}>Please make sure you've searched through our <Link href="/resources"><a href="/resources">resources</a></Link> before contacting us.</p>
 
         <input
           type="text"
@@ -43,10 +45,12 @@ export default () => {
         <textarea
           name=""
           id=""
-          cols="30"
-          rows="10"
+          // cols={30}
+          rows={5}
           placeholder="Write a message..."
         />
+
+        <input type="submit" value="Submit"/>
 
     </form>
 
@@ -55,3 +59,6 @@ export default () => {
     </>
   )
 }
+
+
+// my terrible contact page :')

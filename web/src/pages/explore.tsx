@@ -4,12 +4,13 @@ import { Log } from '../components/utils';
 
 
 // Components
-import styles from '../components/styles/landing.module.css';
 import Nav from '../components/general/Nav';
+import Explore from '../components/explore/Explore'
 
 export default () => {
   return (
     <>
+      <Explore />
       <Nav/>
     </>
   )

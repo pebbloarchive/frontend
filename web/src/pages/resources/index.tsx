@@ -47,10 +47,10 @@ export default () => {
                 <p>Use our "user guide" to help you throughout your journey.</p>
               </section>
             </a></Link>
-            <Link href="/jobs/"><a href="/jobs" className={styles.categories_item}>
+            <Link href="/blog/verification"><a href="/blog/verification" className={styles.categories_item}>
               <section>
-                <h1>Jobs</h1>
-                <p>We would love for you to help out, see some open positions.</p>
+                <h1>Verification</h1>
+                <p>Want to be verified? Check out how.</p>
               </section>
             </a></Link>
             <Link href="/blog/safety"><a href="/blog/safety" className={styles.categories_item}>

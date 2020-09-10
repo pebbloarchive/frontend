@@ -17,7 +17,7 @@ const Topnav = () => {
         // if(route === '/notifications') isActive('notifications');
         // if(route === '/message') isActive('message');
         switch(route) {
-            case  '/profile':
+            case  `/${current.username}`:
                 return isActive('home');
             case '/explore':
                 return isActive('explore');
@@ -46,7 +46,7 @@ const Topnav = () => {
                 </a>
                 {loggedIn ? 
                 <div className={styles.links}>
-                    <Link href="/profile">
+                    <Link href={`/${current.username}`}>
                         <a className={`${active === 'home' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745850922525261844/unknown.png" alt=""/></a>
                     </Link>
                     <Link href="/explore">

@@ -13,11 +13,11 @@ const Topnav = () => {
             <div className={styles.footer}>
                 <div className={styles.footer_item}>
                     <h1>Connect with us</h1>
-                        <Link href="/pebblo" target="_blank"><a href="/pebblo" target="_blank">Pebblo</a></Link>
-                        {/* <Link href="https://discord.gg/4w9k3yQ" target="_blank"><a href="https://discord.gg/4w9k3yQ" target="_blank">Discord</a></Link> */}
-                        <Link href="https://instagram.com/pebbloo" target="_blank"><a href="https://instagram.com/pebbloo" target="_blank">Instagram</a></Link>
-                        <Link href="https://twitter.com/pebblocompany" target="_blank"><a href="https://twitter.com/pebblocompany" target="_blank">Twitter</a></Link>
-                        <hr/>
+                        {/* <Link href="/pebblo" target="_blank"><a href="/pebblo" target="_blank">Pebblo</a></Link>
+                        <Link href="https://twitch.tv/pebbloo" target="_blank"><a href="https://twitch.tv/pebbloo" target="_blank">Twitch</a></Link>
+                        <Link href="https://discord.gg/4w9k3yQ" target="_blank"><a href="https://discord.gg/4w9k3yQ" target="_blank">Discord</a></Link>
+                        <Link href="https://twitter.com/pebblocompany" target="_blank"><a href="https://twitter.com/pebblocompany" target="_blank">Twitter</a></Link> */}
+                        {/* <hr/> */}
                         <Link href="/contact"><a href="/contact">Contact</a></Link>
                         {/* <Link href="mailto:support@pebblo.org"><a href="mailto:support@pebblo.org">support@pebblo.org</a></Link> */}
                 </div>
