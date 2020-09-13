@@ -26,19 +26,32 @@ const Page = () => {
                 </div>
 
                 <div className={styles.content}>
-                    <h1 className={styles.title}>Following</h1>
 
-                    {/* FOLLOWING -- SHOW USERS WHO HAVE RECENTLY POSTED FIRST
-                                     USER WILL ALSO HAVE A BORDER TO INDICATE
-                                     THAT THEY HAVE CREATE A POST */}
-                    <div className={styles.following}>
-                        <Link href=""><a href="">
-                            <div className={styles.following_avatar}>
-                                <img src="https://cdn.discordapp.com/avatars/583925649807245322/a_bfb17d0ffc35ddd308c458b30bf4212b.gif?size=1024" alt=""/>
-                            </div>
-                            <span className={styles.following_username}>test</span>
-                        </a></Link>
+                    <div className={styles.title}><strong>Discover</strong> something new</div>
+                    <div className={styles.tags}>
+
+                        {/* NOTE:       Make it so it randomly shows only
+                                        a random 5 out of the categories
+                                        below when you refresh the page. */}
+
+                        <Link href=""><a href="">Art</a></Link>
+                        <Link href=""><a href="">Beauty</a></Link>
+                        <Link href=""><a href="">DIY</a></Link>
+                        <Link href=""><a href="">Decor / Decoration</a></Link>
+                        <Link href=""><a href="">Educational</a></Link>
+                        {/* <Link href=""><a href="">Entertainment</a></Link>
+                        <Link href=""><a href="">Humor</a></Link>
+                        <Link href=""><a href="">Inspirational</a></Link>
+                        <Link href=""><a href="">Music</a></Link>
+                        <Link href=""><a href="">Restaurants / Cafe / Food</a></Link>
+                        <Link href=""><a href="">Stream</a></Link>
+                        <Link href=""><a href="">Technology</a></Link>
+                        <Link href=""><a href="">Travel</a></Link>
+                        <Link href=""><a href="">TV &amp; Movies</a></Link> */}
                     </div>
+
+                    <div className={styles.subtitle}><strong>Trending</strong> posts</div>
+
                 </div>
 
             </div>

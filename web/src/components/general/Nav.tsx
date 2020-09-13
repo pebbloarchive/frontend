@@ -10,6 +10,27 @@ const Topnav = () => {
     const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
     const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
     const [active, isActive] = useState(undefined);
+    const [clicked, wasClicked] = useState<boolean>(false);
+
+    const onClick = () => {
+        if(!clicked) {
+            wasClicked(true);
+        } else {
+            wasClicked(false);
+        }
+    };
+
+    const Context = () => {
+        return (
+            <section className={styles.profile_dropup}>
+                <Link href={`/${current.username}`}><a href={`/${current.username}`}>My Profile</a></Link>
+                <Link href="/rewards"><a href="/rewards">Rewards</a></Link>
+                <Link href="/settings"><a href="/settings">Settings</a></Link>
+                <br/>
+                <Link href="/logout"><a href="/logout">Logout</a></Link>
+            </section>
+        )
+    }
 
     const onRouteChange = (route) => {
         // if(route === '/') isActive('home');
@@ -17,8 +38,8 @@ const Topnav = () => {
         // if(route === '/notifications') isActive('notifications');
         // if(route === '/message') isActive('message');
         switch(route) {
-            case  `/${current.username}`:
-                return isActive('home');
+            // case  `/${current.username}`:
+            //     return isActive('home');
             case '/explore':
                 return isActive('explore');
             case '/notifications':
@@ -46,9 +67,9 @@ const Topnav = () => {
                 </a>
                 {loggedIn ? 
                 <div className={styles.links}>
-                    <Link href={`/${current.username}`}>
+                    {/* <Link href={`/${current.username}`}>
                         <a className={`${active === 'home' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/745850922525261844/unknown.png" alt=""/></a>
-                    </Link>
+                    </Link> */}
                     <Link href="/explore">
                         <a className={`${active === 'explore' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
                     </Link>
@@ -61,16 +82,10 @@ const Topnav = () => {
                 </div> : '' }
 
                 {loggedIn ? 
-                <Link href={`/${current.username}`}><a href={`/${current.username}`} className={styles.avatar}>
+                <button className={styles.avatar} onClick={onClick}>
                      <img src={current.avatar} alt=""/>
-                        <section className={styles.profile_dropup}>
-                            <Link href="/"><a href="/">Accounts</a></Link>
-                            <Link href="/rewards"><a href="/rewards">Rewards</a></Link>
-                            <Link href="/settings"><a href="/settings">Settings</a></Link>
-                            <br/>
-                            <Link href="/logout"><a href="/logout">Logout</a></Link>
-                        </section>
-                </a></Link> : '' }
+                     { clicked ? <Context /> : '' }
+                </button> : '' }
 
             </div>
         </>

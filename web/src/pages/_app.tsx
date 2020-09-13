@@ -40,7 +40,7 @@ const Pebblo = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-    { loaded ? 'Loading...' : <Component {...pageProps} /> }
+    { loaded ? 'loading...' : <Component {...pageProps} /> }
     </>
   )
 }

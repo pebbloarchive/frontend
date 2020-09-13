@@ -62,7 +62,7 @@ const Page = () => {
 
                     <label className={styles.checkbox}>
                         <div className={styles.checkbox_container}>
-                            <input type="checkbox" name="" id="" checked/>
+                            <input type="checkbox" name="" id="" defaultChecked/>
                             <span className={styles.checkbox_box}></span>
                         </div>
                         <h1>Scan Messages</h1>
@@ -72,7 +72,7 @@ const Page = () => {
                     </label>
                     <label className={styles.checkbox}>
                         <div className={styles.checkbox_container}>
-                            <input type="checkbox" name="" id="" checked/>
+                            <input type="checkbox" name="" id="" defaultChecked/>
                             <span className={styles.checkbox_box}></span>
                         </div>
                         <h1>Scan Media</h1>

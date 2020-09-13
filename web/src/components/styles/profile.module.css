@@ -83,7 +83,7 @@
     align-items: center;
     font-size: 30px;
     font-weight: 600;
-    animation: rainbow 6s infinite;
+    animation: rainbow 12s infinite;
 }
 
 @keyframes rainbow {
@@ -96,14 +96,19 @@
     30% {
         color: #e4da24;
     }
-    70% {
+    50% {
         color: #0DB14B;
     }
-    95% {
+    
+    75% {
         color: #005BAA;
     }
-    100% {
+    80% {
         color: #922791;
+    }
+
+    100% {
+        color: #ED1A3B;
     }
 }
 
@@ -348,40 +353,45 @@
     }
 
     .additional_information {
-        height: auto;
+        height: 100%;
         position: absolute;
         top: 0;
         width: 100%;
         transform: none;
+        display: block;
     }
 
     .rewards_account,
     .follow_account,
     .insights_account {
         width: 25%;
-        margin: 0 20px;
+        margin: 0;
         font-size: 14px;
         padding: 10px 20px;
-        border-radius: 0;
+        border-radius: 100px;
         border: none;
         transform: none;
     }
 
     .follow_account {
-        width: 40%;
-        margin-left: -94%;
+        display: block;
+        width: 100%;
+        margin: 0 a;
     }
 
     .interaction {
-        margin: 0;
-        width: 100%;
-        display: flex;
+        /* display: flex;
         align-items: center;
         text-align: left;
-        justify-content: center;
+        justify-content: center; */
+        display: block;
         position: absolute;
-        top: 25px;
-        left: 0;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0;
+        background-color: saddlebrown;
+        /* width: 100%; */
     }
 
     .statistics {
@@ -410,6 +420,10 @@
 
     .bio p {
         font-size: 16px;
+    }
+    
+    .names {
+        margin-top: 30px;
     }
 
     .names_content h1,

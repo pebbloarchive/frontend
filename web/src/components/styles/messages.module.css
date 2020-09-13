@@ -5,3 +5,50 @@
     width: 100%;
     height: 100%;
 }
+
+.context {
+    margin-left: 400px;
+}
+
+.context section {
+    margin: 125px auto 200px;
+    width: 70%;
+}
+
+.recipient,
+.sender {
+    max-width: 40%;
+}
+
+.recipient span,
+.sender span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.8em;
+    opacity: .5;
+}
+
+.recipient section,
+.sender section {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.recipient section {
+    background-color: #e3e3e3;
+}
+
+.sender {
+    text-align: right;
+}
+
+.sender section {
+    position: relative;
+    left: 141%;
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    color: white;
+    text-align: left;
+}

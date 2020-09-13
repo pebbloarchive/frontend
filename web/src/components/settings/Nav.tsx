@@ -27,8 +27,8 @@ const Topnav = () => {
                 return isActive('notifications');
             case '/settings/linked':
                 return isActive('linked');
-            case '/settings/staff-tools':
-                return isActive('staff');
+            // case '/settings/staff-tools':
+            //     return isActive('staff');
         }
     };
 
@@ -83,13 +83,12 @@ const Topnav = () => {
                             <span>Linked Account</span>
                         </a>
                     </Link> */}
-                    <Link href="/settings/staff-tools">                    
+                    {/* <Link href="/settings/staff-tools">                    
                         <a className={`${active === 'staff' ? styles.settings_active : ''}`}>
                             <img src="https://cdn.discordapp.com/attachments/596156721928470547/750927637681143809/staff_settings_badge.png" alt="Staff Tools | Staff Badge"/>
                             <span>Staff Tools</span>
                         </a>
-                    </Link>
-                    <button>Logout</button>
+                    </Link> */}
                 </div>
             </div>
             

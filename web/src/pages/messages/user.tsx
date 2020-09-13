@@ -11,7 +11,7 @@ import Contact from '../../components/messages/Contact'
 export default () => {
   return (
     <>
-    <title>user</title>
+    <title>(1) @kyle</title>
       <Contact />
       <Nav/>
     </>

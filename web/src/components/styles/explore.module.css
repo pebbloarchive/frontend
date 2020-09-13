@@ -7,11 +7,14 @@
 }
 
 .title {
-    position: relative;
-    font-weight: 600;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
+    margin-top: 50px;
+    font-size: 2em;
+    opacity: .8;
+}
+
+.subtitle {
+    font-size: 1.7em;
+    opacity: .8;
 }
 
 .header {
@@ -46,6 +49,7 @@
     font-size: 1.3em;
     border-radius: 100px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.123);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: .3s;
 
     background-repeat: no-repeat;
@@ -56,6 +60,7 @@
 
 .header_search input[type="search"]:focus {
     width: 35%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .header_search input[type="submit"] {
@@ -68,68 +73,27 @@
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
 }
 
-.following {
+.tags {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 100px;
     white-space: nowrap;
     overflow: auto;
-    padding: 30px 0 10px 30px;
 }
 
-.following a {
-    display: inline-block;
-    width: 90px;
-    /* height: 120px; */
-}
-
-.following a:nth-child(1) {
-    margin-left: -30px;
-}
-
-.following a:nth-last-child(1) {
-    margin-right: 30px;
-}
-
-.following_avatar {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto;
-    position: relative;
-    border-radius: 50%;
-    background: linear-gradient(to bottom right, var(--theme-a), var(--theme-b));
-    transition: .3s;
-}
-
-.following_avatar img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    transition: .3s;
-}
-
-.following_username {
-    display: block;
-    margin-top: 15px;
-    width: 80% auto;
-    text-align: center;
-    opacity: 0;
-    color: var(--color);
+.tags a {
     font-weight: 600;
-    transition: .2s;
+    color: var(--color);
+    margin-right: 20px;
+    font-size: 1.2em;
+    opacity: .5;
+    transition: 1s;
 }
 
-.following a:hover .following_avatar {
-    transform: rotate(-45deg);
-    border-bottom-left-radius: 5px;
-}
-
-.following a:hover img {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.following a:hover .following_username {
+.tags a:hover {
+    background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 1;
 }
 

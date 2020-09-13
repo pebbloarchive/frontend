@@ -85,7 +85,6 @@
     filter: blur(3px);
 }
 
-.content input[type="email"]:hover,
 .content input[type="email"]:focus {
     filter: none;
 }
@@ -275,13 +274,13 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.100);
+    background-color: rgba(0, 0, 0, 0.308);
+    /* border-radius: 50%; */
     transition: .3s;
 }
 
 .checkbox input:checked ~ .checkbox_box {
     background-color: #34a134;
-    border-radius: 5px;
 }
 
 .appearance {
