@@ -21,6 +21,7 @@ export const Page = ({ user }: {
   const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
   if(!user || !user.username) return <NotFound />
   if(user.suspended) return <Suspended {...user}/>
+
   const Button = () => {
     const [set, isSet] = useState(false);
     const [hovering, hovered] = useState(false);
@@ -53,7 +54,7 @@ export const Page = ({ user }: {
     }
     return (
       <button className={styles.follow_account} onClick={buttonClick}><strong>
-        <>Hey</>
+        <>Insights</>
       </strong></button>
     )
   }

@@ -71,13 +71,21 @@
 .content p {
     font-size: 19px;
     color: #777777;
+    /* display: flex;
+    align-items: center; */
 }
 
-.content img {
+.caption_message img {
+    width: 21px;
+    height: 21px;
+}
+
+.caption_image img {
+    position: relative;
     width: 100%;
     max-width: 100%;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .interactions {

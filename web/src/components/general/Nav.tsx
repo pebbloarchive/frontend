@@ -56,7 +56,6 @@ const Topnav = () => {
                 </div>
 
                 { loggedIn ? <a href={`/${current.username}`} className={styles.avatar}><img src={current.avatar} alt=""/></a> : ''}
-
             </div>
         </>
     )

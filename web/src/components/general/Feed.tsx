@@ -3,9 +3,9 @@ import { AccountUser, AccountPosts } from '@pebblo/core/lib/controllers/accounts
 import Link from 'next/link';
 import { abbreivate } from '../utils';
 import moment from 'moment';
+import Twemoji from 'react-twemoji';
 
 const Page = (props: AccountPosts) => {
-    
     return (
         <>
             <div className={styles.feed}>
@@ -19,8 +19,12 @@ const Page = (props: AccountPosts) => {
                     </a>
                     <div className={styles.caption}>
                         <div className={styles.content}>
-                            <p>{props.content}</p>
-                            {/* <img src="https://pbs.twimg.com/media/EfSj6cfUcAAL8vy?format=jpg&name=small" alt=""/> */}
+                            <Twemoji options={{ className: 'twemoji' }}>
+                              <p className={styles.caption_message}>{props.content}</p>
+                            </Twemoji>
+                            <div className={styles.caption_image}>
+                                {/* <img src="https://pbs.twimg.com/media/EfSj6cfUcAAL8vy?format=jpg&name=small" alt=""/> */}
+                            </div>
                         </div>
                     </div>
                     <div className={styles.interactions}>

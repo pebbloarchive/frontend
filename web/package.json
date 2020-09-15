@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "pulse-framework": "file:../_pulse",
     "fs": "0.0.1-security",
     "mesa-js-client": "^1.4.6",
     "moment": "^2.27.0",
@@ -20,6 +19,7 @@
     "react-dom": "16.13.1",
     "react-router-dom": "^5.2.0",
     "react-toastify": "^6.0.8",
+    "react-twemoji": "^0.3.0",
     "ts-loader": "^8.0.3",
     "zxcvbn": "^4.4.2"
   },
