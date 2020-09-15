@@ -274,9 +274,13 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.308);
+    background-color: rgba(0, 0, 0, 0.208);
     /* border-radius: 50%; */
     transition: .3s;
+}
+
+.checkbox_container:hover span {
+    transform: scale(1.1);
 }
 
 .checkbox input:checked ~ .checkbox_box {
