@@ -7,6 +7,7 @@ import * as Sockets from '../components/websocket';
 import API from '@pebblo/core/lib/api'
 import '../components/styles/main.css';
 import { Log } from '../components/utils';
+import styles from '../components/styles/auth.module.css'
 
 
 const Pebblo = ({ Component, pageProps }: AppProps) => {
@@ -40,7 +41,17 @@ const Pebblo = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-    { loaded ? 'loading...' : <Component {...pageProps} /> }
+    { loaded ? 
+    
+    <div className={styles.loader}>
+      <div className={styles.loader_logo}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    : <Component {...pageProps} /> }
     </>
   )
 }

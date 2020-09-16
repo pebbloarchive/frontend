@@ -1,3 +1,9 @@
+/* ======================================================
+
+      "/" PAGE CONTENT
+      
+====================================================== */
+
 .menu {
     position: fixed;
     top: 0;
@@ -138,6 +144,12 @@
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
 }
 
+/* ======================================================
+
+      "/[username] /explore /notifications /messages" PAGE CONTENT
+      
+====================================================== */
+
 .navigation {
     position: fixed;
     bottom: 0;
@@ -210,9 +222,9 @@
     background-color: #f8f8f8;
 }
 
-.active img {
-    /* filter: invert(100%); */
-}
+/* .active img {
+    filter: invert(100%);
+} */
 
 .active img {
     opacity: .8;
@@ -247,7 +259,9 @@
     bottom: 0;
     left: 60px;
     min-width: 160px;
-    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    background: url(../../../public/images/svg/background.svg) no-repeat, linear-gradient(to right, var(--theme-a),var(--theme-b));
+    background-position: bottom;
+    background-size: 300%;
     padding: 7px;
     color: var(--color);
     border-radius: 5px;
@@ -281,98 +295,6 @@
     to {
         opacity: 1;
     }
-}
-
-.settings {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 400px;
-    background-color: #f8f8f8;
-    /* animation: navbar .3s; */
-}
-
-.settings_content {
-    margin: 100px 0;
-    color: var(--color);
-}
-
-.settings_content a {
-    display: flex;
-    align-items: center;
-    color: var(--color);
-    padding: 20px 40px;
-    transition: .3s;
-}
-
-.settings_content span {
-    font-weight: 600;
-    font-size: 15px;
-    opacity: .5;
-}
-
-.settings_content img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin-right: 15px;
-    /* filter: invert(100%); */
-    opacity: .3;
-}
-
-.settings_avatar {
-    width: 35px !important;
-    height: 35px !important;
-    opacity: 1 !important;
-    filter: invert(0%) !important;
-    border-radius: 50%;
-}
-
-.settings_content a:hover {
-    background-color: rgba(0, 0, 0, 0.030);
-}
-
-.settings_content button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 20px 0;
-    background-color: transparent;
-    color: #ff5a5a;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.settings_home {
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    margin: 40px;
-    border-radius: 100%;
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.200);
-    opacity: .9;
-
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746976276216152104/chevron-left.png);
-}
-
-.settings_active {
-    padding-left: 50px !important;
-    background-color: rgba(0, 0, 0, 0.050) !important;
-    border-left: solid 5px rgba(0, 0, 0, 0.100);
-}
-
-.settings_active img {
-    opacity: .7 !important;
-}
-
-.settings_active span {
-    opacity: .7;
 }
 
 .message {
@@ -565,6 +487,12 @@
     background-color: #ff5a5a;
 }
 
+/* ======================================================
+
+      "/dash/" PAGE CONTENT
+      
+====================================================== */
+
 .dash {
     position: fixed;
     width: 300px;
@@ -646,6 +574,19 @@
     margin: 15px 0;
     border: none;
 }
+
+
+
+
+
+/* ======================================================
+
+      RESPONSIVE LAYOUT
+      
+====================================================== */
+
+
+
 
 @media only screen and (max-width:1400px) {
     .menu,

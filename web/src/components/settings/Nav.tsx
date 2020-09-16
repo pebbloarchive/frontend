@@ -1,4 +1,4 @@
-import styles from '../styles/navbar.module.css'
+import styles from '../styles/settings/navbar.module.css'
 import { usePulse } from 'pulse-framework';
 import Router from 'next/router';
 import Link from 'next/link';

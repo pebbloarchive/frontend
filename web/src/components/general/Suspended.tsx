@@ -1,6 +1,6 @@
 import Nav from '../general/Nav';
 import Link from 'next/link';
-import styles from '../../components/styles/profile.module.css';
+import styles from '../../components/styles/profile/profile.module.css';
 import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 
 const Page = (props: AccountUser) => {
@@ -18,7 +18,7 @@ const Page = (props: AccountUser) => {
                 </div>
             </div>
             <div className={styles.bio}>
-                This account has been suspended due to multiple violations of our <a href="/tos">Terms of Service</a>.
+                This account has been suspended due to multiple violations of our <a href="/terms">Terms of Service</a>.
             </div>
         </div>
         </div>

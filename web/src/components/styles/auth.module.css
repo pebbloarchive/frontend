@@ -125,6 +125,56 @@
     box-shadow: 0 10px 18px rgba(69, 112, 222, 0.500);
 }
 
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader_logo span {
+    position: relative;
+    width: 5px;
+    height: 22px;
+    margin: 0px 3px;
+    display: block;
+    border: solid 2px var(--color);
+    border-radius: 100px;
+
+    animation: loader .3s;
+}
+
+.loader_logo span:nth-child(2) {
+    height: 39px;
+}
+
+.loader h1 {
+    background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: loader .7s;
+}
+
+@keyframes loader {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @media only screen and (max-width:1600px) {
     .auth_form {
         width: 300px;

@@ -17,12 +17,6 @@
   --theme-b: #4f60bb; */
 }
 
-/* @media screen and (max-width: 1000px) {
-  :root {
-    --background: #f2f3f7;
-  }
-} */
-
 ::-webkit-scrollbar {
   width: 20px;
   height: 20px;
@@ -39,7 +33,10 @@
   background: linear-gradient(to bottom, var(--theme-a),var(--theme-b));
 }
 
-
+::selection {
+  background: #db0359;
+  color: white;  
+}
 
 body {
   margin: 0;
@@ -64,12 +61,6 @@ p {
   margin: 0;
   padding: 0;
   font-weight: 400
-}
-
-
-::selection {
-  background: var(--theme-b);
-  color: white;  
 }
 
 img {
@@ -103,42 +94,19 @@ textarea {
   resize: none
 }
 
-/* ::-webkit-scrollbar {
-  width: 15px;
-  height: 0px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--background)
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #e0e0e0;
-  border: solid 5px var(--background);
-  border-radius: 100px
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #e7e7e7
-} */
-
-.pt {
-  font-size: 12px;
-}
-
-.pt input[type=checkbox] {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(to bottom right, var(--theme-a), var(--theme-b));
-  color: #fff;
-}
-
 @font-face {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
   src: url(../../components/fonts/Montserrat-Regular.ttf);
 }
+
+
+/* ======================================================
+
+      "/" PAGE CONTENT
+      
+====================================================== */
 
 .content {
   position: absolute;
@@ -148,8 +116,3 @@ textarea {
   height: 100%;
   border-top-left-radius: 50px;
 }
-
-.inactive_link {
-  cursor: not-allowed !important;
-}
-

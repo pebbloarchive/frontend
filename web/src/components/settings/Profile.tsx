@@ -1,4 +1,4 @@
-import styles from '../styles/settings.module.css'
+import styles from '../styles/settings/settings.module.css'
 import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework';
 import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';

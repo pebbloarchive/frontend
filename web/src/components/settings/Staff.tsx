@@ -1,4 +1,4 @@
-import styles from '../styles/settings.module.css'
+import styles from '../styles/settings/settings.module.css'
 
 const Page = () => {
     return (

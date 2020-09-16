@@ -1,4 +1,4 @@
-import styles from '../styles/feed.module.css'
+import styles from '../styles/profile/feed.module.css'
 import { AccountBody, AccountUser, AccountPosts } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 
 const Page = ( props: AccountPosts ) => {

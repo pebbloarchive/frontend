@@ -1,4 +1,4 @@
-import styles from '../styles/messages.module.css'
+import styles from '../styles/profile/messages.module.css'
 import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework';
 import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';

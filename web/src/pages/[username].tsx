@@ -12,7 +12,7 @@ import NotFound from './404';
 import Nav from '../components/general/Nav'
 import Posts from '../components/general/Posts';
 import Suspended from '../components/general/Suspended';
-import styles from '../components/styles/profile.module.css';
+import styles from '../components/styles/profile/profile.module.css';
 
 export default ({ user }: {
   user: UserProps,
