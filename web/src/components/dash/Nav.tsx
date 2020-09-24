@@ -33,7 +33,7 @@ const Page = () => {
     return (
         <>
             <div className={styles.dash}>
-                <Link href="/dash"><a href="/dash" className={styles.dash_company}>
+                <Link href="/"><a href="/" className={styles.dash_company}>
                     <div className={styles.dash_logo}>
                         <span></span>
                         <span></span>

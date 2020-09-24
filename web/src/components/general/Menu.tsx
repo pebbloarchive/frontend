@@ -25,9 +25,9 @@ const Topnav = () => {
         return (
             <div className={styles.menu_links_mobile}>
                 <Link href="/about"><a href="/about">Features</a></Link>
+                <Link href="/explore"><a href="/explore">Explore</a></Link>
+                <Link href="/resources"><a href="/resources">Resources</a></Link>
                 <Link href="/blog"><a href="/blog">Blog</a></Link>
-                <Link href="/jobs"><a href="/jobs">Jobs</a></Link>
-                <Link href="/blog/safety"><a href="/blog/safety">Safety</a></Link>
             </div>
         )
     }
@@ -63,9 +63,9 @@ const Topnav = () => {
 
             <div className={styles.menu_links}>
                 <Link href="/about"><a href="/about">Features</a></Link>
+                <Link href="/explore"><a href="/explore">Explore</a></Link>
+                <Link href="/resources"><a href="/resources">Resources</a></Link>
                 <Link href="/blog"><a href="/blog">Blog</a></Link>
-                <Link href="/jobs"><a href="/jobs">Jobs</a></Link>
-                <Link href="/blog/safety"><a href="/blog/safety">Safety</a></Link>
             </div>
         </>
     )

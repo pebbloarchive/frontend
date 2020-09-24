@@ -22,14 +22,11 @@ const Topnav = () => {
                         {/* <Link href="mailto:support@pebblo.org"><a href="mailto:support@pebblo.org">support@pebblo.org</a></Link> */}
                 </div>
                 <div className={styles.footer_item}>
-                    <h1>Company</h1>
-                        <Link href="/about"><a href="/about">About</a></Link>
-                        <Link href="/blog"><a href="/blog">Blog</a></Link>
-                        <Link href="/jobs"><a href="/jobs">Jobs</a></Link>
-                        {/* <Link href="/blog/safety"><a href="/blog/safety">Safety</a></Link> */}
-                        <hr/>
-                        <Link href="/login"><a href="/login">Login</a></Link>
-                        <Link href="/create"><a href="/create">Create</a></Link>
+                    <h1>Pages</h1>
+                        <Link href={`/${current.username}` }><a href={`/${current.username}`}>Profile <span>({current.username})</span></a></Link>
+                        <Link href="/explore"><a href="/explore">Explore</a></Link>
+                        <Link href="/notifications"><a href="/notifications">Notifications</a></Link>
+                        <Link href="/messages"><a href="/messages">Messages</a></Link>
                 </div>
                 <div className={styles.footer_item}>
                     <h1>Help Desk</h1>

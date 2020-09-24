@@ -1,5 +1,5 @@
 .explore {
-    margin-left: 200px;
+    margin-left: 150px;
 }
 
 .content {
@@ -70,31 +70,8 @@
     margin-left: -70px;
     color: white;
     font-weight: 600;
+    cursor: pointer;
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
-}
-
-.tags {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    white-space: nowrap;
-    overflow: auto;
-}
-
-.tags a {
-    font-weight: 600;
-    color: var(--color);
-    margin-right: 20px;
-    font-size: 1.2em;
-    opacity: .5;
-    transition: 1s;
-}
-
-.tags a:hover {
-    background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
 }
 
 @media only screen and (max-width:1400px) {

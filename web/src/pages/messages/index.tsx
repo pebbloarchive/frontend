@@ -5,14 +5,16 @@ import { Log } from '../../components/utils';
 
 // Components
 import styles from '../../components/styles/landing.module.css';
-import Nav from '../../components/messages/Nav';
+import Nav from '../../components/general/Nav';
+import Contacts from '../../components/messages/Nav'
 
 export default () => {
   return (
     <>
     <title>Messages</title>
-    
+
       <Nav/>
+      <Contacts/>
     </>
   )
 }

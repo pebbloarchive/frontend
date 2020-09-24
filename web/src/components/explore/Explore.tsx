@@ -10,7 +10,6 @@ const Page = () => {
     const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
     return (
         <>
-        {/* <div className={styles.explore}> */}
             <div className={styles.explore}>
                 
                 <div className={styles.header}>
@@ -33,7 +32,6 @@ const Page = () => {
                 </div>
 
             </div>
-        {/* </div> */}
         </>
     )
 }

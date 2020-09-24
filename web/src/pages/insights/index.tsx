@@ -1,5 +1,17 @@
-export const Page = () => {
-  return "hello"
-}
+import React, { useState } from 'react';
+import Router from 'next/router'
+import { Log } from '../../components/utils';
 
-export default Page;
+
+// Components
+import styles from '../../components/styles/landing.module.css';
+import Nav from '../../components/general/Nav';
+
+export default () => {
+  return (
+    <>
+    <title>Insights</title>
+      <Nav/>
+    </>
+  )
+}

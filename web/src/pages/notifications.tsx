@@ -10,6 +10,7 @@ import Nav from '../components/general/Nav';
 export default () => {
   return (
     <>
+    <title>Notifications</title>
       <Nav/>
     </>
   )

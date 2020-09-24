@@ -79,7 +79,7 @@
 .settings_active {
     padding-left: 50px !important;
     background-color: rgba(0, 0, 0, 0.050) !important;
-    border-left: solid 5px rgba(0, 0, 0, 0.100);
+    border-left: solid 5px rgba(0, 0, 0, 0.400);
 }
 
 .settings_active img {

@@ -154,7 +154,7 @@
     position: fixed;
     bottom: 0;
     /* left: 0; */
-    width: 200px;
+    width: 150px;
     height: 100%;
     background-color: var(--background);
     /* background-color: #fafafa;
@@ -173,6 +173,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* display: none; */
 }
 
 .navigation_logo span {
@@ -182,7 +184,7 @@
     display: block;
     background-color: var(--color);
     border-radius: 100px;
-    opacity: .7;
+    opacity: .9;
 }
 
 .navigation_logo span:nth-child(2) {
@@ -191,7 +193,7 @@
 
 .links {
     position: absolute;
-    top: 200px;
+    top: 135px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -204,7 +206,7 @@
 }
 
 .links a {
-    border-radius: 50%;
+    border-radius: 15px;
     margin-bottom: 10px;
     width: 60px;
     height: 60px;
@@ -233,11 +235,11 @@
 
 .avatar {
     position: absolute;
-    bottom: 60px;
+    top: 60px;
     left: 50%;
     transform: translate(-50%);
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background-color: transparent;
 }
 
@@ -248,7 +250,6 @@
     border-radius: 100%;
     width: 100%;
     height: 100%;
-    border: solid 10px transparent;
     cursor: pointer;
 }
 
@@ -256,21 +257,21 @@
     display: block;
     position: absolute;
     text-align: left;
-    bottom: 0;
-    left: 60px;
+    top: 0;
+    left: 80px;
     min-width: 160px;
-    background: url(../../../public/images/svg/background.svg) no-repeat, linear-gradient(to right, var(--theme-a),var(--theme-b));
+    /* background: url(../../../public/images/svg/background.svg) no-repeat, linear-gradient(to right, var(--theme-a),var(--theme-b));
     background-position: bottom;
-    background-size: 300%;
+    background-size: 300%; */
+    background-color: #f8f8f8;
     padding: 7px;
-    color: var(--color);
     border-radius: 5px;
-    box-shadow: 3px 3px 10px #919191;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile_dropup a {
     padding: 10px 10px;
-    color: white;
+    color: var(--color);
     /* font-weight: 600; */
     font-size: 15px;
     display: block;
@@ -279,7 +280,7 @@
 }
 
 .profile_dropup a:hover {
-    background-color: rgba(255, 255, 255, 0.150);
+    background-color: rgba(0, 0, 0, 0.055);
 }
 
 /* .avatar:hover .profile_dropup {
@@ -295,196 +296,6 @@
     to {
         opacity: 1;
     }
-}
-
-.message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(var(--theme-a), var(--theme-b));
-}
-
-.message_avatar {
-    position: relative;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%);
-    border-radius: 50%;
-    margin: 25px 0;
-    width: 50px;
-    height: 50px;
-    border: solid 2px rgba(255, 255, 255, 0.150);
-    cursor: pointer;
-}
-
-.messages_pages {
-    width: 100%;
-    margin: 50px 0;
-}
-
-.messages_pages a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70px;
-    cursor: pointer;
-}
-
-.message_active {
-    background-color: rgba(255, 255, 255, 0.150);
-}
-
-.messages_pages img {
-    filter: invert(100%);
-    width: 30px;
-    height: 30px;
-    opacity: .8;
-}
-
-.contacts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 400px;
-    height: 100%;
-    overflow: auto;
-    background-color: #fafafa;
-}
-
-.contacts_content {
-    margin-left: 100px;
-}
-
-.contacts_filter {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contacts_filter input {
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    height: 60px;
-    margin-top: 25px;
-    padding: 0 30px 0 70px;
-    width: 100%;
-    font-weight: 600;
-    background-color: transparent;
-
-    background-repeat: no-repeat;
-    background-position: 30px 50%;
-    background-size: 25px;
-    background-image: url(https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png);
-}
-
-.contacts_filter input::placeholder {
-    font-weight: normal;
-}
-
-.contact_item {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    height: 30px;
-    width: 100%;
-    padding: 20px 0;
-    border-radius: 0 1000px 1000px 0;
-}
-
-.contact_item section {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 30px;
-}
-
-.contact_avatar {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-left: 30px;
-    border-radius: 50%;
-}
-
-.contact_names {
-    display: flex;
-    align-items: center;
-}
-
-.contact_names img {
-    width: 30px;
-    height: 30px;
-    margin-left: -15px;
-    margin-right: -5px;
-}
-
-.contact_names span {
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    opacity: .7;
-}
-
-.contact_item:hover {
-    background-color: rgba(0, 0, 0, 0.030);
-}
-
-.contact_item:hover span {
-    opacity: .8;
-}
-/* .contact_lastMessage {
-    max-width: 100%;
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    word-wrap: break-word;
-    max-height: 20px;
-    font-size: 14px;
-} */
-
-.contact_timeStamp {
-    width: 100%;
-    opacity: .5;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: right;
-}
-
-.contact_status {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    width: 5px;
-    height: 100%;
-    display: none;
-}
-
-.contact_status span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    transform: translate(0%, -50%);
-}
-
-.contact_status_offline {
-    background-color: #afafaf;
-}
-
-.contact_status_online {
-    background-color: #4aca4a;
-}
-
-.contact_status_idle {
-    background-color: #f6bb3a;
-}
-
-.contact_status_dnd {
-    background-color: #ff5a5a;
 }
 
 /* ======================================================
@@ -729,7 +540,7 @@
 
 @media only screen and (max-width:1200px) {
     .navigation {
-        width: 130px;
+        width: 80px;
     }
 
     .navigation_logo span {
@@ -742,13 +553,13 @@
     }
 
     .links {
-        top: 130px;
+        top: 100px;
     }
 
     .links a {
-        width: 35px;
-        height: 35px;
-        margin-bottom: 10px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
     }
 
     .avatar {

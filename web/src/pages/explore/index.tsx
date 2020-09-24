@@ -4,14 +4,14 @@ import { Log } from '../../components/utils';
 
 
 // Components
-import styles from '../../components/styles/landing.module.css';
-import Nav from '../../components/messages/Nav';
+import Nav from '../../components/general/Nav';
+import Explore from '../../components/explore/Explore'
 
 export default () => {
   return (
     <>
-    <title>Messages &gt; Favourites</title>
-    
+    <title>Explore Pebblo</title>
+      <Explore />
       <Nav/>
     </>
   )
