@@ -23,31 +23,38 @@ const Topnav = () => {
     const Context = () => {
         return (
             <section className={styles.profile_dropup}>
-                <Link href={`/${current.username}`}><a href={`/${current.username}`}>My Profile</a></Link>
-                <Link href="/rewards"><a href="/rewards">Rewards</a></Link>
+                <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
+                {/* <Link href="/rewards"><a href="/rewards">Achievements</a></Link>
                 <Link href="/insights"><a href="/insights">Insights</a></Link>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
+                <Link href="/resources"><a href="/resources">Need Help?</a></Link> */}
                 <br/>
-                <Link href="/logout"><a href="/logout">Logout</a></Link>
+                <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
             </section>
         )
     }
 
     const onRouteChange = (route) => {
-        // if(route === '/') isActive('home');
-        // if(route === '/explore') isActive('explore');
-        // if(route === '/notifications') isActive('notifications');
-        // if(route === '/message') isActive('message');
         switch(route) {
-            case  '/rewards':
-                return isActive('rewards');
+            case '/store':
+                return isActive('store');
+            case '/home':
+                return isActive('home');
             case '/explore':
                 return isActive('explore');
             case '/notifications':
                 return isActive('notifications');
             case '/messages':
                 return isActive('messages');
+            case '/business':
+                return isActive('business');
+            case '/creators':
+                return isActive('creators');
         }
+        // if(route === '/') isActive('home');
+        // if(route === '/explore') isActive('explore');
+        // if(route === '/notifications') isActive('notifications');
+        // if(route === '/message') isActive('message');
         console.log(active);
     };
 
@@ -68,18 +75,27 @@ const Topnav = () => {
                 </a>
                 {loggedIn ? 
                 <div className={styles.links}>
-                    {/* <Link href="/rewards">
-                        <a className={`${active === 'rewards' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728010367205386/piggy-bank.png" alt=""/></a>
-                    </Link> */}
+                    <Link href="/home">
+                        <a className={`${active === 'home' ? styles.active : ''}`}><img src="/icons/home.png" alt=""/></a>
+                    </Link>
                     <Link href="/explore">
                         <a className={`${active === 'explore' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
                     </Link>
                     <Link href="/notifications">
-                    <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/></a>
+                        <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/></a>
                     </Link>
                     <Link href="/messages">
                         <a className={`${active === 'messages' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755729094720880640/envelope.png" alt=""/></a>
                     </Link>
+
+                        {/* <hr/>
+
+                    <Link href="/business">
+                        <a className={`${active === 'business' ? styles.active : ''}`}><img src="/icons/briefcase.png" alt=""/></a>
+                    </Link>
+                    <Link href="/creators">
+                        <a className={`${active === 'creators' ? styles.active : ''}`}><img src="/icons/video-gallery.png" alt=""/></a>
+                    </Link> */}
                 </div> : '' }
 
                 {loggedIn ? 
@@ -87,8 +103,35 @@ const Topnav = () => {
                      <img src={current.avatar} alt=""/>
                      { clicked ? <Context /> : '' }
                 </button> : '' }
-
             </div>
+
+            {/* {loggedIn ?  */}
+                <div className={styles.mobile}>
+                    <Link href="/home">
+                    <a className={`${active === 'home' ? styles.mobileActive : ''}`}><img src="icons/home.png" alt=""/></a>
+                    </Link>
+                    <Link href="/explore">
+                        <a className={`${active === 'explore' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
+                    </Link>
+                    <Link href="/upload" clasn>
+                        <a className={`${active === 'upload' ? styles.mobileActive : ''}`}><img src="icons/menus/plus.png" alt=""/></a>
+                    </Link>
+                    <Link href="/messages">
+                        <a className={`${active === 'messages' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755729094720880640/envelope.png" alt=""/></a>
+                    </Link>
+                    <Link href={`/${current.username}`}>
+                        <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={current.avatar} alt={current.name}/></a>
+                    </Link>
+                </div>
+
+                {/* { loggedIn ? 
+                '' :  
+                <div className={styles.notLogged}>
+                    <Link href="/create"><a href="/create" className={styles.notLogged_signup}>Sign up</a></Link>
+                    <span>or</span>
+                    <Link href="/login"><a href="/login" className={styles.notLogged_login}>Log in</a></Link>
+                </div>
+                } */}
         </>
     )
 }

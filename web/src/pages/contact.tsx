@@ -39,7 +39,8 @@ export default () => {
           name=""
           id="">
             <option>General Support</option>
-            <option>Report a Bug</option>
+            <option>Bug Reports</option>
+            <option>Report and user</option>
         </select>
 
         <textarea

@@ -74,6 +74,206 @@
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
 }
 
+.business,
+.creators {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 400px;
+}
+
+.creators {
+    height: 350px;
+}
+
+.business::after,
+.creators::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.815));
+}
+
+.business_creators_more {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    width: 100px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.business_creators_more span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 100px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    background: linear-gradient(to bottom right, var(--theme-a), var(--theme-b));
+}
+
+.business_creators_more img {
+    transform: rotate(180deg);
+    filter: invert(100%);
+    margin-left: 3px;
+}
+
+.business_card,
+.creator_card {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 350px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin-right: 25px;
+    color: var(--color);
+    transition: .3s;
+}
+
+.creator_card:hover {
+    transform: scale(1.01);
+}
+
+.business_profile {
+    position: relative;
+    top: 50px;
+    width: 80%;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.business_profile img {
+    width: 100px;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.business_name,
+.creator_name {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.creator_name {
+    margin-top: 15px;
+}
+
+.business_name img {
+    width: 30px;
+    height: 30px;
+}
+
+.business_message,
+.creator_message {
+    position: relative;
+    white-space: normal;
+    margin: 0px auto 0;
+    width: 80%;
+    font-size: 15px;
+    height: 175px;
+    overflow-y: auto;
+}
+
+.business_goto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0;
+    background: url(../../../../public/images/svg/background.svg) no-repeat, linear-gradient(to bottom right, rgba(255, 110, 32, 0.8), rgba(255, 0, 102, 0.8));
+    background-size: 200%;
+    background-position: bottom;
+    backdrop-filter: blur(3px);
+    transition: .3s;
+}
+
+.business_goto span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 90%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color);
+}
+
+.business_goto hr {
+    display: none;
+}
+
+.business_card:hover .business_goto {
+    opacity: 1;
+}
+
+.creator_profile {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+}
+
+.creator_avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.creator_verified {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    margin: -10px;
+}
+
+.creator_profile h1 {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.creator_profile p {
+    font-weight: 600;
+    font-size: 12px;
+    opacity: .4;
+}
+
+.creator_message {
+    margin-top: 5px;
+}
+
 @media only screen and (max-width:1400px) {
     .explore {
         margin-left: 150px;

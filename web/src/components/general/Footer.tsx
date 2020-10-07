@@ -21,12 +21,25 @@ const Topnav = () => {
                         <Link href="/contact"><a href="/contact">Contact</a></Link>
                         {/* <Link href="mailto:support@pebblo.org"><a href="mailto:support@pebblo.org">support@pebblo.org</a></Link> */}
                 </div>
-                <div className={styles.footer_item}>
+                { loggedIn ? <div className={styles.footer_item}>
                     <h1>Pages</h1>
                         <Link href={`/${current.username}` }><a href={`/${current.username}`}>Profile <span>({current.username})</span></a></Link>
                         <Link href="/explore"><a href="/explore">Explore</a></Link>
                         <Link href="/notifications"><a href="/notifications">Notifications</a></Link>
                         <Link href="/messages"><a href="/messages">Messages</a></Link>
+                    <hr/>
+                        <Link href="/logout"><a href="/logout">Logout</a></Link>
+                </div> : '' }
+                <div className={styles.footer_item}>
+                    <h1>Quick Access</h1>
+                        <Link href="/login"><a href="/login">Login</a></Link>
+                        <Link href="/create"><a href="/create">Create an Account</a></Link>
+                    <hr/>
+                        <Link href="/"><a href="/" target="_blank">Home</a></Link>
+                        <Link href="/about"><a href="/about" target="_blank">Features</a></Link>
+                        <Link href="/explore"><a href="/explore" target="_blank">Explore</a></Link>
+                        <Link href="/resources"><a href="/resources" target="_blank">Resources</a></Link>
+                        <Link href="/blog"><a href="/blog" target="_blank">Blog</a></Link>
                 </div>
                 <div className={styles.footer_item}>
                     <h1>Help Desk</h1>

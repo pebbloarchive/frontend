@@ -23,7 +23,14 @@ const Page = () => {
                 <h1 className={styles.subtitle}>Parent Email</h1>
                 <p className={styles.note}>Parents can connect their email address to get updates on your activity. Learn more about <a href="">child safety</a> on Pebblo.</p>
                     <label className={styles.guardian_email}>
-                        <input type="email" name="" id="" placeholder="Email Address"/>
+                        <input
+                            type="email"
+                            name=""
+                            id=""
+                            placeholder="Email Address"
+                            spellCheck="false"
+                            required
+                        />
                     </label>
 
                     <hr/>

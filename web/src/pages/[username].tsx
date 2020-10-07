@@ -6,6 +6,7 @@ import { AccountUser as UserProps } from '@pebblo/core/lib/controllers/accounts/
 import { useState } from 'react';
 import Router from 'next/router';
 import { Log } from '../components/utils';
+import Link from 'next/link';
 
 // Components
 import NotFound from './404';
@@ -56,11 +57,12 @@ export default ({ user }: {
 
   const Insights = () => {
     const buttonClick = () => {
-      Router.push('/insights')
+      Router.push('')
     }
     return (
+      // MAKE THIS ONLY SHOW WHEN YOU'RE ON SOMEONE ELSES' ACCOUNT AND REMOVE /INSIGHTS
       <button className={styles.follow_account} onClick={buttonClick}><strong>
-        <>Hey</>
+        <>Follow</>
       </strong></button>
     )
   }
@@ -119,6 +121,60 @@ export default ({ user }: {
               </strong></a> */}
           </div>
       </div>
+
+
+
+
+{/* MOBILE FRIENDLY TO FIX THE STUPID THING I MADE */}
+      <div className={styles.mobile}>
+        <div className={styles.mobile_profile}>
+
+          <div className={styles.mobile_profile_navigation}>
+            <Link href="/explore"><a href="/explore" className={styles.mobile_page_explore}></a></Link>
+              <h1 className={styles.mobile_profile_username}>@{user.username}</h1>
+              {/* REMOVE MOBILE_PAGE_SETTINGS WHEN YOU'RE ON YOUR OWN ACCOUNT*/}
+            <button className={styles.mobile_page_settings}></button>
+          </div>
+          <div className={styles.mobile_information}>
+            <div className={styles.mobile_images}>
+                <img className={styles.mobile_avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
+                  <section className={styles.mobile_statistics}>
+                    <a href="">
+                        <span>{user.followersCount}</span>
+                        <h3>Followers</h3>
+                    </a>
+                    <a href="">
+                        <span>{user.followingCount}</span>
+                        <h3>Following</h3>
+                    </a>
+                  </section>
+            </div>
+            <div className={styles.mobile_profile_information}>
+              <h1 className={styles.profile_name}>{user.name}</h1>
+                <div className={styles.profile_description}>
+                  <p>{user.description}</p>
+                </div>
+            </div>
+            <div className={styles.mobile_interactions}>
+              { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
+              <Link href={`/message/${user.username}`}><a href={`/message/${user.username}`} className={styles.mobile_messageUser}>Message</a></Link>
+            </div>
+          </div>
+
+          <div className={styles.mobile_filter}>
+            <a href="" className={styles.mobile_filter_profile}></a>
+            <a href="" className={styles.mobile_filter_shares}></a>
+            <a href="" className={styles.mobile_filter_connections}></a>
+            <a href="" className={styles.mobile_filter_media}></a>
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* <div className={styles.mobile_lightshot}>
+      </div> */}
+
 
       {
         

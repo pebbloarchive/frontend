@@ -145,7 +145,8 @@
     margin-top: 50px;
 }
 
-.bio a {
+.bio a,
+.profile_description a {
     font-weight: 600;
 }
 
@@ -224,6 +225,183 @@
     font-size: 16px;
 }
 
+
+
+
+.mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    min-height: 100px;
+    padding-bottom: 40px;
+    width: 80%;
+}
+
+.mobile_profile_navigation {
+    position: relative;
+    height: 65px;
+    margin-top: 5%;
+}
+
+.mobile_profile_username {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    opacity: .5;
+    font-weight: 600;
+}
+
+.mobile_profile_navigation a,
+.mobile_profile_navigation button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mobile_page_explore {
+    left: 0;
+    background-position: 0 50%;
+    background-image: url(../../../../public/icons/arrows/chevron-left.png);
+}
+
+.mobile_page_settings {
+    right: 0;
+    background-position: 100% 50%;
+    background-image: url(../../../../public/icons/menus/hamburger.png);
+}
+
+.mobile_images {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile_avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 45px;
+}
+
+.mobile_statistics {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.mobile_statistics a {
+    width: 100%;
+    margin-right: 50px;
+    color: var(--color);
+    text-align: center;
+}
+
+.mobile_statistics a:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.mobile_statistics span {
+    font-size: 18px;
+}
+
+.mobile_statistics h3 {
+    font-size: 13px;
+    opacity: .5;
+}
+
+.mobile_information {
+    margin-top: 20px;
+}
+
+.mobile_profile_information {
+    margin-top: 10px;
+}
+
+.profile_name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile_description p {
+    font-size: 12px;
+}
+
+.mobile_interactions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 40px;
+}
+
+.mobile_filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 45px;
+    /* margin: 0 auto; */
+    background-color: #fafafa;
+    border-radius: 100px;
+    margin-bottom: 50px;
+}
+
+.mobile_filter a {
+    width: 250px;
+    height: 100%;
+    display: block;
+    background-color: transparent;
+    margin: 0 5px;
+
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.mobile_filter span {
+    display: block;
+    margin-top: 40px;
+}
+
+.mobile_filter_profile {
+    background-image: url(../../../../public/icons/user/account.png);
+}
+
+.mobile_filter_shares {
+    background-image: url(../../../../public/icons/arrows/share.png);
+}
+
+.mobile_filter_connections {
+    background-image: url(../../../../public/icons/connections.png);
+}
+
+.mobile_filter_media {
+    background-image: url(../../../../public/icons/gallery.png);
+}
+
+.mobile_lightshot {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 10;
+}
+
+
 @media only screen and (max-width:1800px) {
     .content {
         left: 200px;
@@ -235,8 +413,32 @@
         width: 400px;
     }
 
+    .bio {
+        margin-top: 15px;
+    }
+
     .bio p {
-        font-size: 17px;
+        font-size: 15px;
+    }
+
+    .profile_images {
+        width: 100px;
+        height: 100px;
+    }
+
+    .names {
+        height: 100px;
+        left: 120px;
+    }
+
+    .names_content h1,
+    .names_content_staff h1 {
+        font-size: 20px;
+    }
+
+    .names_content p,
+    .names_content_staff p {
+        font-size: 12px;
     }
 }
 
@@ -250,25 +452,40 @@
         width: 300px;
     }
 
+    .bio {
+        margin-top: 20px;
+    }
+
+    .bio p {
+        font-size: 12px;
+    }
+
+    .profile_images {
+        width: 80px;
+        height: 80px;
+    }
+
     .names {
+        left: 95px;
         width: 350px;
+        height: 80px;
     }
 
     .names_content h1,
     .names_content_staff h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .names_content p,
     .names_content_staff p {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .names_content img,
     .names_content_staff img {
         width: 20px;
         height: 20px;
-        margin-right: 10px;
+        margin-right: 5px;
     }
 
     .follow_account,
@@ -283,7 +500,8 @@
 @media only screen and (max-width:1200px) {
     .content {
         width: 440px;
-        margin-left: 0;
+        margin-left: -50px;
+        height: 100%;
         margin-bottom: 80px;
     }
 
@@ -325,116 +543,62 @@
     }
 
     .bio {
-        margin-top: 100px;
+        width: 100%;
+        margin-top: 80px;
     }
 
     .follow_account,
     .insights_account,
     .rewards_account {
         font-size: 12px;
-        padding: 20px 0;
+        padding: 10px 0;
         width: 60%;
         font-weight: normal;
     }
 }
 
 @media only screen and (max-width:1000px) {
-    .content {
-        position: relative;
-        margin: 100px 0 0;
-        width: 85%;
-        left: 50%;
-        height: 80%;
-        transform: translate(-50%);
-    }
-
-    .suggested {
+    .content,
+    .additional_information {
         display: none;
     }
 
-    .additional_information {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        transform: none;
+    .mobile,
+    .mobile_lightshot {
         display: block;
     }
 
-    .rewards_account,
     .follow_account,
-    .insights_account {
-        width: 25%;
+    .mobile_messageUser {
         margin: 0;
-        font-size: 14px;
-        padding: 10px 20px;
-        border-radius: 100px;
-        border: none;
+        padding: 10px 0;
+        font-size: 10px;
+        width: 100%;
+        margin-left: 5px;
+        left: 0;
         transform: none;
+        text-align: center;
+        font-weight: 600;
+        border-radius: 5px;
+        background: #fcfcfc;
+        color: #515151;
+        border: solid 1px #e9e9e9;
     }
 
     .follow_account {
-        display: block;
-        width: 100%;
-        margin: 0 a;
+        background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+        color: white;
+        border-color: transparent;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .mobile_avatar {
+        margin-right: 30px;
     }
 
-    .interaction {
-        /* display: flex;
-        align-items: center;
-        text-align: left;
-        justify-content: center; */
-        display: block;
-        position: absolute;
-        top: 200px;
-        left: 50%;
-        transform: translate(-50%);
-        margin: 0;
-        background-color: saddlebrown;
-        /* width: 100%; */
-    }
-
-    .statistics {
-        display: flex;
-        align-items: center;
-        height: 100px;
-        margin-left: 130px;
-    }
-
-    .statistics a {
-        display: inline-block;
-        width: 40%;
-    }
-
-    .statistics span {
-        font-size: 15px;
-    }
-
-    .statistics h3 {
-        font-size: 12px;
-    }
-
-    .bio {
-        width: 100%;
-    }
-
-    .bio p {
-        font-size: 16px;
-    }
-    
-    .names {
-        margin-top: 30px;
-    }
-
-    .names_content h1,
-    .names_content_staff h1 {
-        margin-bottom: 5px;
-    }
-
-    .names_content img,
-    .names_content_staff img {
-        margin-right: 7px;
-        width: 25px;
-        height: 25px;
+    .mobile_statistics a {
+        margin-right: 25px;
     }
 }

@@ -6,14 +6,13 @@ import { Log } from '../components/utils';
 // Components
 import styles from '../components/styles/landing.module.css';
 import Nav from '../components/general/Nav';
-import Notifications from '../components/general/notifications/Follows';
+import Upload from '../components/general/Upload';
 
 export default () => {
   return (
     <>
-    <title>Notifications</title>
-
-      <Notifications/>
+    <title>Upload</title>
+      <Upload/>
       <Nav/>
     </>
   )
