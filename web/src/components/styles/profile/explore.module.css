@@ -7,8 +7,9 @@
 }
 
 .title {
-    margin-top: 50px;
-    font-size: 2em;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
     opacity: .8;
 }
 
@@ -17,12 +18,22 @@
     opacity: .8;
 }
 
+.bracket {
+    border: none;
+    background: linear-gradient(to right, var(--theme-a), var(--theme-b));
+    display: block;
+    height: 5px;
+    margin: 30px 0 -25px;
+    border-radius: 100px 0 0 100px;
+    opacity: .1;
+}
+
 .header {
     position: relative;
     top: 0;
     right: 0;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background: url(../../../../public/images/svg/background.svg) no-repeat, radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
     background-size: 100%;
     background-position: bottom;
@@ -43,10 +54,10 @@
 
 .header_search input[type="search"] {
     display: block;
-    height: 80px;
-    width: 30%;
-    padding: 0 85px 0 70px;
-    font-size: 1.3em;
+    height: 60px;
+    width: 500px;
+    padding: 0 65px 0 60px;
+    font-size: 1.1em;
     border-radius: 100px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.123);
     background-color: rgba(255, 255, 255, 0.8);
@@ -54,41 +65,36 @@
 
     background-repeat: no-repeat;
     background-position: 25px 50%;
-    background-size: 30px;
+    background-size: 25px;
     background-image: url(https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png);
 }
 
 .header_search input[type="search"]:focus {
-    width: 35%;
+    width: 600px;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
 .header_search input[type="submit"] {
-    height: 60px;
-    width: 60px;
-    border-radius: 30px 100px 100px 30px;
-    margin-left: -70px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    margin-left: -55px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    transform: scale(0.8);
 }
 
-.business,
-.creators {
+.business {
     margin-top: 20px;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    height: 400px;
-}
-
-.creators {
     height: 350px;
 }
 
-.business::after,
-.creators::after {
+.business::after {
     content: "";
     position: absolute;
     top: 0;
@@ -129,21 +135,16 @@
     margin-left: 3px;
 }
 
-.business_card,
-.creator_card {
+.business_card {
     position: relative;
     display: inline-block;
     height: 100%;
-    width: 350px;
+    width: 300px;
     background-color: #f8f8f8;
     border-radius: 5px;
     margin-right: 25px;
     color: var(--color);
     transition: .3s;
-}
-
-.creator_card:hover {
-    transform: scale(1.01);
 }
 
 .business_profile {
@@ -160,8 +161,7 @@
     border-radius: 100%;
 }
 
-.business_name,
-.creator_name {
+.business_name {
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -172,23 +172,18 @@
     font-weight: 600;
 }
 
-.creator_name {
-    margin-top: 15px;
-}
-
 .business_name img {
     width: 30px;
     height: 30px;
 }
 
-.business_message,
-.creator_message {
+.business_message {
     position: relative;
     white-space: normal;
     margin: 0px auto 0;
     width: 80%;
-    font-size: 15px;
-    height: 175px;
+    font-size: 14px;
+    height: 130px;
     overflow-y: auto;
 }
 
@@ -199,6 +194,7 @@
     width: 100%;
     height: 100%;
     border-radius: 5px;
+    cursor: default;
     opacity: 0;
     background: url(../../../../public/images/svg/background.svg) no-repeat, linear-gradient(to bottom right, rgba(255, 110, 32, 0.8), rgba(255, 0, 102, 0.8));
     background-size: 200%;
@@ -211,14 +207,22 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 90%;
+    max-width: 80%;
+    max-height: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 12px;
     border-radius: 5px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
     color: var(--color);
+}
+
+.business_goto span:hover {
+    filter: invert(100%);
+    opacity: .5;
 }
 
 .business_goto hr {
@@ -229,49 +233,88 @@
     opacity: 1;
 }
 
-.creator_profile {
+.row {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+}
+
+.trending_item {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 80%;
-    margin: 30px auto 0;
-    display: flex;
-    align-items: center;
+    font-size: 14px;
+    background-color: #fafafa;
+    border: solid 1px #dedede;
+    border-radius: 5px;
+    grid-column-end: span 3;
+    grid-row-end: span 3;
+    transition: .3s;
 }
 
-.creator_avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
+.row .trending_item:nth-child(7n+0) {
+    grid-column-end: span 4;
+    grid-row-end: span 4;
+    background-color: saddlebrown;
 }
 
-.creator_verified {
+.trending_item::after {
+    content: "View Post";
     position: absolute;
     top: 0;
     left: 0;
-    width: 35px;
-    height: 35px;
-    margin: -10px;
-}
-
-.creator_profile h1 {
-    display: block;
-    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 1;
+    color: white;
+    transition: .8s;
     font-weight: 600;
-    width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-.creator_profile p {
+.trending_item:hover::after {
+    opacity: 1;
+}
+
+.trending_profile {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.trending_avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.trending_profile_names {
+    margin-left: 15px;
+    color: var(--color);
+}
+
+.trending_profile_names h1 {
+    font-size: 1.2em;
     font-weight: 600;
-    font-size: 12px;
-    opacity: .4;
 }
 
-.creator_message {
-    margin-top: 5px;
+.trending_profile_names p {
+    font-weight: 0.8em;
+    opacity: .6;
+    font-weight: 600;
+}
+
+.trending_caption {
+    margin-top: -1em;
+    padding: 1em;
+    color: var(--color);
 }
 
 @media only screen and (max-width:1400px) {

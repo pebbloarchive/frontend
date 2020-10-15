@@ -175,6 +175,73 @@
     }
 }
 
+.logged {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background: radial-gradient(circle at top left, rgba(255, 110, 32, 0.9), rgba(255, 0, 102, 0.9));
+    backdrop-filter: blur(2px);
+    height: 70px;
+    width: 108%;
+    z-index: 11;
+    /* border-radius: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.logged_title {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.logged_message {
+    font-size: 0.9em;
+    /* font-weight: 600; */
+    opacity: .7;
+}
+
+.logged_links {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logged_links strong {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.logged_links a {
+    display: block;
+    padding: 12px;
+    border-radius: 100px;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 600;
+    border: solid 3px transparent;
+}
+
+.logged_create {
+    padding: 6px 0 !important;
+    margin: 12px;
+    opacity: .5;
+    border-radius: 0 !important;
+    border-bottom-color: white !important;
+}
+
+.logged_login {
+    padding: 8px 20px !important;
+    margin: 6px;
+    opacity: .8;
+    border-radius: 0 !important;
+    background-color: white;
+    color: var(--color) !important;
+    border-radius: 100px !important;
+}
+
 @media only screen and (max-width:1600px) {
     .auth_form {
         width: 300px;

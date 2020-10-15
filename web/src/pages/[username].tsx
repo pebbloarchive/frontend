@@ -14,6 +14,7 @@ import Nav from '../components/general/Nav'
 import Posts from '../components/general/Posts';
 import Suspended from '../components/general/Suspended';
 import styles from '../components/styles/profile/profile.module.css';
+import Logged from '../components/general/Logged';
 
 export default ({ user }: {
   user: UserProps,
@@ -164,7 +165,7 @@ export default ({ user }: {
           <div className={styles.mobile_filter}>
             <a href="" className={styles.mobile_filter_profile}></a>
             <a href="" className={styles.mobile_filter_shares}></a>
-            <a href="" className={styles.mobile_filter_connections}></a>
+            {/* <a href="" className={styles.mobile_filter_connections}></a> */}
             <a href="" className={styles.mobile_filter_media}></a>
           </div>
 
@@ -180,6 +181,7 @@ export default ({ user }: {
         
       }
       
+      <Logged />
     </>
   )
 }

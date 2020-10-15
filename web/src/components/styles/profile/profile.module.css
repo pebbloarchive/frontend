@@ -349,6 +349,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    left: 50%;
+    transform: translate(-50%);
     width: 100%;
     height: 45px;
     /* margin: 0 auto; */
@@ -387,7 +389,7 @@
 }
 
 .mobile_filter_media {
-    background-image: url(../../../../public/icons/gallery.png);
+    background-image: url(../../../../public/icons/menus/collage.png);
 }
 
 .mobile_lightshot {

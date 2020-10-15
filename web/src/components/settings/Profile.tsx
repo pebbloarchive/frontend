@@ -21,7 +21,6 @@ const Page = () => {
     const Context = () => {
         return (
             <section className={styles.settings_lightshot}>
-                <h1>testing</h1>
             </section>
         )
     }

@@ -28,7 +28,7 @@ const Topnav = () => {
                 <Link href="/insights"><a href="/insights">Insights</a></Link>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
                 <Link href="/resources"><a href="/resources">Need Help?</a></Link> */}
-                <br/>
+                {/* <br/> */}
                 <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
             </section>
         )

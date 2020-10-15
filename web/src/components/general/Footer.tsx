@@ -21,7 +21,7 @@ const Topnav = () => {
                         <Link href="/contact"><a href="/contact">Contact</a></Link>
                         {/* <Link href="mailto:support@pebblo.org"><a href="mailto:support@pebblo.org">support@pebblo.org</a></Link> */}
                 </div>
-                { loggedIn ? <div className={styles.footer_item}>
+                {/* { !loggedIn ? <div className={styles.footer_item}>
                     <h1>Pages</h1>
                         <Link href={`/${current.username}` }><a href={`/${current.username}`}>Profile <span>({current.username})</span></a></Link>
                         <Link href="/explore"><a href="/explore">Explore</a></Link>
@@ -29,7 +29,7 @@ const Topnav = () => {
                         <Link href="/messages"><a href="/messages">Messages</a></Link>
                     <hr/>
                         <Link href="/logout"><a href="/logout">Logout</a></Link>
-                </div> : '' }
+                </div> : '' } */}
                 <div className={styles.footer_item}>
                     <h1>Quick Access</h1>
                         <Link href="/login"><a href="/login">Login</a></Link>
