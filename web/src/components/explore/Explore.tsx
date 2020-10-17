@@ -55,220 +55,22 @@ const Page = () => {
                             <div className={styles.row}>
                             {/* EXAMPLE */}
                                 <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
+                                    test
                                 </a>
                                 <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
+                                    test
                                 </a>
                                 <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
+                                    test
                                 </a>
                                 <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
+                                    test
                                 </a>
                                 <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
+                                    test
                                 </a>
                                 <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    <div className={styles.trending_profile}>
-                                        <img className={styles.trending_avatar} src="https://cdn.discordapp.com/icons/564373498336903168/856ac7bcc6b43ae17d0c84a000cbb3e2.webp?size=1024" alt=""/>
-                                        <section className={styles.trending_profile_names}>
-                                            <h1>Pebblo</h1>
-                                            <p>@pebblo</p>
-                                        </section>
-                                    </div>
-                                    <div className={styles.trending_caption}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eligendi sed quos maiores pariatur! Odit minima voluptatem harum voluptas autem vel adipisci ullam, quae eum, nobis dolore, eligendi provident nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto dolorem hic corporis modi alias ea suscipit eos consequatur molestiae saepe sint ratione, tempora aperiam illum quam molestias deleniti, quod necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam amet nostrum quas rem vel dolore obcaecati ea nam, molestiae, saepe voluptatem impedit. Cumque rem debitis quaerat tempora beatae deleniti magnam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi doloribus cupiditate provident deserunt? Maiores ex aspernatur ratione sint velit dolores porro ullam rerum neque modi, soluta ab blanditiis!
-                                    </div>
+                                    test
                                 </a>
                             {/* EXAMPLE */}
                             </div>

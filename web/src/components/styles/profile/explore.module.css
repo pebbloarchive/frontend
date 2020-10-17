@@ -233,6 +233,10 @@
     opacity: 1;
 }
 
+.trending {
+    margin-bottom: 50px;
+}
+
 .row {
     width: 90%;
     display: grid;
@@ -248,73 +252,15 @@
     background-color: #fafafa;
     border: solid 1px #dedede;
     border-radius: 5px;
-    grid-column-end: span 3;
-    grid-row-end: span 3;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
     transition: .3s;
 }
 
-.row .trending_item:nth-child(7n+0) {
-    grid-column-end: span 4;
-    grid-row-end: span 4;
+.row .trending_item:nth-child(2n+0) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
     background-color: saddlebrown;
-}
-
-.trending_item::after {
-    content: "View Post";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.651);
-    backdrop-filter: blur(2px);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    z-index: 1;
-    color: white;
-    transition: .8s;
-    font-weight: 600;
-}
-
-.trending_item:hover::after {
-    opacity: 1;
-}
-
-.trending_profile {
-    display: flex;
-    align-items: center;
-    padding: 1em;
-}
-
-.trending_avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-}
-
-.trending_profile_names {
-    margin-left: 15px;
-    color: var(--color);
-}
-
-.trending_profile_names h1 {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.trending_profile_names p {
-    font-weight: 0.8em;
-    opacity: .6;
-    font-weight: 600;
-}
-
-.trending_caption {
-    margin-top: -1em;
-    padding: 1em;
-    color: var(--color);
 }
 
 @media only screen and (max-width:1400px) {

@@ -225,11 +225,38 @@
 }
 
 .logged_create {
+    position: relative;
     padding: 6px 0 !important;
     margin: 12px;
     opacity: .5;
     border-radius: 0 !important;
-    border-bottom-color: white !important;
+}
+
+.logged_create::before,
+.logged_create::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    /* left: 50%;
+    transform: translate(-50%); */
+    height: 3px;
+    border-radius: 100px;
+    width: 0;
+    background-color: white;
+    transition: .5s;
+}
+
+.logged_create::before {
+    left: 0;
+}
+
+.logged_create::after {
+    right: 0;
+}
+
+.logged_create:hover::before,
+.logged_create:hover::after {
+    width: 100%;
 }
 
 .logged_login {
