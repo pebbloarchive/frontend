@@ -342,4 +342,35 @@
         transform: translate(-50%);
         padding: 15px 50px;
     }
+
+    .logged {
+        height: 50px;
+    }
+
+    .logged_text {
+        margin-left: 20px;
+    }
+
+    .logged section {
+        width: 40%;
+    }
+
+    .logged_links {
+        margin: 0;
+        width: 50%;
+    }
+
+    .logged_title {
+        display: none;
+    }
+
+    .logged_message {
+        font-size: 0.7em;
+    }
+
+    .logged_links a {
+        font-size: 0.6em !important;
+        text-align: center;
+        width: 35%;
+    }
 }

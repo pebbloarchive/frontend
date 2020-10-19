@@ -24,11 +24,14 @@ const Topnav = () => {
         return (
             <section className={styles.profile_dropup}>
                 <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
-                {/* <Link href="/rewards"><a href="/rewards">Achievements</a></Link>
-                <Link href="/insights"><a href="/insights">Insights</a></Link>
+                <Link href="/upload"><a href="/upload">Create a Post</a></Link>
+                <hr/>
+                <Link href="/home"><a href="/home">Home</a></Link>
+                <Link href="/explore"><a href="/explore">Explore</a></Link>
+                <Link href="/notifications"><a href="/notifications">Notifications</a></Link>
+                <Link href="/messages"><a href="/messages">Messages</a></Link>
+                <hr/>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
-                <Link href="/resources"><a href="/resources">Need Help?</a></Link> */}
-                {/* <br/> */}
                 <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
             </section>
         )
@@ -76,16 +79,16 @@ const Topnav = () => {
                 {loggedIn ? 
                 <div className={styles.links}>
                     <Link href="/home">
-                        <a className={`${active === 'home' ? styles.active : ''}`}><img src="/icons/home.png" alt=""/></a>
+                        <a className={`${active === 'home' ? styles.active : ''}`}><img src="/icons/home.png" alt=""/> <span>Home</span></a>
                     </Link>
                     <Link href="/explore">
-                        <a className={`${active === 'explore' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
+                        <a className={`${active === 'explore' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/> <span>Explore</span></a>
                     </Link>
                     <Link href="/notifications">
-                        <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/></a>
+                        <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
                     <Link href="/messages">
-                        <a className={`${active === 'messages' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755729094720880640/envelope.png" alt=""/></a>
+                        <a className={`${active === 'messages' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755729094720880640/envelope.png" alt=""/> <span>Messages</span></a>
                     </Link>
 
                         {/* <hr/>
@@ -108,19 +111,16 @@ const Topnav = () => {
             {/* {loggedIn ?  */}
                 <div className={styles.mobile}>
                     <Link href="/home">
-                    <a className={`${active === 'home' ? styles.mobileActive : ''}`}><img src="icons/home.png" alt=""/></a>
+                    <a className={`${active === 'home' ? styles.mobileActive : ''}`}><img src="icons/home.png" alt=""/> <span>Home</span></a>
                     </Link>
                     <Link href="/explore">
-                        <a className={`${active === 'explore' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/></a>
+                        <a className={`${active === 'explore' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/> <span>Explore</span></a>
                     </Link>
-                    <Link href="/upload" clasn>
-                        <a className={`${active === 'upload' ? styles.mobileActive : ''}`}><img src="icons/menus/plus.png" alt=""/></a>
-                    </Link>
-                    <Link href="/messages">
-                        <a className={`${active === 'messages' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755729094720880640/envelope.png" alt=""/></a>
+                    <Link href="/notifications">
+                        <a className={`${active === 'notifications' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
                     <Link href={`/${current.username}`}>
-                        <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={current.avatar} alt={current.name}/></a>
+                        <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={current.avatar} alt={current.name}/> <span>Profile</span></a>
                     </Link>
                 </div>
 

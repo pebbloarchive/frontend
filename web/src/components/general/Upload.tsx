@@ -20,38 +20,24 @@ const Page = () => {
         }
     };
 
+    const Context = () => {
+        return (
+            <section className={styles.upload}>
+                tyasubhf
+            </section>
+        )
+    }
+
     return (
         <>
             <div className={styles.content}>
-                <form className={styles.upload}>
-                    <input
-                        className={styles.title_post}
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="Title your post [optional]"
-                    />
-                    <textarea
-                        name=""
-                        id=""
-                        cols={0}
-                        rows={7}
-                        placeholder="Write a caption..."
-                    ></textarea>
-                    <label className={styles.upload_media}>
-                        <input
-                            type="file"
-                            name=""
-                            id=""
-                        />
-                        <span>Add Image/Video</span>
-                    </label>
-                    <input
-                        type="submit"
-                        value="Post"
-                    />
-                </form>
             </div>
+
+                {loggedIn ? 
+                <button className={styles.button} onClick={onClick}>
+                    fsabvfhajsashjvf bnajs fhjbas fhjas hf sah fhjsa fhjas hf sahjf hjas fhjas hfjas hjf has fhjas hfas hf ashj fhjasfha shf ashj fhjas hfa shj hj
+                     { clicked ? <Context /> : '' }
+                </button> : '' }
         </>
     )
 }

@@ -1,8 +1,13 @@
 import styles from '../styles/settings/settings.module.css'
 import { useState } from 'react';
 import core from '@pebblo/core';
+import { usePulse } from 'pulse-framework';
+import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
+import Link from 'next/link';
 
 const Page = () => {
+    const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
+    const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
     const [password, setPassword] = useState(undefined);
     const [newPassword, setNewPass] = useState(undefined);
     const [confirmPassword, setConfPass] = useState(undefined);
@@ -13,7 +18,7 @@ const Page = () => {
 
     return (
         <>
-        <title>Settings &gt; Password</title>
+        <title>@{current.username} | Change Password</title>
             <div className={styles.content}>
                 <form className={styles.change_password} onSubmit={sendRequest}>
                 <h1 className={styles.title}>Change Password</h1>

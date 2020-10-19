@@ -4,63 +4,11 @@
 }
 
 .upload {
-    position: relative;
-    top: 150px;
-    width: 50%;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.upload input[type="file"] {
-    display: none !important;
-}
-
-.upload input,
-.upload textarea {
-    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-
-.upload input::placeholder,
-.upload textarea::placeholder {
-    color: #cac9d8;
-    font-weight: 600;
-}
-
-.upload input[type="submit"] {
-    float: right;
-    height: 50px;
-    width: 100px;
-    font-weight: 600;
-    border-radius: 100px;
-    background-color: #cccccc;
-}
-
-.title_post {
-    display: block;
-    padding: 0 0 20px;
-    font-size: 39px;
-    border-bottom: solid 5px #fafafa;
-}
-
-.title_post::after {
-    content: "optional";
-}
-
-.upload textarea {
-    margin-top: 40px;
-    margin-bottom: 50px;
-    font-size: 20px;
-}
-
-.upload_media {
-    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
-    color: white;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 200px;
-    float: left;
+    height: 100%;
+    background-color: saddlebrown;
+    z-index: 10;
 }

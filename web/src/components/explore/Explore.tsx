@@ -3,7 +3,7 @@ import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework';
 import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import Link from 'next/link';
-import Logged from '../../components/general/Logged';
+// import Logged from '../../components/general/Logged';
 
 
 const Page = () => {
@@ -80,7 +80,7 @@ const Page = () => {
 
             </div>
 
-        <Logged />
+        {/* <Logged /> */}
         </>
     )
 }

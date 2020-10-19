@@ -131,7 +131,7 @@ export default ({ user }: {
         <div className={styles.mobile_profile}>
 
           <div className={styles.mobile_profile_navigation}>
-            <Link href="/explore"><a href="/explore" className={styles.mobile_page_explore}></a></Link>
+            <Link href="/home"><a href="/home" className={styles.mobile_page_explore}></a></Link>
               <h1 className={styles.mobile_profile_username}>@{user.username}</h1>
               {/* REMOVE MOBILE_PAGE_SETTINGS WHEN YOU'RE ON YOUR OWN ACCOUNT*/}
             <button className={styles.mobile_page_settings}></button>

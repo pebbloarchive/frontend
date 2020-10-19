@@ -252,8 +252,8 @@
     transition: .3s;
 }
 
-.links a,
-.links button {
+.links a {
+    position: relative;
     border-radius: 15px;
     margin-bottom: 10px;
     width: 60px;
@@ -264,14 +264,62 @@
     background-color: transparent;
 }
 
-.links a:hover img
+.links a:hover img,
 .links button:hover img {
-    opacity: .8;
+    opacity: 1 !important;
+}
+
+.links span {
+    position: absolute;
+    left: 60px;
+    font-size: 0.7em;
+    background-color: #1e1f22;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.377);
+    color: #c7c7c7;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.links span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin-left: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #1e1f22 transparent transparent;
+}
+
+.links a:hover span {
+    display: block;
+    animation: tooltip .4s;
+}
+
+@keyframes tooltip {
+    from {
+        margin-left: -20px;
+        display: none;
+        opacity: 0;
+    }
+
+    to {
+        left: ;
+        display: block;
+        opacity: 1;
+    }
 }
 
 .active {
     /* background: linear-gradient(to right, var(--theme-a),var(--theme-b)); */
     background-color: #f8f8f8 !important;
+}
+
+.active span {
+    margin-left: 15px;
 }
 
 /* .active img {
@@ -323,7 +371,7 @@
     padding: 10px 10px;
     color: var(--color);
     /* font-weight: 600; */
-    font-size: 15px;
+    font-size: 0.9em;
     display: block;
     opacity: .8;
     border-radius: 5px;
@@ -469,6 +517,14 @@
     text-align: center;
 }
 
+.mobile span {
+    display: none;
+    font-size: 0.6em;
+    font-weight: 600;
+    color: var(--color);
+    margin-top: -5px;
+}
+
 .mobile img {
     width: 20px;
     height: 20px;
@@ -483,15 +539,13 @@
     opacity: 1;
 }
 
-.mobile a:nth-child(3) img {
-    /* opacity: 1; */
-    transform: scale(1.8) !important;
-}
-
 .mobileActive img,
 .mobile a:hover img {
-    transform: scale(1.2);
     opacity: 1 !important;
+}
+
+.mobileActive span {
+    display: block;
 }
 
 

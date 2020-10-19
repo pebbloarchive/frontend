@@ -27,7 +27,7 @@ const Page = () => {
 
     return (
         <>
-        <title>Settings &gt; Edit Profile</title>
+        <title>@{current.username} | Edit Profile</title>
 
                 <div className={styles.content}>
                     <h1 className={styles.title}>Account Details</h1>
