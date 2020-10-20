@@ -269,9 +269,12 @@
     opacity: 1 !important;
 }
 
-.links span {
+.links span,
+.avatar span {
     position: absolute;
     left: 60px;
+    top: 50%;
+    transform: translate(0, -50%);
     font-size: 0.7em;
     background-color: #1e1f22;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.377);
@@ -282,7 +285,9 @@
     display: none;
 }
 
-.links span::after {
+
+.links span::after,
+.avatar span::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -294,9 +299,19 @@
     border-color: transparent #1e1f22 transparent transparent;
 }
 
-.links a:hover span {
+.links a:hover span,
+.avatar:hover span {
     display: block;
     animation: tooltip .4s;
+}
+
+.avatar span {
+    width: 50px;
+    margin-left: 30px;
+}
+
+.avatar:hover span {
+    animation: none;
 }
 
 @keyframes tooltip {
@@ -332,7 +347,7 @@
 }
 
 .avatar {
-    position: absolute;
+    position: relative;
     top: 60px;
     left: 50%;
     transform: translate(-50%);
@@ -365,6 +380,17 @@
     padding: 7px;
     border-radius: 5px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile_dropup::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin-left: -20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f8f8f8 transparent transparent;
 }
 
 .profile_dropup a {
@@ -507,7 +533,7 @@
     width: 100%;
     height: 50px;
     background-color: #fafafa;
-    z-index: 1;
+    z-index: 10;
     display: none;
 }
 

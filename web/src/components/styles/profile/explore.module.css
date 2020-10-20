@@ -237,30 +237,21 @@
     margin-bottom: 50px;
 }
 
-.row {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-gap: 5px;
-    grid-auto-rows: minmax(100px, auto);
-    grid-auto-flow: dense;
+.row_trending,
+.row_likes,
+.row_shares {
+    display: inline-block;
+    width: 340px;
+    margin: 0 30px 30px 0;
 }
 
 .trending_item {
     position: relative;
-    font-size: 14px;
-    background-color: #fafafa;
-    border: solid 1px #dedede;
-    border-radius: 5px;
-    grid-column-end: span 1;
-    grid-row-end: span 1;
-    transition: .3s;
-}
-
-.row .trending_item:nth-child(2n+0) {
-    grid-column-end: span 1;
-    grid-row-end: span 1;
-    background-color: saddlebrown;
+    display: block;
+    width: 100%;
+    color: var(--color);
+    padding: 12px;
+    border: solid 1px darkblue;
 }
 
 @media only screen and (max-width:1400px) {

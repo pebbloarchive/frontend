@@ -26,10 +26,10 @@ const Topnav = () => {
                 <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
                 <Link href="/upload"><a href="/upload">Create a Post</a></Link>
                 <hr/>
-                <Link href="/home"><a href="/home">Home</a></Link>
-                <Link href="/explore"><a href="/explore">Explore</a></Link>
-                <Link href="/notifications"><a href="/notifications">Notifications</a></Link>
-                <Link href="/messages"><a href="/messages">Messages</a></Link>
+                <Link href="/home"><a href="/home">Achievements</a></Link>
+                <Link href="/explore"><a href="/explore">Insights</a></Link>
+                <Link href="/business"><a href="/business">Businesses</a></Link>
+                <Link href="/creators"><a href="/creators">Content Creators</a></Link>
                 <hr/>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
                 <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
@@ -104,6 +104,7 @@ const Topnav = () => {
                 {loggedIn ? 
                 <button className={styles.avatar} onClick={onClick}>
                      <img src={current.avatar} alt=""/>
+                     <span>Click Me</span>
                      { clicked ? <Context /> : '' }
                 </button> : '' }
             </div>

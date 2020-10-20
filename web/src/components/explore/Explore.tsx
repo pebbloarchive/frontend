@@ -48,32 +48,15 @@ const Page = () => {
                         </a></Link>
                         </div>
 
-                    <div className={styles.title}><strong>Trending</strong></div>
+                    <div className={styles.title}><strong>Explore</strong></div>
                         
                         {/* GRID FOR EXPLORE */}
                         <div className={styles.trending}>
-                            <div className={styles.row}>
-                            {/* EXAMPLE */}
-                                <a href="" className={styles.trending_item}>
-                                    test
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    test
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    test
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    test
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    test
-                                </a>
-                                <a href="" className={styles.trending_item}>
-                                    test
-                                </a>
-                            {/* EXAMPLE */}
-                            </div>
+
+
+                            
+
+
                         </div>
 
                 </div>
