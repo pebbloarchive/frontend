@@ -25,9 +25,9 @@ const Topnav = () => {
             <section className={styles.profile_dropup}>
                 <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
                 <Link href="/upload"><a href="/upload">Create a Post</a></Link>
-                <hr/>
                 <Link href="/home"><a href="/home">Achievements</a></Link>
                 <Link href="/explore"><a href="/explore">Insights</a></Link>
+                <hr/>
                 <Link href="/business"><a href="/business">Businesses</a></Link>
                 <Link href="/creators"><a href="/creators">Content Creators</a></Link>
                 <hr/>
@@ -39,8 +39,6 @@ const Topnav = () => {
 
     const onRouteChange = (route) => {
         switch(route) {
-            case '/store':
-                return isActive('store');
             case '/home':
                 return isActive('home');
             case '/explore':
@@ -104,7 +102,7 @@ const Topnav = () => {
                 {loggedIn ? 
                 <button className={styles.avatar} onClick={onClick}>
                      <img src={current.avatar} alt=""/>
-                     <span>Click Me</span>
+                     <span>Click Me!</span>
                      { clicked ? <Context /> : '' }
                 </button> : '' }
             </div>

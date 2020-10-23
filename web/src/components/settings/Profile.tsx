@@ -67,8 +67,7 @@ const Page = () => {
                             />
 
                             <hr/>
-                            <h1 className={styles.title}>Public Messages</h1>
-                            <h1 className={styles.subtitle}>Biography</h1>
+                            <h1 className={styles.subtitle}>Biography <code>description</code></h1>
                             <textarea
                                 name=""
                                 id=""
@@ -78,15 +77,18 @@ const Page = () => {
                                 defaultValue={current.description}
                             />
 
-                            <h1 className={styles.subtitle}>Signature</h1>
-                            <p className={styles.note}>Signatures will be automatic messages you've written under the recent posts you have made.</p>
+                            <hr/>
+
+                            <h1 className={styles.title}>Search Engine Optimization</h1>
+                            <h1 className={styles.subtitle}>Keywords <code>keywords</code></h1>
+                            <p className={styles.note}>Type in keywords to get your account found on the internet.</p>
                             <textarea
                                 className={styles.height}
                                 name=""
                                 id=""
                                 cols={0}
                                 rows={5}
-                                placeholder="#put #some #hashtags #or #tell #people #about #yourself"
+                                placeholder="You can split each keyword by using a comma."
                                 // defaultValue={current.description}
                             />
 

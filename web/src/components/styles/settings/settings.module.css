@@ -26,11 +26,24 @@
 }
 
 .subtitle {
+    position: relative;
     font-size: 15px;
     opacity: .5;
     font-weight: 600;
     margin-bottom: 30px;
     margin-top: 20px;
+}
+
+.subtitle code {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    font-size: 0.8em;
+    padding: 3px 4px;
+    background-color: #8f8f8f;
+    color: black;
+    border-radius: 5px;
 }
 
 .note {
