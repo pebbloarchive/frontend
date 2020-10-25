@@ -240,7 +240,7 @@
 
 .links {
     position: absolute;
-    top: 135px;
+    top: 140px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -256,8 +256,8 @@
     position: relative;
     border-radius: 15px;
     margin-bottom: 10px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -277,7 +277,7 @@
     transform: translate(0, -50%);
     font-size: 0.7em;
     background-color: #1e1f22;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.377);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.397);
     color: #c7c7c7;
     font-weight: 600;
     padding: 10px;
@@ -330,12 +330,24 @@
 
 .active {
     /* background: linear-gradient(to right, var(--theme-a),var(--theme-b)); */
-    background-color: #f8f8f8 !important;
+    background-color: #fafafa !important;
 }
 
-.active span {
-    margin-left: 15px;
+.active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -60%;
+    transform: translate(0, -50%);
+    width: 5px;
+    height: 10%;
+    background: linear-gradient(to bottom, var(--theme-a), var(--theme-b));
+    border-radius: 100px;
 }
+
+/* .active span {
+    margin-left: 15px;
+} */
 
 /* .active img {
     filter: invert(100%);

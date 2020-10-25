@@ -84,6 +84,16 @@
     margin-left: 200px;
 }
 
+.edit_avatar {
+    position: relative;
+}
+
+.edit_avatar span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .content input[type="text"],
 .content input[type="email"],
 .content input[type="password"],

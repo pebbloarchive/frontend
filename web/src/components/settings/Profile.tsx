@@ -32,11 +32,13 @@ const Page = () => {
                 <div className={styles.content}>
                     <h1 className={styles.title}>Account Details</h1>
                         <form className={styles.edit_account}>
-                            <label>
-                                <button className={styles.settings_lightshot_trigger} onClick={onClick}>
+                            <label className={styles.edit_avatar}>
+                                {/* <button className={styles.settings_lightshot_trigger} onClick={onClick}> */}
                                     {loggedIn ? <img src={current.avatar} draggable={false} alt={`${current.username}`}/> : '' ? !loggedIn : '' }
                                     { clicked ? <Context /> : '' }
-                                </button>
+                                {/* </button> */}
+                                <input type="file" name="" id=""/>
+                                <span>Upload Profile</span>
                             </label>
                             <input
                                 type="text"
@@ -80,7 +82,7 @@ const Page = () => {
                             <hr/>
 
                             <h1 className={styles.title}>Search Engine Optimization</h1>
-                            <h1 className={styles.subtitle}>Keywords <code>keywords</code></h1>
+                            <h1 className={styles.subtitle}>Keywords <code>og:keywords</code></h1>
                             <p className={styles.note}>Type in keywords to get your account found on the internet.</p>
                             <textarea
                                 className={styles.height}
