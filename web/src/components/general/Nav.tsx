@@ -28,7 +28,7 @@ const Topnav = () => {
                 <Link href="/home"><a href="/home">Achievements</a></Link>
                 <Link href="/explore"><a href="/explore">Insights</a></Link>
                 <hr/>
-                <Link href="/business"><a href="/business">Businesses</a></Link>
+                <Link href="/business"><a href="/business">Business</a></Link>
                 <Link href="/creators"><a href="/creators">Content Creators</a></Link>
                 <hr/>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
@@ -101,7 +101,7 @@ const Topnav = () => {
 
                 {loggedIn ? 
                 <button className={styles.avatar} onClick={onClick}>
-                     <img src={current.avatar} alt=""/>
+                     <img src={current.avatar} alt={`${current.name} || ${current.username}`}/>
                      <span>Click Me!</span>
                      { clicked ? <Context /> : '' }
                 </button> : '' }

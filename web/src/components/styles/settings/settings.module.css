@@ -173,7 +173,7 @@
 .content hr {
     width: 100%;
     margin: 100px 0 50px;
-    border: solid 1px rgba(0, 0, 0, 0.050);
+    border: solid 1px rgba(145, 20, 20, 0.05)05);
 }
 
 .change_password hr {
@@ -336,6 +336,7 @@
 
 .checkbox input:checked ~ .checkbox_box {
     background-color: #34a134;
+    border-radius: 100px;
 }
 
 .appearance {

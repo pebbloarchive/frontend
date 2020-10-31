@@ -62,9 +62,9 @@ const Topnav = () => {
             </div>
 
             <div className={styles.menu_links}>
-                <Link href="/about"><a href="/about">Features</a></Link>
                 <Link href="/explore"><a href="/explore">Explore</a></Link>
-                <Link href="/resources"><a href="/resources">Resources</a></Link>
+                <Link href="/business"><a href="/business">Business</a></Link>
+                <Link href="/creators"><a href="/creators">Content Creators</a></Link>
                 <Link href="/blog"><a href="/blog">Blog</a></Link>
             </div>
         </>

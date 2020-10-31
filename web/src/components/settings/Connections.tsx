@@ -28,7 +28,7 @@ const Page = () => {
 
                     <div className={styles.connections_items}>
                         <h1 className={styles.subtitle}>Active</h1>
-                        {/* <button className={styles.connections_discord}>
+                        <button className={styles.connections_discord}>
                             <input type="text" name="" id="" defaultValue="andre#0069"/>
                         </button>
                         <button className={styles.connections_twitch}>
@@ -36,7 +36,7 @@ const Page = () => {
                         </button>
                         <button className={styles.connections_spotify}>
                             <input type="text" name="" id="" defaultValue="rocketlea"/>
-                        </button> */}
+                        </button>
                     </div>
             </div>
         </>

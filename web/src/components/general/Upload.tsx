@@ -14,7 +14,7 @@ const Page = () => {
     return (
         <>
             <div className={styles.content}>
-    {current.username}Post some thoughts...
+                <a href="" className={styles.}></a>
             </div>
         </>
     )

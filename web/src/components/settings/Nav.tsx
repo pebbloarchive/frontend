@@ -49,31 +49,31 @@ const Topnav = () => {
                     </Link>
                     <Link href="/settings/privacy-safety" >
                         <a className={`${active === 'privacy' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746565258050666516/padlock.png" alt="Privacy and Safety > Padlock"/>
+                            <img src="/icons/lock.png" alt="Privacy and Safety > Padlock"/>
                             <span>Privacy &amp; Safety</span>
                         </a>
                     </Link>
                     <Link href="/settings/password">
                         <a href="/settings/password" className={`${active === 'password' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png" alt="Change Password | Key"/>
+                            <img src="/icons/key.png" alt="Change Password | Key"/>
                             <span>Change Password</span>
                         </a>
                     </Link>
                     <Link href="/settings/connections">
                         <a className={`${active === 'connections' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746568861314187374/connection.png" alt="Connections | Connection"/>
+                            <img src="/icons/connection.png" alt="Connections | Connection"/>
                             <span>Connections</span>
                         </a>
                     </Link>
                     <Link href="/settings/display">
                         <a className={`${active === 'display' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746571427188178964/display.png" alt="Display | Color Palette"/>
+                            <img src="/icons/dropper.png" alt="Display | Color Palette"/>
                             <span>Display</span>
                         </a>
                     </Link>
                     <Link href="/settings/notifications">
                         <a className={`${active === 'notifications' ? styles.settings_active : ''}`}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/746591289486737488/bell.png" alt="Notifications | Bell"/>
+                            <img src="/icons/bell.png" alt="Notifications | Bell"/>
                             <span>Notifications</span>
                         </a>
                     </Link>
