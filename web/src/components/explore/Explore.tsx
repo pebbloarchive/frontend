@@ -22,8 +22,10 @@ const Page = () => {
                         />
                         <input type="submit" value="GO"/>
                     </form>
+                    <img src="/images/cloud.png" alt="" className={styles.header_cloud}/>
                 </div>
             </div>
+            
         </>
     )
 }

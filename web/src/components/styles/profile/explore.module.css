@@ -45,23 +45,24 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    /* width: 0; */
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .header_search input[type="search"] {
     display: block;
     height: 60px;
-    width: 500px;
-    padding: 0 65px 0 60px;
+    width: 440px;
+    padding: 0 30px 0 60px;
     font-size: 1.1em;
     border-radius: 100px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.123);
     background-color: rgba(255, 255, 255, 0.8);
-    transition: .3s;
+    transition: .2s;
 
     background-repeat: no-repeat;
     background-position: 25px 50%;
@@ -69,11 +70,9 @@
     background-image: url(https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png);
 }
 
-.header_search input[type="search"]:focus {
-    width: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
+.header_search:hover input[type="search"] {
+    padding-right: 55px;
 }
-
 .header_search input[type="submit"] {
     height: 50px;
     width: 50px;
@@ -84,6 +83,22 @@
     cursor: pointer;
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
     transform: scale(0.8);
+    opacity: 0;
+    transition: .3s;
+}
+
+.header_search:hover input[type="submit"] {
+    opacity: 1;
+}
+
+
+
+.header_cloud {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    transform: scaleX(-1) rotate(-90deg);
+    height: 100%;
 }
 
 

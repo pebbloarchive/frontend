@@ -11,7 +11,7 @@ export default () => {
   return (
     <>
     <title>Explore Pebblo</title>
-      <Explore />
+      <Explore/>
       <Nav/>
     </>
   )

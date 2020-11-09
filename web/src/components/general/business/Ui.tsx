@@ -17,7 +17,7 @@ const Page = () => {
                             <Link href=""><a href="">Events</a></Link>
                             <Link href=""><a href="">Shop</a></Link>
                             <Link href=""><a href="">Jobs</a></Link>
-                            {/* <hr/> */}
+                            <hr/>
                             <Link href=""><a href="" className={styles.tabs_website}>tesla.com</a></Link>
                         </div>
                 </div>

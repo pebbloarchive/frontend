@@ -1,0 +1,213 @@
+.content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.box {
+    margin-top: 153px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+}
+
+.title {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+    width: 900px;
+    display: block;
+}
+
+.title_text {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.title_options {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.title_options a {
+    position: relative;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 12px 0;
+    color: var(--color);
+    margin: 0 15px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.title_options a:hover {
+    opacity: 0.7;
+}
+
+.title_options a:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.title_options_active {
+    opacity: 1 !important;
+}
+
+.title_options_active::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 3px;
+    height: 3px;
+    background-color: var(--color);
+    /* background: linear-gradient(to bottom right, var(--theme-a), var(--theme-b)); */
+    border-radius: 100px;
+}
+
+.following_list {
+    position: relative;
+    left: 50%;
+    width: 900px;
+    transform: translate(-50%);
+    margin-bottom: 100px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.following_list::after {
+    content: "";
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    right: -10px;
+    width: 15%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, transparent, var(--background), var(--background));
+}
+
+.following_item {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    background: linear-gradient(to bottom right, var(--theme-a), var(--theme-b));
+    border-radius: 50%;
+}
+
+
+.following_item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 71px;
+    height: 71px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.following_item:hover::after {
+    width: 0;
+    background-color: var(--background);
+    border-radius: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.following_item:nth-child(2n+0):hover::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.following_item_avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding: 6px;
+    background-color: var(--background);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.following_item_tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+.following_item_tooltip span {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, var(--theme-a), var(--theme-b));
+    box-shadow: 3px 3px 4px rgba(233, 81, 81, 0.473);
+}
+
+.following_item_tooltip::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translate(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--theme-a) transparent;
+}
+
+.following_item_tooltip i {
+    opacity: .7;
+    font-style: normal;
+}
+
+.following_item:hover section {
+    display: block;
+    animation: tooltip .4s;
+}
+
+@keyframes tooltip {
+    from {
+        display: none;
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+
+.kyle {
+    position: relative;
+    text-align: center;
+    margin: 150px;
+    padding: 30px 0;
+    color: white;
+    text-transform: lowercase;
+    border-radius: 100px;
+    font-size: 0.8em;
+}
+
+.kyle strong {
+    text-transform: uppercase;
+}
+
+.kyle span {
+    background-color: #e11c3d;
+    padding: 12px;
+}

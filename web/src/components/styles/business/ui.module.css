@@ -43,13 +43,13 @@
     position: absolute;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    text-align: center;
     bottom: 0px;
-    width: 100%;
+    width: 1400px;
     /* right: 0; */
-    left: 0;
-    /* transform: translate(-50%); */
+    left: 50%;
+    transform: translate(-50%);
     height: 70px;
     transition: .3s;
 }
@@ -77,16 +77,10 @@
     padding: 7px 12px !important;
     background-color: black;
     color: white !important;
-    margin-left: 20px;
+    display: inline-block;
 }
 
 .tabs hr {
     display: block;
-    width: 2px;
-    height: 30%;
-    margin: 0 25px;
-    background-color: var(--color);
-    border-radius: 100px;
-    border: none;
-    opacity: .5;
+    opacity: 0;
 }

@@ -1,6 +1,6 @@
 import { usePulse } from 'pulse-framework';
 import core from '@pebblo/core';
-import styles from '../styles/profile/upload.module.css'
+import styles from '../styles/profile/home/upload.module.css'
 import Router from 'next/router';
 import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import { useState, useEffect } from 'react';
@@ -14,7 +14,29 @@ const Page = () => {
     return (
         <>
             <div className={styles.content}>
-                <a href="" className={styles.}></a>
+
+
+
+
+
+
+
+
+
+
+                                Hello World
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </>
     )

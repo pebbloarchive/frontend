@@ -41,16 +41,6 @@ const Topnav = () => {
                     <Link href="/business"><a href="/business/jobs">Search Jobs</a></Link>
                     <Link href="/business/reviews"><a href="/business/reviews">Reviews</a></Link>
                 </div>
-                <form className={styles.search}>
-                    <input
-                        type="search"
-                        placeholder="Search..."
-                    />
-                    <input
-                        type="submit"
-                        value=""
-                    />
-                </form>
             </div>
         </>
     )

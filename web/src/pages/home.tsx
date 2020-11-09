@@ -8,7 +8,7 @@ import core from '@pebblo/core';
 // Components
 import styles from '../components/styles/landing.module.css';
 import Nav from '../components/general/Nav';
-import Follow from '../components/general/profile/home/Follow';
+import Content from '../components/general/profile/home/Content';
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
@@ -16,7 +16,7 @@ export default () => {
   return (
     <>
     <title>Home</title>
-      <Follow/>
+      <Content/>
       <Nav/>
     </>
   )
