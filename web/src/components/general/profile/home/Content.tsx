@@ -13,6 +13,16 @@ const Page = () => {
                     </div>
 
                     <div className={styles.following_list}>
+                        <Link href="/upload"><a href="/upload" className={styles.following_item}>
+                            <img src="https://th.bing.com/th/id/OIP.r87WI0Z0jTvIwpoR7PEjSgHaHa?w=171&h=175&c=7&o=5&pid=1.7" alt="" className={styles.following_item_avatar}/>
+                                <section className={styles.following_item_tooltip}>
+                                    <span>
+                                        <i>Upload!</i>
+                                    </span>
+                                </section>
+                        </a></Link>
+
+
                         <Link href=""><a href="" className={styles.following_item}>
                             <img src="https://th.bing.com/th/id/OIP.EYdWIm7GoYTQSGiaqXrOqQHaHa?w=164&h=175&c=7&o=5&pid=1.7" alt="" className={styles.following_item_avatar}/>
                                 <section className={styles.following_item_tooltip}>

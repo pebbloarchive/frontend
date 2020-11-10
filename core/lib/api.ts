@@ -5,8 +5,8 @@ import Pulse, { PulseResponse } from 'pulse-framework';
 const core = App.Core<ICore>();
 
 export const API = App.API({
-  // baseURL: 'http://97.84.165.72:3000/1.0',
-  baseURL: 'https://api.pebblo.org/1.0',
+  baseURL: 'http://97.84.165.72:3000/1.0',
+  // baseURL: 'https://api.pebblo.org/1.0',
   options: {
     headers: {
       ['content-type']: 'application/json'

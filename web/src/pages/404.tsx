@@ -8,7 +8,7 @@ return (
           <div className={styles.notFound}>
             <h1>Oops...</h1>
             <h3>The page you're looking for doesn't exist.</h3>
-            <a href="https://pebblo.org/">Take me home</a>
+            <a href="/home">Take me home</a>
           </div>
        </>
     )

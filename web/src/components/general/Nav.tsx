@@ -25,8 +25,8 @@ const Topnav = () => {
             <section className={styles.profile_dropup}>
                 <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
                 <Link href="/upload"><a href="/upload">Create a Post</a></Link>
-                <Link href="/home"><a href="/home">Achievements</a></Link>
-                <Link href="/explore"><a href="/explore">Insights</a></Link>
+                <Link href="/resources"><a href="/resources">Achievements</a></Link>
+                <Link href="/resources"><a href="/resources">Insights</a></Link>
                 <hr/>
                 <Link href="/business"><a href="/business">Business</a></Link>
                 <Link href="/creators"><a href="/creators">Content Creators</a></Link>

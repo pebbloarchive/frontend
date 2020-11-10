@@ -24,7 +24,7 @@ export default () => {
               type="search"
               name=""
               id=""
-              placeholder="Enter a keyword..."
+              placeholder="Search..."
             />
             <input type="submit" value="GO"/>
           </section>
