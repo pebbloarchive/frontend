@@ -39,6 +39,7 @@
     color: var(--color);
     font-weight: 600;
     padding: 20px 60px;
+    font-size: 0.8em;
     color: white;
     background: linear-gradient(to right, var(--theme-a), var(--theme-b));
     border-top-color: solid 15px rgba(255, 255, 255, 0.205);
@@ -47,8 +48,16 @@
 }
 
 .landing a:hover {
-    margin-left: 5px;
     box-shadow: -5px 5px 12px #919191;
+}
+
+.landing_login {
+    background: transparent;
+    color: var(--color);
+}
+
+.landing_login:hover {
+    box-shadow: none;
 }
 
 .content {
@@ -87,6 +96,15 @@
     text-transform: uppercase;
     margin-bottom: 40px;
     opacity: 0.9;
+}
+
+.footer_subtitle {
+    font-weight: 600;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    opacity: 0.7;
 }
 
 .footer_section a {
@@ -283,34 +301,10 @@
     height: 100%;
 }
 
-.about_business,
-.about_creators {
-    margin-top: 200px;
+.about_services {
+    margin-top: 150px;
 }
 
-.about_business_title,
-.about_creators_title {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: left;
-    width: 770px;
-}
-
-.about_business_title h1,
-.about_creators_title h1 {
-    font-size: 2em;
-    font-weight: 600;
+.about_services_title {
     color: #928f9e;
-}
-
-.about_business_title a,
-.about_creators_title a {
-    display: inline-block;
-    margin-top: 50px;
-    border: solid 2px #928f9e;
-    color: #928f9e;
-    font-weight: 600;
-    font-size: 0.8em;
-    padding: 20px 25px;
 }

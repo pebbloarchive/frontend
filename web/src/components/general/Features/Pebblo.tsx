@@ -25,19 +25,9 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <div className={styles.about_business}>
-                        <div className={styles.about_business_title}>
-                            <h1>We're bringing you simple ways to <span>grow your business</span> and <span>get your business found</span> with SEO</h1>
-                            <Link href="/features/business"><a href="/features/business">Learn more</a></Link>
-                        </div>
-                    </div>
-
-                    <div className={styles.about_creators}>
-                        <div className={styles.about_creators_title}>
-                            <h1>Helping you grow your community and pump your posts using our content creator system</h1>
-                            <Link href="/features/content-creators"><a href="/features/content-creators">Learn more</a></Link>
-                        </div>
-                    </div>
+                    {/* <div className={styles.about_services}>
+                        <h1 className={styles.about_services_title}>What We Deliver</h1>
+                    </div> */}
 
                 </div>
             </div>
