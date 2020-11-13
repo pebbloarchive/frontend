@@ -23,17 +23,15 @@ const Topnav = () => {
                             <Link href="/"><a href="/">Home</a></Link>
                             <Link href="/features"><a href="/features">About</a></Link>
                             <Link href="/contact"><a href="/contact">Contact Us</a></Link>
-                            
-                            <h3 className={styles.footer_subtitle}>Pebblo</h3>
                             <Link href="/explore"><a href="/explore">Explore</a></Link>
-                            <Link href="/creators"><a href="/creators">Content Creators</a></Link>
+                            {/* <Link href="/creators"><a href="/creators">Content Creators</a></Link> */}
                             <Link href="/business"><a href="/business">Business</a></Link>
                     </div>
                     <div className={styles.footer_section}>
                         <h1 className={styles.footer_title}>Work</h1>
-                            <Link href="/features/branding"><a href="/features/branding">Branding</a></Link>
                             <Link href="/features"><a href="/features">Features</a></Link>
-                            <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link>
+                            <Link href="/features/branding"><a href="/features/branding">Branding</a></Link>
+                            {/* <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link> */}
                             <Link href="/features/business"><a href="/featuers/business">Business</a></Link>
                     </div>
                     <div className={styles.footer_section}>
@@ -42,6 +40,17 @@ const Topnav = () => {
                             <Link href=""><a href="">User Guides</a></Link>
                             <Link href=""><a href="">Safety &amp; Security</a></Link>
                             <Link href=""><a href="">Verification</a></Link>
+                    </div>
+                    <div className={styles.footer_social}>
+                            <Link href="/resources"><a href="/resources">
+                                <img src="/images/discord.png" alt=""/>
+                            </a></Link>
+                            <Link href="/resources"><a href="/resources">
+                                <img src="/images/instagram.png" alt=""/>
+                            </a></Link>
+                            <Link href="/resources"><a href="/resources">
+                                <img src="/images/twitter.png" alt=""/>
+                            </a></Link>
                     </div>
                 </div>
 
