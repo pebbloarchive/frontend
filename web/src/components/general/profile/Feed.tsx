@@ -1,4 +1,4 @@
-import styles from '../styles/profile/old/feed.module.css'
+import styles from '../../styles/profile/home/feed.module.css'
 
 const Page = () => {
     return (
