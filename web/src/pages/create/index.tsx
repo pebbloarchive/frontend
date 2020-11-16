@@ -2,8 +2,10 @@ import { usePulse } from 'pulse-framework'
 import core from '@pebblo/core'
 import Router from 'next/router';
 import Head from 'next/head';
-import { useState } from 'react';
-import styles from '../components/styles/auth.module.css'
+import Link from 'next/link';
+import React, { useState } from 'react';
+import styles from '../../components/styles/auth.module.css'
+import Nav from '../../components/general/Menu'
 
 export default function Page() {
   const [username, setUsername] = useState(undefined);
@@ -26,6 +28,8 @@ export default function Page() {
       <div className={styles.auth_right}>
         <img src="images/svg/woman-smartphone.svg"/>
       </div>
+
+      <Link href="/"><a href="/" className={styles.auth_go_back}><span></span></a></Link>
 
       <form className={styles.auth_form} onSubmit={userCreate}>
         <h1 className={styles.auth_title}>Create an account.</h1>

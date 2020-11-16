@@ -23,9 +23,9 @@ export default () => {
       <div className={styles.landing}>
           <span>Share your story on</span>
           <button>Pebblo</button>
-          <Link href="/create"><a href="/create">Get Started</a></Link>
+          <Link href="/features"><a href="/features">New to Pebblo?</a></Link>
           { loggedIn ? '' : 
-          <Link href="/login"><a href="/login" className={styles.landing_login}>Already have an account?</a></Link>
+          <Link href="/login"><a href="/login" className={styles.landing_login}>Have an account?</a></Link>
            }
       </div>
 

@@ -22,18 +22,18 @@ const Topnav = () => {
 
     const Context = () => {
         return (
-            <section className={styles.profile_dropup}>
+            <div className={styles.profile_dropup}>
                 <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
                 <Link href="/upload"><a href="/upload">Create a Post</a></Link>
                 <Link href="/resources"><a href="/resources">Achievements</a></Link>
                 <Link href="/resources"><a href="/resources">Insights</a></Link>
                 <hr/>
-                <Link href="/business"><a href="/business">Business</a></Link>
-                <Link href="/creators"><a href="/creators">Content Creators</a></Link>
+                <Link href="/features/business"><a href="/features/business">Business</a></Link>
+                <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link>
                 <hr/>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
                 <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
-            </section>
+            </div>
         )
     }
 
@@ -101,7 +101,7 @@ const Topnav = () => {
 
                 {loggedIn ? 
                 <button className={styles.avatar} onClick={onClick}>
-                     <img src={current.avatar} alt={`${current.name} || ${current.username}`}/>
+                     <img src={current.avatar ? current.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
                      <span>Click Me!</span>
                      { clicked ? <Context /> : '' }
                 </button> : '' }

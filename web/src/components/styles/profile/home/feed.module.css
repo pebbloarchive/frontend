@@ -1,0 +1,154 @@
+.feed {
+    position: relative;
+    margin: 70px 0 150px 70px;
+    width: 600px;
+}
+
+.post {
+    background-color: white;
+    display: block;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 2px 2px 7px rgba(163, 163, 163, 0.199);
+    margin-bottom: 25px;
+    transition: .3s;
+}
+
+.post:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.post:hover {
+    transform: scale(1.010);
+}
+
+.heading {
+    position: relative;
+    display: block;
+}
+
+.heading_author {
+    display: flex;
+    align-items: center;
+}
+
+.heading_author_avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.heading_author section {
+    margin-left: 15px;
+}
+
+.heading_author_name {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.heading_author_username {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.7em;
+}
+
+.heading_more {
+    position: absolute;
+    top: 5%;
+    height: 20px;
+    cursor: pointer;
+    right: 0;
+    transform: translate(0, -50%);
+    background-color: transparent;
+    margin-right: 15px;
+}
+
+.heading_ellipsis {
+    display: inline-flex;
+}
+
+.heading_ellipsis,
+.heading_ellipsis::before,
+.heading_ellipsis::after {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+}
+
+.heading_ellipsis::before,
+.heading_ellipsis::after {
+    content: "";
+    position: absolute;
+}
+
+.heading_ellipsis::before {
+    left: -7px;
+}
+
+.heading_ellipsis::after {
+    right: -7px;
+}
+
+.content {
+    margin: 20px 0 0;
+}
+
+.caption p {
+    color: rgba(0, 0, 0, .7);
+    line-height: 20px;
+    font-size: 0.78em;
+    margin-bottom: 10px;
+}
+
+.media {
+    margin-top: 20px;
+}
+
+.media img {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 15px;
+}
+
+.interaction {
+    padding-top: 15px;
+    margin-top: 5px;
+    border-top: solid 1px rgba(0, 0, 0, 0);
+}
+
+
+.interaction a,
+.interaction button {
+    font-size: 0.7em;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 25%;
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, .4);
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.interaction img {
+    width: 20px;
+    margin-right: 5px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.interaction a:hover,
+.interaction button:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.interaction a:hover img,
+.interaction button:hover img {
+    opacity: .8;
+}

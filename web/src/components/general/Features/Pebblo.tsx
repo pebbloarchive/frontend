@@ -18,7 +18,7 @@ const Page = () => {
                             we have been creating <br/></strong>
                             <span>Pebblo just for you</span>
                         </h1>
-                        <Link href="/explore"><a href="/explore">Explore</a></Link>
+                        <Link href="/create"><a href="/create">Get Started</a></Link>
                     </div>
 
                     <div className={styles.about_left}>
@@ -26,6 +26,7 @@ const Page = () => {
                         <div className={styles.about_left_title}>
                             <h1>Share your stories with friends</h1>
                             <p>Create a post on your timeline, follow and interact with your friends in a simple way.</p>
+                            <Link href="/resources"><a href="/resources">How it works</a></Link>
                         </div>
                     </div>
 
@@ -41,10 +42,13 @@ const Page = () => {
                     <div className={styles.about_left}>
                         <img src="/images/svg/man-warehouse.png" alt="" className={styles.about_left_image}/>
                         <div className={styles.about_left_title}>
-                            <h1>Coming Soon!</h1>
-                            <p>Pebblo is always up to something behind the scenes, watch this space for our new feature!</p>
+                            <h1>Grow your community</h1>
+                            <p>We are going to be giving <strong>Content Creators</strong> lots of features to help them grow.</p>
+                            <Link href="/features/business"><a href="/features/business">Learn more</a></Link>
                         </div>
                     </div>
+
+                                        <div className={styles.about_create}></div>
 
                 </div>
             </div>

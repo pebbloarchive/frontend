@@ -1,17 +1,20 @@
 :root {
   --color: #1d1d1d;
-  --background: white;
+  --background: #f8f8f9;
   --theme-a: #ff6e20;
   --theme-b: #ff0067;
   --links: #3d6a9b;
 
-  /* --legal-content: 700px; */
+
+  /* Menu */
+  --sidebar-width: 150px;
 
 
-  /* --theme-a: #e27b23;
-  --theme-b: #e75139;
-  --theme-a: #63a4ad;
-  --theme-b: #4f60bb; */
+                                                                                                                        /* --legal-content: 700px;
+                                                                                                                        --theme-a: #e27b23;
+                                                                                                                        --theme-b: #e75139;
+                                                                                                                        --theme-a: #63a4ad;
+                                                                                                                        --theme-b: #4f60bb; */
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +43,6 @@ body {
   padding: 0;
   background-color: var(--background);
   font-family: Montserrat, sans-serif;
-  /* filter: invert(100%); */
 }
 
 a {
@@ -94,7 +96,7 @@ textarea {
 @font-face {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   src: url(../../components/fonts/Montserrat-Regular.ttf);
 }
 

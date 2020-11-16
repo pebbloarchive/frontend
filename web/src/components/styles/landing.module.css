@@ -38,26 +38,33 @@
     border-radius: 100px;
     color: var(--color);
     font-weight: 600;
-    padding: 20px 60px;
+    padding: 20px 40px;
     font-size: 0.8em;
     color: white;
-    background: linear-gradient(to right, var(--theme-a), var(--theme-b));
+    background: url(../../../public/images/svg/background.svg) no-repeat, radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    background-position: center;
+    background-size: 120%;
     border-top-color: solid 15px rgba(255, 255, 255, 0.205);
     border-bottom-color: solid 15px rgba(255, 255, 255, 0.205);
+    opacity: .8;
     transition: .4s;
 }
 
 .landing a:hover {
-    box-shadow: -5px 5px 12px #919191;
+    opacity: 1;
 }
 
 .landing_login {
-    background: transparent;
-    color: var(--color);
+    background: transparent !important;
+    color: var(--color) !important;
+}
+
+.landing_login strong {
+    padding-left: 5px;
 }
 
 .landing_login:hover {
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .content {
@@ -179,7 +186,7 @@
     background-color: white;
     color: var(--color);
     border-radius: 10px;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.459);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.205);
     font-weight: 600;
     font-size: 0.8em;
     transition: .3s;
@@ -242,9 +249,13 @@
 .about_landing {
     color: white;
     /* background: radial-gradient(circle at top right, #9e82b8 10%, #5889d1); */
-    background: radial-gradient(circle at top right, var(--theme-a) 10%, var(--theme-b));
+    background: url(../../../public/images/svg/background.svg) no-repeat, radial-gradient(circle at top right, var(--theme-a), var(--theme-b));
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: bottom;
     box-shadow: 30px 30px 1px #ede5ef75;
     margin-bottom: 200px;
+    margin-top: 200px;
 }
 
 .about_title {
@@ -401,10 +412,18 @@
     border-color: transparent;
 }
 
+.about_left_title {
+    left: 800px;
+}
+
 .about_right_title {
-    left: 0;
+    right: 800px;
+}
+
+.about_left_image {
+    left: 100px;
 }
 
 .about_right_image {
-    right: 0;
+    right: 100px;
 }

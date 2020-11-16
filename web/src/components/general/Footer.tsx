@@ -24,15 +24,15 @@ const Topnav = () => {
                             <Link href="/features"><a href="/features">About</a></Link>
                             <Link href="/contact"><a href="/contact">Contact Us</a></Link>
                             <Link href="/explore"><a href="/explore">Explore</a></Link>
-                            {/* <Link href="/creators"><a href="/creators">Content Creators</a></Link> */}
-                            <Link href="/business"><a href="/business">Business</a></Link>
+                            <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link>
+                            <Link href="/features/business"><a href="/features/business">Business</a></Link>
                     </div>
                     <div className={styles.footer_section}>
                         <h1 className={styles.footer_title}>Work</h1>
                             <Link href="/features"><a href="/features">Features</a></Link>
                             <Link href="/features/branding"><a href="/features/branding">Branding</a></Link>
-                            {/* <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link> */}
-                            <Link href="/features/business"><a href="/featuers/business">Business</a></Link>
+                            <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link>
+                            <Link href="/features/business"><a href="/features/business">Business</a></Link>
                     </div>
                     <div className={styles.footer_section}>
                         <h1 className={styles.footer_title}>Resources</h1>

@@ -38,7 +38,7 @@ const Page = () => {
                                     { clicked ? <Context /> : '' }
                                 {/* </button> */}
                                 <input type="file" name="" id=""/>
-                                <span>Upload Profile</span>
+                                {/* <span>Upload Profile</span> */}
                             </label>
                             <input
                                 type="text"
@@ -79,7 +79,7 @@ const Page = () => {
                                 defaultValue={current.description}
                             />
 
-                            <hr/>
+                            {/* <hr/>
 
                             <h1 className={styles.title}>Search Engine Optimization</h1>
                             <h1 className={styles.subtitle}>Keywords <code>og:keywords</code></h1>
@@ -91,8 +91,8 @@ const Page = () => {
                                 cols={0}
                                 rows={5}
                                 placeholder="You can split each keyword by using a comma."
-                                // defaultValue={current.description}
-                            />
+                                defaultValue={current.description}
+                            /> */}
 
                             {/* </textarea> */}
                             
