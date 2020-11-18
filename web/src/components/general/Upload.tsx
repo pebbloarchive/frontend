@@ -15,27 +15,11 @@ const Page = () => {
         <>
             <div className={styles.content}>
 
+                <form className={styles.upload}>
+                    <div className={styles.widget}>
 
-
-
-
-
-
-
-
-
-                                Hello World
-
-
-
-
-
-
-
-
-
-
-
+                    </div>
+                </form>
 
             </div>
         </>

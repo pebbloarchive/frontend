@@ -1,15 +1,15 @@
 .feed {
     position: relative;
-    margin: 70px 0 150px 70px;
+    margin: 50px 0 150px 30px;
     width: 600px;
 }
 
 .post {
     background-color: white;
     display: block;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 30px;
-    box-shadow: 2px 2px 7px rgba(163, 163, 163, 0.199);
+    box-shadow: 2px 2px 12px rgba(163, 163, 163, 0.178);
     margin-bottom: 25px;
     transition: .3s;
 }
@@ -30,6 +30,7 @@
 .heading_author {
     display: flex;
     align-items: center;
+    color: var(--color);
 }
 
 .heading_author_avatar {
@@ -38,11 +39,18 @@
     height: 40px;
 }
 
+.heading_author_badge {
+    width: 20px;
+    height: 20px;
+}
+
 .heading_author section {
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 .heading_author_name {
+    display: flex;
+    align-items: center;
     font-weight: 600;
     font-size: 1em;
 }
@@ -62,6 +70,7 @@
     transform: translate(0, -50%);
     background-color: transparent;
     margin-right: 15px;
+    display: none;
 }
 
 .heading_ellipsis {
@@ -127,11 +136,11 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    width: 25%;
+    min-width: 40px;
+    margin-right: 10px;
     background-color: transparent;
     border: none;
     color: rgba(0, 0, 0, .4);
-    font-weight: 600;
     cursor: pointer;
     transition: .3s;
 }
@@ -151,4 +160,147 @@
 .interaction a:hover img,
 .interaction button:hover img {
     opacity: .8;
+}
+
+.interaction span {
+    font-weight: 600;
+}
+
+.post_add_comment {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.post_add_comment_avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.post_add_comment_form {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: whitesmoke;
+    border-radius: 100px;
+    cursor: text;
+}
+
+.post_add_comment_form input[type="text"] {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    min-width: 80%;
+    background-color: transparent;
+    padding-left: 15px;
+    font-size: 0.7em;
+}
+
+.post_add_comment_form input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, .5);
+}
+
+.post_add_comment_interaction {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    float: right;
+    top: 50%;
+    padding-right: 15px;
+    right: 0;
+    transform: translate(0, -50%);
+    max-width: 20%;
+}
+
+
+.post_add_comment_interaction img {
+    width: 20px;
+    height: 20px;
+    opacity: .4;
+}
+
+.post_add_comment_interaction label {
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.post_add_comment_interaction input {
+    display: none;
+}
+
+.post_settings {
+    position: absolute;
+    top: 0;
+    left: 570px;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 150px;
+    border-radius: 0 10px 10px 0;
+    display: none;
+    background-color: white;
+    box-shadow: 4px 4px 5px rgba(163, 163, 163, 0.116);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.post_settings::-webkit-scrollbar {
+    background-color: white;
+}
+
+.post_settings::-webkit-scrollbar-thumb {
+    border-color: white;
+}
+
+.post:hover .post_settings {
+    display: block;
+    animation: popout .6s;
+    display: none;
+}
+
+@keyframes popout {
+    from {
+        left: 530px;
+        opacity: 0;
+    }
+    to {
+        background-color: white;
+        left: ;
+        opacity: 1;
+    }
+}
+
+.post_settings hr {
+    width: 0;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.post_settings_title {
+    margin-top: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .5);
+}
+
+.post_settings a,
+.post_settings button {
+    position: relative;
+    display: block;
+    font-size: 0.8em;
+    color: var(--color);
+    width: 100%;
+    padding: 2px 0;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgba(0, 0, 0, .7);
 }

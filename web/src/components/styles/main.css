@@ -18,14 +18,14 @@
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 13px;
   height: 20px;
   background-color: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #cac8c8;
-  border: solid 7px var(--background);
+  border: solid 4px var(--background);
   border-radius: 100px;
 }
 

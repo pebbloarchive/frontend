@@ -1,4 +1,6 @@
 .content {
     position: relative;
-    margin-left:  var(--sidebar-width);
+    left: 50%;
+    transform: translate(-50%);
+    width: 600px;
 }

@@ -5,6 +5,7 @@ import Router from 'next/router';
 import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getAvatar } from '../utils';
 
 const Topnav = () => {
     const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
@@ -66,7 +67,7 @@ const Topnav = () => {
 
     return (
         <>
-            <div className={styles.navigation}> 
+            <div className={styles.navigation}>
                 <a href="/">
                 <div className={styles.navigation_logo}>
                     <span></span>
@@ -74,6 +75,7 @@ const Topnav = () => {
                     <span></span>
                 </div>
                 </a>
+                    <Link href="/upload"><a href="/upload" className={styles.upload}><img src="/icons/plus.png" alt=""/></a></Link> 
                 {loggedIn ? 
                 <div className={styles.links}>
                     <Link href="/home">
@@ -101,7 +103,7 @@ const Topnav = () => {
 
                 {loggedIn ? 
                 <button className={styles.avatar} onClick={onClick}>
-                     <img src={current.avatar ? current.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
+                     <img src={getAvatar('andre')} alt=""/>
                      <span>Click Me!</span>
                      { clicked ? <Context /> : '' }
                 </button> : '' }
@@ -115,11 +117,17 @@ const Topnav = () => {
                     <Link href="/explore">
                         <a className={`${active === 'explore' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/> <span>Explore</span></a>
                     </Link>
+
+
+                    <Link href=""><a className={`${active === 'notifications' ? styles.mobileActive : ''}`}></a></Link>
+                    <Link href="/upload"><a href="/upload" className={styles.mobile_upload}><img src="/icons/plus.png" alt=""/></a></Link>
+
+                    
                     <Link href="/notifications">
                         <a className={`${active === 'notifications' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
                     <Link href={`/${current.username}`}>
-                        <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={current.avatar} alt={current.name}/> <span>Profile</span></a>
+                        <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={getAvatar('andre')} alt={current.name}/> <span>Profile</span></a>
                     </Link>
                 </div>
 
