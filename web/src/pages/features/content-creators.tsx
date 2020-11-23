@@ -9,7 +9,7 @@ import Content from '../../components/general/Features/Creators'
 import Footer from '../../components/general/Footer';
 import Nav from '../../components/general/Menu';
 
-export default () => {
+const Creators = () => {
   return (
     <>
     <title>Content Creators | Pebblo</title>
@@ -19,3 +19,6 @@ export default () => {
     </>
   )
 }
+
+Creators.theme = 'light';
+export default Creators;

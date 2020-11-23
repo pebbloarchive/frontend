@@ -10,8 +10,9 @@ import core from '@pebblo/core';
 import styles from '../components/styles/landing.module.css';
 import Nav from '../components/general/Menu';
 import Footer from '../components/general/Footer';
+import { useTheme } from 'next-themes';
 
-export default () => {
+const Index = () => {
   const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
   
   return (
@@ -37,3 +38,6 @@ export default () => {
     </>
   )
 }
+
+Index.theme = 'light';
+export default Index;

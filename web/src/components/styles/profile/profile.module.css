@@ -280,6 +280,11 @@
     background-image: url(../../../../public/icons/menus/hamburger.png);
 }
 
+[data-theme="dark"] .mobile_page_explore,
+[data-theme="dark"] .mobile_page_settings {
+    filter: invert(100%);
+}
+
 .mobile_images {
     width: 80px;
     height: 80px;
@@ -359,6 +364,10 @@
     margin-bottom: 50px;
 }
 
+[data-theme="dark"] .mobile_filter {
+    background-color: rgba(0, 0, 0, .1);
+}
+
 .mobile_filter a {
     width: 250px;
     height: 100%;
@@ -390,6 +399,13 @@
 
 .mobile_filter_media {
     background-image: url(../../../../public/icons/menus/collage.png);
+}
+
+[data-theme="dark"] .mobile_filter_profile,
+[data-theme="dark"] .mobile_filter_shares,
+[data-theme="dark"] .mobile_filter_connections,
+[data-theme="dark"] .mobile_filter_media {
+    filter: invert(100%);
 }
 
 .mobile_lightshot {

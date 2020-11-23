@@ -9,7 +9,7 @@ import styles from '../components/styles/support.module.css';
 import Nav from '../components/general/Menu';
 import Footer from '../components/general/Footer';
 
-export default () => {
+const Terms = () => {
   return (
     <>
       <title>Pebblo - Terms and Conditions</title>
@@ -90,3 +90,6 @@ export default () => {
     </>
   )
 }
+
+Terms.theme = 'light';
+export default Terms;

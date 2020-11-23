@@ -17,6 +17,16 @@
                                                                                                                         --theme-b: #4f60bb; */
 }
 
+[data-theme="dark"] {
+  --color: white;
+  --background: #111214;
+}
+
+[data-theme="navy"] {
+  --color: white;
+  --background: #0b101c;
+}
+
 ::-webkit-scrollbar {
   width: 13px;
   height: 20px;
@@ -24,7 +34,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #cac8c8;
+  background-color: #8f8f8f;
   border: solid 4px var(--background);
   border-radius: 100px;
 }
@@ -41,6 +51,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: var(--color);
   background-color: var(--background);
   font-family: Montserrat, sans-serif;
 }
@@ -48,6 +59,7 @@ body {
 a {
   text-decoration: none;
   color: var(--links);
+  outline: none;
 }
 
 h1,

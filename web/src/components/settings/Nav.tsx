@@ -5,6 +5,7 @@ import Link from 'next/link';
 import core from '@pebblo/core';
 import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import { useState, useEffect } from 'react';
+import { getAvatar } from '../utils';
 
 const Topnav = () => {
     const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
@@ -43,7 +44,7 @@ const Topnav = () => {
                 <div className={styles.settings_content}>
                     <Link href="/settings">
                         <a className={`${active === 'settings' ? styles.settings_active : ''}`}>
-                            {loggedIn ? <img className={styles.settings_avatar} src={current.avatar} alt=""/> : '' ? !loggedIn : '' }
+                            {loggedIn ? <img className={styles.settings_avatar} src={getAvatar('andre')} alt=""/> : '' ? !loggedIn : '' }
                             <span>Edit Profile</span>
                         </a>
                     </Link>

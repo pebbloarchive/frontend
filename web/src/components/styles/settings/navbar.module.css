@@ -37,6 +37,12 @@
     opacity: .3;
 }
 
+[data-theme="dark"] .settings_content img,
+[data-theme="navy"] .settings_content img {
+    filter: invert(100%);
+    opacity: .4;
+}
+
 .settings_avatar {
     width: 35px !important;
     height: 35px !important;
@@ -46,7 +52,11 @@
 }
 
 .settings_content a:hover {
-    background: linear-gradient(to right, #f8f8f8, transparent);
+    background: linear-gradient(to right, #f0f0f0, transparent);
+}
+
+[data-theme="dark"] .settings_content a:hover {
+    background: linear-gradient(to right, #242426, transparent);
 }
 
 .settings_content button {
@@ -77,9 +87,18 @@
     background-image: url(https://cdn.discordapp.com/attachments/596156721928470547/746976276216152104/chevron-left.png);
 }
 
+[data-theme="dark"] .settings_home,
+[data-theme="navy"] .settings_home {
+    filter: invert(100%);
+}
+
 .settings_active {
     background-color: rgba(0, 0, 0, 0.050) !important;
     border-left: solid 5px rgba(0, 0, 0, 0.400);
+}
+
+[data-theme="dark"] .settings_active  {
+    background-color: rgba(0, 0, 0, 0.200) !important;
 }
 
 .settings_active img {

@@ -1,5 +1,6 @@
 .explore {
     margin-left: 150px;
+    margin-bottom: 100px;
 }
 
 .content {
@@ -47,6 +48,7 @@
     left: 50%;
     /* width: 0; */
     transform: translate(-50%, -50%);
+    margin-left: -50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +102,11 @@
     display: none;
 }
 
-
+.right {
+    position: relative;
+    left: 100vh;
+    background-color: saddlebrown;
+}
 
 @media only screen and (max-width:1400px) {
     .explore {

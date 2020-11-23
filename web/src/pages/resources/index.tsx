@@ -10,7 +10,7 @@ import Nav from '../../components/general/Menu';
 import Footer from '../../components/general/Footer';
 import Head from 'next/head';
 
-export default () => {
+const Resources = () => {
   return (
     <>
     <Head>
@@ -67,3 +67,6 @@ export default () => {
     </>
   )
 }
+
+Resources.theme = 'light';
+export default Resources;

@@ -9,7 +9,7 @@ import Content from '../../components/general/Features/Pebblo'
 import Footer from '../../components/general/Footer';
 import Nav from '../../components/general/Menu';
 
-export default () => {
+const Branding = () => {
   return (
     <>
     <title>Branding | Pebblo</title>
@@ -19,3 +19,6 @@ export default () => {
     </>
   )
 }
+
+Branding.theme = 'light';
+export default Branding;

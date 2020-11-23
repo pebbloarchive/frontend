@@ -13,5 +13,5 @@ return (
        </>
     )
 }
-
+Page.theme = 'light'
 export default Page;

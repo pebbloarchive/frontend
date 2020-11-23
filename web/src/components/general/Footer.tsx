@@ -1,3 +1,4 @@
+
 import { usePulse } from 'pulse-framework';
 import core from '@pebblo/core';
 import styles from '../styles/landing.module.css'
@@ -56,10 +57,10 @@ const Topnav = () => {
 
                 <div className={styles.footer_banner}>
                     <div className={styles.footer_banner_content}>
-                        <div className={styles.footer_banner_title}>Switch to a business account today and grow your community</div>
-                        <p className={styles.footer_banner_message}>Business accounts are made to help with <a href="/" target="_blank" rel="noopener noreferrer">SEO &amp; Marketing</a> so your page get found over the internet and on our website.</p>
+                        <div className={styles.footer_banner_title}>Our <span>Public BETA</span> is now live! Create your first account on <span>Pebblo</span>!</div>
+                        <p className={styles.footer_banner_message}>Share your story with the world, create a post on your timeline, follow and interact with your friends in a simple way by using Pebblo.</p>
                             <div className={styles.footer_banner_button}>
-                                <Link href="/features/business"><a href="/features/business">Upgrade my plan</a></Link>
+                                <Link href="/create"><a href="/create">Start Now!</a></Link>
                             </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ import Content from '../../components/general/Features/Business'
 import Footer from '../../components/general/Footer';
 import Nav from '../../components/general/Menu';
 
-export default () => {
+const Business = () => {
   return (
     <>
     <title>Business | Pebblo</title>
@@ -19,3 +19,6 @@ export default () => {
     </>
   )
 }
+
+Business.theme = 'light';
+export default Business;

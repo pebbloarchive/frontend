@@ -1,22 +1,20 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../../styles/profile/home/feed.module.css';
-import { getAvatar } from '../../../utils';
+import styles from '../../components/styles/profile/home/feed.module.css';
+import { getAvatar } from '../utils';
 
-const Page = () => {
+const Page = (): JSX.Element => {
     return (
-
-        // https://cdn.dribbble.com/users/686119/screenshots/7078221/media/82ce6a365b94f26ba2f3d5174306d4ef.png
         <>
             <div className={styles.feed}>
 
                 <div className={styles.post}>
                     <div className={styles.heading}>
                         <Link href=""><a href="" className={styles.heading_author}>
-                            <img src={getAvatar('pebblo')} alt="" className={styles.heading_author_avatar}/>
+                            <img src="https://cdn.discordapp.com/avatars/583925649807245322/a_16cd3afea657534ec9ad356789d1152c.gif?size=1024" alt="" className={styles.heading_author_avatar}/>
                                 <section>
-                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Pebblo</h1>
-                                    <p className={styles.heading_author_username}>@Pebblo</p>
+                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Kyle</h1>
+                                    <p className={styles.heading_author_username}>@Kyle</p>
                                 </section>
                         </a></Link>
                         <button className={styles.heading_more}>
@@ -26,8 +24,7 @@ const Page = () => {
 
                     <div className={styles.content}>
                         <div className={styles.caption}>
-                            <p>Our Public BETA is now live! Create your first account on Pebblo!</p>
-                            <p>Share your story with the world, create a post on your timeline, follow and interact with your friends in a simple way by using Pebblo.</p>
+                            <p>Sometimes I like to go in the garden and pretend that I'm a carrot.</p>
                         </div>
                         {/* <div className={styles.media}>
                             <img src="https://cdn.discordapp.com/attachments/596156721928470547/778419422738120715/apps.17555.14449609212792458.454eef9f-a0a5-4522-b519-e81aa7b40d6e.jpg" alt=""/>
@@ -71,45 +68,96 @@ const Page = () => {
                     </label>
                 </div>
 
-                <div className={styles.left}>
+                <div className={styles.right}>
                     <div className={styles.card}>
-                        <div className={styles.card_title}></div>
+                        <h1 className={styles.card_title}>Trending</h1>
+                        <div className={styles.card_content}>
+                            
+                            <Link href=""><a href="" className={styles.card_tag}>
+                                <p className={styles.card_tag_count}>
+                                    <span>[count]</span>
+                                    &middot;
+                                    Posts
+                                </p>
+                                <h1 className={styles.card_tag_item}>object[Object]</h1>
+                            </a></Link>
+                            
+                            <Link href=""><a href="" className={styles.card_tag}>
+                                <p className={styles.card_tag_count}>
+                                    <span>[count]</span>
+                                    &middot;
+                                    Posts
+                                </p>
+                                <h1 className={styles.card_tag_item}>object[Object]</h1>
+                            </a></Link>
+                            
+                            <Link href=""><a href="" className={styles.card_tag}>
+                                <p className={styles.card_tag_count}>
+                                    <span>[count]</span>
+                                    &middot;
+                                    Posts
+                                </p>
+                                <h1 className={styles.card_tag_item}>object[Object]</h1>
+                            </a></Link>
+                            
+                            <Link href=""><a href="" className={styles.card_tag}>
+                                <p className={styles.card_tag_count}>
+                                    <span>[count]</span>
+                                    &middot;
+                                    Posts
+                                </p>
+                                <h1 className={styles.card_tag_item}>object[Object]</h1>
+                            </a></Link>
+                            
+                            <Link href=""><a href="" className={styles.card_tag}>
+                                <p className={styles.card_tag_count}>
+                                    <span>[count]</span>
+                                    &middot;
+                                    Posts
+                                </p>
+                                <h1 className={styles.card_tag_item}>object[Object]</h1>
+                            </a></Link>
+
+                        </div>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h1 className={styles.card_title}>People to follow</h1>
                         <div className={styles.card_content}>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src="https://i.redd.it/w0lmb8i7odo51.png" className={styles.card_avatar}/>
+                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
-                                        Among Us</h1>
-                                    <h1 className={styles.card_username}>@AmongUs</h1>
+                                        Andre</h1>
+                                    <h1 className={styles.card_username}>@Andre</h1>
                                 </section>
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src="https://i.redd.it/w0lmb8i7odo51.png" className={styles.card_avatar}/>
+                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
-                                        Among Us</h1>
-                                    <h1 className={styles.card_username}>@AmongUs</h1>
+                                        Andre</h1>
+                                    <h1 className={styles.card_username}>@Andre</h1>
                                 </section>
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src="https://i.redd.it/w0lmb8i7odo51.png" className={styles.card_avatar}/>
+                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
-                                        Among Us</h1>
-                                    <h1 className={styles.card_username}>@AmongUs</h1>
+                                        Andre</h1>
+                                    <h1 className={styles.card_username}>@Andre</h1>
                                 </section>
                             </a></Link>
 
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </>

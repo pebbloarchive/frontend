@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Router from 'next/router';
 import { AppProps } from 'next/app';
-import core from '@pebblo/core'
+import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework'
 import * as Sockets from '../components/websocket';
 import API from '@pebblo/core/lib/api'
 import '../components/styles/main.css';
 import { Log } from '../components/utils';
+import { ThemeProvider } from 'next-themes'
 import styles from '../components/styles/auth.module.css'
 
 
@@ -51,7 +52,12 @@ const Pebblo = ({ Component, pageProps }: AppProps) => {
       </div>
     </div>
 
-    : <Component {...pageProps} /> }
+    : 
+    // @ts-ignore
+    <ThemeProvider forcedTheme={Component.theme || undefined}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+    }
     </>
   )
 }

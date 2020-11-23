@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Router from 'next/router'
 import { Log } from '../components/utils';
 import styles from '../components/styles/support.module.css';
+import { useTheme } from 'next-themes';
 
 // COMPONENTS
 import Nav from '../components/general/Menu'
@@ -9,7 +10,7 @@ import Footer from '../components/general/Footer'
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default () => {
+const Contact = () => {
   return (
     <>
     <Head>
@@ -61,5 +62,5 @@ export default () => {
   )
 }
 
-
-// my terrible contact page :')
+Contact.theme = 'light';
+export default Contact;

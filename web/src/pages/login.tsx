@@ -1,12 +1,12 @@
 import { usePulse } from 'pulse-framework'
-import core from '@pebblo/core'
+import core from '@pebblo/core';
 import Router from 'next/router';
 import Head from 'next/head';
 import React, { useState } from 'react';
 import styles from '../components/styles/auth.module.css'
 import Link from 'next/link';
 
-export default function Page() {
+const Login = () => {
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
@@ -53,3 +53,6 @@ export default function Page() {
     </>
   )
 }
+
+Login.theme = 'light';
+export default Login;

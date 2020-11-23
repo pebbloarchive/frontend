@@ -12,6 +12,18 @@
     margin-bottom: 100px;
 }
 
+.content hr {
+    opacity: .2;
+    background-color: #555555;
+    display: block;
+    height: 1px;
+    border: none;
+}
+
+[data-theme="dark"] .content {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .content:nth-child(1) {
     margin-top: 100px;
 }
@@ -106,6 +118,14 @@
     background-color: rgba(0, 0, 0, 0.050);
     border-radius: 5px;
     color: rgba(0, 0, 0, 0.700);
+}
+
+[data-theme="dark"] .content input[type="text"],
+[data-theme="dark"] .content input[type="email"],
+[data-theme="dark"] .content input[type="password"],
+[data-theme="dark"] .content textarea {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.500);
 }
 
 .content input[type="email"] {
@@ -328,6 +348,10 @@
     background-color: rgba(0, 0, 0, 0.208);
     /* border-radius: 50%; */
     transition: .3s;
+}
+
+[data-theme="dark"] .checkbox_container span {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .checkbox_container:hover span {

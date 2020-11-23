@@ -158,6 +158,22 @@
     margin-bottom: 20px;
 }
 
+.footer_banner_title span {
+    position: relative;
+    display: inline-block;
+}
+
+.footer_banner_title span::before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 10px;
+}
+
 .footer_banner_message {
     font-size: 0.8em;
     opacity: .8;
