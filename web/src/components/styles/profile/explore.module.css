@@ -1,5 +1,5 @@
 .explore {
-    margin-left: 150px;
+    margin-left: var(--sidebar-width);
     margin-bottom: 100px;
 }
 
@@ -40,6 +40,17 @@
     background-position: bottom;
     border-bottom-left-radius: 50px;
     color: white;
+}
+
+[data-theme='dark'] .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 50px;
 }
 
 .header_search {

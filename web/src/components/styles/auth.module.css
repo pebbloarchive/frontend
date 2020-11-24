@@ -68,13 +68,13 @@
 }
 
 .auth_form input {
-    font-size: 20px;
+    font-size: 1em;
     padding: 20px 40px 20px 65px;
     display: block;
     width: 400px;
     margin-bottom: 20px;
     border-radius: 100px;
-    background-color: #f8f8f8;
+    background-color: #eeeded;
 
     background-repeat: no-repeat;
     background-size: 25px;
@@ -94,13 +94,13 @@
 }
 
 .auth_form_password {
-    background-image: url(https://cdn.discordapp.com/attachments/573688434380636175/746945746259148841/key.png);
+    background-image: url(/icons/lock.png);
 }
 
 .auth_form input[type="submit"] {
     text-align: center;
     padding: 20px 0;
-    width: 20%;
+    width: 150px;
     background: linear-gradient(to right, var(--theme-a), var(--theme-b));
     color: white;
     font-weight: 600;
@@ -366,6 +366,90 @@
     border-radius: 100px !important;
 }
 
+.post_loader {
+    position: relative;
+    width: 540px;
+    background-color: rgba(255, 255, 255, 1);
+    display: block;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 2px 2px 12px rgba(163, 163, 163, 0.178);
+    margin-bottom: 25px;
+    opacity: .8;
+    transition: .3s;
+    background: linear-gradient( left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+}
+
+[data-theme='dark'] .post_loader {
+    background-color: #18181a;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.39);
+}
+
+.post_loader_author {
+    display: flex;
+    align-items: center;
+}
+
+.post_loader span {
+    background-color: whitesmoke;
+}
+
+[data-theme='dark'] .post_loader span {
+    background-color: #2b2a2a;
+}
+
+.post_loader_avatar {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: whitesmoke;
+    display: block;
+    border-radius: 5px;
+}
+
+.post_loader_name,
+.post_loader_username {
+    display: block;
+    width: 200px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.post_loader_username {
+    margin-top: 10px;
+    width: 150px;
+}
+
+.post_loader_description {
+    margin-top: 25px;
+}
+
+.post_loader_description span {
+    width: 100%;
+    display: block;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.post_loader_description span:nth-last-child(1) {
+    width: 50%;
+}
+
+@keyframes shimmer {
+    0% {
+      background-position: -468px 0;
+    }
+    100% {
+      background-position: 468px 0;
+    }
+  }
+
 @media only screen and (max-width:1600px) {
 
     .auth_title {
@@ -385,7 +469,6 @@
         font-size: 14px;
         padding: 15px 0;
         margin-top: 40px;
-        width: 10%;
     }
 }
 

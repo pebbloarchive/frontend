@@ -69,11 +69,13 @@ const Page = () => {
                             </div>
                         </form>
                     </label>
+
+                    <span className={styles.timeStamp}>Just Now</span>
                 </div>
 
                 <div className={styles.left}>
                     <div className={styles.card}>
-                        <div className={styles.card_title}></div>
+                        <div className={styles.card_title}>Potential Friends</div>
                         <div className={styles.card_content}>
 
                             <Link href=""><a href="" className={styles.card_profile}>
@@ -104,6 +106,23 @@ const Page = () => {
                                         Among Us</h1>
                                     <h1 className={styles.card_username}>@AmongUs</h1>
                                 </section>
+                            </a></Link>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.right}>
+                    <div className={styles.card}>
+                        <div className={styles.card_title}>Latest News</div>
+                        <div className={styles.card_content}>
+
+                            <Link href=""><a href="" className={styles.card_news}>
+                                <h1 className={styles.card_news_title}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            </a></Link>
+
+                            <Link href=""><a href="" className={styles.card_news}>
+                                <h1 className={styles.card_news_title}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi culpa cumque consequuntur reiciendis!</h1>
                             </a></Link>
 
                         </div>

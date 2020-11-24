@@ -35,7 +35,7 @@ const Login = () => {
             className={styles.auth_form_email}
             type="email"
             name="login_email"
-            placeholder="Email Address"
+            placeholder="Username or Email Address"
             required
             onChange={(change) => { setEmail(change.target.value) }}
           />

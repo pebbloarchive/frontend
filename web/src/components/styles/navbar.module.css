@@ -468,10 +468,10 @@
 }
 
 .upload {
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translate(-50%);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    /* transform: translate(-50%); */
     width: 50px !important;
     height: 50px !important;
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));

@@ -7,7 +7,7 @@
 
 
   /* Menu */
-  --sidebar-width: 150px;
+  --sidebar-width: 100px;
 
 
                                                                                                                         /* --legal-content: 700px;
@@ -19,7 +19,7 @@
 
 [data-theme="dark"] {
   --color: white;
-  --background: #111214;
+  --background: #0e0e10;
 }
 
 [data-theme="navy"] {
@@ -54,6 +54,7 @@ body {
   color: var(--color);
   background-color: var(--background);
   font-family: Montserrat, sans-serif;
+  transition: .3s;
 }
 
 a {
