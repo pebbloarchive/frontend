@@ -1,0 +1,295 @@
+.heading {
+    margin-top: 100px;
+    height: 400px;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading section {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.heading h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 4em;
+    margin-bottom: 50px;
+    background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading input[type="search"] {
+    display: block;
+    padding: 0 80px 0 70px;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 100px;
+    background-color: #f3f1f1;
+
+    background-repeat: no-repeat;
+    background-position: 30px 50%;
+    background-size: 25px;
+    background-image: url(https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png);
+}
+
+.heading input[type="submit"] {
+    height: 60px;
+    width: 60px;
+    margin-left: -80px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 600;
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    cursor: pointer;
+}
+
+.categories {
+    text-align: center;
+}
+
+.categories h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* .categories_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
+
+.categories_item {
+    position: relative;
+    display: inline-block;
+    margin: 0 25px;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.categories_item::before {
+    top: 0;
+}
+
+.categories_item::after {
+    bottom: 0;
+}
+
+
+.categories_item::before {
+    left: 0;
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+}
+
+.categories_item::after {
+    right: 0;
+    background: radial-gradient(circle at top right, var(--theme-a), var(--theme-b));
+}
+
+.categories_item::before,
+.categories_item::after {
+    content: "";
+    width: 0;
+    height: 5px;
+    border-radius: 100px;
+    transition: .2s;
+}
+
+.categories_item:hover::before,
+.categories_item:hover::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+}
+.categories_item section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.categories_item h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.5em;
+    background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.categories_item p {
+    color: var(--color);
+    font-weight: 600;
+    opacity: .4;
+}
+
+.contact {
+    position: relative;
+    margin: 250px auto;
+    width: 800px;
+}
+
+.contact_title {
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.contact_note {
+    font-size: 1em;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+.contact_note a {
+    font-weight: 600;
+}
+
+.contact input {
+    display: block;
+    width: 40%;
+    background-color: #f3f1f1;
+    border-radius: 100px;
+    font-size: 0.8em;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+}
+
+.contact input[type="submit"] {
+    display: block;
+    width: 30%;
+    height: 50px;
+    margin: 30px 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1em;
+    color: white;
+    background: linear-gradient(to right, var(--theme-a), var(--theme-b));
+}
+
+.contact hr {
+    border: none;
+    background-color: #f3f1f1;
+    padding: 1px;
+    margin: 50px 30px;
+}
+
+.contact_select {
+    display: block;
+    width: 30%;
+    padding: 20px;
+    border: none;
+    background-color: #f3f1f1;
+}
+
+.contact textarea {
+    display: block;
+    width: 100%;
+    background-color: #f3f1f1;
+    margin-top: 50px;
+    padding: 25px;
+    resize: vertical;
+}
+
+.legal_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
+    height: 450px;
+    background: url(../../../public/images/svg/background.svg) no-repeat, radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    background-position: bottom;
+    background-size: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+
+.legal_header section {
+    text-align: center;
+}
+
+.legal_header h1 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.legal_header p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.legal_header span {
+    opacity: .8;
+    font-weight: normal;
+}
+
+.legal {
+    width: 700px;
+    margin: 150px 0 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.legal_title {
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    margin-top: 100px;
+    opacity: 0.8;
+}
+
+.legal_title:nth-child(1) {
+    margin-top: 0;
+}
+
+.legal_note {
+    display: block;
+    margin: 30px 0;
+    font-weight: normal;
+    font-size: 1em;
+    opacity: 0.7;
+}
+
+.legal_note hr {
+    display: block;
+    opacity: 0;
+    margin: 25px 0;
+}
+
+.legal_unlist {
+    margin: 0;
+    list-style-type: decimal-leading-zero;
+}
+
+.legal_unlist_item {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.legal_unlist_item p {
+    color: #808080;
+    font-weight: normal;
+}
+
+.legal_unlist_item hr {
+    margin-block: 15px 0;
+    opacity: 0;
+}
