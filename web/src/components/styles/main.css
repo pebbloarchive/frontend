@@ -4,6 +4,7 @@
   --theme-a: #ff6e20;
   --theme-b: #ff0067;
   --links: #3d6a9b;
+  --scrollbar: #d3d3d3;
 
 
   /* Menu */
@@ -20,6 +21,7 @@
 [data-theme="dark"] {
   --color: white;
   --background: #0e0e10;
+  --scrollbar: #58585a;
 }
 
 [data-theme="navy"] {
@@ -34,7 +36,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #8f8f8f;
+  background-color: var(--scrollbar);
   border: solid 4px var(--background);
   border-radius: 100px;
 }

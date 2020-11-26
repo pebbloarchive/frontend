@@ -227,7 +227,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,7 +251,7 @@
 
 .links {
     position: absolute;
-    top: 140px;
+    top: 100px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -369,12 +369,12 @@
 
 .avatar {
     position: relative;
-    top: 50px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%);
     width: 55px;
     height: 55px;
-    background-color: transparent;
+    background-color: var(--background);
 }
 
 .avatar img {
@@ -392,7 +392,7 @@
     position: absolute;
     text-align: left;
     top: 0;
-    left: 80px;
+    left: 76px;
     min-width: 160px;
     /* background: url(../../../public/images/svg/background.svg) no-repeat, linear-gradient(to right, var(--theme-a),var(--theme-b));
     background-position: bottom;

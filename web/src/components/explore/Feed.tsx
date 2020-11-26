@@ -9,130 +9,6 @@ const Page = (): JSX.Element => {
         <>
             <div className={styles.feed}>
 
-<div className={styles.post}>
-    <div className={styles.heading}>
-        <Link href=""><a href="" className={styles.heading_author}>
-            <img src="https://cdn.discordapp.com/avatars/583925649807245322/a_16cd3afea657534ec9ad356789d1152c.gif?size=1024" alt="" className={styles.heading_author_avatar}/>
-                <section>
-                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Kyle</h1>
-                    <p className={styles.heading_author_username}>@Kyle</p>
-                </section>
-        </a></Link>
-        <button className={styles.heading_more}>
-            <span className={styles.heading_ellipsis}></span>
-        </button>
-    </div>
-
-    <div className={styles.content}>
-        <div className={styles.caption}>
-            <p>Sometimes I like to go in the garden and pretend that I'm a carrot.</p>
-        </div>
-        {/* <div className={styles.media}>
-            <img src="https://cdn.discordapp.com/attachments/596156721928470547/778419422738120715/apps.17555.14449609212792458.454eef9f-a0a5-4522-b519-e81aa7b40d6e.jpg" alt=""/>
-        </div> */}
-    </div>
-
-    <div className={styles.interaction}>
-        <Link href=""><a href="">
-            <img src="/icons/comment.png" alt=""/>
-            <span>0</span>
-        </a></Link>
-        <button>
-            <img src="/icons/heart.png" alt=""/>
-            <span>0</span>
-        </button>
-        <button>
-            <img src="/icons/share.png" alt=""/>
-            <span>0</span>
-        </button>
-    </div>
-
-    <label className={styles.post_add_comment}>
-        <img src={getAvatar('andre')} alt="" className={styles.post_add_comment_avatar}/>
-        <form className={styles.post_add_comment_form}>
-            <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Write a comment..."
-            />
-            <div className={styles.post_add_comment_interaction}>
-                <label>
-                    <img src="/icons/blushing.png" alt=""/>
-                </label>
-                <label>
-                    <img src="/icons/image.png" alt=""/>
-                    <input type="file" name="" id=""/>
-                </label>
-            </div>
-        </form>
-    </label>
-
-    <span className={styles.timeStamp}>Just Now</span>
-</div>
-
-<div className={styles.post}>
-    <div className={styles.heading}>
-        <Link href=""><a href="" className={styles.heading_author}>
-            <img src="https://cdn.discordapp.com/avatars/583925649807245322/a_16cd3afea657534ec9ad356789d1152c.gif?size=1024" alt="" className={styles.heading_author_avatar}/>
-                <section>
-                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Kyle</h1>
-                    <p className={styles.heading_author_username}>@Kyle</p>
-                </section>
-        </a></Link>
-        <button className={styles.heading_more}>
-            <span className={styles.heading_ellipsis}></span>
-        </button>
-    </div>
-
-    <div className={styles.content}>
-        <div className={styles.caption}>
-            <p>Sometimes I like to go in the garden and pretend that I'm a carrot.</p>
-        </div>
-        {/* <div className={styles.media}>
-            <img src="https://cdn.discordapp.com/attachments/596156721928470547/778419422738120715/apps.17555.14449609212792458.454eef9f-a0a5-4522-b519-e81aa7b40d6e.jpg" alt=""/>
-        </div> */}
-    </div>
-
-    <div className={styles.interaction}>
-        <Link href=""><a href="">
-            <img src="/icons/comment.png" alt=""/>
-            <span>0</span>
-        </a></Link>
-        <button>
-            <img src="/icons/heart.png" alt=""/>
-            <span>0</span>
-        </button>
-        <button>
-            <img src="/icons/share.png" alt=""/>
-            <span>0</span>
-        </button>
-    </div>
-
-    <label className={styles.post_add_comment}>
-        <img src={getAvatar('andre')} alt="" className={styles.post_add_comment_avatar}/>
-        <form className={styles.post_add_comment_form}>
-            <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Write a comment..."
-            />
-            <div className={styles.post_add_comment_interaction}>
-                <label>
-                    <img src="/icons/blushing.png" alt=""/>
-                </label>
-                <label>
-                    <img src="/icons/image.png" alt=""/>
-                    <input type="file" name="" id=""/>
-                </label>
-            </div>
-        </form>
-    </label>
-
-    <span className={styles.timeStamp}>Just Now</span>
-</div>
-
                 <div className={styles.post}>
                     <div className={styles.heading}>
                         <Link href=""><a href="" className={styles.heading_author}>
@@ -146,6 +22,7 @@ const Page = (): JSX.Element => {
                             <span className={styles.heading_ellipsis}></span>
                         </button>
                     </div>
+                    <span className={styles.timeStamp}>Just Now</span>
 
                     <div className={styles.content}>
                         <div className={styles.caption}>
@@ -191,8 +68,13 @@ const Page = (): JSX.Element => {
                             </div>
                         </form>
                     </label>
+                    <div className={styles.post_buttons}>
+                        
+                        <Link href=""><a href="" className={styles.singlePost_link}>
+                            <img src="/icons/menus/ellipsis.png" alt=""/>
+                        </a></Link>
 
-                    <span className={styles.timeStamp}>Just Now</span>
+                    </div>
                 </div>
 
                 <div className={styles.left}>

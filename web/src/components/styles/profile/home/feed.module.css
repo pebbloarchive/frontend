@@ -282,11 +282,63 @@
 
 .timeStamp {
     position: absolute;
-    top: 100%;
-    left: 30px;
+    top: 26px;
+    right: 80px;
     margin: 5px 0;
     font-size: 0.7em;
     opacity: .8;
+}
+
+.post_buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.post_buttons a,
+.post_buttons button {
+    margin-bottom: 5px;
+    position: relative;
+    display: block;
+    border-radius: 50%;
+}
+
+.singlePost_link {
+    width: 35px;
+    height: 35px;
+}
+
+.singlePost_link img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+}
+
+[data-theme='dark'] .singlePost_link img {
+    filter: invert(100%);
+}
+
+.singlePost_link:nth-child(1) img {
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 60%;
+}
+
+.singlePost_link {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    transition: .3s;
+}
+
+[data-theme='dark'] .singlePost_link {
+    background-color: #18181a;
+}
+
+.singlePost_link:hover {
+    background-color: var(--background);
 }
 
 .right,

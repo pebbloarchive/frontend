@@ -23,11 +23,18 @@ const Index = () => {
       </div>
       <div className={styles.landing}>
           <span>Share your story on</span>
-          <button>Pebblo</button>
-          <Link href="/features"><a href="/features">New to Pebblo?</a></Link>
-          { loggedIn ? '' : 
-          <Link href="/login"><a href="/login" className={styles.landing_login}>Have an account?</a></Link>
-           }
+          <i>Pebblo</i>
+          { loggedIn ?
+          <div>
+            <Link href="/explore"><a href="/explore">Explore Pebblo</a></Link>
+            <Link href="/andre"><a href="/andre" className={styles.landing_login}>My Profile</a></Link>
+          </div>
+          :
+          <div> 
+            <Link href="/features"><a href="/features">New to Pebblo?</a></Link>
+            <Link href="/login"><a href="/login" className={styles.landing_login}>Have an account?</a></Link>
+          </div>
+          }
       </div>
 
       <div className={styles.content}>

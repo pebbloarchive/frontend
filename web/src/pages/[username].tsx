@@ -13,8 +13,8 @@ import NotFound from './404';
 import Nav from '../components/general/Nav'
 import Posts from '../components/general/Posts';
 import Suspended from '../components/general/Suspended';
+import Feed from '../components/general/profile/home/Feed';
 import styles from '../components/styles/profile/profile.module.css';
-import Logged from '../components/general/Logged';
 
 export default ({ user }: {
   user: UserProps,
@@ -82,46 +82,66 @@ export default ({ user }: {
         {/* <meta name="og:site_name" content={`Followers             Posts\n${user.followersCount}             0`}/> */}
       </Head>
       <Nav />
-      <div className={styles.content}>
-        <div className={styles.profile}>
-              <div className={styles.profile_images}>
-                  <img className={styles.avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt=""/>
-                  { user.permissions.includes('verified') ? (<img className={styles.badge} src="icons/verified.png" alt=""/>) : '' }
-              </div>
-              <div className={styles.names}>
-                  <div className={user.permissions.includes('admin') ? styles.names_content_staff : styles.names_content }>
-                      <h1>
-                        {/* { user.permissions.includes('admin') ? <img src="icons/developer.png" alt=""/> : '' } */}
-                        {user.name}</h1>
-                      <p>@{user.username}</p>
-                  </div>
-              </div>
-              <div className={styles.bio}>
-                  <p>{user.description}</p>
-              </div>
-          </div>
-      </div>
 
-      <div className={styles.additional_information}>
-          <div className={styles.statistics}>
-              <a href="">
-                  <span>{user.followersCount}</span>
-                  <h3>Followers</h3>
-              </a>
-              <a href="">
-                  {/* BY DEFAULT >> CHANGE TO FOLLOWING */}
-                  <span>{user.followingCount}</span>
-                  {/* <h3>Subscribers</h3> */}
-                  <h3>Following</h3>
-              </a>
+
+
+    <div className={styles.content}>
+      <div className={styles.profile}>
+
+        <div className={styles.information}>
+          <div className={styles.avatar}>
+            <img src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt={`${current.name} || ${current.username}`}/>
           </div>
-          <div className={styles.interaction}>
-              { process.browser && Router.route === `/${current.username}` ? <Button /> : <Insights /> }
-              {/* <a href="" className={styles.rewards_account}><strong>
-                Rewards
-              </strong></a> */}
+        </div>
+        <div className={styles.about}>
+          <h1 className={styles.name}>{user.name}</h1>
+          <h1 className={styles.username}>@{user.username}</h1>
+          <p className={styles.description}>{user.description}</p>
+        </div>
+        <div className={styles.left}>
+          <div className={styles.card}>
+
+              <div className={styles.card_content}>
+                <div className={styles.statistics}>
+                  <Link href=""><a href="">
+                    <span>{user.followersCount}</span>
+                    <h3>Followers</h3>
+                  </a></Link>
+                  <Link href=""><a href="">
+                    <span>{user.followingCount}</span>
+                    <h3>Following</h3>
+                  </a></Link>
+                </div>
+              </div>
+
           </div>
+        </div>
+        <div className={styles.right}>
+          <div className={styles.card}>
+
+              <div className={styles.card_content}>
+                <div className={styles.filter}>
+                    { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
+                  <a href="">
+                    <img src="/icons/envelope.png" alt=""/>
+                    Message
+                  </a>
+                  <button>
+                    <img src="/icons/invisible.png" alt=""/>
+                    Block
+                  </button>
+                  <button>
+                    <img src="/icons/flag.png" alt=""/>
+                    Report @{user.username}
+                  </button>
+                </div>
+              </div>
+
+          </div>
+        </div>
+
       </div>
+    </div>
 
 
 
@@ -172,16 +192,9 @@ export default ({ user }: {
         </div>
       </div>
 
-
-      {/* <div className={styles.mobile_lightshot}>
-      </div> */}
-
-
-      {
-        
-      }
-      
-      <Logged />
+    <div className={styles.content}>
+      <Feed/>
+    </div>
     </>
   )
 }

@@ -8,7 +8,7 @@ import core from '@pebblo/core';
 // Components
 import styles from '../components/styles/profile/home/content.module.css';
 import Nav from '../components/general/Nav';
-import Content from '../components/general/profile/home/Feed';
+import Content from '../components/general/profile/home/Home';
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);

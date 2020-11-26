@@ -7,20 +7,22 @@ const Page = (props: AccountUser) => {
   return (
     <>
       <div className={styles.content}>
+        <center>
         <div className={styles.profile}>
-            <div className={styles.profile_images}>
-            <img className={styles.avatar} src='https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png' alt=""/>
+            <div className={styles.avatar}>
+            <img src='https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png' alt=""/>
             </div>
+            <br/>
             <div className={styles.names}>
                 <div className={styles.names_content}>
-                  <h1>Suspended account</h1>
-                    <p>@{props.username}</p>
+                  <h1 className={styles.name}>Suspended account</h1>
+                  <p className={styles.username}>@{props.username}</p>
                 </div>
             </div>
-            <div className={styles.bio}>
+            <div className={styles.description}>
                 This account has been suspended due to multiple violations of our <a href="/terms">Terms of Service</a>.
             </div>
-        </div>
+        </div></center>
         </div>
       <Nav/>
     </>

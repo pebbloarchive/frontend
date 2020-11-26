@@ -79,6 +79,62 @@ const Page = () => {
                     </div>
                 </div>
 
+                <div className={styles.left}>
+                    <div className={styles.card}>
+                        <div className={styles.card_title}>Potential Friends</div>
+                        <div className={styles.card_content}>
+
+                            <Link href=""><a href="" className={styles.card_profile}>
+                                <img src="https://i.redd.it/w0lmb8i7odo51.png" className={styles.card_avatar}/>
+                                <section className={styles.card_user}>
+                                    <h1 className={styles.card_name}>
+                                        <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
+                                        Among Us</h1>
+                                    <h1 className={styles.card_username}>@AmongUs</h1>
+                                </section>
+                            </a></Link>
+
+                            <Link href=""><a href="" className={styles.card_profile}>
+                                <img src="https://i.redd.it/w0lmb8i7odo51.png" className={styles.card_avatar}/>
+                                <section className={styles.card_user}>
+                                    <h1 className={styles.card_name}>
+                                        <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
+                                        Among Us</h1>
+                                    <h1 className={styles.card_username}>@AmongUs</h1>
+                                </section>
+                            </a></Link>
+
+                            <Link href=""><a href="" className={styles.card_profile}>
+                                <img src="https://i.redd.it/w0lmb8i7odo51.png" className={styles.card_avatar}/>
+                                <section className={styles.card_user}>
+                                    <h1 className={styles.card_name}>
+                                        <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
+                                        Among Us</h1>
+                                    <h1 className={styles.card_username}>@AmongUs</h1>
+                                </section>
+                            </a></Link>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.right}>
+                    <div className={styles.card}>
+                        <div className={styles.card_title}>Latest News</div>
+                        <div className={styles.card_content}>
+
+                            <Link href=""><a href="" className={styles.card_news}>
+                                <h1 className={styles.card_news_title}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            </a></Link>
+
+                            <Link href=""><a href="" className={styles.card_news}>
+                                <h1 className={styles.card_news_title}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi culpa cumque consequuntur reiciendis!</h1>
+                            </a></Link>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </>
