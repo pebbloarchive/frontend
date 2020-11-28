@@ -24,8 +24,8 @@ const Topnav = () => {
     const Context = () => {
         return (
             <div className={styles.profile_dropup}>
-                <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
-                <Link href="/settings"><a href="/settings">Settings</a></Link>
+                <Link href="/andre"><a href="/andre">Your Profile</a></Link>
+                <Link href="/settings/privacy-safety"><a href="/settings/privacy-safety">Settings</a></Link>
                 <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
             </div>
         )

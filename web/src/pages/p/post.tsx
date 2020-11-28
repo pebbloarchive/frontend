@@ -1,46 +1,25 @@
 import React, { useState } from 'react';
 import Router from 'next/router'
+import { Log } from '../../components/utils';
+import Link from 'next/link';
+
+
+// Components
+import styles from '../../components/styles/support.module.css';
+import Nav from '../../components/general/Nav';
+import Post from '../../components/general/profile/Post/Single';
 import Head from 'next/head';
-import { AccountPosts } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
-import core from '@pebblo/core';
-import { usePulse } from 'pulse-framework';
-import { GetServerSideProps } from 'next';
 
-// components
-import styles from '../../components/styles/navbar.module.css';
-import Nav from '../../components/general/Nav'
-import Feed from '../../components/general/Posts'
-import NotFound from '../404';
-
-export default ({ post }: {
-  post: AccountPosts,
-}) => {
-  // const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-  if(!post || !post.id) return <NotFound/>
-    
+const Resources = () => {
   return (
     <>
-        <Head>
-          <title>{post.author_info.name}: "{post.content}" / Pebblo</title>
-            <meta property="og:type" content="website"/>
-            <meta name="description" content={post.content}/>
-            <meta name="subtitle" content={`${post.author_info.name} (@${post.author_info.username}), ${post.author_info.avatar}`}/>
-            <meta name="author" content={post.author_info.avatar}/>
-            <meta property="og:description" content={`${post.content}\n\n&copy; pebblo.org`}/>
-            <meta name="theme-color" content="#FF274E"/>
-        </Head>
-        <Nav/>
-      <Feed {...post}/>
+      <Head>
+        <title>[BETA] Single Post</title>
+      </Head>
+      <Post/>
+      <Nav/>
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async(context) => {
-  const postId = context.params.post as string;
-  const post = await core.accounts.routes.getPost(postId);
-  return {
-    props: {
-      post
-    }
-  }
-}
+export default Resources;

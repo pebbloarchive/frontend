@@ -16,7 +16,7 @@ const Page = () => {
                         <Link href=""><a href="" className={styles.heading_author}>
                             <img src={getAvatar('pebblo')} alt="" className={styles.heading_author_avatar}/>
                                 <section>
-                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Pebblo</h1>
+                                    <h1 className={styles.heading_author_name}><img src="/icons/verified.png" alt="" className={styles.heading_author_badge}/>Pebblo</h1>
                                     <p className={styles.heading_author_username}>@Pebblo</p>
                                 </section>
                         </a></Link>
@@ -64,7 +64,7 @@ const Page = () => {
                                     <img src="/icons/blushing.png" alt=""/>
                                 </label>
                                 <label>
-                                    <img src="/icons/image.png" alt=""/>
+                                    <img src="/icons/gallery.png" alt=""/>
                                     <input type="file" name="" id=""/>
                                 </label>
                             </div>

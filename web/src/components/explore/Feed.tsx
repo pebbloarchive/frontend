@@ -62,7 +62,7 @@ const Page = (): JSX.Element => {
                                     <img src="/icons/blushing.png" alt=""/>
                                 </label>
                                 <label>
-                                    <img src="/icons/image.png" alt=""/>
+                                    <img src="/icons/gallery.png" alt=""/>
                                     <input type="file" name="" id=""/>
                                 </label>
                             </div>

@@ -123,6 +123,14 @@
     margin-bottom: 10px;
 }
 
+.caption a {
+    font-weight: 600;
+}
+
+.caption a:hover {
+    text-decoration: underline;
+}
+
 [data-theme="dark"] .caption p {
     color: rgba(255, 255, 255, 0.7);
 }
@@ -501,4 +509,13 @@
     font-size: 0.8em;
     font-weight: 600;
     color: var(--color);
+}
+
+.single_content {
+    position: relative;
+    min-height: 100vh;
+    width: 1200px;
+    margin-left: var(--sidebar-width);
+    border-radius: 50px 0 0 50px;
+    background-color: #18181a;
 }

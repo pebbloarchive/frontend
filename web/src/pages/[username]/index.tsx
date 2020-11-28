@@ -5,16 +5,16 @@ import { usePulse } from 'pulse-framework';
 import { AccountUser as UserProps } from '@pebblo/core/lib/controllers/accounts/account.interfaces'
 import { useState } from 'react';
 import Router from 'next/router';
-import { Log } from '../components/utils';
+import { getAvatar, Log } from '../../components/utils';
 import Link from 'next/link';
 
 // Components
-import NotFound from './404';
-import Nav from '../components/general/Nav'
-import Posts from '../components/general/Posts';
-import Suspended from '../components/general/Suspended';
-import Feed from '../components/general/profile/home/Feed';
-import styles from '../components/styles/profile/profile.module.css';
+import NotFound from '../404';
+import Nav from '../../components/general/Nav';
+import Posts from '../../components/general/Posts';
+import Suspended from '../../components/general/Suspended';
+import Feed from '../../components/general/profile/home/Feed';
+import styles from '../../components/styles/profile/profile.module.css';
 
 export default ({ user }: {
   user: UserProps,
@@ -91,6 +91,19 @@ export default ({ user }: {
         <div className={styles.information}>
           <div className={styles.avatar}>
             <img src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt={`${current.name} || ${current.username}`}/>
+            
+            <div className={styles.badge}>
+              <div className={styles.verified}>
+                <span>Verified</span>
+              </div>
+              <div className={styles.support}>
+                <span>Support</span>
+              </div>
+              <div className={styles.developer}>
+                <span>Developer</span>
+              </div>
+            </div>
+
           </div>
         </div>
         <div className={styles.about}>
@@ -123,9 +136,18 @@ export default ({ user }: {
                 <div className={styles.filter}>
                     { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
                   <a href="">
+                    <img src="/icons/gallery.png" alt=""/>
+                    Gallery
+                  </a>
+                  <a href="">
+                    <img src="/icons/share.png" alt=""/>
+                    Shared Posts
+                  </a>
+                  <a href="">
                     <img src="/icons/envelope.png" alt=""/>
                     Message
                   </a>
+                  <br/>
                   <button>
                     <img src="/icons/invisible.png" alt=""/>
                     Block
@@ -134,6 +156,14 @@ export default ({ user }: {
                     <img src="/icons/flag.png" alt=""/>
                     Report @{user.username}
                   </button>
+                  <Link href="/settings"><a href="/settings">
+                    <img src="/icons/cog.png" alt=""/>
+                    Edit Profile
+                  </a></Link>
+                  <Link href="/logout"><a href="/logout">
+                    <img src="/icons/exit.png" alt=""/>
+                    Logout
+                  </a></Link>
                 </div>
               </div>
 

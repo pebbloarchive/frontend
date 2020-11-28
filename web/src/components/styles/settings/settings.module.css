@@ -239,13 +239,17 @@
     border-radius: 5px;
     text-align: left;
     color: var(--color);
-    border: solid 1px rgba(255, 255, 255, 0.500);
+    border: solid 1px rgba(255, 255, 255, 0.5);
     margin-bottom: 30px;
     display: block;
     padding: 30px 60px;
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: 20px;
+}
+
+[data-theme='dark'] .connections_items button {
+    border: solid 1px rgba(0, 0, 0, 0.5)
 }
 
 .connections_items button:nth-last-child(1) {

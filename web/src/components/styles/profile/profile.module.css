@@ -9,10 +9,9 @@
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    margin: 50px 0 150px 30px;
+    margin: 50px 0 70px 30px;
     margin-left: -20px;
     width: 600px;
-    border-radius: 15px;
 }
 
 .information {
@@ -172,6 +171,82 @@
 .name {
     font-size: 1.3em;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translate(0, -50%);
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.badge div {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+.badge span {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 10px;
+    font-size: 0.7em;
+    transform: translate(-50%);
+    background-color: #1e1f22;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.397);
+    color: #c7c7c7;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    animation: badge .3s;
+}
+
+.badge span::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e1f22 transparent transparent transparent;
+}
+
+.badge div:hover span {
+    display: block;
+}
+
+@keyframes badge {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.verified {
+    background-image: url(/icons/verified.png);
+    background-size: 130% !important;
+    margin-right: 5px;
+}
+
+.support {
+    background-image: url(/icons/premium.png);
+}
+
+.developer {
+    background-image: url(/icons/premium.png);
 }
 
 .username {

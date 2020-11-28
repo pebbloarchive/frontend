@@ -14,10 +14,10 @@ const Page = () => {
                 <span className={styles.timeStamp}>Just Now</span>
                     <div className={styles.heading}>
                         <Link href=""><a href="" className={styles.heading_author}>
-                            <img src={getAvatar('pebblo')} alt="" className={styles.heading_author_avatar}/>
+                            <img src={getAvatar('kyle')} alt="" className={styles.heading_author_avatar}/>
                                 <section>
-                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Pebblo</h1>
-                                    <p className={styles.heading_author_username}>@Pebblo</p>
+                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/> kyle</h1>
+                                    <p className={styles.heading_author_username}>@kyle</p>
                                 </section>
                         </a></Link>
                         <button className={styles.heading_more}>
@@ -27,12 +27,13 @@ const Page = () => {
 
                     <div className={styles.content}>
                         <div className={styles.caption}>
-                            <p>Our Public BETA is now live! Create your first account on Pebblo!</p>
-                            <p>Share your story with the world, create a post on your timeline, follow and interact with your friends in a simple way by using Pebblo.</p>
+                            <p>
+                                Like my <a href="">#NewProfile</a> for Pebblo?
+                            </p>
                         </div>
-                        {/* <div className={styles.media}>
-                            <img src="https://cdn.discordapp.com/attachments/596156721928470547/778419422738120715/apps.17555.14449609212792458.454eef9f-a0a5-4522-b519-e81aa7b40d6e.jpg" alt=""/>
-                        </div> */}
+                        <div className={styles.media}>
+                            <img src="https://i.gifer.com/2pJC.gif" alt=""/>
+                        </div>
                     </div>
 
                     <div className={styles.interaction}>
@@ -64,7 +65,7 @@ const Page = () => {
                                     <img src="/icons/blushing.png" alt=""/>
                                 </label>
                                 <label>
-                                    <img src="/icons/image.png" alt=""/>
+                                    <img src="/icons/gallery.png" alt=""/>
                                     <input type="file" name="" id=""/>
                                 </label>
                             </div>

@@ -20,13 +20,14 @@
 
 [data-theme="dark"] {
   --color: white;
+  --links: #5d8fc5;
   --background: #0e0e10;
   --scrollbar: #58585a;
 }
 
 [data-theme="navy"] {
   --color: white;
-  --background: #0b101c;
+  --background: #1a2131;
 }
 
 ::-webkit-scrollbar {
