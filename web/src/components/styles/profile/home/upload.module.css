@@ -10,10 +10,15 @@
     border-radius: 15px;
 }
 
+[data-theme='dark'] .content {
+    background-color: #18181a;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.39);
+}
+
 .title {
     font-size: 1.5em;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.6);
+    opacity: .6;
     margin-bottom: 25px;
 }
 
@@ -26,7 +31,7 @@
 }
 
 .upload textarea::placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    opacity: .6;
 }
 
 .upload textarea::-webkit-scrollbar {
@@ -61,6 +66,10 @@
     transform: translate(-50%, -50%);
     width: 50%;
     opacity: .5;
+}
+
+[data-theme='dark'] .upload_buttons img {
+    filter: invert(100%);
 }
 
 .upload_buttons span {

@@ -13,7 +13,7 @@ import NotFound from '../404';
 import Nav from '../../components/general/Nav';
 import Posts from '../../components/general/Posts';
 import Suspended from '../../components/general/Suspended';
-import Feed from '../../components/general/profile/home/Feed';
+import Feed from '../../components/general/profile/home/Private';
 import styles from '../../components/styles/profile/profile.module.css';
 
 export default ({ user }: {
@@ -135,19 +135,6 @@ export default ({ user }: {
               <div className={styles.card_content}>
                 <div className={styles.filter}>
                     { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
-                  <a href="">
-                    <img src="/icons/gallery.png" alt=""/>
-                    Gallery
-                  </a>
-                  <a href="">
-                    <img src="/icons/share.png" alt=""/>
-                    Shared Posts
-                  </a>
-                  <a href="">
-                    <img src="/icons/envelope.png" alt=""/>
-                    Message
-                  </a>
-                  <br/>
                   <button>
                     <img src="/icons/invisible.png" alt=""/>
                     Block
@@ -156,14 +143,6 @@ export default ({ user }: {
                     <img src="/icons/flag.png" alt=""/>
                     Report @{user.username}
                   </button>
-                  <Link href="/settings"><a href="/settings">
-                    <img src="/icons/cog.png" alt=""/>
-                    Edit Profile
-                  </a></Link>
-                  <Link href={`/${current.username}/logout`}><a href={`/${current.username}/logout`}>
-                    <img src="/icons/exit.png" alt=""/>
-                    Logout
-                  </a></Link>
                 </div>
               </div>
 

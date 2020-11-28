@@ -33,9 +33,9 @@ const Page = (): JSX.Element => {
                             <button onClick={() => setTheme('dark')} className={styles.appearance_dark}>
                                 <span></span>
                             </button>
-                            <button onClick={() => setTheme('navy')} className={styles.appearance_dark_blue}>
+                            {/* <button onClick={() => setTheme('navy')} className={styles.appearance_dark_blue}>
                                 <span></span>
-                            </button>
+                            </button> */}
                         </div>
                     <hr/>
                 

@@ -9,7 +9,7 @@
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    margin: 50px 0 70px 30px;
+    margin: 150px 0 70px 30px;
     margin-left: -20px;
     width: 600px;
 }
@@ -187,8 +187,8 @@
 
 .badge div {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     background-position: center;
     background-size: 70%;
     background-repeat: no-repeat;
@@ -242,7 +242,12 @@
 }
 
 .support {
-    background-image: url(/icons/premium.png);
+    background-size: 100% !important;
+    background-image: url(/icons/shield.png);
+}
+
+[data-theme='dark'] .support {
+    background-image: url(/icons/shield-light.png);
 }
 
 .developer {

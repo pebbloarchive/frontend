@@ -34,7 +34,7 @@ const Page = () => {
                         </label>
                         <label>
                             <span>File</span>
-                            <img src="/icons/image.png" alt=""/>
+                            <img src="/icons/gallery.png" alt=""/>
                             <input type="file" name="" id=""/>
                         </label>
                     </div>

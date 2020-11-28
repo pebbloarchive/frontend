@@ -4,10 +4,10 @@ import Router from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import styles from '../../components/styles/auth.module.css'
-import Nav from '../../components/general/Menu'
+import styles from '../components/styles/auth.module.css'
+import Nav from '../components/general/Menu'
 
-export default function Page() {
+const Create = () => {
   const [username, setUsername] = useState(undefined);
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
@@ -63,3 +63,6 @@ export default function Page() {
     </>
   )
 }
+
+Create.theme = 'light';
+export default Create;

@@ -26,7 +26,7 @@ const Topnav = () => {
             <div className={styles.profile_dropup}>
                 <Link href="/andre"><a href="/andre">Your Profile</a></Link>
                 <Link href="/settings/privacy-safety"><a href="/settings/privacy-safety">Settings</a></Link>
-                <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
+                <Link href={`/${current.username}/logout`}><a href={`/${current.username}/logout`} className={styles.profile_dropup_logout}>Logout</a></Link>
             </div>
         )
     }
@@ -78,8 +78,8 @@ const Topnav = () => {
                     <Link href="/explore">
                         <a className={`${active === 'explore' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/> <span>Explore</span></a>
                     </Link>
-                    <Link href="/notifications">
-                        <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
+                    <Link href={`/${current.username}/notifications`}>
+                        <a href={`/${current.username}/notifications`} className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
                     <Link href="/messages">
                         <a className={`${active === 'messages' ? styles.active : ''}`}><img src="/icons/envelope.png" alt=""/> <span>Messages</span></a>
@@ -98,19 +98,19 @@ const Topnav = () => {
                 <Link href="/upload"><a href="/upload" className={styles.mobile_upload}><img src="/icons/plus.png" alt=""/></a></Link>
 
                     <Link href="/home">
-                    <a className={`${active === 'home' ? styles.mobileActive : ''}`}><img src="icons/home.png" alt=""/> <span>Home</span></a>
+                        <a href="/home" className={`${active === 'home' ? styles.mobileActive : ''}`}><img src="/icons/home.png" alt=""/> <span>Home</span></a>
                     </Link>
                     <Link href="/explore">
-                        <a className={`${active === 'explore' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/> <span>Explore</span></a>
+                        <a href="/explore" className={`${active === 'explore' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/667293886468718592/734609486307786862/search.png" alt=""/> <span>Explore</span></a>
                     </Link>
 
                     <hr/>
                     
-                    <Link href="/notifications">
-                        <a className={`${active === 'notifications' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
+                    <Link href={`/${current.username}/notifications`}>
+                        <a href={`/${current.username}/notifications`} className={`${active === 'notifications' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
                     <Link href={`/${current.username}`}>
-                        <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={getAvatar('andre')} alt={current.name} className={styles.mobile_avatar}/> <span>Profile</span></a>
+                        <a href={`/${current.username}`} className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={getAvatar('andre')} alt={current.name} className={styles.mobile_avatar}/> <span>Profile</span></a>
                     </Link>
                 </div>
         </>
