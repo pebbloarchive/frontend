@@ -1,0 +1,3 @@
+mutation Share($id: String!) {
+    share(id: $id)
+}

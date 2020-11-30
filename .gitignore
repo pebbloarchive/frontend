@@ -1,8 +1,0 @@
-node_modules
-.next
-build
-.env
-.DS_Store
-**/.DS_Store
-.vscode
-.idea

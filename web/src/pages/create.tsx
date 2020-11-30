@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head';
-import styles from '@pebblo/styles/auth.module.css';
+import styles from '../css/auth.module.css';
 import Link from 'next/link';
 
 export const Register = () => {

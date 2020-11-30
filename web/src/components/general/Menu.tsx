@@ -1,15 +1,14 @@
-import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
-import styles from '../styles/navbar.module.css'
+import styles from '../../css/navbar.module.css';
 import Router from 'next/router';
-import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useAuth } from '../hooks/useAuth';
+import { useQuery } from '@apollo/client';
+import { useMeQuery } from '../../generated/graphql';
 
 const Topnav = () => {
-    const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    // const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
-    const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const loggedIn = useAuth();
+    const { data } = useMeQuery();
     const [clicked, wasClicked] = useState<boolean>(false);
 
     const onClick = () => {
@@ -18,7 +17,6 @@ const Topnav = () => {
         } else {
             wasClicked(false);
         }
-        console.log("peepee")
     };
 
     const Context = () => {
@@ -47,10 +45,10 @@ const Topnav = () => {
                         <a href="/"><h1>pebblo</h1></a>
                     </Link>
                 </div>
-                { loggedIn ? 
+                { loggedIn.me ? 
                 <div className={styles.menu_user}>
-                    <Link href={`/${current.username}`}><a href={`/${current.username}`}>
-                        <img src={current.avatar} alt={current.username}/>
+                    <Link href={`/${data?.me.username}`}><a href={`/${data?.me.username}`}>
+                        <img src={data?.me.avatar} alt={data?.me.username}/>
                     </a></Link>
                 </div> : ''
                 //  ? loggedIn : 

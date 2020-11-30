@@ -1,0 +1,5 @@
+mutation UpdatePost($id: String!, $content: String!) {
+    updatePost(id: $id, content: $content) {
+        ...AnyPostResponse
+    }
+}

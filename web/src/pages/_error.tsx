@@ -1,4 +1,4 @@
-import styles from '@pebblo/styles/notfound.module.css';
+import styles from '../css/notfound.module.css';
 
 const Page = () => {
 return (

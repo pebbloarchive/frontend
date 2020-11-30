@@ -1,0 +1,9 @@
+fragment AnyPostResponse on PostResponse {
+    errors {
+        field
+        message
+    }
+    post {
+        ...PostSnippet
+    }
+}

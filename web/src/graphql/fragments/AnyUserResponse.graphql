@@ -1,0 +1,9 @@
+fragment AnyUserResponse on UserResponse {
+  errors {
+    field
+    message
+  }
+  user {
+    ...AnyUser
+  }
+}

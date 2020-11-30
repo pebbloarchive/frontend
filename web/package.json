@@ -1,33 +1,38 @@
 {
-  "name": "@pebblo/web",
-  "version": "1.0.0-alpha.0",
-  "private": true,
+  "name": "@pebblo/frontend",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "next dev -p 1500",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@pebblo/core": "^1.0.0-alpha.0",
-    "fs": "0.0.1-security",
-    "mesa-js-client": "^1.4.6",
-    "next": "^9.4.4",
-    "next-auth": "^3.1.0",
-    "nprogress": "^0.2.0",
-    "pulse-framework": "^3.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-toastify": "^6.0.8",
-    "zxcvbn": "^4.4.2"
+    "@apollo/client": "^3.2.7",
+    "@sentry/node": "^5.27.4",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "latest",
+    "next-apollo": "^5.0.4",
+    "next-themes": "^0.0.10",
+    "next-with-apollo": "^5.1.0",
+    "react": "^17.0.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1"
   },
+  "license": "MIT",
   "devDependencies": {
-    "@types/next": "^9.0.0",
-    "@types/node": "^13.13.14",
-    "@types/nprogress": "^0.2.0",
-    "@types/react": "^16.9.43",
-    "@types/react-router": "^5.1.8",
-    "@types/react-router-dom": "^5.1.5",
-    "typescript": "^3.9.7"
+    "@graphql-codegen/cli": "^1.19.2",
+    "@graphql-codegen/typescript": "^1.17.11",
+    "@graphql-codegen/typescript-operations": "^1.17.10",
+    "@graphql-codegen/typescript-react-apollo": "^2.1.1",
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^14.14.8",
+    "@types/react": "^16.9.56",
+    "apollo": "^2.31.1",
+    "typescript": "^4.0.5"
   }
 }

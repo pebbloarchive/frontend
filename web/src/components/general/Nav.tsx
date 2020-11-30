@@ -25,12 +25,6 @@ const Topnav = () => {
         return (
             <div className={styles.profile_dropup}>
                 <Link href={`/${current.username}`}><a href={`/${current.username}`}>Your Profile</a></Link>
-                {/* <Link href="/resources"><a href="/resources">Achievements</a></Link>
-                <Link href="/resources"><a href="/resources">Insights</a></Link>
-                <hr/>
-                <Link href="/features/business"><a href="/features/business">Business</a></Link>
-                <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link> */}
-                <hr/>
                 <Link href="/settings"><a href="/settings">Settings</a></Link>
                 <Link href="/logout"><a href="/logout" className={styles.profile_dropup_logout}>Logout</a></Link>
             </div>
@@ -74,6 +68,7 @@ const Topnav = () => {
                     <span></span>
                 </div>
                 </a>
+
                     <Link href="/upload"><a href="/upload" className={styles.upload}><img src="/icons/plus.png" alt=""/></a></Link> 
                 {loggedIn ? 
                 <div className={styles.links}>
@@ -87,17 +82,8 @@ const Topnav = () => {
                         <a className={`${active === 'notifications' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
                     <Link href="/messages">
-                        <a className={`${active === 'messages' ? styles.active : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755729094720880640/envelope.png" alt=""/> <span>Messages</span></a>
+                        <a className={`${active === 'messages' ? styles.active : ''}`}><img src="/icons/envelope.png" alt=""/> <span>Messages</span></a>
                     </Link>
-
-                        {/* <hr/>
-
-                    <Link href="/business">
-                        <a className={`${active === 'business' ? styles.active : ''}`}><img src="/icons/briefcase.png" alt=""/></a>
-                    </Link>
-                    <Link href="/creators">
-                        <a className={`${active === 'creators' ? styles.active : ''}`}><img src="/icons/video-gallery.png" alt=""/></a>
-                    </Link> */}
                 </div> : '' }
 
                 {loggedIn ? 
@@ -107,8 +93,7 @@ const Topnav = () => {
                      { clicked ? <Context /> : '' }
                 </button> : '' }
             </div>
-
-            {/* {loggedIn ?  */}
+            
                 <div className={styles.mobile}>
                 <Link href="/upload"><a href="/upload" className={styles.mobile_upload}><img src="/icons/plus.png" alt=""/></a></Link>
 
@@ -128,15 +113,6 @@ const Topnav = () => {
                         <a className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={getAvatar('andre')} alt={current.name} className={styles.mobile_avatar}/> <span>Profile</span></a>
                     </Link>
                 </div>
-
-                {/* { loggedIn ? 
-                '' :  
-                <div className={styles.notLogged}>
-                    <Link href="/create"><a href="/create" className={styles.notLogged_signup}>Sign up</a></Link>
-                    <span>or</span>
-                    <Link href="/login"><a href="/login" className={styles.notLogged_login}>Log in</a></Link>
-                </div>
-                } */}
         </>
     )
 }

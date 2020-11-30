@@ -1,4 +1,4 @@
-import styles from '../components/styles/notfound.module.css';
+import styles from '../css/notfound.module.css';
 
 const Page = () => {
 return (

@@ -1,25 +1,36 @@
-import React, { useState } from 'react';
-import Router from 'next/router'
-import { Log } from '../components/utils';
-import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
+import { useRouter } from "next/router";
+import { withApollo } from "../components/hooks/withApolloHook";
+import Content from "../components/general/profile/home/Home";
+import Nav from "../components/Nav"
+import styles from "../css/profile/home/content.module.css";
+import { useIsAuth } from "../components/hooks/useIsAuth";
+import { useMeQuery } from "../generated/graphql";
+import Login from '../pages/login'
 
+export const Home = () => {
+    const router = useRouter();
+    const { data, loading } = useMeQuery()
+    
+    if(!loading && !data?.me) {
+        if(process.browser) {
+            router.replace("/login")
+            return <p></p>
+        }
+    }
 
-// Components
-import styles from '../components/styles/profile/home/content.module.css';
-import Nav from '../components/general/Nav';
-import Content from '../components/general/profile/home/Feed';
+    if(loading && !data?.me) {
+        return <p>Loading...</p>
+    }
 
-export default () => {
-  const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-  if(!loggedIn && process.browser) Router.push('/');
-  return (
-    <>
-    <title>Home</title>
-    <div className={styles.content}>
-      <Content/>
-    </div>
-      <Nav/>
-    </>
-  )
+    return (
+        <>
+            <title>Home</title>
+            <Nav/>
+            <div className={styles.content}>
+                <Content/>
+            </div>
+        </>
+    )
 }
+
+export default withApollo({ ssr: true })(Home);

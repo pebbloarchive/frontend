@@ -1,0 +1,22 @@
+query User($username: String!) {
+    user(username: $username) {
+        errors {
+            field
+            message
+        }
+        user {
+            id
+            username
+            name
+            avatar
+            description
+            followers
+            following
+            verified
+            # suspended
+            permissions
+            createdAt
+            updatedAt
+        }
+    }
+}

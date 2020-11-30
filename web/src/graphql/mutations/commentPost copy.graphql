@@ -1,0 +1,12 @@
+mutation DeleteSub($id: String!, $subid: String!) {
+    deleteSub(id: $id, subid: $subid) {
+        errors {
+            field
+            message
+        }
+        post {
+            id
+            author
+        }
+    }
+}

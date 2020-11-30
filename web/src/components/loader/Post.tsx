@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import styles from '../styles/auth.module.css';
-import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
+// import styles from '../auth.module.css';
+import styles from '../../css/auth.module.css';
 
-const Loader = (props: AccountUser) => {
+const Loader = () => {
   return (
     <>
         <div className={styles.post_loader}>

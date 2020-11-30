@@ -1,0 +1,11 @@
+mutation CommentPost($id: String!, $content: String!) {
+    commentPost(id: $id, content: $content) {
+        post {
+            id
+            author
+            content
+            created_at
+            updated_at
+        }
+    }
+}

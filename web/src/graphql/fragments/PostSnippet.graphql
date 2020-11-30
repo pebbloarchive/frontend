@@ -1,0 +1,20 @@
+fragment PostSnippet on Post {
+	id
+	author
+	content
+	likes
+	shares
+	media
+	subs {
+		id
+		createdAt
+		owner {
+			id
+			username
+			avatar
+			verified
+		}
+	}
+	created_at
+	updated_at
+}

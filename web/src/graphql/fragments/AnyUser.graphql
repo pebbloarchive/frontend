@@ -1,0 +1,14 @@
+fragment AnyUser on User {
+    id
+    username
+    name
+    email
+    avatar
+    description
+    followers
+    following
+    verified
+    permissions
+    createdAt
+    updatedAt
+}
