@@ -441,14 +441,181 @@
     width: 50%;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 20;
+}
+
+[data-theme='dark'] .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.report {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 50vh;
+    width: 300px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 21;
+}
+
+[data-theme='dark'] .report {
+    background-color: #18181a;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.39);
+}
+
+.report_title {
+    margin-bottom: 20px;
+}
+
+.report_title h1 {
+    font-size: 1em;
+    font-weight: 600;
+    opacity: .8;
+}
+
+.report_title p {
+    font-size: 0.8em;
+    font-weight: 600;
+    opacity: .5;
+}
+
+.report_list input {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    padding: 12px;
+    font-size: 0.7em;
+    background: transparent;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .5;
+    transition: .1s;
+}
+
+.report_list input:hover,
+.report_custom input {
+    opacity: 1 !important;
+    background-color: whitesmoke !important;
+}
+
+[data-theme='dark'] .report_list input:hover {
+    background-color: #1e1f22;
+}
+
+.report_custom {
+    display: block;
+    margin-top: 20px;
+}
+
+.report_custom input {
+    width: 100%;
+    cursor: text;
+    padding-right: 40px;
+    background-color: whitesmoke;
+    background-position: 95% 50%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-image: url(/icons/search.png);
+}
+
+[data-theme='dark'] .report_custom input {
+    background-color: #1e1f22;
+}
+
 @keyframes shimmer {
     0% {
-      background-position: -468px 0;
+    background-position: -468px 0;
     }
     100% {
-      background-position: 468px 0;
+    background-position: 468px 0;
     }
-  }
+}
+
+.recovery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url(../../../public/images/svg/background.svg) no-repeat, radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    background-position: bottom;
+    background-size: 150%;
+}
+
+.recovery_card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    padding: 30px 30px 0 30px;
+    width: 300px;
+    box-shadow: 2px 2px 12px rgba(46, 46, 46, 0.316);
+}
+
+.recovery_title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.recovery_message {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 10px 0 20px;
+}
+
+.recovery_form {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    padding: 30px;
+}
+
+.recovery_form input {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    background-color: whitesmoke;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 270px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.recovery_form input[type="submit"] {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
+    padding: 12px 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 300px;
+    font-size: 0.7em;
+    color: white;
+    text-align: center;
+}
 
 @media only screen and (max-width:1600px) {
 

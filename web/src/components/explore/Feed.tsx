@@ -11,16 +11,13 @@ const Page = (): JSX.Element => {
 
                 <div className={styles.post}>
                     <div className={styles.heading}>
-                        <Link href=""><a href="" className={styles.heading_author}>
-                            <img src="https://cdn.discordapp.com/avatars/583925649807245322/a_16cd3afea657534ec9ad356789d1152c.gif?size=1024" alt="" className={styles.heading_author_avatar}/>
+                        <Link href="/kyle"><a href="/kyle" className={styles.heading_author}>
+                            <img src={getAvatar('kyle')} alt="" className={styles.heading_author_avatar}/>
                                 <section>
-                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Kyle</h1>
+                                    <h1 className={styles.heading_author_name}><img src="/icons/verified.png" alt="" className={styles.heading_author_badge}/>Kyle</h1>
                                     <p className={styles.heading_author_username}>@Kyle</p>
                                 </section>
                         </a></Link>
-                        <button className={styles.heading_more}>
-                            <span className={styles.heading_ellipsis}></span>
-                        </button>
                     </div>
                     <span className={styles.timeStamp}>Just Now</span>
 
@@ -61,17 +58,13 @@ const Page = (): JSX.Element => {
                                 <label>
                                     <img src="/icons/blushing.png" alt=""/>
                                 </label>
-                                <label>
-                                    <img src="/icons/gallery.png" alt=""/>
-                                    <input type="file" name="" id=""/>
-                                </label>
                             </div>
                         </form>
                     </label>
                     <div className={styles.post_buttons}>
                         
-                        <Link href=""><a href="" className={styles.singlePost_link}>
-                            <img src="/icons/menus/ellipsis.png" alt=""/>
+                        <Link href="/kyle/[post]"><a href="/kyle/[post]" className={styles.singlePost_link}>
+                            <img src="/icons/arrows/chevron-right.png" alt=""/>
                         </a></Link>
 
                     </div>

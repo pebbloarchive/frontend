@@ -8,6 +8,7 @@
 
 
   /* Menu */
+  --menu-height: 80px;
   --sidebar-width: 100px;
 
 
@@ -25,9 +26,10 @@
   --scrollbar: #58585a;
 }
 
-[data-theme="navy"] {
+[data-theme="dark_purple"] {
+  --links: #7c4ce0;
   --color: white;
-  --background: #1a2131;
+  --background: #0d0810;
 }
 
 ::-webkit-scrollbar {
@@ -104,9 +106,10 @@ textarea {
   outline: 0;
   margin: 0;
   padding: 0;
+  color: var(--color);
   border: none;
   font-family: Montserrat, sans-serif;
-  resize: none
+  resize: none;
 }
 
 @font-face {
@@ -130,4 +133,51 @@ textarea {
   background-color: var(--background);
   height: 100%;
   border-top-left-radius: 50px;
+}
+
+
+
+/* ======================================================
+
+      RESPONSIVE LAYOUT
+      
+====================================================== */
+
+
+@media only screen and (max-width: 2000px) {
+    :root {
+      --menu-height: 75px;
+      --sidebar-width: 95px;
+    }
+}
+
+@media only screen and (max-width: 1900px) {
+  :root {
+    --menu-height: 70px;
+    --sidebar-width: 90px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  :root {
+    --menu-height: 60px;
+    --sidebar-width: 80px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  :root {
+    --menu-height: 50px;
+    --sidebar-width: 70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --menu-height: 45px;
+    --sidebar-width: 65px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
 }

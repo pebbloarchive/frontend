@@ -5,8 +5,8 @@ import { usePulse } from 'pulse-framework';
 import styles from '../../components/styles/navbar.module.css';
 
 // components
-import Nav from '../../components/settings/Nav'
-import Setting from '../../components/settings/Profile'
+import Nav from '../../../components/settings/Nav'
+import Setting from '../../../components/settings/Display'
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);

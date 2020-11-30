@@ -1,8 +1,8 @@
 .background {
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     right: 10%;
-    transform: translate(0%, -50%);
+    transform: translate(0%, 50%);
     width: 40%;
 }
 
@@ -17,25 +17,25 @@
     transform: translate(0%, -50%);
 }
 
+.landing span {
+    font-size: 1.5em;
+    display: block;
+    font-weight: normal;
+    opacity: .7;
+}
+
 .landing i {
     display: block;
     padding: 0;
     margin: 0;
     margin-left: -10px;
     margin-bottom: 50px;
-    font-size: 120px;
+    font-size: 10em;
     font-style: normal;
     font-weight: 600;
     background: -webkit-radial-gradient(var(--theme-b), var(--theme-a));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.landing span {
-    font-size: 30px;
-    display: block;
-    font-weight: normal;
-    opacity: .7;
 }
 
 .landing a {
@@ -446,4 +446,180 @@
 
 .about_right_image {
     right: 100px;
+}
+
+
+
+/* ======================================================
+
+      RESPONSIVE LAYOUT
+      
+====================================================== */
+
+
+@media only screen and (max-width: 2000px) {
+    .landing span {
+        font-size: 1.4em;
+    }
+
+    .landing i {
+        font-size: 9em;
+    }
+
+    .footer_title {
+        font-size: 0.9em;
+        margin-bottom: 35px;
+    }
+
+    .footer_section a {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 1900px) {
+}
+
+@media only screen and (max-width: 1700px) {
+    .landing span {
+        font-size: 1.2em;
+    }
+
+    .landing i {
+        font-size: 8.5em;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .landing span {
+        font-size: 1.2em;
+    }
+
+    .landing i {
+        font-size: 7em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1000px) {
+    .background {
+        position: absolute;
+        bottom: -11%;
+        left: -30%;
+        transform: none;
+        width: 100%;
+        overflow: hidden;
+        transform: scaleX(-1);
+    }
+
+    .landing {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transform: none;
+    }
+
+    .landing span,
+    .landing i,
+    .landing_links {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+    }
+
+    .landing span {
+        margin-bottom: -10px;
+        margin-top: 30%;
+    }
+
+    .landing_links {
+        display: flex;
+        align-items: center;
+    }
+
+    .landing_links a {
+        display: inline-block;
+        width: 50% !important;
+        text-align: center;
+    }
+
+    .content {
+        top: 90%;
+    }
+
+    .footer_title {
+        margin-bottom: 10px;
+        font-size: 1.3em;
+    }
+
+    .footer_section a {
+        font-size: 1em;
+    }
+
+    .footer_banner_message {
+        width: 80%;
+    }
+
+    .footer_banner_button {
+        right: -5%;
+    }
+
+    .footer_section {
+        margin: 0;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .footer_content {
+        display: block;
+    }
+
+    .about_landing {
+        margin-top: 30vh;
+        height: 500px;
+    }
+
+    .about_title {
+        top: 10%;
+        transform: none;
+    }
+
+    .about_landing a {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .about_left_title,
+    .about_right_title,
+    .about_left_title h1,
+    .about_right_title h1 {
+        width: 100%;
+    }
+
+    .about_left_title p,
+    .about_right_title p {
+        width: 80%;
+    }
+
+    .about_left_image,
+    .about_right_image {
+        top: 100%;
+        height: 70%;
+        right: 80%;
+    }
+
+    .about_left_title,
+    .about_right_title {
+        left: 0;
+    }
+    
+    .about_left_image,
+    .about_right_image {
+        left: 0;
+    }
+    
 }

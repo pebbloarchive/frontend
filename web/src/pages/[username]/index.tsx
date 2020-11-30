@@ -94,12 +94,15 @@ export default ({ user }: {
             
             <div className={styles.badge}>
               <div className={styles.verified}>
+                <img src="/icons/verified.png" alt=""/>
                 <span>Verified</span>
               </div>
               <div className={styles.support}>
+                <img src="/icons/premium.png" alt=""/>
                 <span>Support</span>
               </div>
               <div className={styles.developer}>
+                <img src="/icons/developer.png" alt=""/>
                 <span>Developer</span>
               </div>
             </div>
@@ -116,11 +119,11 @@ export default ({ user }: {
 
               <div className={styles.card_content}>
                 <div className={styles.statistics}>
-                  <Link href=""><a href="">
+                  <Link href="/kyle/followers"><a href="/kyle/followers">
                     <span>{user.followersCount}</span>
                     <h3>Followers</h3>
                   </a></Link>
-                  <Link href=""><a href="">
+                  <Link href="/kyle/following"><a href="/kyle/following">
                     <span>{user.followingCount}</span>
                     <h3>Following</h3>
                   </a></Link>
@@ -152,11 +155,11 @@ export default ({ user }: {
                     <img src="/icons/invisible.png" alt=""/>
                     Block
                   </button>
-                  <button>
+                  <Link href="/kyle/report"><a href="/kyle/report">
                     <img src="/icons/flag.png" alt=""/>
                     Report @{user.username}
-                  </button>
-                  <Link href="/settings"><a href="/settings">
+                  </a></Link>
+                  <Link href="/andre/settings"><a href="/andre/settings">
                     <img src="/icons/cog.png" alt=""/>
                     Edit Profile
                   </a></Link>

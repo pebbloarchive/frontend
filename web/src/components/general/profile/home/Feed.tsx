@@ -20,9 +20,6 @@ const Page = () => {
                                     <p className={styles.heading_author_username}>@kyle</p>
                                 </section>
                         </a></Link>
-                        <button className={styles.heading_more}>
-                            <span className={styles.heading_ellipsis}></span>
-                        </button>
                     </div>
 
                     <div className={styles.content}>
@@ -64,17 +61,13 @@ const Page = () => {
                                 <label>
                                     <img src="/icons/blushing.png" alt=""/>
                                 </label>
-                                <label>
-                                    <img src="/icons/gallery.png" alt=""/>
-                                    <input type="file" name="" id=""/>
-                                </label>
                             </div>
                         </form>
                     </label>
                     <div className={styles.post_buttons}>
                         
-                        <Link href=""><a href="" className={styles.singlePost_link}>
-                            <img src="/icons/menus/ellipsis.png" alt=""/>
+                        <Link href="/kyle/[post]"><a href="/kyle/[post]" className={styles.singlePost_link}>
+                            <img src="/icons/arrows/chevron-right.png" alt=""/>
                         </a></Link>
 
                     </div>

@@ -11,7 +11,7 @@ export function Log(caller: string = "Router", ...logs: any): void {
 export function getAvatar(user: string) {
     switch(user) {
         case 'andre':
-            return 'https://cdn.discordapp.com/avatars/215302985826304010/12ecc925cbfa40643c9317a7cf6f1365.png?size=1024';
+            return 'https://cdn.discordapp.com/avatars/215302985826304010/a_72b33eb7c3e076cc233c9cf68edd27eb.gif?size=1024';
         case 'kyle':
 			return 'https://i.gifer.com/2pJC.gif';
 		case 'pebblo':

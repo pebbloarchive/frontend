@@ -5,8 +5,8 @@ import core from '@pebblo/core';
 import styles from '../../components/styles/navbar.module.css';
 
 // components
-import Nav from '../../components/settings/Nav'
-import Setting from '../../components/settings/Privacy'
+import Nav from '../../../components/settings/Nav'
+import Setting from '../../../components/settings/Notifications'
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);

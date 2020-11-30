@@ -30,7 +30,7 @@ const Index = () => {
             <Link href="/andre"><a href="/andre" className={styles.landing_login}>My Profile</a></Link>
           </div>
           :
-          <div> 
+          <div className={styles.landing_links}> 
             <Link href="/features"><a href="/features">New to Pebblo?</a></Link>
             <Link href="/login"><a href="/login" className={styles.landing_login}>Have an account?</a></Link>
           </div>

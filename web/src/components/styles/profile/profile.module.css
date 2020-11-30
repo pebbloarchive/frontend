@@ -37,14 +37,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 4px;
-    width: 90%;
+    padding: 5px;
+    /* margin-top: -0.5px; */
+    margin-left: 0.5px;
+    width: 85%;
     border-radius: 50%;
-    background-color: white;
-}
-
-[data-theme='dark'] .avatar img {
-    background-color: #18181a;
+    background-color: var(--background);
 }
 
 .interactions {
@@ -195,13 +193,28 @@
     position: relative;
     width: 32px;
     height: 32px;
-    background-position: center;
-    background-size: 70%;
-    background-repeat: no-repeat;
+}
+
+.badge img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    background: transparent !important;
+    border-radius: 0;
+}
+
+.verified {
+    margin-right: 10px;
+}
+
+.verified img {
+    width: 50px;
 }
 
 .badge span,
-.overlay_likes_interaction span {
+.overlay_profile_interaction span {
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -218,8 +231,13 @@
     animation: badge .3s;
 }
 
+[data-theme="dark_purple"] .badge span,
+[data-theme="dark_purple"] .overlay_profile_interaction span {
+    background-color: #0f0e1e;
+}
+
 .badge span::before,
-.overlay_likes_interaction span::before {
+.overlay_profile_interaction span::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -228,6 +246,11 @@
     border-width: 5px;
     border-style: solid;
     border-color: #1e1f22 transparent transparent transparent;
+}
+
+[data-theme="dark_purple"] .badge span::before,
+[data-theme="dark_purple"] .overlay_profile_interaction span::before {
+    border-color: #0f0e1e transparent transparent transparent;
 }
 
 .badge div:hover span {
@@ -241,25 +264,6 @@
     to {
         opacity: 1;
     }
-}
-
-.verified {
-    background-image: url(/icons/verified.png);
-    background-size: 130% !important;
-    margin-right: 5px;
-}
-
-.support {
-    background-size: 100% !important;
-    background-image: url(/icons/shield.png);
-}
-
-[data-theme='dark'] .support {
-    background-image: url(/icons/shield-light.png);
-}
-
-.developer {
-    background-image: url(/icons/premium.png);
 }
 
 .username {
@@ -357,6 +361,8 @@
     transition: .3s;
 }
 
+[data-theme="dark_purple"] .filter button,
+[data-theme="dark_purple"] .filter a,
 [data-theme='dark'] .filter button,
 [data-theme='dark'] .filter a {
     color: rgba(255, 255, 255, 0.5);
@@ -387,6 +393,8 @@
     margin-left: 30px;
 }
 
+
+[data-theme="dark_purple"] .filter img,
 [data-theme='dark'] .filter img {
     filter: invert(100%);
 }
@@ -449,6 +457,8 @@
     background-image: url(../../../../public/icons/menus/hamburger.png);
 }
 
+[data-theme="dark_purple"] .mobile_page_explore,
+[data-theme="dark_purple"] .mobile_page_settings,
 [data-theme="dark"] .mobile_page_explore,
 [data-theme="dark"] .mobile_page_settings {
     filter: invert(100%);
@@ -533,6 +543,7 @@
     margin-bottom: 50px;
 }
 
+[data-theme="dark_purple"] .mobile_filter,
 [data-theme="dark"] .mobile_filter {
     background-color: rgba(0, 0, 0, .1);
 }
@@ -570,6 +581,10 @@
     background-image: url(../../../../public/icons/menus/collage.png);
 }
 
+[data-theme="dark_purple"] .mobile_filter_profile,
+[data-theme="dark_purple"] .mobile_filter_shares,
+[data-theme="dark_purple"] .mobile_filter_connections,
+[data-theme="dark_purple"] .mobile_filter_media,
 [data-theme="dark"] .mobile_filter_profile,
 [data-theme="dark"] .mobile_filter_shares,
 [data-theme="dark"] .mobile_filter_connections,
@@ -608,7 +623,12 @@
 
 [data-theme="dark"] .single {
     background-color: #18181a;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.39);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark_purple"] .single {
+    background-color: #221f2f;
+    box-shadow: 2px 2px 12px rgba(23, 21, 31, 0.3);
 }
 
 .single_author {
@@ -675,7 +695,15 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+[data-theme='dark_purple'] .overlay {
+    background-color: rgb(15, 14, 30, 0.5);
+}
+
 .noscroll {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
     overflow: hidden;
 }
 
@@ -695,6 +723,11 @@
 
 [data-theme='dark'] .overlay_content {
     background-color: #18181a;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.39);
+}
+
+[data-theme='dark_purple'] .overlay_content {
+    background-color: #110f18;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.39);
 }
 
@@ -735,7 +768,7 @@
     border-color: white;
 }
 
-.overlay_likes_item {
+.overlay_profile_item {
     position: relative;
     display: flex;
     align-items: center;
@@ -744,37 +777,41 @@
     transition: .3s;
 }
 
-.overlay_likes_item:hover {
+.overlay_profile_item:hover {
     background-color: #f8f8f8;
 }
 
-[data-theme='dark'] .overlay_likes_item:hover {
+[data-theme='dark'] .overlay_profile_item:hover {
     background-color: #1e1f22;
 }
 
-.overlay_likes_avatar {
+[data-theme='dark_purple'] .overlay_profile_item:hover {
+    background-color: #221f2f;
+}
+
+.overlay_profile_avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.overlay_likes_user {
+.overlay_profile_user {
     margin-left: 10px;
 }
 
-.overlay_likes_name {
+.overlay_profile_name {
     font-size: 1em;
     font-weight: 600;
     opacity: .7;
 }
 
-.overlay_likes_username {
+.overlay_profile_username {
     font-size: 0.8em;
     font-weight: 600;
     opacity: .3;
 }
 
-.overlay_likes_interaction {
+.overlay_profile_interaction {
     position: absolute;
     display: flex;
     align-items: center;
@@ -783,8 +820,8 @@
     transform: translate(0, -50%);
 }
 
-.overlay_likes_interaction button,
-.overlay_likes_interaction a {
+.overlay_profile_interaction button,
+.overlay_profile_interaction a {
     display: block;
     position: relative;
     margin-left: 5px;
@@ -795,12 +832,17 @@
     cursor: pointer;
 }
 
-[data-theme='dark'] .overlay_likes_interaction button,
-[data-theme='dark'] .overlay_likes_interaction a {
+[data-theme='dark'] .overlay_profile_interaction button,
+[data-theme='dark'] .overlay_profile_interaction a {
     background-color: #212124;
 }
 
-.overlay_likes_interaction img {
+[data-theme='dark_purple'] .overlay_profile_interaction button,
+[data-theme='dark_purple'] .overlay_profile_interaction a {
+    background-color: #1d1c30;
+}
+
+.overlay_profile_interaction img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -808,7 +850,8 @@
     width: 50%;
 }
 
-[data-theme='dark'] .overlay_likes_interaction img {
+[data-theme='dark_purple'] .overlay_profile_interaction img,
+[data-theme='dark'] .overlay_profile_interaction img {
     filter: invert(100%);
 }
 

@@ -45,12 +45,12 @@ const Single = () => {
                                 Shares <span>98k</span>
                             </button>
                             <br/>
-                            <button>
+                            <Link href="/kyle/[post]/report"><a href="/kyle/[post]/report">
                                 <img src="/icons/flag.png" alt=""/>
                                 Report Post
-                            </button>
+                            </a></Link>
                             <br/>
-                            <Link href="/[post]/settings"><a href="/[post]/settings">
+                            <Link href="/kyle/[post]/settings"><a href="/kyle/[post]/settings">
                                 <img src="/icons/cog.png" alt=""/>
                                 Post Settings
                             </a></Link>
