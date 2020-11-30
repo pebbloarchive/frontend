@@ -37,7 +37,7 @@ const Username = () => {
   const [follow] = useFollowMutation();
   const { data, error, loading, fetchMore, variables } = usePostsQuery({
     variables: {
-      limit: 10,
+      limit: 14,
       cursor: null
     },
     notifyOnNetworkStatusChange: true
@@ -145,7 +145,7 @@ const Username = () => {
           </div>
         </div>
         {data?.posts.posts.map(
-              (post) => (
+              (post) => post.creator.username === username && (
                   <Feed key={post.id} post={post} />
                 )
         )}

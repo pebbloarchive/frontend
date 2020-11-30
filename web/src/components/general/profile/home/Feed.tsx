@@ -23,10 +23,10 @@ export const Feed: React.FC<PostProps> = ({ post }) => {
                 : `${minutes} minute${minutes !== 1 ? "s" : ""}`}</span>
                     <div className={styles.heading}>
                         <Link href=""><a href="" className={styles.heading_author}>
-                            <img src={''} alt="" className={styles.heading_author_avatar}/>
+                            <img src={post.creator.avatar} alt="" className={styles.heading_author_avatar}/>
                                 <section>
-                                    <h1 className={styles.heading_author_name}><img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.heading_author_badge}/>Name</h1>
-                                    <p className={styles.heading_author_username}>@Name</p>
+                                    <h1 className={styles.heading_author_name}>{ post.creator.verified ? (<img src="/icons/verified.png" alt="" className={styles.heading_author_badge}/>) : '' }{post.creator.name}</h1>
+                                    <p className={styles.heading_author_username}>@{post.creator.username}</p>
                                 </section>
                         </a></Link>
                         <button className={styles.heading_more}>

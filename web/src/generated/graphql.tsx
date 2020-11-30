@@ -53,6 +53,7 @@ export type Post = {
   __typename?: 'Post';
   id: Scalars['String'];
   author: Scalars['String'];
+  creator: Creator;
   content: Scalars['String'];
   media: Array<Scalars['String']>;
   likes: Array<Scalars['String']>;
@@ -60,6 +61,15 @@ export type Post = {
   subs: Array<Subs>;
   created_at: Scalars['String'];
   updated_at: Scalars['String'];
+};
+
+export type Creator = {
+  __typename?: 'Creator';
+  id?: Maybe<Scalars['String']>;
+  username?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  avatar?: Maybe<Scalars['String']>;
+  verified?: Maybe<Scalars['Boolean']>;
 };
 
 export type Subs = {
@@ -126,7 +136,7 @@ export type Mutation = {
   share: Scalars['Boolean'];
   commentPost: PostResponse;
   deleteSub: PostResponse;
-  createPost: Post;
+  createPost: PostResponse;
   updatePost?: Maybe<PostResponse>;
   deletePost: Scalars['Boolean'];
   followUser: UserResponse;
@@ -275,7 +285,10 @@ export type PostSnippetFragment = (
       { __typename?: 'Owner' }
       & Pick<Owner, 'id' | 'username' | 'avatar' | 'verified'>
     )> }
-  )> }
+  )>, creator: (
+    { __typename?: 'Creator' }
+    & Pick<Creator, 'id' | 'username' | 'name' | 'verified' | 'avatar'>
+  ) }
 );
 
 export type DeleteSubMutationVariables = Exact<{
@@ -323,8 +336,8 @@ export type CreatePostMutationVariables = Exact<{
 export type CreatePostMutation = (
   { __typename?: 'Mutation' }
   & { createPost: (
-    { __typename?: 'Post' }
-    & PostSnippetFragment
+    { __typename?: 'PostResponse' }
+    & AnyPostResponseFragment
   ) }
 );
 
@@ -531,6 +544,13 @@ export const PostSnippetFragmentDoc = gql`
       verified
     }
   }
+  creator {
+    id
+    username
+    name
+    verified
+    avatar
+  }
   created_at
   updated_at
 }
@@ -655,10 +675,10 @@ export type CommentPostMutationOptions = Apollo.BaseMutationOptions<CommentPostM
 export const CreatePostDocument = gql`
     mutation CreatePost($content: String!) {
   createPost(content: $content) {
-    ...PostSnippet
+    ...AnyPostResponse
   }
 }
-    ${PostSnippetFragmentDoc}`;
+    ${AnyPostResponseFragmentDoc}`;
 export type CreatePostMutationFn = Apollo.MutationFunction<CreatePostMutation, CreatePostMutationVariables>;
 
 /**

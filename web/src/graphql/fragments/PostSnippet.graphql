@@ -15,6 +15,13 @@ fragment PostSnippet on Post {
 			verified
 		}
 	}
+	creator {
+		id
+		username
+		name
+		verified
+		avatar
+	}	
 	created_at
 	updated_at
 }
