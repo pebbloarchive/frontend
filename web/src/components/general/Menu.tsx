@@ -35,39 +35,17 @@ const Topnav = () => {
     return (
         <>
             <div className={styles.menu}>
-                <button className={styles.menu_button} onClick={onClick}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                     { clicked ? <Context /> : '' }
-                </button>
-
-                <div className={styles.menu_company}>
-                    <Link href="/">
-                        <a href="/"><h1>pebblo</h1></a>
-                    </Link>
+                <div className={styles.menu_content}>
+                    <div className={styles.menu_links}>
+                        <Link href=""><a href="">
+                            
+                        </a></Link>
+                    </div>
                 </div>
-                { loggedIn ? 
-                <div className={styles.menu_user}>
-                    <Link href={`/${current.username}`}><a href={`/${current.username}`}>
-                        <img src={current.avatar} alt={current.username}/>
-                    </a></Link>
-                </div> : ''
-                //  ? loggedIn : 
-                //     <div className={styles.menu_buttons}>
-                //         <Link href="/login"><a href="/login" className={styles.login}>Login</a></Link>
-                //         <Link href="/create"><a href="/create" className={styles.create}>Get Started</a></Link>
-                //     </div>
-                 }
-            </div>
-
-            <div className={styles.menu_links}>
-                <Link href="/"><a href="/">Home</a></Link>
-                <Link href="/explore"><a href="/explore">Explore</a></Link>
-                <Link href="/features/business"><a href="/features/business">Business</a></Link>
-                <Link href="/features/content-creators"><a href="/features/content-creators">Content Creators</a></Link>
             </div>
         </>
+
+
     )
 }
 

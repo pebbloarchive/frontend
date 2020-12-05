@@ -17,30 +17,7 @@ const Index = () => {
   
   return (
     <>
-      <title>Pebblo</title>
-      <div className={styles.background}>
-        <img src="images/svg/woman-on-mountain.svg"/>
-      </div>
-      <div className={styles.landing}>
-          <span>Share your story on</span>
-          <i>Pebblo</i>
-          { loggedIn ?
-          <div>
-            <Link href="/explore"><a href="/explore">Explore Pebblo</a></Link>
-            <Link href="/andre"><a href="/andre" className={styles.landing_login}>My Profile</a></Link>
-          </div>
-          :
-          <div className={styles.landing_links}> 
-            <Link href="/features"><a href="/features">New to Pebblo?</a></Link>
-            <Link href="/login"><a href="/login" className={styles.landing_login}>Have an account?</a></Link>
-          </div>
-          }
-      </div>
-
-      <div className={styles.content}>
-        <Footer />
-      </div>
-
+      <title>Pebblo - Share Your Story</title>
       <Nav/>
     </>
   )
