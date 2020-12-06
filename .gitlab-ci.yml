@@ -13,11 +13,12 @@ deploy:
     # - 'which ssh-agent || ( apt-get install -qq openssh-client )'
     - apt-get update -qq
     - apt-get install -qq git
-    - eval $(ssh-agent -s)
-    - ssh-add <(echo "$PRIVATE_KEY")
     - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
-    - ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR]; mkdir ~/${WORK_DIR}; git clone ${REPO}; cd ${WORK_DIR}; npm install -g yarn; yarn; yarn build; yarn start"
+    - ssh-add <(echo "$PRIVATE_KEY")
+    - ssh -o StrictHostKeyChecking=no ubuntu@"$PRD_SERVER" "rm -rf ~/${WORK_DIR]; git clone ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn build; yarn start"
+
   only:
   - develop
