@@ -1,0 +1,10 @@
+{
+  "name": "pebblo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "web",
+    "css"
+  ],
+  "private": true
+}

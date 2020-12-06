@@ -1,0 +1,104 @@
+/* ======================================================
+
+      404 PAGE CONTENT
+      
+====================================================== */
+
+.notFound {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translate(0,-50%);
+}
+
+.notFound h1 {
+  font-weight: 600;
+  font-size: 80px;
+  color: #585866;
+}
+
+.notFound h3 {
+  font-size: 20px;
+  opacity: .7;
+  font-weight: 600;
+  margin: 5px 0 50px;
+}
+
+.notFound a {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(to right,var(--theme-a),var(--theme-b));
+  border: solid 4px rgba(255,255,255,.363);
+  border-left: none;
+  border-right: none;
+  color: #fff;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.notFound_text {
+  position: fixed;
+  top: 50%;
+  transform: rotate(20deg) translate(0,-50%);
+  right: 200px;
+  font-size: 300px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: .1;
+  filter: blur(5px);
+}
+
+/* ======================================================
+
+      501 PAGE CONTENT
+      
+====================================================== */
+
+.fiveoone {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+
+
+/* ======================================================
+
+      RESPONSIVE LAYOUT
+      
+====================================================== */
+
+
+
+
+@media only screen and (max-width:1000px) {
+  .notFound {
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+  }
+
+  .notFound h1 {
+    font-size: 30px;
+  }
+
+  .notFound_text {
+    left: 0;
+    top: 20%;
+    transform: translate(0) rotate(10deg);
+    width: 100%;
+    text-align: center;
+    font-size: 160px;
+    opacity: .050;
+  }
+
+  .fiveoone {
+    width: 70%;
+  }
+}
