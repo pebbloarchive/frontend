@@ -16,9 +16,9 @@ deploy:
     # Setup SSH deploy keys
     # - 'which ssh-agent || ( apt-get install -qq openssh-client )'
     # - eval $(ssh-agent -s)
-    # - ssh-add <(echo "$AZURE_PROD_SSHKEY")
-    # - mkdir -p ~/.ssh
-    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - ssh-add <(echo "$AZURE_PROD_SSHKEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     # - ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR}; git clone ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn build; yarn start"
     - sshpass -p "$PRD_PASSWORD" ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR}; git clone ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn dev"
