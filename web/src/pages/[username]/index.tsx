@@ -79,7 +79,7 @@ export default ({ user }: {
         <meta property="og:description" content={`${user.description}\n\n&copy; pebblo.org`}/>
         <meta property="og:image" content={user.avatar}/>
         <meta name="theme-color" content="#FF274E"/>
-        {/* <meta name="og:site_name" content={`Followers             Posts\n${user.followersCount}             0`}/> */}
+        <meta name="og:site_name" content={`Followers: ${user.followersCount} \n Following: ${user.followeingCount}`}/>
       </Head>
       <Nav />
 
@@ -90,7 +90,7 @@ export default ({ user }: {
 
         <div className={styles.information}>
           <div className={styles.avatar}>
-            <img src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt={`${current.name} || ${current.username}`}/>
+            <img className={styles.avatar_image} src={user.avatar ? user.avatar : getAvatar('andre')} alt={`${current.name} || ${current.username}`}/>
             
             <div className={styles.badge}>
               <div className={styles.verified}>
@@ -211,15 +211,7 @@ export default ({ user }: {
             </div>
             <div className={styles.mobile_interactions}>
               { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
-              <Link href={`/message/${user.username}`}><a href={`/message/${user.username}`} className={styles.mobile_messageUser}>Message</a></Link>
             </div>
-          </div>
-
-          <div className={styles.mobile_filter}>
-            <a href="" className={styles.mobile_filter_profile}></a>
-            <a href="" className={styles.mobile_filter_shares}></a>
-            {/* <a href="" className={styles.mobile_filter_connections}></a> */}
-            <a href="" className={styles.mobile_filter_media}></a>
           </div>
 
         </div>

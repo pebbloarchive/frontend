@@ -32,7 +32,7 @@
     background: radial-gradient(circle at top left, var(--theme-a), var(--theme-b));
 }
 
-.avatar img {
+.avatar_image {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,6 +41,7 @@
     /* margin-top: -0.5px; */
     margin-left: 0.5px;
     width: 85%;
+    height: 85%;
     border-radius: 50%;
     background-color: var(--background);
 }
@@ -522,10 +523,9 @@
 }
 
 .mobile_interactions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto 40px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .mobile_filter {
@@ -855,6 +855,18 @@
     filter: invert(100%);
 }
 
+@media only screen and (max-width: 1500px) {
+    .profile {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .profile {
+        width: 300px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .mobile {
         display: block;
@@ -862,6 +874,10 @@
 
     .content {
         display: none;
+    }
+
+    .follow_account {
+        transform: none;
     }
 }
 
