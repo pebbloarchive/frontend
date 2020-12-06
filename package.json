@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "lerna bootstrap && lerna run build && lerna run dev --parallel",
-    "prod": "lerna bootstrap && lerna run build && lerna run build-next && lerna run pm2 --parallel"
+    "prod": "lerna bootstrap && lerna run build && lerna run build-next && cd web && yarn pm2"
   },
   "workspaces": [
     "core",
