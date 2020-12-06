@@ -12,14 +12,15 @@ deploy:
   before_script:
     - apt-get update -qq
     - apt-get install -qq git
+    - apt-get install -qq sshpass
     # Setup SSH deploy keys
-    - 'which ssh-agent || ( apt-get install -qq openssh-client )'
-    - eval $(ssh-agent -s)
-    - ssh-add <(echo "$AZURE_PROD_SSHKEY")
-    - mkdir -p ~/.ssh
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    # - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+    # - eval $(ssh-agent -s)
+    # - ssh-add <(echo "$AZURE_PROD_SSHKEY")
+    # - mkdir -p ~/.ssh
+    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
-    # - ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR]; git clone ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn build; yarn start"
-    - ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR}; git clone -b ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn dev;"
+    # - ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR}; git clone ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn build; yarn start"
+    - ssh -o StrictHostKeyChecking=no sshpass -p "$PRD_PASSWORD" ssh root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR}; git clone -b ${REPO}; cd ${WORK_DIR}; npm install yarn -g; yarn; yarn dev"
   only:
   - develop
