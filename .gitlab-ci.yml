@@ -8,7 +8,7 @@ stages:
   - deploy
 
 deploy:
-  stage: build
+  stage: deploy
   before_script:
     - 'which ssh-agent || ( apt-get install -qq openssh-client )'
     - apt-get update -qq
