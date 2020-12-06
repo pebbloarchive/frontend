@@ -1,7 +1,7 @@
-import { PostSnippetFragment } from '../../../generated/graphql';
-import { useConvertUnixTimestamp } from '../../hooks/useConvertUnixTimestamp';
+import { PostSnippetFragment } from '~/generated/graphql';
+import { useConvertUnixTimestamp } from '~/hooks/useConvertUnixTimestamp';
 import React from "react";
-import styles from '../../../css/profile/home/feed.module.css';
+import styles from '@pebblo/css/profile/home/feed.module.css';
 
 interface PostProps {
     post: PostSnippetFragment;

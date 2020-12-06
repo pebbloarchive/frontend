@@ -1,14 +1,14 @@
 import { useQuery } from "@apollo/client"
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useMeQuery } from "../../generated/graphql";
+import { useMeQuery } from "@pebblo/frontend/src/generated/graphql";
 
-export const useIsAuth = () => {
+export const useNotAuth = () => {
     const { data, loading } = useMeQuery();
     const router = useRouter();
     useEffect(() => {
-			if(!loading && !data?.me) {
-        router.replace(`/login?next=${router.asPath}`);
+      if(!loading && data?.me) {
+        router.push("/home");
       }
     }, [loading, data, router]);
-	}
+  }

@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head';
-import styles from '../css/auth.module.css';
+import styles from '@pebblo/css/auth.module.css';
 import Link from 'next/link';
 
-export const Register = () => {
+export default function Register() {
     return (
         <>
             <Head>
@@ -45,4 +45,3 @@ export const Register = () => {
 }
 
 Register.theme = 'light';
-export default Register;

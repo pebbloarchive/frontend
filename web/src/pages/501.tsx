@@ -1,11 +1,9 @@
-import styles from '../css/notfound.module.css';
+import styles from '@pebblo/css/notfound.module.css';
 
-const Page = () => {
+export default function Page() {
 return (
-       <>
-        <img className={styles.fiveoone} src="https://cdn.discordapp.com/attachments/596156721928470547/745481777078075552/unknown.png" alt="Internal Error"/>
-       </>
-    )
+		<>
+			<p>Fuck a server error has occured.</p>
+		</>
+	)
 }
-
-export default Page;

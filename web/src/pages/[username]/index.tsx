@@ -1,39 +1,25 @@
-import { GetServerSideProps } from "next";
-import Nav from '../../components/Nav';
+import Nav from '~/components/Nav';
 import NotFound from '../404'
-import styles from '../../css/profile/profile.module.css';
+import styles from '@pebblo/css/profile/profile.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useFollowMutation, useMeQuery, usePostLazyQuery, usePostQuery, usePostsQuery, useUserQuery } from "../../generated/graphql";
-import { withApollo } from "../../components/hooks/withApolloHook";
-import { useFetchMorePosts } from "../../components/hooks/useFetchMorePosts";
-import { useConvertUnixTimestamp } from "../../components/hooks/useConvertUnixTimestamp";
-import { Feed } from '../../components/general/profile/home/Feed'
-import Loader from "../../components/loader/Post";
+import { withApollo } from "~/hooks/withApolloHook";
+import { useFetchMorePosts } from "~/hooks/useFetchMorePosts";
+import { useConvertUnixTimestamp } from "~/hooks/useConvertUnixTimestamp";
+import { Feed } from '~/components/general/profile/home/Feed'
+import Loader from "~/components/loader/Post";
+import { useAuth } from "~/hooks/useAuth";
 
 const Username = () => {
-  // const { data, loading, error } = useUserQuery({
-    //   variables: { username: router.query.username?.toString() }
-    // });
-    
-    // if (loading && data?.user) {
-  //   return <p>Loading...</p>
-  // }
-  
-  // if (!data || !data.user || data.user.errors) {
-    //   return <NotFound />
-  // }
 
-  
-  // const user = data.user.user;
-  // // const { data: self } = useMeQuery();
-  
   const router = useRouter();
   const username = router.query.username?.toString() || "";
   const { data: meData } = useMeQuery();
   const { data: userData } = useUserQuery({
     variables: { username: username }
   });
+  const loggedIn = useAuth();
   const [follow] = useFollowMutation();
   const { data, error, loading, fetchMore, variables } = usePostsQuery({
     variables: {
@@ -56,7 +42,13 @@ const Username = () => {
   }
 
   if(!data && loading) {
-    return <Loader/>
+    return (
+      <>
+        <Nav/>
+        {/* <Loader/> */}
+        
+      </>
+    )
   }
 
   return (
@@ -97,6 +89,7 @@ const Username = () => {
           <div className={styles.right}>
             <div className={styles.card}>
               <div className={styles.card_content}>
+                {/* TODO : I neeed to make a check for when you're logged out, it doesn't show the context */}
                 { meData?.me?.username === username ?
                   <div className={styles.filter}>
                     <a href="">

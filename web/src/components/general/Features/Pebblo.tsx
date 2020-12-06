@@ -1,12 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../styles/landing.module.css'
-import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
+import styles from '@pebblo/css/landing.module.css'
 
 const Page = () => {
-    const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
     return (
         <>
             <div className={styles.features}>

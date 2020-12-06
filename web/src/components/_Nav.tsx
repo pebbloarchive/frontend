@@ -1,17 +1,14 @@
-import styles from '../css/navbar.module.css';
+import styles from '@pebblo/css/navbar.module.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { meQuery } from '../../graphql/queries/me';
-import { useQuery } from '@apollo/client';
-import { useAuth } from './hooks/useAuth';
 import { useRouter } from 'next/router';
+import { useMeQuery } from '~/generated/graphql';
 
 const Topnav = () => {
     const router = useRouter();
     const [tab, setTab] = useState();
     const query = router.query.query as string | undefined;
-    const loggedIn = useAuth();
-    const { data } = useQuery(meQuery);
+    const { data } = useMeQuery();
 
     return (
         <>
@@ -25,7 +22,7 @@ const Topnav = () => {
                 </a>
 
                 <Link href="/upload"><a href="/upload" className={styles.upload}><img src="icons/plus.png" alt=""/></a></Link>
-            { loggedIn.me ?
+            { data?.me ?
                 <div className={styles.links}>
                     <Link href="/home">
                         <a className={`${query && tab === 'home' ? styles.active : ''}`}><img src="/icons/home.png" alt=""/><span>Home</span>

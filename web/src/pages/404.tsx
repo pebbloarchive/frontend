@@ -1,6 +1,6 @@
-import styles from '../css/notfound.module.css';
+import styles from '@pebblo/css/notfound.module.css';
 
-const Page = () => {
+export default function Page() {
 return (
        <>
        <title>404 Not Found</title>
@@ -13,5 +13,5 @@ return (
        </>
     )
 }
+
 Page.theme = 'light'
-export default Page;

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
-import styles from '../css/auth.module.css';
+import styles from '@pebblo/css/auth.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { useMutation } from '@apollo/client'
-import { useAuth } from '../components/hooks/useAuth';
-import { withApollo } from '../components/hooks/withApolloHook';
+import { useAuth } from '../hooks/useAuth';
+import { withApollo } from '../hooks/withApolloHook';
 import { onError } from "apollo-link-error";
 import { MeDocument, MeQuery, useLoginMutation } from '../generated/graphql';
 

@@ -1,16 +1,13 @@
 
-import core from '@pebblo/core';
-import { usePulse } from 'pulse-framework';
-import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import Link from 'next/link';
+import { useMeQuery } from '~/generated/graphql';
 import styles from '../styles/settings/settings.module.css'
 
 const Page = () => {
-    const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    const [current] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const { data } = useMeQuery();
     return (
         <>
-        <title>@{current.username} | Staff Tools</title>
+        <title>@{data?.me.username} | Staff Tools</title>
 
             <form className={styles.content}>
                 <h1 className={styles.title}>Staff Tools</h1>

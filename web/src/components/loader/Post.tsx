@@ -1,6 +1,6 @@
 import Link from 'next/link';
 // import styles from '../auth.module.css';
-import styles from '../../css/auth.module.css';
+import styles from '@pebblo/css/auth.module.css';
 
 const Loader = () => {
   return (

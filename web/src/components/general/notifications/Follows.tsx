@@ -1,4 +1,4 @@
-import styles from '../../styles/notifications.module.css'
+import styles from '@pebblo/css/notifications.module.css'
 
 const Page = () => {
     return (

@@ -1,4 +1,4 @@
-import { Exact, PostsQuery } from "../../generated/graphql";
+import { Exact, PostsQuery } from "@pebblo/frontend/src/generated/graphql";
 
 export const useFetchMorePosts = (
   data: PostsQuery | undefined,

@@ -1,9 +1,6 @@
 import styles from '../styles/profile.module.css'
-import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
 
 const Topnav = () => {
-    const [loggedIn, cache] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
 
     return (
         <>

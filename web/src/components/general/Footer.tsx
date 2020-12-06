@@ -1,15 +1,11 @@
 
-import styles from '../../css/landing.module.css';
+import styles from '@pebblo/css/landing.module.css';
 import Link from 'next/link';
 
 const Topnav = () => {
     return (
         <>
-
-
 {/* https://dribbble.com/shots/12896171-Footer-UI-Design/attachments/4496112?mode=media */}
-
-
             <div className={styles.footer}>
                 
                 <div className={styles.footer_content}>

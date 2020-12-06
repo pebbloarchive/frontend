@@ -5,15 +5,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "gen": "graphql-codegen --config codegen.yml"
+    "gen": "graphql-codegen --config codegen.yml",
+    "pm2": "pm2 start npm --name \"web\" -- start"
   },
   "dependencies": {
     "@apollo/client": "^3.2.7",
+    "@pebblo/css": "1.0.0",
     "@sentry/node": "^5.27.4",
+    "@types/jest": "^26.0.16",
     "apollo-boost": "^0.4.9",
+    "formik": "^2.2.5",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
     "isomorphic-unfetch": "^3.1.0",
+    "jest": "^26.6.3",
     "next": "latest",
     "next-apollo": "^5.0.4",
     "next-themes": "^0.0.10",
@@ -21,7 +26,8 @@
     "react": "^17.0.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^17.0.1",
-    "react-is": "^17.0.1"
+    "react-is": "^17.0.1",
+    "yup": "^0.31.1"
   },
   "license": "MIT",
   "devDependencies": {
@@ -33,6 +39,9 @@
     "@types/node": "^14.14.8",
     "@types/react": "^16.9.56",
     "apollo": "^2.31.1",
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-react-app": "^3.0.8",
     "typescript": "^4.0.5"
   }
 }

@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from "../../../../css/profile/home/feed.module.css";
-import { PostSnippetFragment } from '../../../../generated/graphql';
-import { useConvertUnixTimestamp } from '../../../hooks/useConvertUnixTimestamp';
+// @ts-ignore
+import styles from "@pebblo/css/profile/home/feed.module.css";
+import { PostSnippetFragment } from '@pebblo/frontend/src/generated/graphql';
+import { useConvertUnixTimestamp } from '@pebblo/frontend/src/hooks/useConvertUnixTimestamp';
 
 interface PostProps {
     post: PostSnippetFragment;

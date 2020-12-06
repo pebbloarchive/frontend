@@ -12,11 +12,11 @@
 
 import { createWithApollo } from "./createWithApollo";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { PaginatedPosts } from "../../generated/graphql";
+import { PaginatedPosts } from "@pebblo/frontend/src/generated/graphql";
 import { NextPageContext } from "next";
 
 const CLIENT_URL = 'http://localhost:4000/api';
-const endpoint = `${CLIENT_URL}/query`;
+const endpoint = `${CLIENT_URL}/graphql`;
 
 const createClient = (ctx: NextPageContext) =>
   new ApolloClient({

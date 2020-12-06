@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../styles/business/content.module.css'
+import styles from '@pebblo/css/business/content.module.css'
 
 const Page = () => {
     return (

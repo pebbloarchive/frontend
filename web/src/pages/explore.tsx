@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 
-import { useAuth } from "../components/hooks/useAuth";
-import { withApollo } from "../components/hooks/withApolloHook";
-import Content from "../components/general/profile/home/Home";
-import Nav from "../components/Nav"
-import styles from "../css/profile/home/content.module.css";
+import { useAuth } from "../hooks/useAuth";
+import { withApollo } from "../hooks/withApolloHook";
+import Content from "@pebblo/frontend/src/components/general/profile/home/Home";
+import Nav from "@pebblo/frontend/src/components/Nav"
+import styles from "@pebblo/css/profile/home/content.module.css";
 import { useMeQuery } from "../generated/graphql";
 
 export const Home = () => {

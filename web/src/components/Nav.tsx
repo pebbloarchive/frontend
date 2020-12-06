@@ -1,9 +1,10 @@
-import styles from '../css/navbar.module.css';
+// @ts-ignore
+import styles from "@pebblo/css/navbar.module.css"
 import Router from 'next/router';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useAuth } from './hooks/useAuth';
-import { useMeQuery } from '../generated/graphql';
+import { useAuth } from '@pebblo/frontend/src/hooks/useAuth';
+import { useMeQuery } from '@pebblo/frontend/src/generated/graphql';
 
 const Topnav = () => {
     const loggedIn = useAuth();

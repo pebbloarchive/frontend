@@ -1,16 +1,13 @@
-import { usePulse } from 'pulse-framework';
-import core from '@pebblo/core';
-import styles from '../styles/auth.module.css'
+import styles from '@pebblo/css/auth.module.css'
 import Router from 'next/router';
-import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import Link from 'next/link';
+import { useMeQuery } from '~/generated/graphql';
 
 const Topnav = () => {
-    const [loggedIn, user] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const { data } = useMeQuery();
     return (
         <>
-            { !loggedIn ? <div className={styles.logged}>
+            { !data?.me ? <div className={styles.logged}>
                 <section className={styles.logged_text}>
                     <h1 className={styles.logged_title}>You're not logged in.</h1>
                     <p className={styles.logged_message}>Don't miss an update from your favourite people!</p>

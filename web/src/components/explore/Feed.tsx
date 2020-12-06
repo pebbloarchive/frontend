@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../components/styles/profile/home/feed.module.css';
-import { getAvatar } from '../utils';
+import styles from '@pebblo/css/profile/home/feed.module.css';
 import Loader from '../loader/Post';
 
 const Page = (): JSX.Element => {
@@ -49,7 +48,7 @@ const Page = (): JSX.Element => {
                     </div>
 
                     <label className={styles.post_add_comment}>
-                        <img src={getAvatar('andre')} alt="" className={styles.post_add_comment_avatar}/>
+                        <img src="" alt="" className={styles.post_add_comment_avatar}/>
                         <form className={styles.post_add_comment_form}>
                             <input
                                 type="text"
@@ -84,7 +83,7 @@ const Page = (): JSX.Element => {
                         <div className={styles.card_content}>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -94,7 +93,7 @@ const Page = (): JSX.Element => {
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -104,7 +103,7 @@ const Page = (): JSX.Element => {
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -114,7 +113,7 @@ const Page = (): JSX.Element => {
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -124,7 +123,7 @@ const Page = (): JSX.Element => {
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -141,7 +140,7 @@ const Page = (): JSX.Element => {
                         <div className={styles.card_content}>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -151,7 +150,7 @@ const Page = (): JSX.Element => {
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>
@@ -161,7 +160,7 @@ const Page = (): JSX.Element => {
                             </a></Link>
 
                             <Link href=""><a href="" className={styles.card_profile}>
-                                <img src={getAvatar('andre')} className={styles.card_avatar}/>
+                                <img src="" className={styles.card_avatar}/>
                                 <section className={styles.card_user}>
                                     <h1 className={styles.card_name}>
                                         <img src="https://cdn.discordapp.com/emojis/747011360524599318.png?v=1" alt="" className={styles.card_badge}/>

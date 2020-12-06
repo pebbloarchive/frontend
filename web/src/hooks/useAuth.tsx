@@ -1,4 +1,4 @@
-import { useMeQuery } from "../../generated/graphql"
+import { useMeQuery } from "@pebblo/frontend/src/generated/graphql";
 
 export function useAuth() {
   const { data } = useMeQuery();

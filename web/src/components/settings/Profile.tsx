@@ -1,13 +1,10 @@
 import styles from '../styles/settings/settings.module.css'
-import core from '@pebblo/core';
-import { usePulse } from 'pulse-framework';
-import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useMeQuery } from '~/generated/graphql';
 
 const Page = () => {
-    const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED, core.accounts.state.CACHE]);
-    const [current]: AccountBody[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const { data } = useMeQuery();
     const [clicked, wasClicked] = useState<boolean>(false);
 
     const onClick = () => {
@@ -27,14 +24,14 @@ const Page = () => {
 
     return (
         <>
-        <title>@{current.username} | Edit Profile</title>
+        <title>@{data?.me?.username} | Edit Profile</title>
 
                 <div className={styles.content}>
                     <h1 className={styles.title}>Account Details</h1>
                         <form className={styles.edit_account}>
                             <label className={styles.edit_avatar}>
                                 {/* <button className={styles.settings_lightshot_trigger} onClick={onClick}> */}
-                                    {loggedIn ? <img src={current.avatar} draggable={false} alt={`${current.username}`}/> : '' ? !loggedIn : '' }
+                                    {data?.me ? <img src={data?.me?.avatar} draggable={false} alt={`${data?.me?.username}`}/> : '' }
                                     { clicked ? <Context /> : '' }
                                 {/* </button> */}
                                 <input type="file" name="" id=""/>
@@ -45,7 +42,7 @@ const Page = () => {
                                 name=""
                                 id=""
                                 placeholder="Full Name"
-                                defaultValue={current.name}
+                                defaultValue={data?.me?.name}
                                 spellCheck="false"
                                 required
                             />
@@ -54,7 +51,7 @@ const Page = () => {
                                 name=""
                                 id=""
                                 placeholder="Username"
-                                defaultValue={current.username}
+                                defaultValue={data?.me?.username}
                                 spellCheck="false"
                                 required
                             />
@@ -63,7 +60,7 @@ const Page = () => {
                                 name=""
                                 id=""
                                 placeholder="Email Address"
-                                defaultValue={current.email}
+                                defaultValue={data?.me?.email}
                                 spellCheck="false"
                                 required
                             />
@@ -76,7 +73,7 @@ const Page = () => {
                                 cols={0}
                                 rows={3}
                                 placeholder="Tell us about yourself!"
-                                defaultValue={current.description}
+                                defaultValue={data?.me?.description}
                             />
 
                             {/* <hr/>

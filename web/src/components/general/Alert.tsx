@@ -1,4 +1,4 @@
-import styles from '../styles/auth.module.css'
+import styles from '@pebblo/css/auth.module.css'
 
 const Page = () => {
     return (

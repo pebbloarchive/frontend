@@ -1,15 +1,11 @@
 import styles from '../styles/settings/navbar.module.css'
-import { usePulse } from 'pulse-framework';
 import Router from 'next/router';
 import Link from 'next/link';
-import core from '@pebblo/core';
-import { AccountUser } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import { useState, useEffect } from 'react';
-import { getAvatar } from '../utils';
+import { useMeQuery } from '~/generated/graphql';
 
 const Topnav = () => {
-    const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-    const [current]: AccountUser[] = usePulse([core.accounts.collection.selectors.CURRENT]);
+    const { data } = useMeQuery();
     const [active, isActive] = useState(undefined);
 
     const onRouteChange = (route) => {
@@ -44,7 +40,7 @@ const Topnav = () => {
                 <div className={styles.settings_content}>
                     <Link href="/settings">
                         <a className={`${active === 'settings' ? styles.settings_active : ''}`}>
-                            {loggedIn ? <img className={styles.settings_avatar} src={getAvatar('andre')} alt=""/> : '' ? !loggedIn : '' }
+                            {data?.me ? <img className={styles.settings_avatar} src={data?.me?.avatar} alt=""/> : '' }
                             <span>Edit Profile</span>
                         </a>
                     </Link>
@@ -93,7 +89,7 @@ const Topnav = () => {
                 </div>
             </div>
             
-            { loggedIn ?  <a href={`/${current.username}`} className={styles.settings_home}></a> : '' }
+            { data?.me ?  <a href={`/${data?.me?.username}`} className={styles.settings_home}></a> : '' }
         </>
     )
 }

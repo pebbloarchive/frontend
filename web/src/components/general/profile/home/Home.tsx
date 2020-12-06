@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../../../css/profile/home/feed.module.css';
+import styles from '@pebblo/css/profile/home/feed.module.css';
 
 const Page = () => {
     return (
