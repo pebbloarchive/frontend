@@ -3,7 +3,7 @@ variables:
   APP_NAME: web
   WORK_DIR: ${CI_PROJECT_NAME}
   # BRANCH: ${CI_COMMIT_REF_NAME}
-  REPO: https://gitlab.com/pebblo/frontend
+  REPO: git@gitlab.com:pebblo/frontend.git
 stages:
   - deploy
 
