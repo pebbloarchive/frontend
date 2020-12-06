@@ -1,0 +1,25 @@
+image: ubuntu:latest
+variables:
+  APP_NAME: web
+  WORK_DIR: ${CI_PROJECT_NAME}
+  # BRANCH: ${CI_COMMIT_REF_NAME}
+  REPO: git@gitlab.com:pebblo/frontend.git
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  before_script:
+    - apt-get update -qq
+    - apt-get install -qq git
+    - apt-get install -qq sshpass
+    # Setup SSH deploy keys
+    # - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+    # - eval $(ssh-agent -s)
+    # - ssh-add <(echo "$PRIVATE_KEY")
+    # - mkdir -p ~/.ssh
+    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - sshpass -p "$PRD_PASSWORD" ssh -o StrictHostKeyChecking=no root@"$PRD_SERVER" "rm -rf ~/${WORK_DIR}; git clone ${REPO}; cd ${WORK_DIR}; npm install yarn -g; npm install pm2 -g; yarn; yarn workspace @pebblo/frontend build; yarn workspace @pebblo/frontend pm2"
+  only:
+    - develop

@@ -1,38 +1,10 @@
 {
-  "name": "@pebblo/frontend",
+  "name": "pebblo",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "gen": "graphql-codegen --config codegen.yml"
-  },
-  "dependencies": {
-    "@apollo/client": "^3.2.7",
-    "@sentry/node": "^5.27.4",
-    "apollo-boost": "^0.4.9",
-    "graphql": "^15.4.0",
-    "graphql-tag": "^2.11.0",
-    "isomorphic-unfetch": "^3.1.0",
-    "next": "latest",
-    "next-apollo": "^5.0.4",
-    "next-themes": "^0.0.10",
-    "next-with-apollo": "^5.1.0",
-    "react": "^17.0.1",
-    "react-apollo": "^3.1.5",
-    "react-dom": "^17.0.1",
-    "react-is": "^17.0.1"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@graphql-codegen/cli": "^1.19.2",
-    "@graphql-codegen/typescript": "^1.17.11",
-    "@graphql-codegen/typescript-operations": "^1.17.10",
-    "@graphql-codegen/typescript-react-apollo": "^2.1.1",
-    "@types/graphql": "^14.5.0",
-    "@types/node": "^14.14.8",
-    "@types/react": "^16.9.56",
-    "apollo": "^2.31.1",
-    "typescript": "^4.0.5"
-  }
+  "main": "index.js",
+  "workspaces": [
+    "web",
+    "css"
+  ],
+  "private": true
 }
