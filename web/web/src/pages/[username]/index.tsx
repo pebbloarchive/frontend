@@ -18,6 +18,7 @@ import { Feed } from "~/components/general/profile/home/Feed";
 import Loader from "~/components/loader/Post";
 import { useAuth } from "~/hooks/useAuth";
 import FollowButton from "~/components/ui/FollowButton";
+import Button from "~/components/ui/Button";
 
 const Username = () => {
   const router = useRouter();
@@ -119,7 +120,7 @@ const Username = () => {
               </div>
             </div>
           </div>
-
+          following
           <div className={styles.right}>
             <div className={styles.card}>
               <div className={styles.card_content}>
@@ -149,7 +150,7 @@ const Username = () => {
                   </div>
                 ) : (
                   <div className={styles.filter}>
-                    <button
+                    {/* <button
                       className={styles.follow_account}
                       // @ts-ignore
                       onClick={followMutation}
@@ -158,6 +159,16 @@ const Username = () => {
                         ? "Unfollow"
                         : "Follow"}
                     </button>
+                    */}
+                    <Button
+                      style={styles.follow_account}
+                      text={
+                        userData?.user?.followers.includes(meData?.me?.id)
+                          ? "Unfollow"
+                          : "Follow"
+                      }
+                      onPress={followMutation}
+                    />
                     <a href="">
                       <img src="/icons/gallery.png" alt="" />
                       Gallery
@@ -217,11 +228,11 @@ const Username = () => {
               />
               <section className={styles.mobile_statistics}>
                 <a href="">
-                  <span>0</span>
+                  <span>{userData?.user.user?.followers.length}</span>
                   <h3>Followers</h3>
                 </a>
                 <a href="">
-                  <span>0</span>
+                  <span>{userData?.user.user?.following.length}</span>
                   <h3>Following</h3>
                 </a>
               </section>
