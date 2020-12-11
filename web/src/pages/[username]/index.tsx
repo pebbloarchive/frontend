@@ -79,14 +79,14 @@ export default ({ user }: {
         <meta property="og:description" content={`${user.description}\n\n&copy; pebblo.org`}/>
         <meta property="og:image" content={user.avatar}/>
         <meta name="theme-color" content="#FF274E"/>
-        <meta name="og:site_name" content={`Followers: ${user.followersCount} \n Following: ${user.followeingCount}`}/>
+        <meta name="og:site_name" content={`Followers: ${user.followersCount} \n Following: ${user.followingCount}`}/>
       </Head>
       <Nav />
 
 
 
     <div className={styles.content}>
-      <div className={styles.profile}>
+      <div className={styles.profile}>  
 
         <div className={styles.information}>
           <div className={styles.avatar}>
@@ -131,7 +131,7 @@ export default ({ user }: {
               </div>
 
           </div>
-        </div>
+        </div>  
         <div className={styles.right}>
           <div className={styles.card}>
 
@@ -193,24 +193,24 @@ export default ({ user }: {
             <div className={styles.mobile_images}>
                 <img className={styles.mobile_avatar} src={user.avatar ? user.avatar : 'https://cdn.discordapp.com/attachments/596156721928470547/746173257866018866/unknown.png'} alt={`${current.name} || ${current.username}`}/>
                   <section className={styles.mobile_statistics}>
-                    <a href="">
+                  <Link href="/kyle/followers"><a href="/kyle/followers">
                         <span>{user.followersCount}</span>
                         <h3>Followers</h3>
-                    </a>
-                    <a href="">
+                    </a></Link>
+                  <Link href="/kyle/following"><a href="/kyle/following">
                         <span>{user.followingCount}</span>
                         <h3>Following</h3>
-                    </a>
+                    </a></Link>
                   </section>
+            </div>
+            <div className={styles.mobile_interactions}>
+              { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
             </div>
             <div className={styles.mobile_profile_information}>
               <h1 className={styles.profile_name}>{user.name}</h1>
                 <div className={styles.profile_description}>
                   <p>{user.description}</p>
                 </div>
-            </div>
-            <div className={styles.mobile_interactions}>
-              { process.browser && Router.route === `/${current.username}` ? '' : <Button /> }
             </div>
           </div>
 

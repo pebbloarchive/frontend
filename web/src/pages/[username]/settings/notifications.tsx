@@ -10,7 +10,7 @@ import Setting from '../../../components/settings/Notifications'
 
 export default () => {
   const [loggedIn] = usePulse([core.accounts.state.IS_LOGGED]);
-  if(!loggedIn && process.browser) Router.push('/');
+  if(!loggedIn && process.browser) Router.push('/login');
   return (
     <>
         <Setting />

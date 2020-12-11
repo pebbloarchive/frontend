@@ -3,6 +3,7 @@ import core from '@pebblo/core';
 import { usePulse } from 'pulse-framework';
 import { AccountBody } from '@pebblo/core/lib/controllers/accounts/account.interfaces';
 import Link from 'next/link';
+import { getAvatar } from '../utils';
 // import Logged from '../../components/general/Logged';
 
 
@@ -18,7 +19,7 @@ const Page = () => {
                             type="search"
                             name=""
                             id=""
-                            placeholder="Search for keywords or accounts..."
+                            placeholder="Search Pebblo"
                         />
                         <input type="submit" value="GO"/>
                     </form>
@@ -26,6 +27,14 @@ const Page = () => {
                 </div>
             </div>
             
+            <div className={styles.mobile_explore}>
+                <div className={styles.mobile_header}>
+                    <form className={styles.mobile_search}>
+                        <input type="search" name="" id="" placeholder="Search..."/>
+                    </form>
+                    <h1>Explore</h1>
+                </div>
+            </div>
         </>
     )
 }

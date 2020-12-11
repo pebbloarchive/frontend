@@ -544,7 +544,7 @@
 }
 
 [data-theme="dark"] .mobile {
-    background-color: #181818;
+    background-color: #0a0a0a;
 }
 
 .mobile hr {
@@ -595,7 +595,8 @@
 }
 
 .mobileActive span {
-    display: block;
+    /* display: block; */
+    display: none;
 }
 
 .mobile_upload {

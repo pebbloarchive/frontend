@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root {
-  --color: #1d1d1d;
-  --background: #f8f8f9;
-  --theme-a: #ff6e20;
-  --theme-b: #ff0067;
-  --links: #3d6a9b;
-  --scrollbar: #d3d3d3;
+  --color: rgb(29, 29, 29);
+  --background: rgb(247, 247, 248);
+  --theme-a: rgb(255, 110, 32);
+  --theme-b: rgb(255, 0, 103);
+  --links: rgb(61, 106, 155);
+  --scrollbar: rgb(211, 211, 211);
 
 
   /* Menu */
@@ -17,25 +17,19 @@
   /* default */
   --width: 80%;
   --pebblo-font: 'Fredoka One', cursive;
-
-                                                                                                                        /* --legal-content: 700px;
-                                                                                                                        --theme-a: #e27b23;
-                                                                                                                        --theme-b: #e75139;
-                                                                                                                        --theme-a: #63a4ad;
-                                                                                                                        --theme-b: #4f60bb; */
 }
 
 [data-theme="dark"] {
-  --color: white;
-  --links: #5d8fc5;
-  --background: #0e0e10;
-  --scrollbar: #58585a;
+  --color: rgb(255, 255, 255);
+  --links: rgb(93, 143, 197);
+  --background: rgb(14, 14, 16);
+  --scrollbar: rgb(88, 88, 90);
 }
 
 [data-theme="dark_purple"] {
-  --links: #7c4ce0;
-  --color: white;
-  --background: #0d0810;
+  --links: rgb(124, 76, 224);
+  --color: rgb(255, 255, 255);
+  --background: rgb(13, 8, 16);
 }
 
 ::-webkit-scrollbar {
@@ -55,8 +49,8 @@
 }
 
 ::selection {
-  background: #db0359;
-  color: white;  
+  background: rgb(219, 3, 89);
+  color: rgb(255, 255, 255);
 }
 
 body {
@@ -65,6 +59,7 @@ body {
   color: var(--color);
   background-color: var(--background);
   font-family: Montserrat, sans-serif;
+  scroll-behavior: smooth;
   transition: .3s;
 }
 
@@ -186,4 +181,17 @@ textarea {
 }
 
 @media only screen and (max-width: 1000px) {
+  :root {
+    --width: 85%;
+  }
 }
+
+
+
+
+
+                                                                                                                        /* --legal-content: 700px;
+                                                                                                                        --theme-a: #e27b23;
+                                                                                                                        --theme-b: #e75139;
+                                                                                                                        --theme-a: #63a4ad;
+                                                                                                                        --theme-b: #4f60bb; */

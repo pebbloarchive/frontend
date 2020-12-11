@@ -109,8 +109,8 @@ const Topnav = () => {
                     <Link href={`/${current.username}/notifications`}>
                         <a href={`/${current.username}/notifications`} className={`${active === 'notifications' ? styles.mobileActive : ''}`}><img src="https://cdn.discordapp.com/attachments/596156721928470547/755728469312274479/notification.png" alt=""/> <span>Notifications</span></a>
                     </Link>
-                    <Link href={`/${current.username}`}>
-                        <a href={`/${current.username}`} className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={getAvatar('andre')} alt={current.name} className={styles.mobile_avatar}/> <span>Profile</span></a>
+                    <Link href="/andre">
+                        <a href="/andre" className={`${active === `/${current.username}`} ? styles.mobile_active : ''}`}><img src={getAvatar('andre')} alt={current.name} className={styles.mobile_avatar}/> <span>Profile</span></a>
                     </Link>
                 </div>
         </>

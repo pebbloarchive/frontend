@@ -9,7 +9,7 @@ const Page = () => {
         // https://cdn.dribbble.com/users/686119/screenshots/7078221/media/82ce6a365b94f26ba2f3d5174306d4ef.png
         <>
             <div className={styles.feed}>
-
+                
                 <div className={styles.post}>
                 <span className={styles.timeStamp}>Just Now</span>
                     <div className={styles.heading}>
