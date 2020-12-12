@@ -1,0 +1,48 @@
+{
+  "@apollo/client/react/ssr": [
+    {
+      "id": "4DfG",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "9t1y",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "BdB7",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "FIKz",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "Pj+6",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "UdKW",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "mXGw",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "oYCi",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "re7x",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "xARA",
+      "file": "static/chunks/framework.a88686a2b15e9e5376f0.js"
+    },
+    {
+      "id": "HDCo",
+      "file": "static/chunks/23.a7b97912c0279f9d9d36.js"
+    }
+  ]
+}

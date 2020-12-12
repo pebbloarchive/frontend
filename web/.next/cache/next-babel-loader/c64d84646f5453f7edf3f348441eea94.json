@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { withApollo } from \"~/hooks/withApolloHook\";\nexport async function Settings() {\n  return /*#__PURE__*/_jsx(\"p\", {\n    children: \"Omg becky\"\n  });\n}\nexport default withApollo({\n  ssr: false\n})(Settings);","map":null,"metadata":{},"sourceType":"module"}

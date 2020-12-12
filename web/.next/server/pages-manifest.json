@@ -1,0 +1,16 @@
+{
+  "/404": "pages/404.html",
+  "/501": "pages/501.html",
+  "/[username]": "pages/[username].js",
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/admin": "pages/admin.js",
+  "/create": "pages/create.html",
+  "/explore": "pages/explore.html",
+  "/home": "pages/home.js",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
+  "/logout": "pages/logout.js",
+  "/settings": "pages/settings.js",
+  "/_document": "pages/_document.js"
+}
