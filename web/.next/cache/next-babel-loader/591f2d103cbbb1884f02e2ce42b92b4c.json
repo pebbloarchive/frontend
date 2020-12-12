@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { gql } from '@apollo/client';\nexport const getUser = gql`\n    query user($username: String!) {\n        user(username: $username) {\n            id\n            username\n        }\n    }\n`;","map":null,"metadata":{},"sourceType":"module"}

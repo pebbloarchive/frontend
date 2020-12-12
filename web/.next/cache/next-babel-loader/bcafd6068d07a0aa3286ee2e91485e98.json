@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Fragment as _Fragment } from \"react/jsx-runtime\";\nexport default function Page() {\n  return /*#__PURE__*/_jsx(_Fragment, {\n    children: /*#__PURE__*/_jsx(\"p\", {\n      children: \"Fuck a server error has occured.\"\n    })\n  });\n}","map":null,"metadata":{},"sourceType":"module"}

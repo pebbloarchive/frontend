@@ -1,6 +1,7 @@
 #  build files
 dist
 node_modules
+.next
 
 # editors
 .env

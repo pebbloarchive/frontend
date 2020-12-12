@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { useMeQuery } from \"@pebblo/frontend/src/generated/graphql\";\nexport function useAuth() {\n  const {\n    data\n  } = useMeQuery();\n  return {\n    me: data && data.me\n  };\n}","map":null,"metadata":{},"sourceType":"module"}

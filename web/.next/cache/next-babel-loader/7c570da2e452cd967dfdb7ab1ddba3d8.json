@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { me } from '../../../graphql/queries/me';\nimport { useQuery } from '@apollo/client';\nexport function useAuth() {\n  var _useQuery = useQuery(me),\n      data = _useQuery.data;\n\n  return {\n    me: data && data.me\n  };\n}","map":null,"metadata":{},"sourceType":"module"}
