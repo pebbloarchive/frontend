@@ -17,7 +17,6 @@ import { useConvertUnixTimestamp } from "~/hooks/useConvertUnixTimestamp";
 import { Feed } from "~/components/general/profile/home/Feed";
 import Loader from "~/components/loader/Post";
 import { useAuth } from "~/hooks/useAuth";
-import FollowButton from "~/components/ui/FollowButton";
 import Button from "~/components/ui/Button";
 
 const Username = () => {
@@ -150,25 +149,19 @@ const Username = () => {
                   </div>
                 ) : (
                   <div className={styles.filter}>
-                    {/* <button
-                      className={styles.follow_account}
-                      // @ts-ignore
-                      onClick={followMutation}
-                    >
-                      {userData?.user.user?.followers.includes(meData?.me?.id)
-                        ? "Unfollow"
-                        : "Follow"}
-                    </button>
-                    */}
-                    <Button
-                      style={styles.follow_account}
-                      text={
-                        userData?.user?.followers.includes(meData?.me?.id)
-                          ? "Unfollow"
-                          : "Follow"
-                      }
-                      onPress={followMutation}
-                    />
+                    {meData?.me?.username === username ? (
+                      <Button
+                        style={styles.follow_account}
+                        text={
+                          userData?.user.user?.followers.includes(
+                            meData?.me?.id
+                          )
+                            ? "Unfollow"
+                            : "Follow"
+                        }
+                        onPress={followMutation}
+                      />
+                    ) : null}
                     <a href="">
                       <img src="/icons/gallery.png" alt="" />
                       Gallery
