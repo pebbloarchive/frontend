@@ -149,7 +149,6 @@ const Username = () => {
                   </div>
                 ) : (
                   <div className={styles.filter}>
-                    {meData?.me?.username === username ? (
                       <Button
                         style={styles.follow_account}
                         text={
@@ -161,7 +160,6 @@ const Username = () => {
                         }
                         onPress={followMutation}
                       />
-                    ) : null}
                     <a href="">
                       <img src="/icons/gallery.png" alt="" />
                       Gallery

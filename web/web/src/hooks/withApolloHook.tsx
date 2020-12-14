@@ -15,7 +15,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { PaginatedPosts } from "@pebblo/frontend/src/generated/graphql";
 import { NextPageContext } from "next";
 
-const CLIENT_URL = 'http://localhost:4000/api';
+const CLIENT_URL = 'http://97.84.165.72:4000/api';
 const endpoint = `${CLIENT_URL}/graphql`;
 
 const createClient = (ctx: NextPageContext) =>
