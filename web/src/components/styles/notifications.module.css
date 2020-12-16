@@ -1,6 +1,5 @@
 .notifications {
     position: relative;
-    padding-left: 150px;
 }
 
 .content {
@@ -8,8 +7,8 @@
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    padding-top: 153px;
-    width: 900px;
+    padding: 100px 0;
+    width: var(--width);
     padding-bottom: 100px;
 }
 

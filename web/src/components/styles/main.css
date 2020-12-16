@@ -3,8 +3,21 @@
 
 :root {
   --color: rgb(29, 29, 29);
+      --color-01: rgb(29, 29, 29, 0.1);
+      --color-03: rgb(29, 29, 29, 0.3);
+      --color-05: rgb(29, 29, 29, 0.5);
+      --color-07: rgb(29, 29, 29, 0.7);
+      --color-09: rgb(29, 29, 29, 0.9);
   --background: rgb(247, 247, 248);
+      --background-01: rgb(247, 247, 248, 0.1);
+      --background-03: rgb(247, 247, 248, 0.3);
+      --background-05: rgb(247, 247, 248, 0.5);
+      --background-07: rgb(247, 247, 248, 0.7);
+      --background-09: rgb(247, 247, 248, 0.9);
+
+
   --theme-a: rgb(255, 110, 32);
+  --theme-middle: rgb(255, 47, 74);
   --theme-b: rgb(255, 0, 103);
   --links: rgb(61, 106, 155);
   --scrollbar: rgb(211, 211, 211);
@@ -16,14 +29,27 @@
 
   /* default */
   --width: 80%;
+    --width-reverse: 10%;
   --pebblo-font: 'Fredoka One', cursive;
 }
 
 [data-theme="dark"] {
   --color: rgb(255, 255, 255);
-  --links: rgb(93, 143, 197);
+      --color-01: rgb(255, 255, 255, 0.1);
+      --color-03: rgb(255, 255, 255, 0.3);
+      --color-05: rgb(255, 255, 255, 0.5);
+      --color-07: rgb(255, 255, 255, 0.7);
+      --color-09: rgb(255, 255, 255, 0.9);
   --background: rgb(14, 14, 16);
+      --background-01: rgb(14, 14, 16, 0.1);
+      --background-03: rgb(14, 14, 16, 0.3);
+      --background-05: rgb(14, 14, 16, 0.5);
+      --background-07: rgb(14, 14, 16, 0.7);
+      --background-09: rgb(14, 14, 16, 0.9);
+
+
   --scrollbar: rgb(88, 88, 90);
+  --links: rgb(93, 143, 197);
 }
 
 [data-theme="dark_purple"] {
@@ -82,7 +108,7 @@ p {
 }
 
 img {
-  user-drag: none; 
+  /* user-drag: none; */
   /* user-select: none; */
   /* -moz-user-select: none; */
   -webkit-user-drag: none;
@@ -146,43 +172,25 @@ textarea {
 
 
 @media only screen and (max-width: 2000px) {
-    :root {
-      --menu-height: 90px;
-      --sidebar-width: 95px;
-    }
 }
 
 @media only screen and (max-width: 1900px) {
-  :root {
-    --menu-height: 82px;
-    --sidebar-width: 90px;
-  }
 }
 
 @media only screen and (max-width: 1700px) {
-  :root {
-    --menu-height: 75px;
-    --sidebar-width: 80px;
-  }
 }
 
 @media only screen and (max-width: 1500px) {
-  :root {
-    --menu-height: 63px;
-    --sidebar-width: 70px;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
-  :root {
-    --menu-height: 55px;
-    --sidebar-width: 65px;
-  }
 }
 
 @media only screen and (max-width: 1000px) {
   :root {
-    --width: 85%;
+    --menu-height: 60px;
+    --width: 90%;
+      --width-reverse: 5%;
   }
 }
 

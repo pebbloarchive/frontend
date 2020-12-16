@@ -151,21 +151,9 @@ export default ({ user }: {
                     Message
                   </a>
                   <br/>
-                  <button>
-                    <img src="/icons/invisible.png" alt=""/>
-                    Block
-                  </button>
-                  <Link href="/kyle/report"><a href="/kyle/report">
-                    <img src="/icons/flag.png" alt=""/>
-                    Report @{user.username}
-                  </a></Link>
-                  <Link href="/andre/settings"><a href="/andre/settings">
-                    <img src="/icons/cog.png" alt=""/>
-                    Edit Profile
-                  </a></Link>
-                  <Link href={`/${current.username}/logout`}><a href={`/${current.username}/logout`}>
-                    <img src="/icons/exit.png" alt=""/>
-                    Logout
+                  <Link href="/andre/account"><a href="/andre/account">
+                    <img src="/icons/external-popup.png" alt=""/>
+                    View More
                   </a></Link>
                 </div>
               </div>
