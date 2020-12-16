@@ -419,15 +419,18 @@
 }
 
 .landing_about_goal_title {
-    font-size: 2.3em;
+    font-size: 2.7em;
     font-weight: 600;
     opacity: .8;
+    background: -webkit-radial-gradient(var(--theme-a), var(--theme-b));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .landing_about_goal p {
     margin-top: 20px;
-    font-size: 1.3em;
-    opacity: .7;
+    font-size: 1.2em;
+    opacity: .5;
     width: 700px;
 }
 
@@ -488,15 +491,20 @@
     }
 
     .landing_content_button {
-        margin-top: 5vh;
+        margin-top: 7vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: scale(0.8);
     }
 
     .landing_content_button_one,
     .landing_content_button_two {
-        font-size: 0.5em;
+        font-size: 0.8em;
+    }
+
+    .landing_mouse {
+        margin-bottom: 50px;
     }
 
     .landing_images_one {
@@ -517,8 +525,8 @@
     }
 
     .landing_images_full {
-        top: 30vh;
-        width: 80%;
+        top: 40vh;
+        width: 70%;
         left: 50%;
         transform: translate(-50%);
     }

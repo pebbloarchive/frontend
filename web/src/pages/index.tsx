@@ -25,13 +25,13 @@ const Index = () => {
           <h1 className={styles.landing_content_heading}>One step closer to <Link href=""><a href="">safe</a></Link> and <Link href=""><a href="">easier</a></Link> ways of sharing</h1>
             { loggedIn ?
               <ul className={styles.landing_content_button}>
-                <li><Link href=""><a href="" className={styles.landing_content_button_two}>Our Goal</a></Link></li>
-                <li><Link href=""><a href="" className={styles.landing_content_button_one}>Explore Pebblo</a></Link></li>
+                <li><Link href="#about" as="#about"><a href="#about" className={styles.landing_content_button_two}>Our Goal</a></Link></li>
+                <li><Link href="/explore"><a href="/explore" className={styles.landing_content_button_one}>Explore Pebblo</a></Link></li>
               </ul>
             :
               <ul className={styles.landing_content_button}>
                 <li><Link href="#about" as="#about"><a href="#about" className={styles.landing_content_button_two}>Our Goal</a></Link></li>
-                <li><Link href=""><a href="" className={styles.landing_content_button_one}>Get Started</a></Link></li>
+                <li><Link href="/create"><a href="/create" className={styles.landing_content_button_one}>Get Started</a></Link></li>
               </ul>
             }
         </header>
